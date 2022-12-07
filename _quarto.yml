@@ -2,7 +2,7 @@ project:
   type: website
 lang: fr
 website:
-  title: "<b>Formation·R</b>"
+  title: "<b>T·I·G·R</b>"
   favicon: img/cist.png
   twitter-card: true
   site-url: https://ee-cist.github.io/modules_R/
