@@ -1,0 +1,68 @@
+project:
+  type: website
+lang: fr
+website:
+  title: "<b>Formation·R</b>"
+  favicon: img/cist.png
+  twitter-card: true
+  site-url: https://ee-cist.github.io/modules_R/
+  description: "Modules de formation pour le traitement de l'information géographique avec R"
+  page-navigation: true
+  search: 
+    location: navbar
+    type: overlay
+  navbar:
+    background: "#1a8cab"
+    left: 
+      - href: data.qmd
+        text: Données
+      - href: import.qmd
+        text: I. Import
+      - href: statistique.qmd
+        text: II. Statistique
+      - href: notebook.qmd
+        text: III. Notebook
+      - href: geomatic.qmd
+        text: IV. Geomatique
+      - href: map.qmd
+        text: V. Cartographie        
+        
+    right:
+      - href: about.qmd
+        text: Á propos
+    tools:
+      - icon: github
+        aria-label: GitHub
+        text: GitHub
+        href: https://github.com/EE-CIST/modules_R
+  sidebar:
+    contents:
+      - href: data.qmd
+        text: Données
+      - href: import.qmd
+        text: I. Import
+      - href: statistique.qmd
+        text: II. Statistique
+      - href: notebook.qmd
+        text: III. Notebook
+      - href: geomatic.qmd
+        text: IV. Geomatique
+      - href: map.qmd
+        text: V. Cartographie        
+
+  page-footer:  Ecole d'été CIST·2023 - UMR8504 Géographie-Cités - [![licensebuttons by-sa](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0)
+  margin-header: |
+    ![](img/cist.png){width="65%"}
+format:
+  html:
+    theme: 
+      light: Minty
+      dark: cyborg
+    css: styles.css
+    toc: true
+    page-layout: full
+
+editor: visual
+  
+  
+

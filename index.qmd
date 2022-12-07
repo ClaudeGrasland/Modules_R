@@ -1,0 +1,6 @@
+---
+title: "Traitement de l'information géographique avec R"
+---
+
+Modules de formation pour le traitement de l'information géographique avec R
+
