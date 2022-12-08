@@ -134,7 +134,6 @@ website:
           - href: quarto.qmd
             text: Présentation de Quarto 
  
-        
     right:
       - href: ressources.qmd
         text: Ressources
@@ -152,7 +151,7 @@ website:
 
   page-footer:  Ecole d'été CIST·2023 - UMR8504 Géographie-Cités - [![licensebuttons by-sa](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0)
   margin-header: |
-    ![](img/cist.png){width="65%"}
+    ![](img/tigr.png){width="80%"}
 format:
   html:
     theme: 
