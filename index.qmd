@@ -1,5 +1,3 @@
 ---
-title: "**T**raitement de l'**I**nformation **G**éographique avec **R**"
+title: "Traitement de l'Information Géographique avec <img src='img/R.png' style='display: inline-block;width:8%;' />"
 ---
-
-Modules de formation pour le traitement de l'information géographique avec R
