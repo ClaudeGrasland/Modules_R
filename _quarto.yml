@@ -96,7 +96,7 @@ website:
 
   page-footer:  Ecole d'été CIST·2023 - UMR8504 Géographie-Cités - [![licensebuttons by-sa](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0)
   margin-header: |
-    ![](img/tigr.png){width="80%"}
+    ![](img/pawprint.jpg){width="80%"}
 format:
   html:
     theme: 
