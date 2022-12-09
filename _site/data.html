@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./data1.html" rel="next">
+<link href="./modules/import.html" rel="next">
 <link href="./img/cist.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,11 +44,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "Pas de résultats",
@@ -86,143 +86,26 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-données" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Données</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-données">    
-        <li>
-    <a class="dropdown-item" href="./data.html">
- <span class="dropdown-text">A</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="./data.html" aria-current="page">
+ <span class="menu-text">Données</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./data1.html">
- <span class="dropdown-text">B</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./modules.html">
+ <span class="menu-text">Modules R</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./data2.html">
- <span class="dropdown-text">C</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-import" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Import</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-import">    
-        <li>
-    <a class="dropdown-item" href="./import.html">
- <span class="dropdown-text">Import &amp; export</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./api.html">
- <span class="dropdown-text">Packages API</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./scraping.html">
- <span class="dropdown-text">Web scraping</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-manipulation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Manipulation</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-manipulation">    
-        <li>
-    <a class="dropdown-item" href="./manipulation.html">
- <span class="dropdown-text">R-base</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./datatable.html">
- <span class="dropdown-text">data.table</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./tidyverse.html">
- <span class="dropdown-text">tidyverse</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistique" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Statistique</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistique">    
-        <li>
-    <a class="dropdown-item" href="./statistique.html">
- <span class="dropdown-text">Univariée</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./statistique2.html">
- <span class="dropdown-text">Bivariée</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./statistique3.html">
- <span class="dropdown-text">Multivariée</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cartographie" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Cartographie</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-cartographie">    
-        <li>
-    <a class="dropdown-item" href="./map.html">
- <span class="dropdown-text">Cartographie statique</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./map2.html">
- <span class="dropdown-text">Cartographie dynamique</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-géomatique" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Géomatique</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-géomatique">    
-        <li>
-    <a class="dropdown-item" href="./geomatic.html">
- <span class="dropdown-text">Données vectorielles</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./geomatic2.html">
- <span class="dropdown-text">Données Raster</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notebook" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Notebook</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-notebook">    
-        <li>
-    <a class="dropdown-item" href="./programmation_lettree.html">
- <span class="dropdown-text">La programmation lettrée</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notebook.html">
- <span class="dropdown-text">Les notebooks</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./quarto.html">
- <span class="dropdown-text">Présentation de Quarto</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./ressources.html">
- <span class="menu-text">Ressources</span></a>
+ <span class="menu-text">Ressources annexes</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html">
  <span class="menu-text">Á propos</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/EE-CIST/modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/EE-CIST/modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -230,7 +113,6 @@ ul.task-list li input[type="checkbox"] {
               <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -254,9 +136,14 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link active"><strong>Données</strong></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><strong>Données</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><strong>Import</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -264,24 +151,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link active">A</a>
+  <a href="./modules/import.html" class="sidebar-item-text sidebar-link">Import &amp; export</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data1.html" class="sidebar-item-text sidebar-link">B</a>
+  <a href="./modules/api.html" class="sidebar-item-text sidebar-link">Packages API</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data2.html" class="sidebar-item-text sidebar-link">C</a>
+  <a href="./modules/scraping.html" class="sidebar-item-text sidebar-link">Web scraping</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><strong>Import</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><strong>Manipulation</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -289,24 +176,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./import.html" class="sidebar-item-text sidebar-link">Import &amp; export</a>
+  <a href="./modules/manipulation.html" class="sidebar-item-text sidebar-link">R-base</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./api.html" class="sidebar-item-text sidebar-link">Packages API</a>
+  <a href="./modules/datatable.html" class="sidebar-item-text sidebar-link">data.table</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./scraping.html" class="sidebar-item-text sidebar-link">Web scraping</a>
+  <a href="./modules/tidyverse.html" class="sidebar-item-text sidebar-link">tidyverse</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><strong>Manipulation</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><strong>Statistique</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -314,24 +201,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./manipulation.html" class="sidebar-item-text sidebar-link">R-base</a>
+  <a href="./modules/statistique.html" class="sidebar-item-text sidebar-link">Univariée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datatable.html" class="sidebar-item-text sidebar-link">data.table</a>
+  <a href="./modules/statistique2.html" class="sidebar-item-text sidebar-link">Bivariée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tidyverse.html" class="sidebar-item-text sidebar-link">tidyverse</a>
+  <a href="./modules/statistique3.html" class="sidebar-item-text sidebar-link">Multivariée</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true"><strong>Statistique</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true"><strong>Cartographie</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -339,24 +226,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistique.html" class="sidebar-item-text sidebar-link">Univariée</a>
+  <a href="./modules/map.html" class="sidebar-item-text sidebar-link">Cartographie statique</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistique2.html" class="sidebar-item-text sidebar-link">Bivariée</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./statistique3.html" class="sidebar-item-text sidebar-link">Multivariée</a>
+  <a href="./modules/map2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true"><strong>Cartographie</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true"><strong>Géomatique</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -364,19 +246,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./map.html" class="sidebar-item-text sidebar-link">Cartographie statique</a>
+  <a href="./modules/geomatic.html" class="sidebar-item-text sidebar-link">Données vectorielles</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./map2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
+  <a href="./modules/geomatic2.html" class="sidebar-item-text sidebar-link">Données Raster</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true"><strong>Géomatique</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true"><strong>Notebook</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -384,47 +266,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geomatic.html" class="sidebar-item-text sidebar-link">Données vectorielles</a>
+  <a href="./modules/programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geomatic2.html" class="sidebar-item-text sidebar-link">Données Raster</a>
+  <a href="./modules/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/quarto.html" class="sidebar-item-text sidebar-link">Présentation de Quarto</a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true"><strong>Notebook</strong></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
+  <a href="./ressources.html" class="sidebar-item-text sidebar-link"><strong>Ressources annexes</strong></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./quarto.html" class="sidebar-item-text sidebar-link">Présentation de Quarto</a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="img/cist.png" class="img-fluid" style="width:65.0%"></p>
+<p><img src="img/tigr.png" class="img-fluid" style="width:80.0%"></p>
 </div></div>
         
     </div>
@@ -704,8 +571,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./data1.html" class="pagination-link">
-        <span class="nav-page-text">B</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./modules/import.html" class="pagination-link">
+        <span class="nav-page-text">Import &amp; export</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

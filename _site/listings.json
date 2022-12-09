@@ -1,0 +1,23 @@
+[
+  {
+    "listing": "/modules.html",
+    "items": [
+      "/modules/import.html",
+      "/modules/tidyverse.html",
+      "/modules/map2.html",
+      "/modules/statistique.html",
+      "/modules/quarto.html",
+      "/modules/programmation_lettree.html",
+      "/modules/statistique2.html",
+      "/modules/manipulation.html",
+      "/modules/statistique3.html",
+      "/modules/geomatic2.html",
+      "/modules/geomatic.html",
+      "/modules/scraping.html",
+      "/modules/map.html",
+      "/modules/notebook.html",
+      "/modules/api.html",
+      "/modules/datatable.html"
+    ]
+  }
+]
