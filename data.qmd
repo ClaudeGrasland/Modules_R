@@ -1,3 +1,10 @@
 ---
 title: "Les données utilisées"
 ---
+
+
+::: column-margin
+![](img/data.png){width="45%"}
+
+
+:::

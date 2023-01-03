@@ -3,4 +3,6 @@ title: "TIG'R ?"
 ---
 
 
-
+::: column-margin
+![](img/logo.png){width="50%"}
+:::

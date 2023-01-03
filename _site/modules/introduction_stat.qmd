@@ -1,3 +1,0 @@
----
-title: "Statistique avec R"
----

@@ -3,9 +3,8 @@ title: "Ressources annexes"
 subtitle: "Ressources supplémentaires"
 ---
 
-
-::: {.column-margin}
+::: column-margin
 ![](img/rzine.png){width="45%"}
 :::
 
----
+------------------------------------------------------------------------

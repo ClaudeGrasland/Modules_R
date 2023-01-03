@@ -2,7 +2,6 @@
 title: "**T**raitement de l'**I**nformation **G**éographique avec <img src='img/R.png' style='display: inline-block;width:5%;' />"
 ---
 
-
-::: {.column-margin}
-![](img/logo.png){width="60%"}
+::: column-margin
+![](img/logo.png){width="80%"}
 :::

@@ -99,19 +99,19 @@ website:
             text: Présentation de Quarto    
             
       - text: "---"
-
+      
       - text: "**Ressources annexes**"
         href: ressources.qmd
             
   navbar:
     background: "#1a8cab"
     left: 
-      - text: Liste des modules
-        href: modules.qmd
       - text: Données 
         href: data.qmd
       - text: Packages
         href: packages.qmd
+      - text: Liste des modules
+        href: modules.qmd       
       - text: Ressources
         href: ressources.qmd
 
