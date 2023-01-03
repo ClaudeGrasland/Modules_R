@@ -4,6 +4,20 @@
     "href": "modules.html",
     "title": "Tous les modules",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nImport et export de données\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie dynamqiue\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nExemple Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLa programmation lettrée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données Raster\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données vectorielles\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nWeb scraping\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie statique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation d’API\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation d’API\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données vectorielles\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données Raster\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nImport et export de données\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nGéomatique avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nimport de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nNotbook avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie statique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie dynamqiue\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation dOSM\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLa programmation lettrée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nExemple Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nWeb scraping\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+  },
+  {
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Ressources annexes",
+    "section": "",
+    "text": "This page brought to you by https://example.com"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Les données 0",
+    "section": "",
+    "text": "This page brought to you by https://example.com"
   }
 ]

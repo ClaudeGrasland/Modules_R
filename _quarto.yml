@@ -2,8 +2,8 @@ project:
   type: website
 lang: fr
 website:
-  title: "<b>T·I·G·R</b>"
-  favicon: img/cist.png
+  title: "<b>TIG'R</b>"
+  favicon: img/tigr2.png
   twitter-card: true
   site-url: https://ee-cist.github.io/modules_R/
   description: "Modules de formation pour le traitement de l'information géographique avec R"
@@ -14,20 +14,41 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - text: "**Données**"
-        href: data.qmd
+    
+   
+    
+      - text: "**TIG'R ?**"
+        href: presentation.qmd
+        
+      - text: "---"
+      
+      - section: "**Data & Packages**"
+        contents:        
+        
+          - href: data.qmd
+            text: Données utilisées
+          - href: packages.qmd
+            text: Packages utilisés
 
-      - section: "**Import**"
+      - text: "---"
+
+      - section: "**Import de données**"
         contents:
+          - href: modules/introduction_import.qmd
+            text: Introduction
           - href: modules/import.qmd
             text: Import & export
           - href: modules/api.qmd
-            text: Packages API
+            text: Package & API
+          - href: modules/osm.qmd
+            text: OpenStreetMap
           - href: modules/scraping.qmd 
             text: Web scraping
             
       - section: "**Manipulation**"
         contents:
+          - href: modules/introduction_manip.qmd
+            text: Introduction
           - href: modules/manipulation.qmd
             text: R-base
           - href: modules/datatable.qmd
@@ -37,35 +58,47 @@ website:
             
       - section: "**Statistique**"
         contents:
+          - href: modules/introduction_stat.qmd
+            text: Introduction
           - href: modules/statistique.qmd
             text: Univariée
           - href: modules/statistique2.qmd
             text: Bivariée
           - href: modules/statistique3.qmd
             text: Multivariée
-            
-      - section: "**Cartographie**"
-        contents:
-          - href: modules/map.qmd
-            text: Cartographie statique
-          - href: modules/map2.qmd
-            text: Cartographie dynamique   
+          
             
       - section: "**Géomatique**"
         contents:
+          - href: modules/introduction_geomatic.qmd
+            text: Introduction
           - href: modules/geomatic.qmd
             text: Données vectorielles
           - href: modules/geomatic2.qmd
             text: Données Raster
+            
+      - section: "**Cartographie**"
+        contents:
+          - href: modules/introduction_carto.qmd
+            text: Introduction
+          - href: modules/map.qmd
+            text: Cartographie statique
+          - href: modules/map2.qmd
+            text: Cartographie dynamique              
+            
           
       - section: "**Notebook**"
         contents:
+          - href: modules/introduction_quarto.qmd
+            text: Introduction
           - href: modules/programmation_lettree.qmd
             text: La programmation lettrée
           - href: modules/notebook.qmd
             text: Les notebooks  
           - href: modules/quarto.qmd
-            text: Présentation de Quarto        
+            text: Présentation de Quarto    
+            
+      - text: "---"
 
       - text: "**Ressources annexes**"
         href: ressources.qmd
@@ -73,17 +106,19 @@ website:
   navbar:
     background: "#1a8cab"
     left: 
-      - text: Données
-        href: data.qmd
-      - text: Modules R
+      - text: Liste des modules
         href: modules.qmd
-      - text: Ressources annexes
+      - text: Données 
+        href: data.qmd
+      - text: Packages
+        href: packages.qmd
+      - text: Ressources
         href: ressources.qmd
-        
+
         
     right:    
       - href: about.qmd
-        text: Á propos
+        text: Crédits
         
     tools:
       - icon: github
@@ -92,11 +127,10 @@ website:
         href: https://github.com/EE-CIST/modules_R
         
 
-            
-
   page-footer:  Ecole d'été CIST·2023 - UMR8504 Géographie-Cités - [![licensebuttons by-sa](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0)
-  margin-header: |
-    ![](img/pawprint.jpg){width="80%"}
+  # margin-header: |
+  #   ![](img/logo.png){width="90%"}
+  
 format:
   html:
     theme: 

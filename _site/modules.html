@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>T·I·G·R - Tous les modules</title>
+<title>TIG’R - Tous les modules</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./img/cist.png" rel="icon" type="image/png">
+<link href="./img/tigr2.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="T·I·G·R - Tous les modules">
+<meta name="twitter:title" content="TIG’R - Tous les modules">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><b>T·I·G·R</b></span>
+    <span class="navbar-title"><b>TIG’R</b></span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -118,25 +118,29 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./data.html" aria-current="page">
+    <a class="nav-link active" href="./modules.html" aria-current="page">
+ <span class="menu-text">Liste des modules</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data.html">
  <span class="menu-text">Données</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./modules.html">
- <span class="menu-text">Modules R</span></a>
+    <a class="nav-link" href="./packages.html">
+ <span class="menu-text">Packages</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ressources.html">
- <span class="menu-text">Ressources annexes</span></a>
+ <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html">
- <span class="menu-text">Á propos</span></a>
+ <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/EE-CIST/modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/EE-CIST/modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -169,12 +173,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link"><strong>Données</strong></a>
+  <a href="./presentation.html" class="sidebar-item-text sidebar-link"><strong>TIG’R ?</strong></a>
   </div>
 </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><strong>Import</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><strong>Data &amp; Packages</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -182,12 +187,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">Données utilisées</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./packages.html" class="sidebar-item-text sidebar-link">Packages utilisés</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><strong>Import de données</strong></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_import.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./modules/import.html" class="sidebar-item-text sidebar-link">Import &amp; export</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/api.html" class="sidebar-item-text sidebar-link">Packages API</a>
+  <a href="./modules/api.html" class="sidebar-item-text sidebar-link">Package &amp; API</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/osm.html" class="sidebar-item-text sidebar-link">OpenStreetMap</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -199,12 +235,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><strong>Manipulation</strong></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><strong>Manipulation</strong></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_manip.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules/manipulation.html" class="sidebar-item-text sidebar-link">R-base</a>
@@ -224,12 +265,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><strong>Statistique</strong></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true"><strong>Statistique</strong></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_stat.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules/statistique.html" class="sidebar-item-text sidebar-link">Univariée</a>
@@ -249,32 +295,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true"><strong>Cartographie</strong></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./modules/map.html" class="sidebar-item-text sidebar-link">Cartographie statique</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./modules/map2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true"><strong>Géomatique</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_geomatic.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules/geomatic.html" class="sidebar-item-text sidebar-link">Données vectorielles</a>
@@ -289,12 +320,42 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true"><strong>Notebook</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true"><strong>Cartographie</strong></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_carto.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/map.html" class="sidebar-item-text sidebar-link">Cartographie statique</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/map2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true"><strong>Notebook</strong></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/introduction_quarto.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules/programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
@@ -312,6 +373,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ressources.html" class="sidebar-item-text sidebar-link"><strong>Ressources annexes</strong></a>
@@ -321,11 +383,9 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="img/pawprint.jpg" class="img-fluid" style="width:80.0%"></p>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(16)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(23)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
@@ -371,259 +431,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1670504291712" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/import.html">
-<h3 class="no-anchor listing-title">
-Import et export de données
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/import.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1670507338953" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/tidyverse.html">
-<h3 class="no-anchor listing-title">
-Utilisation du tidyverse
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/tidyverse.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1670507268534" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/map2.html">
-<h3 class="no-anchor listing-title">
-Cartographie dynamqiue
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/map2.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1670504754029" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/statistique.html">
-<h3 class="no-anchor listing-title">
-Statistique descriptive univariée
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/statistique.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1670507717994" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/quarto.html">
-<h3 class="no-anchor listing-title">
-Exemple Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/quarto.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1670507135495" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/programmation_lettree.html">
-<h3 class="no-anchor listing-title">
-La programmation lettrée
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/programmation_lettree.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1670504776884" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/statistique2.html">
-<h3 class="no-anchor listing-title">
-Statistique descriptive bivariée
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/statistique2.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1670504680001" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/manipulation.html">
-<h3 class="no-anchor listing-title">
-Manipulation en R-base
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/manipulation.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1670504790660" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/statistique3.html">
-<h3 class="no-anchor listing-title">
-Statistique descriptive multivariée
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/statistique3.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1670507082171" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/geomatic2.html">
-<h3 class="no-anchor listing-title">
-Manipulation de données Raster
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/geomatic2.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1670507098231" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/geomatic.html">
-<h3 class="no-anchor listing-title">
-Manipulation de données vectorielles
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/geomatic.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1670504478591" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/scraping.html">
-<h3 class="no-anchor listing-title">
-Web scraping
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/scraping.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1670507256706" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/map.html">
-<h3 class="no-anchor listing-title">
-Cartographie statique
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/map.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1670507152787" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="./modules/notebook.html">
-<h3 class="no-anchor listing-title">
-Les notebooks (exécutables)
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./modules/notebook.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1670504404627" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1672679514146" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="./modules/api.html">
 <h3 class="no-anchor listing-title">
@@ -641,7 +449,7 @@ Utilisation d’API
 <a href="./modules/api.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1670504693165" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1672679514147" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="./modules/datatable.html">
 <h3 class="no-anchor listing-title">
@@ -658,6 +466,384 @@ Utilisation de data.table
 </div>
 <div class="metadata">
 <a href="./modules/datatable.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1672679514148" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/geomatic.html">
+<h3 class="no-anchor listing-title">
+Manipulation de données vectorielles
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/geomatic.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1672679514149" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/geomatic2.html">
+<h3 class="no-anchor listing-title">
+Manipulation de données Raster
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/geomatic2.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1672679514155" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/import.html">
+<h3 class="no-anchor listing-title">
+Import et export de données
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/import.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1672692609633" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_carto.html">
+<h3 class="no-anchor listing-title">
+Cartographie avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_carto.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1672692576801" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_geomatic.html">
+<h3 class="no-anchor listing-title">
+Géomatique avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_geomatic.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1672692392073" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_import.html">
+<h3 class="no-anchor listing-title">
+import de données avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_import.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1672692528615" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_manip.html">
+<h3 class="no-anchor listing-title">
+Manipulation de données avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_manip.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1672693009951" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_quarto.html">
+<h3 class="no-anchor listing-title">
+Notbook avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_quarto.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1672692548844" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/introduction_stat.html">
+<h3 class="no-anchor listing-title">
+Statistique avec R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/introduction_stat.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1672679514156" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/manipulation.html">
+<h3 class="no-anchor listing-title">
+Manipulation en R-base
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/manipulation.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1672679514157" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/map.html">
+<h3 class="no-anchor listing-title">
+Cartographie statique
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/map.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1672679514158" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/map2.html">
+<h3 class="no-anchor listing-title">
+Cartographie dynamqiue
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/map2.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1672679514160" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/notebook.html">
+<h3 class="no-anchor listing-title">
+Les notebooks (exécutables)
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/notebook.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1672692909273" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/osm.html">
+<h3 class="no-anchor listing-title">
+Utilisation dOSM
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/osm.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1672679514161" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/programmation_lettree.html">
+<h3 class="no-anchor listing-title">
+La programmation lettrée
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/programmation_lettree.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-listing-file-modified-sort="1672679514162" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/quarto.html">
+<h3 class="no-anchor listing-title">
+Exemple Quarto
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/quarto.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="18" data-listing-file-modified-sort="1672679514163" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/scraping.html">
+<h3 class="no-anchor listing-title">
+Web scraping
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/scraping.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1672679514164" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/statistique.html">
+<h3 class="no-anchor listing-title">
+Statistique descriptive univariée
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/statistique.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1672679514164" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/statistique2.html">
+<h3 class="no-anchor listing-title">
+Statistique descriptive bivariée
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/statistique2.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1672679514165" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/statistique3.html">
+<h3 class="no-anchor listing-title">
+Statistique descriptive multivariée
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/statistique3.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1672679514166" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./modules/tidyverse.html">
+<h3 class="no-anchor listing-title">
+Utilisation du tidyverse
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./modules/tidyverse.html"> </a>
 </div>
 </div>
 </div>

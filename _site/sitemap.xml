@@ -1,87 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ee-cist.github.io/modules_R/about.html</loc>
+    <lastmod>2023-01-02T21:01:57.296Z</lastmod>
+  </url>
+  <url>
     <loc>https://ee-cist.github.io/modules_R/data.html</loc>
-    <lastmod>2022-12-09T16:08:49.487Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/import.html</loc>
-    <lastmod>2022-12-09T16:08:49.831Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/tidyverse.html</loc>
-    <lastmod>2022-12-09T16:08:50.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/map2.html</loc>
-    <lastmod>2022-12-09T16:08:50.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/statistique.html</loc>
-    <lastmod>2022-12-09T16:08:50.803Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/quarto.html</loc>
-    <lastmod>2022-12-09T16:08:51.107Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/programmation_lettree.html</loc>
-    <lastmod>2022-12-09T16:08:51.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/statistique2.html</loc>
-    <lastmod>2022-12-09T16:08:51.735Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/manipulation.html</loc>
-    <lastmod>2022-12-09T16:08:52.051Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/statistique3.html</loc>
-    <lastmod>2022-12-09T16:08:52.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/geomatic2.html</loc>
-    <lastmod>2022-12-09T16:08:52.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/geomatic.html</loc>
-    <lastmod>2022-12-09T16:08:52.991Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/scraping.html</loc>
-    <lastmod>2022-12-09T16:08:53.311Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/map.html</loc>
-    <lastmod>2022-12-09T16:08:53.623Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ee-cist.github.io/modules_R/modules/notebook.html</loc>
-    <lastmod>2022-12-09T16:08:53.955Z</lastmod>
+    <lastmod>2023-01-02T22:14:14.578Z</lastmod>
   </url>
   <url>
     <loc>https://ee-cist.github.io/modules_R/modules/api.html</loc>
-    <lastmod>2022-12-09T16:08:54.259Z</lastmod>
+    <lastmod>2023-01-02T20:00:28.389Z</lastmod>
   </url>
   <url>
     <loc>https://ee-cist.github.io/modules_R/modules/datatable.html</loc>
-    <lastmod>2022-12-09T16:08:54.599Z</lastmod>
+    <lastmod>2023-01-02T19:35:41.995Z</lastmod>
   </url>
   <url>
-    <loc>https://ee-cist.github.io/modules_R/quarto.html</loc>
-    <lastmod>2022-12-09T16:08:54.903Z</lastmod>
+    <loc>https://ee-cist.github.io/modules_R/modules/geomatic.html</loc>
+    <lastmod>2023-01-02T20:57:31.262Z</lastmod>
   </url>
   <url>
-    <loc>https://ee-cist.github.io/modules_R/ressources.html</loc>
-    <lastmod>2022-12-09T16:08:55.203Z</lastmod>
+    <loc>https://ee-cist.github.io/modules_R/modules/geomatic2.html</loc>
+    <lastmod>2023-01-02T17:15:11.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/import.html</loc>
+    <lastmod>2023-01-02T20:57:15.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/manipulation.html</loc>
+    <lastmod>2023-01-02T20:57:17.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/map.html</loc>
+    <lastmod>2023-01-02T20:57:38.639Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/map2.html</loc>
+    <lastmod>2023-01-02T17:20:34.788Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/notebook.html</loc>
+    <lastmod>2023-01-02T17:15:14.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/programmation_lettree.html</loc>
+    <lastmod>2023-01-02T20:57:43.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/quarto.html</loc>
+    <lastmod>2023-01-02T17:20:10.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/scraping.html</loc>
+    <lastmod>2023-01-02T19:23:11.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/statistique.html</loc>
+    <lastmod>2023-01-02T20:57:27.788Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/statistique2.html</loc>
+    <lastmod>2023-01-02T20:57:29.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/statistique3.html</loc>
+    <lastmod>2023-01-02T17:15:17.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/tidyverse.html</loc>
+    <lastmod>2023-01-02T17:15:52.235Z</lastmod>
   </url>
   <url>
     <loc>https://ee-cist.github.io/modules_R/modules.html</loc>
-    <lastmod>2022-12-09T16:08:55.647Z</lastmod>
+    <lastmod>2023-01-02T22:14:10.171Z</lastmod>
   </url>
   <url>
-    <loc>https://ee-cist.github.io/modules_R/about.html</loc>
-    <lastmod>2022-12-09T16:08:55.943Z</lastmod>
+    <loc>https://ee-cist.github.io/modules_R/quarto.html</loc>
+    <lastmod>2023-01-02T17:15:19.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/ressources.html</loc>
+    <lastmod>2023-01-02T22:14:22.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/index.html</loc>
+    <lastmod>2023-01-02T22:12:03.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/presentation.html</loc>
+    <lastmod>2023-01-02T22:12:47.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/packages.html</loc>
+    <lastmod>2023-01-02T22:14:17.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_quarto.html</loc>
+    <lastmod>2023-01-02T20:52:32.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_carto.html</loc>
+    <lastmod>2023-01-02T20:51:02.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_geomatic.html</loc>
+    <lastmod>2023-01-02T20:51:03.002Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_import.html</loc>
+    <lastmod>2023-01-02T20:51:03.665Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_manip.html</loc>
+    <lastmod>2023-01-02T20:51:04.215Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/Introduction_stat.html</loc>
+    <lastmod>2023-01-02T20:51:04.754Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_quarto.html</loc>
+    <lastmod>2023-01-02T21:00:23.595Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/osm.html</loc>
+    <lastmod>2023-01-02T20:56:16.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_import.html</loc>
+    <lastmod>2023-01-02T21:03:35.913Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_manip.html</loc>
+    <lastmod>2023-01-02T20:57:16.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_stat.html</loc>
+    <lastmod>2023-01-02T20:57:25.460Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_geomatic.html</loc>
+    <lastmod>2023-01-02T20:57:30.172Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ee-cist.github.io/modules_R/modules/introduction_carto.html</loc>
+    <lastmod>2023-01-02T20:57:37.468Z</lastmod>
   </url>
 </urlset>
