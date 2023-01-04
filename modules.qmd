@@ -1,12 +1,12 @@
 ---
 title: "Tous les modules"
 listing: 
-  contents : modules
+  contents : 
+   - "modules/*.qmd"
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: true
   filter-ui: true
 page-layout: full
 ---
-

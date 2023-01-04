@@ -3,5 +3,5 @@ title: "**T**raitement de l'**I**nformation **G**éographique avec <img src='img
 ---
 
 ::: column-margin
-![](img/logo.png){width="80%"}
+<a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode">![](img/logo.png){width="80%"}</a>
 :::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TIG’R - Utilisation du tidyverse</title>
+<title>TIG’R - Statistique descriptive bivariée</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../modules/introduction_stat.html" rel="next">
-<link href="../modules/datatable.html" rel="prev">
-<link href="../img/tigr2.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/tigr2.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -65,8 +63,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="TIG’R - Utilisation du tidyverse">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="TIG’R - Statistique descriptive bivariée">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -78,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title"><b>TIG’R</b></span>
     </a>
   </div>
@@ -88,25 +86,25 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../data.html" aria-current="page">
+    <a class="nav-link active" href="../../data.html" aria-current="page">
  <span class="menu-text">Données</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../packages.html">
+    <a class="nav-link" href="../../packages.html">
  <span class="menu-text">Packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../modules.html">
+    <a class="nav-link" href="../../modules.html">
  <span class="menu-text">Liste des modules</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html">
+    <a class="nav-link" href="../../ressources.html">
  <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
@@ -123,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Utilisation du tidyverse</h1>
+      <h1 class="quarto-secondary-nav-title">Statistique descriptive bivariée</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../presentation.html" class="sidebar-item-text sidebar-link"><strong>TIG’R ?</strong></a>
+  <a href="../../presentation.html" class="sidebar-item-text sidebar-link"><strong>TIG’R ?</strong></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -157,12 +155,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data.html" class="sidebar-item-text sidebar-link">Données utilisées</a>
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">Données utilisées</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../packages.html" class="sidebar-item-text sidebar-link">Packages utilisés</a>
+  <a href="../../packages.html" class="sidebar-item-text sidebar-link">Packages utilisés</a>
   </div>
 </li>
       </ul>
@@ -178,27 +176,27 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_import.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_import.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/import.html" class="sidebar-item-text sidebar-link">Import &amp; export</a>
+  <a href="../../modules/import.html" class="sidebar-item-text sidebar-link">Import &amp; export</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/api.html" class="sidebar-item-text sidebar-link">Package &amp; API</a>
+  <a href="../../modules/api.qmd" class="sidebar-item-text sidebar-link">Package &amp; API</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/osm.html" class="sidebar-item-text sidebar-link">OpenStreetMap</a>
+  <a href="../../modules/osm.qmd" class="sidebar-item-text sidebar-link">OpenStreetMap</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/scraping.html" class="sidebar-item-text sidebar-link">Web scraping</a>
+  <a href="../../modules/scraping.qmd" class="sidebar-item-text sidebar-link">Web scraping</a>
   </div>
 </li>
       </ul>
@@ -213,22 +211,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_manip.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_manip.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/manipulation.html" class="sidebar-item-text sidebar-link">R-base</a>
+  <a href="../../modules/manipulation.html" class="sidebar-item-text sidebar-link">R-base</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/datatable.html" class="sidebar-item-text sidebar-link">data.table</a>
+  <a href="../../modules/datatable.qmd" class="sidebar-item-text sidebar-link">data.table</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/tidyverse.html" class="sidebar-item-text sidebar-link active">tidyverse</a>
+  <a href="../../modules/tidyverse.qmd" class="sidebar-item-text sidebar-link">tidyverse</a>
   </div>
 </li>
       </ul>
@@ -243,22 +241,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_stat.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_stat.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/statistique.html" class="sidebar-item-text sidebar-link">Univariée</a>
+  <a href="../../modules/statistique.html" class="sidebar-item-text sidebar-link">Univariée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/statistique2.html" class="sidebar-item-text sidebar-link">Bivariée</a>
+  <a href="../../modules/statistique2.qmd" class="sidebar-item-text sidebar-link">Bivariée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/statistique3.html" class="sidebar-item-text sidebar-link">Multivariée</a>
+  <a href="../../modules/statistique3.qmd" class="sidebar-item-text sidebar-link">Multivariée</a>
   </div>
 </li>
       </ul>
@@ -273,17 +271,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_geomatic.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_geomatic.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/geomatic.html" class="sidebar-item-text sidebar-link">Données vectorielles</a>
+  <a href="../../modules/geomatic.qmd" class="sidebar-item-text sidebar-link">Données vectorielles</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/geomatic2.html" class="sidebar-item-text sidebar-link">Données Raster</a>
+  <a href="../../modules/geomatic2.qmd" class="sidebar-item-text sidebar-link">Données Raster</a>
   </div>
 </li>
       </ul>
@@ -298,17 +296,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_carto.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_carto.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/map.html" class="sidebar-item-text sidebar-link">Cartographie statique</a>
+  <a href="../../modules/map.qmd" class="sidebar-item-text sidebar-link">Cartographie statique</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/map2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
+  <a href="../../modules/map2.qmd" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
   </div>
 </li>
       </ul>
@@ -323,22 +321,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/introduction_quarto.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../modules/introduction_quarto.qmd" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
+  <a href="../../modules/programmation_lettree.qmd" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
+  <a href="../../modules/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/quarto.html" class="sidebar-item-text sidebar-link">Présentation de Quarto</a>
+  <a href="../../modules/quarto.qmd" class="sidebar-item-text sidebar-link">Présentation de Quarto</a>
   </div>
 </li>
       </ul>
@@ -346,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ressources.html" class="sidebar-item-text sidebar-link"><strong>Ressources annexes</strong></a>
+  <a href="../../ressources.html" class="sidebar-item-text sidebar-link"><strong>Ressources annexes</strong></a>
   </div>
 </li>
     </ul>
@@ -361,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Utilisation du tidyverse</h1>
+<h1 class="title d-none d-lg-block">Statistique descriptive bivariée</h1>
 </div>
 
 
@@ -628,19 +626,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-      <a href="../modules/datatable.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">data.table</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../modules/introduction_stat.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

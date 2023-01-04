@@ -1,3 +1,11 @@
 ---
-title: "Manipulation en  R-base"
+title: "Manipulation"
+listing: 
+  contents : manipulation
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
 ---

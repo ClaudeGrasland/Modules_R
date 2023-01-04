@@ -1,7 +1,7 @@
 ---
-title: "Statistique"
+title: "Cartographie"
 listing: 
-  contents : statistique
+  contents : cartographie
   sort: "date desc"
   type: default
   categories: true

@@ -10,7 +10,7 @@ website:
   page-navigation: true
   search:
     location: sidebar
-    
+
   sidebar:
     style: "docked"
     contents:

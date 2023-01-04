@@ -1,7 +1,7 @@
 ---
-title: "Statistique"
+title: "Géomatique"
 listing: 
-  contents : statistique
+  contents : geomatique
   sort: "date desc"
   type: default
   categories: true
