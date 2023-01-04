@@ -1,5 +1,6 @@
 ---
 title: "Statistique"
+image : img/stat.png
 listing: 
   contents : statistique
   sort: "date desc"

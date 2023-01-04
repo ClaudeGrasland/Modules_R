@@ -1,5 +1,6 @@
 ---
 title: "Manipulation"
+image : img/data.png
 listing: 
   contents : manipulation
   sort: "date desc"

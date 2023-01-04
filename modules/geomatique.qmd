@@ -1,5 +1,6 @@
 ---
 title: "Géomatique"
+image : img/spatial.png
 listing: 
   contents : geomatique
   sort: "date desc"

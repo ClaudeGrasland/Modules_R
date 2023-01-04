@@ -1,5 +1,6 @@
 ---
 title: "Import"
+image : img/import.png
 listing: 
   contents : import
   sort: "date desc"

@@ -3,7 +3,6 @@
     "listing": "/modules/cartographie.html",
     "items": [
       "/modules/cartographie/introduction_carto.html",
-      "/modules/cartographie/introduction_geomatic.html",
       "/modules/cartographie/map.html",
       "/modules/cartographie/map2.html"
     ]
@@ -12,7 +11,8 @@
     "listing": "/modules/geomatique.html",
     "items": [
       "/modules/geomatique/geomatic.html",
-      "/modules/geomatique/geomatic2.html"
+      "/modules/geomatique/geomatic2.html",
+      "/modules/geomatique/introduction_geomatic.html"
     ]
   },
   {
@@ -45,7 +45,12 @@
   },
   {
     "listing": "/modules/statistique.html",
-    "items": []
+    "items": [
+      "/modules/statistique/introduction_stat.html",
+      "/modules/statistique/statistique.html",
+      "/modules/statistique/statistique2.html",
+      "/modules/statistique/statistique3.html"
+    ]
   },
   {
     "listing": "/modules.html",

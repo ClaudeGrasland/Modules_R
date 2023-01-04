@@ -1,1 +1,1 @@
-Sitemap: https://ee-cist.github.io/modules_R/sitemap.xml
+Sitemap: https://tigr.netlify.app/sitemap.xml

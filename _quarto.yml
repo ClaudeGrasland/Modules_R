@@ -5,7 +5,7 @@ website:
   title: "<b>TIG'R</b>"
   favicon: img/tigr2.png
   twitter-card: true
-  site-url: https://ee-cist.github.io/modules_R/
+  site-url: https://tigr.netlify.app/
   description: "Modules de formation pour le traitement de l'information géographique avec R"
   page-navigation: true
   search:
@@ -14,8 +14,6 @@ website:
   sidebar:
     style: "docked"
     contents:
-    
-   
     
       - text: "**TIG'R ?**"
         href: presentation.qmd
@@ -34,68 +32,66 @@ website:
 
       - section: "**Import de données**"
         contents:
-          - href: modules/introduction_import.qmd
+          - href: modules/import/introduction_import.qmd
             text: Introduction
-          - href: modules/import.qmd
+          - href: modules/import/import.qmd
             text: Import & export
-          - href: modules/api.qmd
+          - href: modules/import/api.qmd
             text: Package & API
-          - href: modules/osm.qmd
+          - href: modules/import/osm.qmd
             text: OpenStreetMap
-          - href: modules/scraping.qmd 
+          - href: modules/import/scraping.qmd 
             text: Web scraping
             
       - section: "**Manipulation**"
         contents:
-          - href: modules/introduction_manip.qmd
+          - href: modules/manipulation/introduction_manip.qmd
             text: Introduction
-          - href: modules/manipulation.qmd
+          - href: modules/manipulation/manipulation.qmd
             text: R-base
-          - href: modules/datatable.qmd
+          - href: modules/manipulation/datatable.qmd
             text: data.table
-          - href: modules/tidyverse.qmd 
+          - href: modules/manipulation/tidyverse.qmd 
             text: tidyverse
             
       - section: "**Statistique**"
         contents:
-          - href: modules/introduction_stat.qmd
+          - href: modules/statistique/introduction_stat.qmd
             text: Introduction
-          - href: modules/statistique.qmd
+          - href: modules/statistique/statistique.qmd
             text: Univariée
-          - href: modules/statistique2.qmd
+          - href: modules/statistique/statistique2.qmd
             text: Bivariée
-          - href: modules/statistique3.qmd
+          - href: modules/statistique/statistique3.qmd
             text: Multivariée
           
-            
       - section: "**Géomatique**"
         contents:
-          - href: modules/introduction_geomatic.qmd
+          - href: modules/geomatique/introduction_geomatic.qmd
             text: Introduction
-          - href: modules/geomatic.qmd
+          - href: modules/geomatique/geomatic.qmd
             text: Données vectorielles
-          - href: modules/geomatic2.qmd
+          - href: modules/geomatique/geomatic2.qmd
             text: Données Raster
             
       - section: "**Cartographie**"
         contents:
-          - href: modules/introduction_carto.qmd
+          - href: modules/cartographie/introduction_carto.qmd
             text: Introduction
-          - href: modules/map.qmd
+          - href: modules/cartographie/map.qmd
             text: Cartographie statique
-          - href: modules/map2.qmd
+          - href: modules/cartographie/map2.qmd
             text: Cartographie dynamique              
             
-          
       - section: "**Notebook**"
         contents:
-          - href: modules/introduction_quarto.qmd
+          - href: modules/notebook/introduction_quarto.qmd
             text: Introduction
-          - href: modules/programmation_lettree.qmd
+          - href: modules/notebook/programmation_lettree.qmd
             text: La programmation lettrée
-          - href: modules/notebook.qmd
+          - href: modules/notebook/notebook.qmd
             text: Les notebooks  
-          - href: modules/quarto.qmd
+          - href: modules/notebook/quarto.qmd
             text: Présentation de Quarto    
             
       - text: "---"
@@ -104,8 +100,10 @@ website:
         href: ressources.qmd
             
   navbar:
-    background: "#1a8cab"
+    background: "#2a8cbe"
     left: 
+      - text: Présentation 
+        href: presentation.qmd
       - text: Données 
         href: data.qmd
       - text: Packages
@@ -124,7 +122,7 @@ website:
       - icon: github
         aria-label: GitHub
         text: GitHub
-        href: https://github.com/EE-CIST/modules_R
+        href: https://github.com/HuguesPecout/Modules_R
         
 
   page-footer:  Ecole d'été CIST·2023 - UMR8504 Géographie-Cités - [![licensebuttons by-sa](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0)

@@ -1,5 +1,6 @@
 ---
 title: "Notebook"
+image : img/nb.png
 listing: 
   contents : notebook
   sort: "date desc"

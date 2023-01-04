@@ -5,6 +5,7 @@ listing:
    - "modules/*.qmd"
   sort: "date desc"
   type: grid
+  image-height: 200px
   categories: true
   sort-ui: true
   filter-ui: true
