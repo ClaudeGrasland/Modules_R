@@ -10,3 +10,10 @@ listing:
   filter-ui: true
 page-layout: full
 ---
+
+
+::: column-margin
+![](img/nb.png){width="50%"}
+:::
+
+[Tous les modules](/modules.qmd)

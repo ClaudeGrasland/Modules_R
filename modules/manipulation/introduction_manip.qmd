@@ -1,3 +1,0 @@
----
-title: "Manipulation de données avec R"
----

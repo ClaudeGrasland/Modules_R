@@ -15,7 +15,7 @@ website:
     style: "docked"
     contents:
     
-      - text: "**TIG'R ?**"
+      - text: "**Introduction**"
         href: presentation.qmd
         
       - text: "---"
@@ -32,7 +32,7 @@ website:
 
       - section: "**Import de données**"
         contents:
-          - href: modules/import/introduction_import.qmd
+          - href: modules/import.qmd
             text: Introduction
           - href: modules/import/import.qmd
             text: Import & export
@@ -45,7 +45,7 @@ website:
             
       - section: "**Manipulation**"
         contents:
-          - href: modules/manipulation/introduction_manip.qmd
+          - href: modules/manipulation.qmd
             text: Introduction
           - href: modules/manipulation/manipulation.qmd
             text: R-base
@@ -54,45 +54,56 @@ website:
           - href: modules/manipulation/tidyverse.qmd 
             text: tidyverse
             
+      - section: "**Graphique**"
+        contents:
+          - href: modules/graphique.qmd
+            text: Introduction
+          - href: modules/graphique/Rbase_graph.qmd
+            text: Graphique R-base
+          - href: modules/graphique/ggplot2.qmd
+            text: Graphique avec ggplot2
+          - href: modules/graphique/package_graph.qmd 
+            text: Divers
+            
       - section: "**Statistique**"
         contents:
-          - href: modules/statistique/introduction_stat.qmd
+          - href: modules/statistique.qmd
             text: Introduction
-          - href: modules/statistique/statistique.qmd
+          - href: modules/statistique/statistique_uni.qmd
             text: Univariée
-          - href: modules/statistique/statistique2.qmd
+          - href: modules/statistique/statistique_bi.qmd
             text: Bivariée
-          - href: modules/statistique/statistique3.qmd
+          - href: modules/statistique/statistique_multi.qmd
             text: Multivariée
           
       - section: "**Géomatique**"
         contents:
-          - href: modules/geomatique/introduction_geomatic.qmd
+          - href: modules/geomatique.qmd
             text: Introduction
-          - href: modules/geomatique/geomatic.qmd
+          - href: modules/geomatique/geomatic_vector.qmd
             text: Données vectorielles
-          - href: modules/geomatique/geomatic2.qmd
+          - href: modules/geomatique/geomatic_raster.qmd
             text: Données Raster
             
       - section: "**Cartographie**"
         contents:
-          - href: modules/cartographie/introduction_carto.qmd
+          - href: modules/cartographie.qmd
             text: Introduction
-          - href: modules/cartographie/map.qmd
+          - href: modules/cartographie/map_sf.qmd
             text: Cartographie statique
-          - href: modules/cartographie/map2.qmd
+          - href: modules/cartographie/map_2.qmd
             text: Cartographie dynamique              
             
       - section: "**Notebook**"
         contents:
-          - href: modules/notebook/introduction_quarto.qmd
+          - href: modules/notebook.qmd
             text: Introduction
           - href: modules/notebook/programmation_lettree.qmd
             text: La programmation lettrée
           - href: modules/notebook/notebook.qmd
             text: Les notebooks  
           - href: modules/notebook/quarto.qmd
-            text: Présentation de Quarto    
+            text: Exemple Quarto    
             
       - text: "---"
       
@@ -102,15 +113,15 @@ website:
   navbar:
     background: "#2a8cbe"
     left: 
-      - text: Présentation 
+      - text: Introduction 
         href: presentation.qmd
       - text: Données 
         href: data.qmd
       - text: Packages
         href: packages.qmd
-      - text: Liste des modules
+      - text: Modules
         href: modules.qmd       
-      - text: Ressources
+      - text: Ressources externes
         href: ressources.qmd
 
         

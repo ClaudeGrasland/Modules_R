@@ -3,11 +3,15 @@ title: "Tous les modules"
 listing: 
   contents : 
    - "modules/*.qmd"
-  sort: "date desc"
+  sort: "ordre asc"
   type: grid
-  image-height: 200px
+  image-height: 100%
   categories: true
-  sort-ui: true
-  filter-ui: true
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 ---
+
+::: column-margin
+![](img/modules.png){width="50%"}
+:::

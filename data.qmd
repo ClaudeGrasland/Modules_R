@@ -1,10 +1,112 @@
 ---
-title: "Les données utilisées"
+title: "Données"
+subtitle: "Présentation et téléchargement des données utilisés dans les modules"
 ---
 
+<!-- ::: column-margin -->
+<!-- ![](img/data.png){width="35%"} -->
+<!-- ::: -->
 
-::: column-margin
-![](img/data.png){width="45%"}
 
 
-:::
+### Intro
+
+
+### Download
+
+#### Metadata 
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+# install.packages("DT")
+library(DT)
+
+
+
+
+metadata <- read.csv2(file = "data/afrika_don_meta.csv")
+
+datatable(metadata , options = list(
+  pageLength = 10, autoWidth = TRUE
+))
+
+```
+
+
+
+# data
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+data <- read.csv2(file = "data/afrika_don.csv")
+datatable(data , filter = 'top', options = list(
+  pageLength =5, autoWidth = TRUE
+))
+
+
+```
+
+### Distribution
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+
+str(data)
+
+library(vtable)
+
+st(data[,3:20], summ=c('propNA(x)', 'mean(x)',
+                'median(x)', 'min(x)', 'max(x)', 
+                'sd(x)'),
+         summ.names=c('% NA', 'moy',
+                'med', 'min', 'max', 
+                'sd'), title='')
+
+# 
+# st(data[,21], summ=c('propNA(x)'),
+#          summ.names=c('% NA'), 
+#          title='')
+
+
+# data[,22]<- as.logical(data[,22])
+# data[,23]<- as.logical(data[,23])
+# data[,24]<- as.logical(data[,24])
+# data[,25]<- as.logical(data[,25])
+# data[,26]<- as.logical(data[,26])
+st(data[,22:26], summ=c('propNA(x)', 'mean(x)',
+                'median(x)', 'min(x)', 'max(x)', 
+                'sd(x)'),
+         summ.names=c('% NA', 'moy',
+                'med', 'min', 'max', 
+                'sd'), title='')
+
+```
+
+
+
+```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, out.width="100%"}
+par(mfrow=c(2,2))
+
+for (i in 4:ncol(data)){
+  if (is.numeric( data[,i])){
+    
+    if(length(unique(data[,i]))==2){
+      
+      barplot(table(as.logical(data[,i])), main = metadata[i,2], xlab = colnames(data)[i])
+      
+    } else {
+      
+  hist(data[,i], main = metadata[i,2], xlab = colnames(data)[i])
+  abline(v = summary(data[,i])[2], lwd = 1, col="green4" )
+  abline(v = summary(data[,i])[3], lwd = 1, col="green4")
+  abline(v = summary(data[,i])[5], lwd = 1, col="green4")
+  abline(v = summary(data[,i])[4], col="red", lwd=2)
+  }
+    } else {
+      
+      
+    barplot(table(data[,i]), main = metadata[i,2], xlab = colnames(data)[i])
+  }
+}
+
+
+```

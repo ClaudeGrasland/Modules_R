@@ -1,51 +1,79 @@
 [
   {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Données",
+    "section": "",
+    "text": "Intro\n\n\nDownload\n\nMetadata\n\n\n\n\n\n\n\n\n\n\ndata\n\n\n\n\n\n\n\n\nDistribution\n\n\n'data.frame':   49 obs. of  26 variables:\n $ iso3  : chr  \"AGO\" \"BDI\" \"BEN\" \"BFA\" ...\n $ name  : chr  \"Angola\" \"Burundi\" \"Benin\" \"Burkina Faso\" ...\n $ nom   : chr  \"Angola\" \"Burundi\" \"Bénin\" \"Burkina Faso\" ...\n $ POP   : num  31.32 11.35 11.64 20.04 2.28 ...\n $ PIB   : num  6794 757 3224 2161 17700 ...\n $ IDH   : num  0.582 0.432 0.543 0.448 0.733 ...\n $ ADOFEC: num  152.6 56.2 87.4 105.7 46.3 ...\n $ CO2HAB: num  1.121 0.0467 0.6225 0.1974 2.9574 ...\n $ EMPAGR: num  50.4 92 38.9 25.6 20.9 ...\n $ EMPSER: num  41.4 6.5 42.1 40.9 61 ...\n $ INTERN: num  14.34 2.66 20 16 47 ...\n $ ESPVIE: num  61 61.4 61.6 61.4 69.4 ...\n $ AGEMED: num  16.7 17.3 18.8 17.6 24 ...\n $ TELMOB: num  43.1 56.5 82.4 97.9 150 ...\n $ MORINF: num  51.6 41 60.5 49 30 ...\n $ TXMIGR: num  0.211 0.181 -0.176 -1.282 1.341 ...\n $ DVIEUX: num  4.32 4.36 5.99 4.56 6.95 ...\n $ TUBERC: int  355 111 56 48 275 540 142 186 321 375 ...\n $ URBANI: num  65.8 13.2 47.6 29.7 69.8 ...\n $ DJEUNE: num  91.5 87 77.8 84.9 54.9 ...\n $ SUBREG: chr  \"Middle Africa\" \"Eastern Africa\" \"Western Africa\" \"Western Africa\" ...\n $ LOCKED: int  0 1 0 1 1 1 0 0 0 0 ...\n $ COLFRA: int  0 0 1 1 0 1 1 1 0 1 ...\n $ COLGBR: int  0 0 0 0 1 0 0 0 0 0 ...\n $ LANGFR: int  0 1 1 1 0 1 1 1 1 1 ...\n $ LANGEN: int  0 0 0 0 1 0 0 1 0 0 ...\n\n\n\n\n\n \n  \n    Variable \n    % NA \n    moy \n    med \n    min \n    max \n    sd \n  \n \n\n  \n    POP \n    0 \n    26.271 \n    15.226 \n    0.966 \n    198.419 \n    35.347 \n  \n  \n    PIB \n    0.1 \n    5168.765 \n    3289.435 \n    756.594 \n    19458.924 \n    4786.517 \n  \n  \n    IDH \n    0 \n    0.545 \n    0.532 \n    0.392 \n    0.747 \n    0.097 \n  \n  \n    ADOFEC \n    0 \n    92.836 \n    92.262 \n    5.814 \n    188.314 \n    43.289 \n  \n  \n    CO2HAB \n    0 \n    1.079 \n    0.335 \n    0.024 \n    8.09 \n    1.77 \n  \n  \n    EMPAGR \n    0 \n    46.174 \n    43.752 \n    5.128 \n    92.017 \n    21.694 \n  \n  \n    EMPSER \n    0 \n    39.652 \n    41.351 \n    6.498 \n    71.846 \n    14.956 \n  \n  \n    INTERN \n    0 \n    25.381 \n    20 \n    1.309 \n    64.804 \n    18.912 \n  \n  \n    ESPVIE \n    0 \n    63.214 \n    63.172 \n    53.042 \n    76.786 \n    5.66 \n  \n  \n    AGEMED \n    0 \n    20.311 \n    19.204 \n    15.151 \n    32.835 \n    3.897 \n  \n  \n    TELMOB \n    0 \n    82.806 \n    88.184 \n    20.364 \n    153.25 \n    35.738 \n  \n  \n    MORINF \n    0 \n    45.325 \n    42.142 \n    10.243 \n    84.464 \n    17.764 \n  \n  \n    TXMIGR \n    0 \n    -1.103 \n    -0.339 \n    -15.902 \n    12.443 \n    3.976 \n  \n  \n    DVIEUX \n    0 \n    5.961 \n    5.466 \n    3.802 \n    12.555 \n    1.755 \n  \n  \n    TUBERC \n    0 \n    222.265 \n    186 \n    12 \n    611 \n    157.381 \n  \n  \n    URBANI \n    0 \n    45.373 \n    43.6 \n    13.2 \n    89.55 \n    18.786 \n  \n  \n    DJEUNE \n    0 \n    72.678 \n    75.624 \n    35.93 \n    105.101 \n    15.643 \n  \n\n\n\n\n\n\n\n\n \n  \n    Variable \n    % NA \n    moy \n    med \n    min \n    max \n    sd \n  \n \n\n  \n    LOCKED \n    0 \n    0.327 \n    0 \n    0 \n    1 \n    0.474 \n  \n  \n    COLFRA \n    0 \n    0.408 \n    0 \n    0 \n    1 \n    0.497 \n  \n  \n    COLGBR \n    0 \n    0.388 \n    0 \n    0 \n    1 \n    0.492 \n  \n  \n    LANGFR \n    0 \n    0.449 \n    0 \n    0 \n    1 \n    0.503 \n  \n  \n    LANGEN \n    0 \n    0.429 \n    0 \n    0 \n    1 \n    0.5"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
+  },
+  {
     "objectID": "modules/cartographie.html",
     "href": "modules/cartographie.html",
     "title": "Cartographie",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nCartographie avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie statique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie dynamqiue\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nCartographie dynamqiue\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie statique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules/geomatique.html",
     "href": "modules/geomatique.html",
     "title": "Géomatique",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nManipulation de données vectorielles\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données Raster\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nGéomatique avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nManipulation de données Raster\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données vectorielles\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+  },
+  {
+    "objectID": "modules/graphique.html",
+    "href": "modules/graphique.html",
+    "title": "Représentation Graphique",
+    "section": "",
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nGraphique avec ggplot2\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nIntroduction représentation graphique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nDivers package de représentation graphique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nGraphique R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules/import.html",
     "href": "modules/import.html",
     "title": "Import",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation d’API\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nImport et export de données\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nimport de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation dOSM\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nWeb scraping\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation d’API\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nImport et export de données\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nimport de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation dOSM\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nWeb scraping\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules/manipulation.html",
     "href": "modules/manipulation.html",
     "title": "Manipulation",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation de données avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules/notebook.html",
     "href": "modules/notebook.html",
     "title": "Notebook",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nNotbook avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLa programmation lettrée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nExemple Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nNotbook avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLa programmation lettrée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nExemple Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules/statistique.html",
     "href": "modules/statistique.html",
     "title": "Statistique",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nStatistique avec R\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "modules.html",
     "href": "modules.html",
     "title": "Tous les modules",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCartographie\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGéomatique\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImport\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nManipulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotebook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistique\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAucun article correspondant"
+    "text": "Import\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nManipulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistique\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReprésentation Graphique\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGéomatique\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCartographie\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotebook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAucun article correspondant"
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Néanmoins, il est nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.\nSi vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les ressources annexes. Vous pouvez également consulter ces deux supports de formation utilisés pour introduire au langage R :\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\nLes modules thématiques\nTIG’R propose sept module thématiques :\n\nImport de données\nManipulation de données\nStatistique\nReprésentation graphique\nGéomatique\nCartographie\nNotebook\n\nChaque module comprend au moins un cours d’introduction et un exercice appliqué reproductible.\n\n\nLes données\nUn seul jeu de données externe à R (ou ses package) est utlisé pour l’ensemble des modules.\n\n\nLes packages\nMinimiser et plusieurs solution\n\n\nConditions d’utilisation\nLes modules de formation sont organisé par thématique et regroupe des cours théoriques et des exercices pratiques"
   }
 ]

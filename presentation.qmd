@@ -1,8 +1,59 @@
 ---
-title: "TIG'R ?"
+title: Introduction
+# subtitle: Présentation des modules de formations TIG'R
 ---
-
 
 ::: column-margin
 <a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode">![](img/logo.png){width="50%"}</a>
 :::
+
+
+Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Néanmoins, il est nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
+
+Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Vous pouvez également consulter ces deux supports de formation utilisés pour introduire au langage R :
+
+
+
+:::: {.columns } 
+::: {.column width="49%" }
+<center>Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)</center>
+<iframe class="slide" width="100%" height="225px" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/"></iframe>
+:::
+
+::: {.column width="2%" }
+:::
+
+
+::: {.column width="49%" sytle="margin-left:40px"}
+<center>Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)</center> 
+<iframe class="slide" width="100%" height="225px" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/"></iframe>
+::: 
+::::
+
+
+### Les modules thématiques
+
+TIG'R propose sept module thématiques :
+
+- Import de données
+- Manipulation de données
+- Statistique
+- Représentation graphique
+- Géomatique
+- Cartographie
+- Notebook
+
+Chaque module comprend au moins un cours d'introduction et un exercice appliqué reproductible.
+
+### Les données 
+
+Un seul jeu de données externe à R (ou ses package) est utlisé pour l'ensemble des modules.
+
+### Les packages 
+
+Minimiser et plusieurs solution
+
+### Conditions d'utilisation
+
+
+Les modules de formation sont organisé par thématique et regroupe des cours théoriques et des exercices pratiques

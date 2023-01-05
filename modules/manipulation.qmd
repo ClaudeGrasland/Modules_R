@@ -9,4 +9,12 @@ listing:
   sort-ui: true
   filter-ui: true
 page-layout: full
+ordre: 02
 ---
+
+
+::: column-margin
+![](img/data.png){width="50%"}
+:::
+
+[Tous les modules](/modules.qmd)

@@ -1,6 +1,6 @@
 ---
 title: "Statistique"
-image : img/stat.png
+image : img/statistic.png
 listing: 
   contents : statistique
   sort: "date desc"
@@ -9,4 +9,12 @@ listing:
   sort-ui: true
   filter-ui: true
 page-layout: full
+ordre: 04
 ---
+
+
+::: column-margin
+![](img/statistic.png){width="50%"}
+:::
+
+[Tous les modules](/modules.qmd)

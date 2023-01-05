@@ -1,0 +1,27 @@
+Code;Definition;Souce
+iso3;ISO3 code of country;Human Development Report 2020
+name;English name of country;Human Development Report 2020
+nom;French name of country;Human Development Report 2020
+POP;Population (Millions inhabitants);Human Development Report 2020
+PIB;Gross Domestic Product ($ per capita ppp);Human Development Report 2020
+IDH;Human Development Index;Human Development Report 2020
+ADOFEC; Adolescent birth rate (births per 1,000 women ages 15-19)        ;Human Development Report 2020
+CO2HAB;Carbon Dioxyde Emissions per capita (tonnes);Human Development Report 2020
+EMPAGR;Employment in agriculture (% of total employment)          ;Human Development Report 2020
+EMPSER;Employment in services (% of total employment)                     ;Human Development Report 2020
+INTERN;Internet users, total (% of population)                             ;Human Development Report 2020
+ESPVIE;Life expectancy at birth (years)                          ;Human Development Report 2020
+AGEMED;Median age (years)                                                 ;Human Development Report 2020
+TELMOB;Mobile phone subscriptions (per 100 people)                        ;Human Development Report 2020
+MORINF;Mortality rate, infant (per 1,000 live births)                     ;Human Development Report 2020
+TXMIGR;Net migration rate (per 1,000 people)                              ;Human Development Report 2020
+DVIEUX;Old-age (65 and older) dependency ratio (per 100 people ages 15-64);Human Development Report 2020
+TUBERC;Tuberculosis incidence (per 100,000 people)                         ;Human Development Report 2020
+URBANI;Urban population (%)                                               ;Human Development Report 2020
+DJEUNE;Young age (0-14) dependency ratio (per 100 people ages 15-64);Human Development Report 2020
+SUBREG;United Nation subregions in Africa;Human Development Report 2020
+LOCKED;Landlocked country (0/1);CEPII
+COLFRA;Colonisation by France (0/1);CEPII
+COLGBR;Colonisation by United Kingdom (0/1);CEPII
+LANGFR;French official langage (0/1);CEPII
+LANGEN;English official langage(0/1);CEPII

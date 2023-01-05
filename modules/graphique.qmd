@@ -1,0 +1,19 @@
+---
+title: "Représentation Graphique"
+image : img/graph.png
+listing: 
+  contents : graphique
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+ordre: 05
+---
+
+::: column-margin
+![](img/graph.png){width="50%"}
+:::
+
+[Tous les modules](/modules.qmd)

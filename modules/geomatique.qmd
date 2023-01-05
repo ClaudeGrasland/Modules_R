@@ -1,6 +1,6 @@
 ---
 title: "Géomatique"
-image : img/spatial.png
+image : img/geomatic2.png
 listing: 
   contents : geomatique
   sort: "date desc"
@@ -9,4 +9,11 @@ listing:
   sort-ui: true
   filter-ui: true
 page-layout: full
+ordre: 06
 ---
+
+::: column-margin
+![](img/geomatic2.png){width="50%"}
+:::
+
+[Tous les modules](/modules.qmd)

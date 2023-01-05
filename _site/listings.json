@@ -2,17 +2,24 @@
   {
     "listing": "/modules/cartographie.html",
     "items": [
-      "/modules/cartographie/introduction_carto.html",
-      "/modules/cartographie/map.html",
-      "/modules/cartographie/map2.html"
+      "/modules/cartographie/map_2.html",
+      "/modules/cartographie/map_sf.html"
     ]
   },
   {
     "listing": "/modules/geomatique.html",
     "items": [
-      "/modules/geomatique/geomatic.html",
-      "/modules/geomatique/geomatic2.html",
-      "/modules/geomatique/introduction_geomatic.html"
+      "/modules/geomatique/geomatic_raster.html",
+      "/modules/geomatique/geomatic_vector.html"
+    ]
+  },
+  {
+    "listing": "/modules/graphique.html",
+    "items": [
+      "/modules/graphique/ggplot2.html",
+      "/modules/graphique/introduction_graph.html",
+      "/modules/graphique/package_graph.html",
+      "/modules/graphique/Rbase_graph.html"
     ]
   },
   {
@@ -46,21 +53,21 @@
   {
     "listing": "/modules/statistique.html",
     "items": [
-      "/modules/statistique/introduction_stat.html",
-      "/modules/statistique/statistique.html",
-      "/modules/statistique/statistique2.html",
-      "/modules/statistique/statistique3.html"
+      "/modules/statistique/statistique_bi.html",
+      "/modules/statistique/statistique_multi.html",
+      "/modules/statistique/statistique_uni.html"
     ]
   },
   {
     "listing": "/modules.html",
     "items": [
-      "/modules/cartographie.html",
-      "/modules/geomatique.html",
       "/modules/import.html",
       "/modules/manipulation.html",
-      "/modules/notebook.html",
-      "/modules/statistique.html"
+      "/modules/statistique.html",
+      "/modules/graphique.html",
+      "/modules/geomatique.html",
+      "/modules/cartographie.html",
+      "/modules/notebook.html"
     ]
   }
 ]
