@@ -1,5 +1,6 @@
 ---
-title: "Représentation Graphique"
+title: "Graphique"
+subtitle: "Représentation graphique"
 image : img/graph.png
 listing: 
   contents : graphique

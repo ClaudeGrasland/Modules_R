@@ -1,5 +1,6 @@
 ---
 title: "Géomatique"
+subtitle: "Traitement données vecteur et raster"
 image : img/geomatic2.png
 listing: 
   contents : geomatique

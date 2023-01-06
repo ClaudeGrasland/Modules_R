@@ -1,5 +1,6 @@
 ---
 title: "Manipulation"
+subtitle: "Gestion & traitement de données"
 image : img/data.png
 listing: 
   contents : manipulation
@@ -11,7 +12,6 @@ listing:
 page-layout: full
 ordre: 02
 ---
-
 
 ::: column-margin
 ![](img/data.png){width="50%"}

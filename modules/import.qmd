@@ -1,7 +1,9 @@
 ---
 title: "Import"
+subtitle: "Import, collecte (API) et export de données"
 image : img/import.png
 listing: 
+  id: import
   contents : import
   sort: "date desc"
   type: default
@@ -12,9 +14,12 @@ page-layout: full
 ordre: 01
 ---
 
-
 ::: column-margin
 ![](img/import.png){width="50%"}
 :::
 
-[Tous les modules](/modules.qmd)
+::: {#import}
+:::
+
+
+[Voir tous les modules](/modules.qmd)

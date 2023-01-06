@@ -1,5 +1,6 @@
 ---
 title: "Cartographie"
+subtitle: "Cartographie thématique"
 image: img/map.png
 listing: 
   contents : cartographie
@@ -11,7 +12,6 @@ listing:
 page-layout: full
 ordre: 07
 ---
-
 
 ::: column-margin
 ![](img/map.png){width="50%"}

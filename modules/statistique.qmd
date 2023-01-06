@@ -1,5 +1,6 @@
 ---
 title: "Statistique"
+subtitle: "Stat. descriptive uni, bi et multivariée"
 image : img/statistic.png
 listing: 
   contents : statistique
@@ -12,9 +13,6 @@ page-layout: full
 ordre: 04
 ---
 
-
 ::: column-margin
 ![](img/statistic.png){width="50%"}
 :::
-
-[Tous les modules](/modules.qmd)
