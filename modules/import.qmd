@@ -5,11 +5,12 @@ image : img/import.png
 listing: 
   id: import
   contents : import
-  sort: "date desc"
+  sort: "ordre asc"
+  fields: [image, title]
   type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+  categories: false
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 ordre: 01
 ---
@@ -20,6 +21,5 @@ ordre: 01
 
 ::: {#import}
 :::
-
 
 [Voir tous les modules](/modules.qmd)

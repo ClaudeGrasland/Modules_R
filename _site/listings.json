@@ -3,9 +3,9 @@
     "listing": "/modules/import.html",
     "items": [
       "/modules/import/import.html",
+      "/modules/import/api.html",
       "/modules/import/osm.html",
-      "/modules/import/scraping.html",
-      "/modules/import/api.html"
+      "/modules/import/scraping.html"
     ]
   },
   {

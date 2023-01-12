@@ -1,3 +1,9 @@
 ---
-title: "Web scraping"
+title: "Initiation au web scraping"
+author: 
+- Alexandre Cebeillac
+- Robin Cura
+- Hugues Pecout
+- Sébastien Rey-Coyrehourcq
+ordre: 04
 ---

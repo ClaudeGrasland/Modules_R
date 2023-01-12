@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -376,6 +376,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#les-données" id="toc-les-données" class="nav-link" data-scroll-target="#les-données">Les données</a></li>
   <li><a href="#les-packages" id="toc-les-packages" class="nav-link" data-scroll-target="#les-packages">Les packages</a></li>
   <li><a href="#conditions-dutilisation" id="toc-conditions-dutilisation" class="nav-link" data-scroll-target="#conditions-dutilisation">Conditions d’utilisation</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
   </ul>
 </nav>
     </div>
@@ -403,49 +404,92 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><img src="img/logo.png" class="img-fluid" style="width:50.0%"></a></p>
 </div></div><p>Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Néanmoins, il est nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.</p>
-<p>Si vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les <a href="./ressources.html">ressources annexes</a>. Vous pouvez également consulter ces deux supports de formation utilisés pour introduire au langage R :</p>
+<p>Si vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les <a href="./ressources.html">ressources annexes</a>. Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :</p>
 <div class="columns">
 <div class="column" style="width:49%;">
-<center>
+<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+</iframe>
+<center style="font-size:80%;">
 Consulter en <a href="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/"><strong>plein écran</strong></a>
 </center>
-<iframe class="slide" width="100%" height="225px" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
-</iframe>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" data-sytle="margin-left:40px" style="width:49%;">
-<center>
+<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+</iframe>
+<center style="font-size:80%;">
 Consulter en <a href="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/"><strong>plein écran</strong></a>
 </center>
-<iframe class="slide" width="100%" height="225px" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
-</iframe>
 </div>
 </div>
+<p><br>
+</p>
 <section id="les-modules-thématiques" class="level3">
 <h3 class="anchored" data-anchor-id="les-modules-thématiques">Les modules thématiques</h3>
-<p>TIG’R propose sept module thématiques :</p>
+<p>TIG’R contient sept modules thématiques de formation :</p>
 <ul>
-<li>Import de données</li>
-<li>Manipulation de données</li>
-<li>Statistique</li>
-<li>Représentation graphique</li>
-<li>Géomatique</li>
-<li>Cartographie</li>
-<li>Notebook</li>
+<li><a href="./modules/import.html"><strong>Import de données</strong></a> (Import, collecte (API) et export de données)</li>
+<li><a href="./modules/manipulation.html"><strong>Manipulation de données</strong></a> (gestion &amp; traitement de données)</li>
+<li><a href="./modules/statistique.html"><strong>Statistique descriptives</strong></a> (uni, bi et multivariée)</li>
+<li><a href="./modules/graphique.html"><strong>Représentation graphique</strong></a> (R-base &amp; ggplot2)</li>
+<li><a href="./modules/geomatique.html"><strong>Géomatique</strong></a> (traitement des données vectorielles et raster)</li>
+<li><a href="./modules/cartographie.html"><strong>Cartographie thématique</strong></a> (statique et interactive</li>
+<li><a href="./modules/notebook.html"><strong>Notebook</strong></a> (Production de document combinant du texte et du code)</li>
 </ul>
-<p>Chaque module comprend au moins un cours d’introduction et un exercice appliqué reproductible.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Chaque module comprend au moins un cours d’introduction et un exercice appliqué.</p>
+</div>
+</div>
 </section>
 <section id="les-données" class="level3">
 <h3 class="anchored" data-anchor-id="les-données">Les données</h3>
-<p>Un seul jeu de données externe à R (ou ses package) est utlisé pour l’ensemble des modules.</p>
+<p>Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur <a href="./data.html">cette page</a>.</p>
 </section>
 <section id="les-packages" class="level3">
 <h3 class="anchored" data-anchor-id="les-packages">Les packages</h3>
-<p>Minimiser et plusieurs solution</p>
+<p>Afin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tente de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des référence dans la communauté R et laisser présager une certaine stabilité.</p>
+<p>Les packages utilisés dans les différents modules thématiques sont :</p>
+<ul>
+<li><a href="">readr</a></li>
+<li><a href="">foreign</a></li>
+<li><a href="">dplyr</a></li>
+<li><a href="">factominer</a></li>
+<li><a href="">ggplot2</a></li>
+<li><a href="">sf</a></li>
+<li><a href="">mapsf</a></li>
+<li><a href="">rmarkdown</a></li>
+<li><a href="">knitr</a></li>
+</ul>
 </section>
 <section id="conditions-dutilisation" class="level3">
 <h3 class="anchored" data-anchor-id="conditions-dutilisation">Conditions d’utilisation</h3>
-<p>Les modules de formation sont organisé par thématique et regroupe des cours théoriques et des exercices pratiques</p>
+<p>Le contenu de ce site web (support de cours et exercice inclus) est soumis à la <a href="https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf">Licence ouverte V2.0 d’Etalab</a>. Le « Réutilisateur » est <strong>libre de réutiliser l‘ « Information »</strong> :</p>
+<ul>
+<li>de la reproduire, la copier,<br>
+</li>
+<li>de l‘adapter, la modifier, l‘extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,<br>
+</li>
+<li>de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,<br>
+</li>
+<li>de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.</li>
+</ul>
+<p><strong>Sous réserve de :</strong></p>
+<ul>
+<li>mentionner la paternité de l’ « Information » : sa source (cf.&nbsp;<a href="#citation">citation</a> et la date de dernière mise à jour de l’ « Information » réutilisée.</li>
+</ul>
+</section>
+<section id="citation" class="level3">
+<h3 class="anchored" data-anchor-id="citation">Citation</h3>
+<p>Citation pour TIG’R</p>
 
 
 </section>

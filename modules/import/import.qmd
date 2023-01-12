@@ -1,3 +1,6 @@
 ---
 title: "Import et export de données"
+author: Hugues pecout
+image : img/import.png
+ordre: 01
 ---

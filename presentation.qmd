@@ -7,53 +7,89 @@ title: Introduction
 <a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode">![](img/logo.png){width="50%"}</a>
 :::
 
-
 Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Néanmoins, il est nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
 
-Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Vous pouvez également consulter ces deux supports de formation utilisés pour introduire au langage R :
+Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :
 
-
-
-:::: {.columns } 
-::: {.column width="49%" }
-<center>Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)</center>
-<iframe class="slide" width="100%" height="225px" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/"></iframe>
+::: columns
+::: {.column width="49%"}
+<iframe class="slide" width="100%" height="225px"  style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+</iframe>
+<center style="font-size:80%;">Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)</center>
 :::
 
-::: {.column width="2%" }
+::: {.column width="2%"}
 :::
-
 
 ::: {.column width="49%" sytle="margin-left:40px"}
-<center>Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)</center> 
-<iframe class="slide" width="100%" height="225px" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/"></iframe>
-::: 
-::::
+<iframe class="slide" width="100%" height="225px"  style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+</iframe>
+<center style="font-size:80%;">Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)</center>
 
+:::
+:::
+
+
+\
 
 ### Les modules thématiques
 
-TIG'R propose sept module thématiques :
+TIG'R contient sept modules thématiques de formation :
 
-- Import de données
-- Manipulation de données
-- Statistique
-- Représentation graphique
-- Géomatique
-- Cartographie
-- Notebook
+-   [**Import de données**](modules/import.qmd) (Import, collecte (API) et export de données)
+-   [**Manipulation de données**](modules/manipulation.qmd) (gestion & traitement de données)
+-   [**Statistique descriptives**](modules/statistique.qmd) (uni, bi et multivariée)
+-   [**Représentation graphique**](modules/graphique.qmd) (R-base & ggplot2)
+-   [**Géomatique**](modules/geomatique.qmd) (traitement des données vectorielles et raster)
+-   [**Cartographie thématique**](modules/cartographie.qmd) (statique et interactive
+-   [**Notebook**](modules/notebook.qmd) (Production de document combinant du texte et du code)
 
-Chaque module comprend au moins un cours d'introduction et un exercice appliqué reproductible.
 
-### Les données 
+:::{.callout-note}
 
-Un seul jeu de données externe à R (ou ses package) est utlisé pour l'ensemble des modules.
+Chaque module comprend au moins un cours d'introduction et un exercice appliqué.
 
-### Les packages 
+:::
 
-Minimiser et plusieurs solution
+### Les données
+
+Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur [cette page](data.qmd). 
+
+
+### Les packages
+
+Afin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tente de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des référence dans la communauté R et laisser présager une certaine stabilité.
+
+Les packages utilisés dans les différents modules thématiques sont :
+
+- [readr]()
+- [foreign]()
+- [dplyr]()
+- [factominer]()
+- [ggplot2]()
+- [sf]()
+- [mapsf]()
+- [rmarkdown]()
+- [knitr]()
+
 
 ### Conditions d'utilisation
 
+Le contenu de ce site web (support de cours et exercice inclus) est soumis à la [Licence ouverte V2.0 d'Etalab](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf). Le « Réutilisateur » est **libre de réutiliser l‘ « Information »** :   
 
-Les modules de formation sont organisé par thématique et regroupe des cours théoriques et des exercices pratiques
+-  de la reproduire, la copier,   
+-  de l‘adapter, la modifier, l‘extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,    
+- de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,   
+- de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.
+
+**Sous réserve de :**   
+
+- mentionner la paternité de l’ « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l’ « Information » réutilisée.
+
+
+### Citation
+
+
+Citation pour TIG'R
+
+

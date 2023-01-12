@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -405,7 +405,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(4)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
 
@@ -431,27 +431,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="img/import.png" class="img-fluid" style="width:50.0%"></p>
 </div></div><div id="listing-import" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-import-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-import'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Trier par</option>
-       <option value="index" data-direction="asc">Ordre par défaut</option>
-         <option value="listing-title" data-direction="asc">
-          Titre
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Auteur·rice
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1673545658121" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<p><a href="../modules/import/import.html"> <img src="../modules/import/img/import.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="../modules/import/import.html">
 <h3 class="no-anchor listing-title">
@@ -460,25 +444,48 @@ Import et export de données
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
-
-</div>
 </a>
 </div>
 <div class="metadata">
 <a href="../modules/import/import.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1673543272916" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<a href="../modules/import/api.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../modules/import/api.html"></a></p>
+</div>
 <div class="body">
-<a href="../modules/import/osm.html">
+<a href="../modules/import/api.html">
 <h3 class="no-anchor listing-title">
-Utilisation dOSM
+Packages de données et API
 </h3>
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
+</a>
+</div>
+<div class="metadata">
+<a href="../modules/import/api.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1673542893060" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<a href="../modules/import/osm.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../modules/import/osm.html"></a></p>
+</div>
+<div class="body">
+<a href="../modules/import/osm.html">
+<h3 class="no-anchor listing-title">
+Données OpenStreetMap
+</h3>
+<div class="listing-subtitle">
 
 </div>
 </a>
@@ -487,40 +494,26 @@ Utilisation dOSM
 <a href="../modules/import/osm.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1673543257196" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<a href="../modules/import/scraping.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../modules/import/scraping.html"></a></p>
+</div>
 <div class="body">
 <a href="../modules/import/scraping.html">
 <h3 class="no-anchor listing-title">
-Web scraping
+Initiation au web scraping
 </h3>
 <div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
 
 </div>
 </a>
 </div>
 <div class="metadata">
 <a href="../modules/import/scraping.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
-<div class="body">
-<a href="../modules/import/api.html">
-<h3 class="no-anchor listing-title">
-Utilisation d’API
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../modules/import/api.html"> </a>
 </div>
 </div>
 </div>

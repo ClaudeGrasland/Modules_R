@@ -4,24 +4,24 @@ subtitle: "Présentation et téléchargement des données utilisés dans les mod
 ---
 
 <!-- ::: column-margin -->
+
 <!-- ![](img/data.png){width="35%"} -->
+
 <!-- ::: -->
 
-
-
-Le principal jeu de données utilisé dans les différents modules est une compilation de données fournie par ... et ....
-Il comporte des données sur l'ensemble des pays africains à l'échelle nationale.
+Le principal jeu de données utilisé dans les différents modules est une compilation de données fournie par ... et .... Il comporte des données sur l'ensemble des pays africains à l'échelle nationale.
 
 Source :
 
 Ces données sont stockées dans un fichier csv (....csv). Le dictionnaire des variables est également mis à disposition en format csv (....csv)
 
-
 ## Téléchargement
 
-Vous pouvez récupérer les données En cliquant sur ce lien 
+Vous pouvez récupérer les données En cliquant sur ce lien
 
-## Visualisation des données
+## data afrika
+
+### Les données
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -39,7 +39,7 @@ datatable(data , filter = 'top', options = list(
 
 ```
 
-## Dictionnaire des variables
+### Dictionnaire des variables
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -50,15 +50,11 @@ datatable(metadata , options = list(
 
 ```
 
+### Résumé statistique des variables
 
+#### Variables quantitatives
 
-
-
-## Résumé statistique des variables
-
-### Variables quantitatives
-
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 library(vtable)
 
 st(data[,3:20], summ=c('propNA(x)', 'mean(x)',
@@ -70,9 +66,9 @@ st(data[,3:20], summ=c('propNA(x)', 'mean(x)',
 
 ```
 
-### Variables qualitatives
+#### Variables qualitatives
 
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 
 st(data, vars = "SUBREG", summ=c('propNA(x)', 'mean(x)'),
          summ.names=c('Freq', '%'), title='')
@@ -80,9 +76,9 @@ st(data, vars = "SUBREG", summ=c('propNA(x)', 'mean(x)'),
 
 ```
 
-### Variables bouléenes, stockées en format numerique
+#### Variables bouléenes, stockées en format numerique
 
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 
 
 # data[,22]<- as.logical(data[,22])
@@ -99,12 +95,12 @@ st(data[,22:26], summ=c('propNA(x)', 'mean(x)',
 
 ```
 
-
-
 <!-- ```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, out.width="100%"} -->
+
 <!-- par(mfrow=c(2,2)) -->
 
 <!-- for (i in 4:ncol(data)){ -->
+
 <!--   if (is.numeric( data[,i])){ -->
 
 <!--     if(length(unique(data[,i]))==2){ -->
@@ -114,17 +110,23 @@ st(data[,22:26], summ=c('propNA(x)', 'mean(x)',
 <!--     } else { -->
 
 <!--   hist(data[,i], main = metadata[i,2], xlab = colnames(data)[i]) -->
+
 <!--   abline(v = summary(data[,i])[2], lwd = 1, col="green4" ) -->
+
 <!--   abline(v = summary(data[,i])[3], lwd = 1, col="green4") -->
+
 <!--   abline(v = summary(data[,i])[5], lwd = 1, col="green4") -->
+
 <!--   abline(v = summary(data[,i])[4], col="red", lwd=2) -->
+
 <!--   } -->
+
 <!--     } else { -->
 
-
 <!--     barplot(table(data[,i]), main = metadata[i,2], xlab = colnames(data)[i]) -->
-<!--   } -->
-<!-- } -->
 
+<!--   } -->
+
+<!-- } -->
 
 <!-- ``` -->
