@@ -3,4 +3,6 @@ title: "Import et export de données"
 author: Hugues pecout
 image : img/import.png
 ordre: 01
+date: "02-28-2023"
+category: Cours
 ---

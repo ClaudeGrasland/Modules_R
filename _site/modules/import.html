@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 <meta name="twitter:title" content="TIG’R - Import">
 <meta name="twitter:description" content="Import, collecte (API) et export de données">
-<meta name="twitter:image" content="https://tigr.netlify.app/modules/img/import.png">
+<meta name="twitter:image" content="https://tigr.netlify.app/modules\img\import.png">
 <meta name="twitter:image-height" content="512">
 <meta name="twitter:image-width" content="512">
 <meta name="twitter:card" content="summary_large_image">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -432,10 +432,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="img/import.png" class="img-fluid" style="width:50.0%"></p>
 </div></div><div id="listing-import" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1673545658121" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<p><a href="../modules/import/import.html"> <img src="../modules/import/img/import.png" class="thumnail-image"> </a></p>
-</div>
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1677538800000" data-listing-file-modified-sort="1673602177205" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="../modules/import/import.html">
 <h3 class="no-anchor listing-title">
@@ -447,17 +444,17 @@ Import et export de données
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/import/import.html"> </a>
+<a href="../modules/import/import.html">
+<div class="listing-date">
+28 févr. 2023
+</div>
+<div class="listing-author">
+Hugues pecout
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1673543272916" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<a href="../modules/import/api.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../modules/import/api.html"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1673601194675" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="../modules/import/api.html">
 <h3 class="no-anchor listing-title">
@@ -469,17 +466,14 @@ Packages de données et API
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/import/api.html"> </a>
+<a href="../modules/import/api.html">
+<div class="listing-author">
+Hugues pecout
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1673542893060" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<a href="../modules/import/osm.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../modules/import/osm.html"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1673601194682" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="../modules/import/osm.html">
 <h3 class="no-anchor listing-title">
@@ -494,14 +488,7 @@ Données OpenStreetMap
 <a href="../modules/import/osm.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1673543257196" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<a href="../modules/import/scraping.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../modules/import/scraping.html"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="NaN" data-listing-file-modified-sort="1673602225322" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="../modules/import/scraping.html">
 <h3 class="no-anchor listing-title">
@@ -513,7 +500,14 @@ Initiation au web scraping
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/import/scraping.html"> </a>
+<a href="../modules/import/scraping.html">
+<div class="listing-date">
+Invalid Date
+</div>
+<div class="listing-author">
+Alexandre Cebeillac, Robin Cura, Hugues Pecout, Sébastien Rey-Coyrehourcq
+</div>
+</a>
 </div>
 </div>
 </div>

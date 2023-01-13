@@ -6,7 +6,7 @@ listing:
   id: import
   contents : import
   sort: "ordre asc"
-  fields: [image, title]
+  fields: [date, title, author]
   type: default
   categories: false
   sort-ui: false
