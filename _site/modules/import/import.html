@@ -21,6 +21,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -68,7 +131,8 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="TIG’R - Import et export de données">
-<meta name="twitter:image" content="https://tigr.netlify.app/modules\import\img\import.png">
+<meta name="twitter:description" content="Les différents types et formats de données pris en charge par R">
+<meta name="twitter:image" content="https://tigr.netlify.app/modules/import/img/import.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -112,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -370,15 +434,39 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#tableau-de-données" id="toc-tableau-de-données" class="nav-link active" data-scroll-target="#tableau-de-données">Tableau de données</a>
+  <ul class="collapse">
+  <li><a href="#fichier-texte-simple" id="toc-fichier-texte-simple" class="nav-link" data-scroll-target="#fichier-texte-simple">Fichier texte simple</a></li>
+  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
+  <li><a href="#sas" id="toc-sas" class="nav-link" data-scroll-target="#sas">SAS</a></li>
+  <li><a href="#spss" id="toc-spss" class="nav-link" data-scroll-target="#spss">SPSS</a></li>
+  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
+  </ul></li>
+  <li><a href="#couche-géographique" id="toc-couche-géographique" class="nav-link" data-scroll-target="#couche-géographique">Couche géographique</a>
+  <ul class="collapse">
+  <li><a href="#vecteur" id="toc-vecteur" class="nav-link" data-scroll-target="#vecteur">Vecteur</a></li>
+  <li><a href="#raster" id="toc-raster" class="nav-link" data-scroll-target="#raster">Raster</a></li>
+  </ul></li>
+  <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a>
+  <ul class="collapse">
+  <li><a href="#import-7" id="toc-import-7" class="nav-link" data-scroll-target="#import-7">Import</a></li>
+  <li><a href="#export-7" id="toc-export-7" class="nav-link" data-scroll-target="#export-7">Export</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Import et export de données</h1>
+<p class="subtitle lead">Les différents types et formats de données pris en charge par R</p>
 </div>
 
 
@@ -395,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">28 février 2023</p>
+      <p class="date">17 janvier 2023</p>
     </div>
   </div>
   
@@ -405,8 +493,407 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>De nombreuses de fonctions(primitives ou non) peuvent être utilisées pour importer et exporter des données de différents formats.</p>
+<section id="tableau-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="tableau-de-données">Tableau de données</h2>
+<section id="fichier-texte-simple" class="level3">
+<h3 class="anchored" data-anchor-id="fichier-texte-simple">Fichier texte simple</h3>
+<p>Un fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s’ouvrir avec n’importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.</p>
+<p>Plusieurs fonctions primitives permettent d’importer et d’exporter des fichiers texte simples, comme les fichiers <strong>csv</strong>, <strong>txt</strong> , <strong>tsv</strong>…</p>
+<section id="import" class="level4">
+<h4 class="anchored" data-anchor-id="import">Import</h4>
+<ul>
+<li><code>read.delim()</code> : fichiers délimités par un symbole quelconque et “.” en séparateur décimal</li>
+<li><code>read.delim2()</code> : fichiers délimités par un symbole quelconque et “,” en séparateur décimal</li>
+<li><code>read.table()</code> : pour des fichiers texte délimités par des espaces<br>
+</li>
+<li><code>read.csv()</code> : pour des fichiers texte délimités par des virgules (format csv)</li>
+<li><code>read.csv2()</code> : pour des fichiers texte délimités par des points-virgules (format csv français)</li>
+</ul>
+<p>Pour que l’import de données s’effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :</p>
+<p><strong>header</strong> : valeur logique qui indique si la première ligne contient les noms des variables.<br> <strong>sep</strong> = indique le caractère utilisé comme séparateur de champ (ex : “;”)<br> <strong>encoding</strong> = Chaîne de caractère qui précise l’encodage utilisé pour le fichier (ex : “UTF-8”).<br></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>N’oubliez pas d’assigner le résultat dans un objet pour garder en mémoire vos données importées.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple d'utilisation de read.table()</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"../data/afrika_don_meta.csv"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">sep=</span> <span class="st">";"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.frame"</code></pre>
+</div>
+</div>
+</section>
+<section id="export" class="level4">
+<h4 class="anchored" data-anchor-id="export">Export</h4>
+<p>Des fonctions primitives permettent également d’exporter votre tableau de donnée vers différents format texte simple</p>
+<ul>
+<li><code>write.table()</code> : pour tous les types de formats texte simple (séparateur à renseigner)</li>
+<li><code>write.csv()</code> : pour exporter en csv (séparateur virgule)</li>
+<li><code>write.csv2()</code> : pour exporter en csv (séparateur points-virgules)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.table()</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x =</span> mon_tableau, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">file =</span> <span class="st">"../data/tableau.txt"</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">col.names =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">fileEncoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.csv()</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/tableau.csv"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="excel" class="level3">
+<h3 class="anchored" data-anchor-id="excel">Excel</h3>
+<p>Il est parfois nécessaire d’importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d’importer ce genre de format, et même d’exporter vos données dans ce type de format.</p>
+<section id="import-1" class="level4">
+<h4 class="anchored" data-anchor-id="import-1">Import</h4>
+<p>Vous pouvez par exemple importer un fichier Excel avec le package <a href="https://readxl.tidyverse.org/"><code>readxl</code></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le packages <code>readxl</code> fait partie de l’écosystème <code>tidyverse</code> (cf.&nbsp;module <a href="">x</a>). Pour cette raison, le tableau importé est mis en mémoire dans un objet <a href="https://tibble.tidyverse.org/"><code>tibble</code></a> et non <code>dataframe</code>. Il s’agit de deux objets très semblables mais pas identiques. Pour convertir un <code>tibble</code> en <code>dataframe</code>, vous pouvez utiliser la fonction <code>as.data.frame()</code>.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mon_tableau <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"../data/afrika_don.xls"</span>, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sheet =</span> <span class="st">"afrika_meta"</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">skip =</span> <span class="dv">0</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+</section>
+<section id="export-1" class="level4">
+<h4 class="anchored" data-anchor-id="export-1">Export</h4>
+<p>Pour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package <a href="https://cran.r-project.org/web/packages/openxlsx/index.html"><code>openxlsx</code></a> et sa fonction <code>write.xlsx()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"openxlsx"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le packages <code>openxlsx</code> permet uniquement de lire et écrire les fichiers Excel comportant l’extension <strong>.xlsx</strong>.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/afrika_don.xlsx"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="sas" class="level3">
+<h3 class="anchored" data-anchor-id="sas">SAS</h3>
+<p>Le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tout comme <code>readxl</code>, ce package fait partie de l’écosystème <code>tidyverse</code> (cf.&nbsp;module <a href="">x</a>). Le tableau importé est mis en mémoire dans un objet <a href="https://tibble.tidyverse.org/"><code>tibble</code></a> et non <code>dataframe</code>. Vous pouvez utiliser la fonction <code>as.data.frame()</code> pour le convertir.</p>
+</div>
+</div>
+<section id="import-2" class="level4">
+<h4 class="anchored" data-anchor-id="import-2">Import</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="at">data_file =</span> <span class="st">"../data/data_sas.sas7bdat"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="export-2" class="level4">
+<h4 class="anchored" data-anchor-id="export-2">Export</h4>
+<p>Le package <code>haven</code>met également une fonction à disposition qui permet d’exporter des données en format SAS (.sas7bdat).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span> <span class="st">"../data/mon_tableau_sas.sas7bdat"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="spss" class="level3">
+<h3 class="anchored" data-anchor-id="spss">SPSS</h3>
+<p>Vous pouvez utiliser le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> qui permet la lecture et l’écriture de fichier de données SAS.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-3" class="level4">
+<h4 class="anchored" data-anchor-id="import-3">Import</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="at">file =</span>  <span class="st">"../data/data_spss.sav"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="export-3" class="level4">
+<h4 class="anchored" data-anchor-id="export-3">Export</h4>
+<p>Le package <code>haven</code>met également une fonction à disposition qui permet d’exporter des données en format SPSS (.sav).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_spss.sav"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="stata" class="level3">
+<h3 class="anchored" data-anchor-id="stata">Stata</h3>
+<p>Vous pouvez utiliser le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> qui permet la lecture et l’écriture de fichier de données Stata.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-4" class="level4">
+<h4 class="anchored" data-anchor-id="import-4">Import</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="at">file =</span>  <span class="st">"../data/data_stata.dta"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="export-4" class="level4">
+<h4 class="anchored" data-anchor-id="export-4">Export</h4>
+<p>Le package <code>haven</code>met également une fonction à disposition qui permet d’exporter des données en format Stata (.dta).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_stata.dta"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+</section>
+<section id="couche-géographique" class="level2">
+<h2 class="anchored" data-anchor-id="couche-géographique">Couche géographique</h2>
+<section id="vecteur" class="level3">
+<h3 class="anchored" data-anchor-id="vecteur">Vecteur</h3>
+<p>Le package <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage…). Pour cela, ce package interface avec la librairie système <a href="https://gdal.org/">GDAL</a>. Les SIG fonctionnent de la même façon !</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’installation du package <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> demande un prérequis. La librairie système <a href="https://gdal.org/">GDAL</a> doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d’exploitation comme GNU/Linux.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-5" class="level4">
+<h4 class="anchored" data-anchor-id="import-5">Import</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>map_africa <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map_africa)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "sf"         "data.frame"</code></pre>
+</div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une couche géographique importée via la fonction <code>st_read()</code> du package <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> est mise en mémoire dans un objet sf (simple feature). Il s’agit en quelque sorte d’un dataframe ou chaque individu est associé à une géométrie.</p>
+</div>
+</div>
+</section>
+<section id="export-5" class="level4">
+<h4 class="anchored" data-anchor-id="export-5">Export</h4>
+<p>La fonction <code>st_write()</code> permet d’enregistrer un objet sf sur sa machine, dans le format que l’on souhaite.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format ESRI Shapefile</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.shp"</span>, </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer_options =</span> <span class="st">"ENCODING=UTF-8"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format GeoPackage</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.gpkg"</span>, </span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer =</span> <span class="st">"pays"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+<section id="raster" class="level3">
+<h3 class="anchored" data-anchor-id="raster">Raster</h3>
+<p>Le package <a href="https://rspatial.org/index.html"><code>terra</code></a> permet aussi de lire et d’écrire des données géographiques vectorielles (comme <code>sf</code>) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"terra)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-6" class="level4">
+<h4 class="anchored" data-anchor-id="import-6">Import</h4>
+<p>Pour importer des données Raster, vous pouvez utiliser la fonction <code>rast()</code>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un Raster importé via la fonction <code>rast()</code> du package <a href="https://rspatial.org/index.html"><code>terra</code></a> est mis en mémoire dans un objet SpatRaster.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>Elevation_Benin <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"../data/elevation.tif"</span>) </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>Elevation_Benin</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class       : SpatRaster 
+dimensions  : 742, 369, 1  (nrow, ncol, nlyr)
+resolution  : 0.008339098, 0.008333169  (x, y)
+extent      : 0.774574, 3.851701, 6.23514, 12.41835  (xmin, xmax, ymin, ymax)
+coord. ref. : lon/lat WGS 84 (EPSG:4326) 
+source      : elevation.tif 
+name        : elevation </code></pre>
+</div>
+</div>
+</section>
+<section id="export-6" class="level4">
+<h4 class="anchored" data-anchor-id="export-6">Export</h4>
+<p>La fonction <code>writeRaster()</code> permet d’enregistrer un objet SpatRaster sur sa machine, dans le format que l’on souhaite.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(<span class="at">x =</span> Elevation_Benin, <span class="at">filename =</span> <span class="st">"../data/Benin_Elevation.tif"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</section>
+</section>
+</section>
+<section id="image" class="level2">
+<h2 class="anchored" data-anchor-id="image">Image</h2>
+<section id="import-7" class="level3">
+<h3 class="anchored" data-anchor-id="import-7">Import</h3>
+<p>Pour importer des images, le package <code>png</code>et <code>jpeg</code>, pré-installé avec le language R vous permet d’importer des images.</p>
+<section id="format-png" class="level4">
+<h4 class="anchored" data-anchor-id="format-png">Format PNG</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>mon_image_png <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"../img/map.png"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="format-jpeg" class="level4">
+<h4 class="anchored" data-anchor-id="format-jpeg">Format JPEG</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jpeg)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>mon_image_jpg <span class="ot">&lt;-</span> <span class="fu">readJPEG</span>(<span class="st">"../img/wip.jpg"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="export-7" class="level3">
+<h3 class="anchored" data-anchor-id="export-7">Export</h3>
+<p>Il est également possible d’exporter les sorties graphiques en format image avec les fonctions primitives suivantes :</p>
+<ul>
+<li><strong>bmp()</strong></li>
+<li><strong>jpeg()</strong></li>
+<li><strong>png()</strong></li>
+<li><strong>tiff()</strong></li>
+</ul>
+<p>Ces fonction doivent être utilisées de la manière suivante (exemple avec le format png) :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"../img/mon_image.jpg"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) de l'image png</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il est important <strong>et obligatoire</strong> d’ajouter la fonction <code>dev.off()</code> qui permet de clôturer la représentation graphique et d’enregistrer l’image.</p>
+</div>
+</div>
+<p>Il est également possible d’exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator…). Les fonction pour réaliser cela sont :</p>
+<ul>
+<li><strong>pdf()</strong></li>
+<li><strong>svg()</strong></li>
+</ul>
+<p>L’utilisation de ces fonctions primitives est similaire à l’export d’images matricielles :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"../img/mon_image.pdf"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) du pdf</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -657,7 +1144,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../../modules/import.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>

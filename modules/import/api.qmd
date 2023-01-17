@@ -1,5 +1,5 @@
 ---
 title: "Packages de données et API"
-author: Hugues pecout
+author: Work in progress
 ordre: 02
 ---

@@ -1,40 +1,53 @@
 ---
 title: Introduction
 # subtitle: Présentation des modules de formations TIG'R
+bibliography: biblio/tigr.bib
+nocite: '@*'
+# csl: geo.csl
 ---
 
 ::: column-margin
 <a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode">![](img/logo.png){width="50%"}</a>
 :::
 
-Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Néanmoins, il est nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
+Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
 
 Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :
 
 ::: columns
 ::: {.column width="49%"}
-<iframe class="slide" width="100%" height="225px"  style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+
 </iframe>
-<center style="font-size:80%;">Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)</center>
+
+<center style="font-size:80%;">
+
+Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)
+
+</center>
 :::
 
 ::: {.column width="2%"}
 :::
 
 ::: {.column width="49%" sytle="margin-left:40px"}
-<iframe class="slide" width="100%" height="225px"  style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+
 </iframe>
-<center style="font-size:80%;">Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)</center>
 
+<center style="font-size:80%;">
+
+Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)
+
+</center>
 :::
 :::
-
 
 \
 
 ### Les modules thématiques
 
-TIG'R contient sept modules thématiques de formation :
+Le contenu de TIG'R est organisé en sept modules thématiques :
 
 -   [**Import de données**](modules/import.qmd) (Import, collecte (API) et export de données)
 -   [**Manipulation de données**](modules/manipulation.qmd) (gestion & traitement de données)
@@ -44,52 +57,68 @@ TIG'R contient sept modules thématiques de formation :
 -   [**Cartographie thématique**](modules/cartographie.qmd) (statique et interactive
 -   [**Notebook**](modules/notebook.qmd) (Production de document combinant du texte et du code)
 
-
-:::{.callout-note}
-
+::: callout-note
 Chaque module comprend au moins un cours d'introduction et un exercice appliqué.
-
 :::
 
 ### Les données
 
-Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur [cette page](data.qmd). 
-
+Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur [cette page](data.qmd).
 
 ### Les packages
 
-Afin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tente de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des référence dans la communauté R et laisser présager une certaine stabilité.
+Afin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tentent de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des références dans la communauté R et laisser présager une certaine stabilité du code présenté.
 
 Les packages utilisés dans les différents modules thématiques sont :
 
-- [readr]()
-- [foreign]()
-- [dplyr]()
-- [factominer]()
-- [ggplot2]()
-- [sf]()
-- [mapsf]()
-- [rmarkdown]()
-- [knitr]()
+
+-   [readxl](https://readxl.tidyverse.org/)
+-   [openxlsx](https://cran.r-project.org/web/packages/openxlsx/index.html)
+-   [haven](https://haven.tidyverse.org/)
+-   [dplyr](https://dplyr.tidyverse.org/)
+-   [lubridate](https://lubridate.tidyverse.org/)
+-   [FactoMineR](http://factominer.free.fr/index_fr.html)
+-   [ggplot2](https://ggplot2.tidyverse.org/)
+-   [sf](https://r-spatial.github.io/sf/)
+-   [terra](https://rspatial.org/index.html) 
+-   [mapsf](https://riatelab.github.io/mapsf/index.html)
+-   [rmarkdown](https://rmarkdown.rstudio.com/)
+-   [knitr](https://yihui.org/knitr/)
+
+
+```{r}
+
+# Liste de package à installer
+packages <- c("readxl", "openxlsx", "haven",
+              "dplyr", "lubridate", "stringr",
+              "ggplot2",  "FactoMineR", "sf", 
+              "terra", "mapsf", "rmarkdown", "knitr")
+
+
+# Détéction de package à installer
+missing_packages <- packages [!(packages  %in% installed.packages()[,"Package"])]
+
+# Installation des packages manquants
+if(length(missing_packages)) install.packages(missing_packages)
+
+
+```
 
 
 ### Conditions d'utilisation
 
-Le contenu de ce site web (support de cours et exercice inclus) est soumis à la [Licence ouverte V2.0 d'Etalab](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf). Le « Réutilisateur » est **libre de réutiliser l‘ « Information »** :   
+Le contenu de ce site web (support de cours et exercice inclus) est soumis à la [Licence ouverte V2.0 d'Etalab](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf). Le « Réutilisateur » est **libre de réutiliser l' « Information »** :
 
--  de la reproduire, la copier,   
--  de l‘adapter, la modifier, l‘extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,    
-- de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,   
-- de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.
+-   de la reproduire, la copier,\
+-   de l'adapter, la modifier, l'extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\
+-   de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\
+-   de l'exploiter à titre commercial, par exemple en la combinant avec d'autres informations, ou en l'incluant dans son propre produit ou application.
 
-**Sous réserve de :**   
+**Sous réserve de :**
 
-- mentionner la paternité de l’ « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l’ « Information » réutilisée.
+-   mentionner la paternité de l' « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l' « Information » réutilisée.
 
+### Citation TIG'R
 
-### Citation
-
-
-Citation pour TIG'R
-
-
+::: {#refs}
+:::

@@ -1,27 +1,5 @@
 [
   {
-    "listing": "/modules/cartographie.html",
-    "items": [
-      "/modules/cartographie/map_2.html",
-      "/modules/cartographie/map_sf.html"
-    ]
-  },
-  {
-    "listing": "/modules/geomatique.html",
-    "items": [
-      "/modules/geomatique/geomatic_raster.html",
-      "/modules/geomatique/geomatic_vector.html"
-    ]
-  },
-  {
-    "listing": "/modules/graphique.html",
-    "items": [
-      "/modules/graphique/ggplot2.html",
-      "/modules/graphique/package_graph.html",
-      "/modules/graphique/Rbase_graph.html"
-    ]
-  },
-  {
     "listing": "/modules/import.html",
     "items": [
       "/modules/import/import.html",
@@ -31,27 +9,49 @@
     ]
   },
   {
-    "listing": "/modules/manipulation.html",
+    "listing": "/modules/geomatique.html",
     "items": [
-      "/modules/manipulation/datatable.html",
-      "/modules/manipulation/manipulation.html",
-      "/modules/manipulation/tidyverse.html"
+      "/modules/geomatique/geomatic_vector.html",
+      "/modules/geomatique/geomatic_raster.html"
     ]
   },
   {
-    "listing": "/modules/notebook.html",
+    "listing": "/modules/cartographie.html",
     "items": [
-      "/modules/notebook/notebook.html",
-      "/modules/notebook/programmation_lettree.html",
-      "/modules/notebook/quarto.html"
+      "/modules/cartographie/map_sf.html",
+      "/modules/cartographie/map_2.html"
     ]
   },
   {
     "listing": "/modules/statistique.html",
     "items": [
+      "/modules/statistique/statistique_uni.html",
       "/modules/statistique/statistique_bi.html",
-      "/modules/statistique/statistique_multi.html",
-      "/modules/statistique/statistique_uni.html"
+      "/modules/statistique/statistique_multi.html"
+    ]
+  },
+  {
+    "listing": "/modules/manipulation.html",
+    "items": [
+      "/modules/manipulation/tidyverse.html",
+      "/modules/manipulation/manipulation.html",
+      "/modules/manipulation/datatable.html"
+    ]
+  },
+  {
+    "listing": "/modules/graphique.html",
+    "items": [
+      "/modules/graphique/package_graph.html",
+      "/modules/graphique/ggplot2.html",
+      "/modules/graphique/Rbase_graph.html"
+    ]
+  },
+  {
+    "listing": "/modules/notebook.html",
+    "items": [
+      "/modules/notebook/quarto.html",
+      "/modules/notebook/programmation_lettree.html",
+      "/modules/notebook/notebook.html"
     ]
   },
   {

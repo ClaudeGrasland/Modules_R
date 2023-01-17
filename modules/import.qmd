@@ -6,7 +6,7 @@ listing:
   id: import
   contents : import
   sort: "ordre asc"
-  fields: [date, title, author]
+  fields: [date, author, title]
   type: default
   categories: false
   sort-ui: false
@@ -22,4 +22,8 @@ ordre: 01
 ::: {#import}
 :::
 
-[Voir tous les modules](/modules.qmd)
+</br>
+
+::: {.center}
+Revenir à la [page d'acceuil des modules](/modules.qmd)
+:::

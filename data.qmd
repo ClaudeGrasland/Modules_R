@@ -9,19 +9,36 @@ subtitle: "Présentation et téléchargement des données utilisés dans les mod
 
 <!-- ::: -->
 
-Le principal jeu de données utilisé dans les différents modules est une compilation de données fournie par ... et .... Il comporte des données sur l'ensemble des pays africains à l'échelle nationale.
+:::{.callout-note}
+**Tous les jeux de données utilisés dans les différents modules sont présentés sur cette page.**
+:::
 
-Source :
 
-Ces données sont stockées dans un fichier csv (....csv). Le dictionnaire des variables est également mis à disposition en format csv (....csv)
 
 ## Téléchargement
 
-Vous pouvez récupérer les données En cliquant sur ce lien
+Vous pouvez récupérer l'intégralité des jeux de données utilisés dans les différents cours et exercices TIG'R à en cliquant sur ce lien : 
 
-## data afrika
+::: {.center}
+[<span style="font-size: 400%;" class="bi bi-box-arrow-down"></span> <br/> Download]()</p>
+:::
 
-### Les données
+
+</br>
+
+## Les jeux de données
+
+\
+
+### [I. Afrique 2020 (UN - CEPII)]{.blue-data}
+
+Présentationd es données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+
+</br>
+
+##### Affichage de données :
+
+
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -32,27 +49,107 @@ metadata <- metadata[, c(1,2,4,3)]
 
 # install.packages("DT")
 library(DT)
-datatable(data , filter = 'top', options = list(
-  pageLength =8, autoWidth = TRUE
+datatable(data ,  options = list(
+  pageLength =5, autoWidth = TRUE
 ))
 
 
 ```
 
-### Dictionnaire des variables
+
+</br>
+
+##### Dictionnaire des variables :
+
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
 
 datatable(metadata , options = list(
-  pageLength = 10, autoWidth = TRUE
+  pageLength = 5, autoWidth = TRUE
 ))
 
 ```
 
-### Résumé statistique des variables
+\
 
-#### Variables quantitatives
+### [II. Afrique 2020 (GADM)]{.blue-data}
+
+Présentationd des données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+
+</br>
+
+##### Affichage de données :
+
+
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+
+library(sf)
+pays_afrique <- st_read("data/afrika_map.shp",  quiet = TRUE)
+
+library(mapview)
+mapview(pays_afrique, zcol = "subregion")
+
+
+```
+
+
+</br>
+
+##### Dictionnaire des variables :
+
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+
+# install.packages("DT")
+library(DT)
+datatable(pays_afrique ,  options = list(
+  pageLength =5, autoWidth = TRUE
+))
+
+
+```
+
+\
+
+### [III. Afrique 2018 (Elevation)]{.blue-data}
+
+https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62
+Présentationd des données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+
+</br>
+
+##### Affichage de données :
+
+
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+
+library(terra)
+Elevation_Benin <- rast("data/elevation.tif") 
+
+plot(Elevation_Benin)
+
+```
+
+
+</br>
+
+##### Caractèristiques du Raster :
+
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+Elevation_Benin
+
+```
+
+
+
+
+
 
 ```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 library(vtable)
@@ -66,7 +163,6 @@ st(data[,3:20], summ=c('propNA(x)', 'mean(x)',
 
 ```
 
-#### Variables qualitatives
 
 ```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 
@@ -76,7 +172,6 @@ st(data, vars = "SUBREG", summ=c('propNA(x)', 'mean(x)'),
 
 ```
 
-#### Variables bouléenes, stockées en format numerique
 
 ```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
 

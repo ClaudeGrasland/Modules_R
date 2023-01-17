@@ -1,10 +1,5 @@
 ---
 title: "Initiation au web scraping"
-author: 
-- Alexandre Cebeillac
-- Robin Cura
-- Hugues Pecout
-- Sébastien Rey-Coyrehourcq
+author: Work in progress
 ordre: 04
-date: "work in progress"
 ---
