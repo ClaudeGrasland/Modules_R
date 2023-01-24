@@ -41,9 +41,9 @@
   {
     "listing": "/modules/graphique.html",
     "items": [
-      "/modules/graphique/package_graph.html",
+      "/modules/graphique/Rbase_graph.html",
       "/modules/graphique/ggplot2.html",
-      "/modules/graphique/Rbase_graph.html"
+      "/modules/graphique/package_graph.html"
     ]
   },
   {

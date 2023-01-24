@@ -34,3 +34,20 @@ text-align:center;
 .blue-data{
 color:#2a8cbe;
 }
+
+
+#exo{
+background-color:#2a8cbe;
+padding: 20px;
+
+}
+
+
+.title .exo-title{
+color:#2a8cbe;
+}
+
+.question{
+color:white;
+font-weight: bold;
+}

@@ -1,3 +1,219 @@
 ---
-title: "Graphique R-base"
+title: "Graphique de base"
+subtitle: "Representations graphiques en R-base"
+author: Hugues pecout
+date: last-modified
+ordre: 01
+code-fold: true
+code-tools: true
 ---
+
+**Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.
+
+## Fonctions graphiques 
+
+
+### Trois types 
+
+Il y a trois types de fonctions graphiques en R: 
+
+I. **Les fonctions, dites de niveau supérieur, qui servent à créer de nouveaux graphiques**. Exemple: 
+
+  - plot()  
+  - barplot() 
+  - stripchart()
+  - hist()  
+  - boxplot()  
+  - curve()    
+  - etc....
+  
+  
+II. **les fonctions, dites de niveau inférieur, qui servent à jouter de l'information à un graphique existant**. Exemple: 
+
+  - legend()
+  - title()
+  - density()
+  - points()
+  - lines()
+  - text()
+  - etc...
+  
+  
+III. **Les fonctions utilisées pour fixer et contrôler des paramètres graphiques généraux** tels que la disposition des figures, la taille des marges, la forme des axes, la police à utiliser, etc... Exemple: 
+
+  - par()
+  - layout()
+
+\
+
+### Fonction plot()
+
+La fonction la plus couramment utilisée pour produire des graphiques dans R est la fonction `plot()`. `plot()` est une fonction générique dont le comportement s’adapte automatiquement à la nature de ses arguments. Il y a deux syntaxes possibles pour cette fonction :
+
+- syntaxe classique: `plot(x = varX, y = varY)`
+- syntaxe à base de formule: `plot(varY ~ varX)`,
+
+où varX et varY sont les noms des variables à mettre dans l’axe des x et l’axe des y, respectivement. L’expression `varY ~ varX` est un exemple de ce que R appelle formula (formule). Dans cette expression `varY` désigne la variable dépendante (à expliquer, càd., celui dont on cherche à étudier les variations) et `varX` la variable indépendante (explicative). Si vous tapez `methods(plot)`, vous allez voir, dans liste des méthodes, la fonction `plot.formula()`. C’est cette dernière qui est en réalité appelée à chaque fois qu’une formule est introduite comme argument.
+
+```{r }
+
+# les données
+x <- seq(-pi, pi, 0.1)
+y <- sin(x)
+
+plot(x, y)   # format classique
+plot(y ~ x)  # formule ---> plot.formula
+```
+
+
+Avec la syntaxe “formule”, la fonction `plot()` accepte l’argument `data` (voir le Help de `plot.formula()`) qui permet de simplifier davantage la syntaxe lorsqu’il s’agit de données stockées dans des data frames. Ainsi les deux lignes de codes suivantes sont équivalentes et produisent le même graphique que ci-dessus.
+
+
+```{r eval = FALSE}
+
+
+dt <- data.frame(z = x, w = y)
+plot(dt$w ~ dt$z)
+plot(w ~ z, data = dt)
+```
+
+La fonction `plot()` accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).
+
+```{r eval = FALSE}
+
+plot(w ~ z, data = dt,
+  type = "o", # type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...
+  col = "blue", # couleur, tapez `colours()` pour la liste complète
+  pch = 4, # type de symboles, un chiffre entre 0 et 25, tapez `?points`
+  cex = 0.5, # taille des symboles
+  lty = 3, # type de lignes, un chiffre entre 1 et 6
+  lwd = 1.2, # taille de lignes
+  xlim = c(-2.5, 2.5), # limites de l'axe des x
+  ylim = c(-1.5, 1.5), # limites de l'axe des y)
+  xlab = "La variable z", # titre pour l'axe des x
+  ylab = "Le sinus  de z", # titre pour l'axe des y
+  main = "La fonction sinus entre -pi et pi" # titre général pour le graphique
+) 
+```
+
+
+\
+
+## Représenter des variables
+
+### Variable quantitative
+
+```{r eval = FALSE}
+
+
+# gauche supérieur
+stripchart(mpg$displ, xlab = "displ", pch = 16)
+# droite supérieur
+stripchart(mpg$displ, xlab = "displ", method = "stack", pch = 16)
+# gauche inférieur
+stripchart(mpg$displ, xlab = "displ", method = "jitter", pch = 16)
+# droite inférieur
+stripchart(mpg$displ, ylab = "displ", method = "jitter", vertical = TRUE, pch = "+")
+
+plot(mpg$drv)   #---> barplot()
+barplot(mpg$drv)
+
+# Pour la distribution
+hist(mpg$displ)
+hist(mpg$displ, freq = FALSE)
+density(mpg$displ)
+
+```
+
+
+### Deux variables quantitatives
+
+```{r eval = FALSE}
+
+
+
+
+plot(hwy ~ displ, data = mpg, pch = 16)
+```
+
+### Variale qualitative
+
+```{r eval = FALSE}
+
+```
+
+### Deux variables qualitatives
+
+```{r eval = FALSE}
+plot()
+barplot()
+```
+
+### Varibales qualitatives et quantitatives
+
+```{r eval = FALSE}
+
+stripchart(hwy ~ trans, data = mpg, vertical = TRUE, pch = 16, metho = "jitter")
+
+boxplot(hwy ~ trans, data = mpg)
+
+plot()
+
+boxplot(hwy ~ trans, data = mpg)
+stripchart(hwy ~ trans, data = mpg, vertical = TRUE, pch = 16, metho = "jitter", add = TRUE)
+
+boxplot(hwy ~ trans + drv, data = mpg)
+
+```
+
+## Tracer une fonction
+```{r eval = FALSE}
+
+curve()
+curve(x^2, from = 0, to = 20, col = "red", lty = 1, ylab = "y")
+curve(x^(2.5), from = 0, to = 20, col = "gray", lty = 2, add = TRUE)
+curve(x^(3), from = 0, to = 20, col = "blue", lty = 3, add = TRUE)
+legend("topright", title = "Function", legend = c("x^2", "x^2.5", "x^3"), col = c("red", "gray", "blue"), lty = 1:3, bty = "n", inset = c(0.2, 0))
+```
+
+## Exporter un graphique
+
+Un graphique crée dans RStudio est affiché par défaut dans l’onglet **Plots**. Vous pouvez utiliser cet onglet pour zoomer sur un graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export**.
+
+Pour sauvegarder un graphique R (tel que vous le visualisez sur votre écran) en format PDF, vous pouvez aussi exécuter le code suivant en remplaçant filename par le le nom que vous voulez. Le fichier ainsi créé sera enregistré dans votre répertoire de travail R.
+
+```{r eval = FALSE}
+dev.print(pdf, "filename.pdf") # <-- remplacez 'filename' (gardez l'extension pdf)
+```
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+\
+
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+\
+
+------------------------------------------------------------------------
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+
+
+```
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Correction"
+  
+
+
+
+
+```
+:::
+
+\

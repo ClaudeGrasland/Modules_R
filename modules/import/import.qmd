@@ -2,46 +2,43 @@
 title: "Import et export de données"
 subtitle: "Les différents types et formats de données pris en charge par R"
 author: Hugues pecout
-image : img/import.png
 date: last-modified
 ordre: 01
+code-fold: true
+code-tools: true
 ---
 
+**De nombreuses de fonctions (primitives ou non) permettent d'importer et d'exporter des données de différents formats.**
 
-De nombreuses de fonctions(primitives ou non) peuvent être utilisées pour importer et exporter des données de différents formats.
-
-## Tableau de données
+## **Tableau de données**
 
 ### Fichier texte simple
 
 Un fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s'ouvrir avec n'importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.
 
-Plusieurs fonctions primitives permettent d'importer et d'exporter des fichiers texte simples, comme les fichiers **csv**, **txt** , **tsv**... 
+Plusieurs fonctions primitives permettent d'importer et d'exporter des fichiers texte simples, comme les fichiers **csv**, **txt** , **tsv**...
 
 #### Import
 
-- `read.delim()` : fichiers délimités par un symbole quelconque et "." en séparateur décimal 
-- `read.delim2()` : fichiers délimités par un symbole quelconque et "," en séparateur décimal 
-- `read.table()` : pour des fichiers texte délimités par des espaces  
-- `read.csv()` : pour des fichiers texte délimités par des virgules (format csv)
-- `read.csv2()` : pour des fichiers texte délimités par des points-virgules (format csv français)
+-   `read.delim()` : fichiers délimités par un symbole quelconque et "." en séparateur décimal
+-   `read.delim2()` : fichiers délimités par un symbole quelconque et "," en séparateur décimal
+-   `read.table()` : pour des fichiers texte délimités par des espaces\
+-   `read.csv()` : pour des fichiers texte délimités par des virgules (format csv)
+-   `read.csv2()` : pour des fichiers texte délimités par des points-virgules (format csv français)
 
 Pour que l'import de données s'effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :
 
-**header** : valeur logique qui indique si la première ligne contient les noms des variables.<br/>
-**sep** = indique le caractère utilisé comme séparateur de champ (ex : ";")<br/>
-**encoding** = Chaîne de caractère qui précise l'encodage utilisé pour le fichier (ex : "UTF-8").<br/>
+**header** = valeur logique qui indique si la première ligne contient les noms des variables.<br/> **sep** = indique le caractère utilisé comme séparateur de champ (ex : ";")<br/> **encoding** = Chaîne de caractère qui précise l'encodage utilisé pour le fichier (ex : "UTF-8").<br/>
 
-:::{.callout-important}
+::: callout-important
 N'oubliez pas d'assigner le résultat dans un objet pour garder en mémoire vos données importées.
 :::
 
-
-
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
 
 # Exemple d'utilisation de read.table()
-mon_tableau  <- read.table(file = "../data/afrika_don_meta.csv", 
+mon_tableau  <- read.table(file = "../data/DEV_AFRICA_2018/afrika_don_meta.csv", 
                            header = TRUE,
                            sep= ";",
                            encoding = "UTF-8")
@@ -52,17 +49,16 @@ class(mon_tableau)
 
 ```
 
-
-
 #### Export
 
-Des fonctions primitives permettent également d'exporter votre tableau de donnée vers différents format texte simple
+Des fonctions primitives permettent également d'exporter votre tableau de données vers différents format texte.
 
-- `write.table() ` : pour tous les types de formats texte simple (séparateur à renseigner)
-- `write.csv() ` : pour exporter en csv (séparateur virgule)
-- `write.csv2() ` : pour exporter en csv (séparateur points-virgules)
+-   `write.table()` : pour tous les types de formats texte simple (séparateur à renseigner)
+-   `write.csv()` : pour exporter en csv (séparateur virgule)
+-   `write.csv2()` : pour exporter en csv (séparateur points-virgules)
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
 # Exemple write.table()
 write.table(x = mon_tableau, 
@@ -80,32 +76,26 @@ write.csv(x = mon_tableau, file = "../data/tableau.csv")
 
 Il est parfois nécessaire d'importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d'importer ce genre de format, et même d'exporter vos données dans ce type de format.
 
-
-
-#### Import 
-
+#### Import
 
 Vous pouvez par exemple importer un fichier Excel avec le package [`readxl`](https://readxl.tidyverse.org/).
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
 
 install.packages("readxl")
 
 ```
 
-:::{.callout-important}
-
+::: callout-important
 Le packages `readxl` fait partie de l'écosystème `tidyverse` (cf. module [x]()). Pour cette raison, le tableau importé est mis en mémoire dans un objet [`tibble`](https://tibble.tidyverse.org/) et non `dataframe`. Il s'agit de deux objets très semblables mais pas identiques. Pour convertir un `tibble` en `dataframe`, vous pouvez utiliser la fonction `as.data.frame()`.
-
 :::
 
-
-
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
 
 library(readxl)
-mon_tableau <- read_excel(path = "../data/afrika_don.xls", 
+mon_tableau <- read_excel(path = "../data/DEV_AFRICA_2018/afrika_don.xls", 
                           sheet = "afrika_meta", 
                           skip = 0,
                           col_names = TRUE)
@@ -115,30 +105,26 @@ class(mon_tableau)
 
 ```
 
-
 #### Export
 
 Pour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package [`openxlsx`](https://cran.r-project.org/web/packages/openxlsx/index.html) et sa fonction `write.xlsx()`.
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
 
 install.packages("openxlsx")
 
 ```
 
-
-:::{.callout-important}
-
+::: callout-important
 Le packages `openxlsx` permet uniquement de lire et écrire les fichiers Excel comportant l'extension **.xlsx**.
-
 :::
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
-library(readxl)
-write.xlsx(x = mon_tableau, file = "../data/afrika_don.xlsx")
+library(openxlsx)
+write.xlsx(x = mon_tableau, file = "../data/DEV_AFRICA_2018/afrika_don.xlsx")
 
 ```
 
@@ -146,21 +132,23 @@ write.xlsx(x = mon_tableau, file = "../data/afrika_don.xlsx")
 
 ### SAS
 
-Le package [`haven`](https://haven.tidyverse.org/) permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf... 
+Le package [`haven`](https://haven.tidyverse.org/) permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf...
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
 
 install.packages("haven")
 
 ```
 
-:::{.callout-important}
+::: callout-important
 Tout comme `readxl`, ce package fait partie de l'écosystème `tidyverse` (cf. module [x]()). Le tableau importé est mis en mémoire dans un objet [`tibble`](https://tibble.tidyverse.org/) et non `dataframe`. Vous pouvez utiliser la fonction `as.data.frame()` pour le convertir.
 :::
 
 #### Import
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
 library(haven)
 mon_tableau  <- read_sas(data_file = "../data/data_sas.sas7bdat")
@@ -169,10 +157,9 @@ mon_tableau  <- read_sas(data_file = "../data/data_sas.sas7bdat")
 
 #### Export
 
-Le package `haven`met également une fonction à disposition qui permet d'exporter des données en format SAS (.sas7bdat).
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
-
+#| code-summary: "Voir l'exemple"
+library(haven)
 write_sas(data = mon_tableau, path = "../data/mon_tableau_sas.sas7bdat")
 ```
 
@@ -182,26 +169,21 @@ write_sas(data = mon_tableau, path = "../data/mon_tableau_sas.sas7bdat")
 
 Vous pouvez utiliser le package [`haven`](https://haven.tidyverse.org/) qui permet la lecture et l'écriture de fichier de données SAS.
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-
-library(haven)
-
-```
-
 #### Import
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
+library(haven)
 mon_tableau  <- read_sav(file =  "../data/data_spss.sav")
 
 ```
 
 #### Export
 
-Le package `haven`met également une fonction à disposition qui permet d'exporter des données en format SPSS (.sav).
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
-
+#| code-summary: "Voir l'exemple"
+library(haven)
 write_sav(data = mon_tableau, path =  "../data/mon_tableau_spss.sav")
 
 ```
@@ -212,15 +194,10 @@ write_sav(data = mon_tableau, path =  "../data/mon_tableau_spss.sav")
 
 Vous pouvez utiliser le package [`haven`](https://haven.tidyverse.org/) qui permet la lecture et l'écriture de fichier de données Stata.
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-
-library(haven)
-
-```
-
 #### Import
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
 library(haven)
 mon_tableau  <- read_stata(file =  "../data/data_stata.dta")
@@ -229,55 +206,57 @@ mon_tableau  <- read_stata(file =  "../data/data_stata.dta")
 
 #### Export
 
-Le package `haven`met également une fonction à disposition qui permet d'exporter des données en format Stata (.dta).
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
-
+#| code-summary: "Voir l'exemple"
+library(haven)
 write_dta(data = mon_tableau, path =  "../data/mon_tableau_stata.dta")
 
 ```
 
 \
 
-## Couche géographique
+## **Couche géographique**
 
 ### Vecteur
 
-Le package [`sf`](https://r-spatial.github.io/sf/) permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage...). Pour cela, ce package interface avec la librairie système [GDAL](https://gdal.org/). Les SIG fonctionnent de la même façon !
-
-
-:::{.callout-note}
-L'installation du package [`sf`](https://r-spatial.github.io/sf/) demande un prérequis. La librairie système [GDAL](https://gdal.org/) doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d'exploitation comme GNU/Linux.
-:::
+Le package [`sf`](https://r-spatial.github.io/sf/) permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage...). Pour cela, ce package interface avec la librairie système [`GDAL`](https://gdal.org/). Les SIG fonctionnent de la même façon !
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
 
 install.packages("sf")
 
 ```
 
+::: callout-note
+L'installation du package [`sf`](https://r-spatial.github.io/sf/) demande un prérequis. La librairie système [`GDAL`](https://gdal.org/) doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d'exploitation comme GNU/Linux.
+:::
+
 #### Import
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
 
 library(sf)
-map_africa <- st_read("../data/afrika_map.shp",  quiet = TRUE)
+map_africa <- st_read("../data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 
 class(map_africa)
 
+
 ```
 
-:::{.callout-important}
+::: callout-important
 Une couche géographique importée via la fonction `st_read()` du package [`sf`](https://r-spatial.github.io/sf/) est mise en mémoire dans un objet sf (simple feature). Il s'agit en quelque sorte d'un dataframe ou chaque individu est associé à une géométrie.
 :::
-
 
 #### Export
 
 La fonction `st_write()` permet d'enregistrer un objet sf sur sa machine, dans le format que l'on souhaite.
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir les exemples"
+
+library(sf)
 
 # Enregistrement en format ESRI Shapefile
 st_write(obj = map_africa, 
@@ -292,8 +271,6 @@ st_write(obj = map_africa,
 
 ```
 
-
-
 \
 
 ### Raster
@@ -301,21 +278,22 @@ st_write(obj = map_africa,
 Le package [`terra`](https://rspatial.org/index.html) permet aussi de lire et d'écrire des données géographiques vectorielles (comme `sf`) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
 
-install.packages("terra)
+install.packages("terra")
 
 ```
 
 #### Import
 
 Pour importer des données Raster, vous pouvez utiliser la fonction `rast()`.
- 
-:::{.callout-important}
+
+::: callout-important
 Un Raster importé via la fonction `rast()` du package [`terra`](https://rspatial.org/index.html) est mis en mémoire dans un objet SpatRaster.
 :::
 
-
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
 
 library(terra)
 Elevation_Benin <- rast("../data/elevation.tif") 
@@ -328,48 +306,53 @@ Elevation_Benin
 La fonction `writeRaster()` permet d'enregistrer un objet SpatRaster sur sa machine, dans le format que l'on souhaite.
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
-
+#| code-summary: "Voir l'exemple"
+library(terra)
 writeRaster(x = Elevation_Benin, filename = "../data/Benin_Elevation.tif")
 
 ```
 
 \
 
-## Image
+## **Image**
 
 ### Import
 
-Pour importer des images, le package `png`et `jpeg`, pré-installé avec le language R vous permet d'importer des images.
+Pour importer des images, le package `png`et `jpeg`, pré-installés avec le language R vous permet d'importer des images.
 
-#### Format PNG
+#### PNG
 
 ```{r}
+#| code-summary: "Voir l'exemple"
 
 library(png)
 mon_image_png <- readPNG("../img/map.png")
 
 ```
 
-#### Format JPEG
+#### JPEG
 
 ```{r}
+#| code-summary: "Voir l'exemple"
 
 library(jpeg)
 mon_image_jpg <- readJPEG("../img/wip.jpg")
 
 ```
+
 ### Export
 
 Il est également possible d'exporter les sorties graphiques en format image avec les fonctions primitives suivantes :
 
-- **bmp()**
-- **jpeg()**
-- **png()**
-- **tiff()**
+-   `bmp()`
+-   `jpeg()`
+-   `png()`
+-   `tiff()`
 
-Ces fonction doivent être utilisées de la manière suivante (exemple avec le format png) :
+Ces fonctions doivent être utilisées avec la fonction `dev.off()`. Exemple :
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
 # Ouverture de la création de l'image
 png(filename = "../img/mon_image.jpg")
@@ -382,19 +365,19 @@ dev.off()
 
 ```
 
- 
-:::{.callout-important}
-Il est important **et obligatoire** d'ajouter la fonction `dev.off()` qui permet de clôturer la représentation graphique et d'enregistrer l'image.
+::: callout-important
+La fonction `dev.off()` permet de clôturer la représentation graphique et d'enregistrer l'image. Si aucun dev.off() n'est exécuté à la suite de ces fonctions d'export, votre fenêtre graphique restera figée, et inutilisable.
 :::
 
-Il est également possible d'exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator...). Les fonction pour réaliser cela sont : 
+Il est également possible d'exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator...). Les fonction pour réaliser cela sont :
 
-- **pdf()**
-- **svg()**
+-   `pdf()`
+-   `svg()`
 
-L'utilisation de ces fonctions primitives est similaire à l'export d'images matricielles :
+L'utilisation de ces fonctions primitives est similaire à l'export d'images matricielles. Exemple :
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Voir l'exemple"
 
 # Ouverture de la création de l'image
 pdf(file = "../img/mon_image.pdf")
@@ -407,3 +390,86 @@ dev.off()
 
 ```
 
+\
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+\
+
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+\
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Raster délévation du Bénin (???)  | <a href="https://bit.ly/3XqLAKR" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+\
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder.png")
+```
+
+\
+
+[4. Créez un script R à la racine de votre projet Rstudio]{.question}
+
+*File/New File/R script*
+
+\
+
+[5. Importer les fichiers suivants en utilisant les fonctions adéquates :]{.question}
+
+-   data/DEV_AFRIA_2018/**afrika_don.csv**\
+-   data/DEV_AFRICA_2018/**afrika_don.xls** (1er onglet)\
+-   data/GADM_AFRICA_2020/**afrika_map.shp**\
+-   data/**elevation.tif**
+
+------------------------------------------------------------------------
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Pour importer un fichier csv (afrika_don.csv)
+read.csv()
+read.csv2()
+
+# Pour importer un fichier Excel (afrika_don.xls)
+library(readxl)
+read_excel()
+
+# Pour importer un fichier ESRI Shapefile (afrika_map.shp)
+library(sf)
+st_read()
+
+```
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Correction"
+  
+
+# Import du fichier csv "afrika_don.csv"
+data_from_csv <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don.csv")
+
+# Import du fichier xls "afrika_don.xls"
+library(readxl)
+data_from_xls <- read_excel(path = "data/DEV_AFRICA_2018/afrika_don.xls")
+
+# Importer du fichier shp "afrika_map.shp"
+library(sf)
+data_from_shp <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
+
+
+```
+:::
+
+\

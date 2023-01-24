@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (1:1.2.2+202212051552+b0a8486541)"
+   sodipodi:docname="repertoire.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.914906"
+     inkscape:cx="154.11419"
+     inkscape:cy="561.25984"
+     inkscape:window-width="2486"
+     inkscape:window-height="1376"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#4d4d4d;fill-rule:evenodd;stroke-width:0.259877"
+       id="rect111"
+       width="142.35353"
+       height="102.91162"
+       x="32.061882"
+       y="52.0229" />
+    <rect
+       style="fill:#ffd42a;fill-rule:evenodd;stroke-width:0.293187"
+       id="rect113"
+       width="68.885269"
+       height="84.674454"
+       x="98.630226"
+       y="64.789139" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;opacity:0.99;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="32.852489"
+       y="48.652187"
+       id="text329"><tspan
+         sodipodi:role="line"
+         id="tspan327"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#666666;stroke-width:0.264583"
+         x="32.852489"
+         y="48.652187">Répertoire de votre projet Rstudio</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;opacity:0.99;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="99.176826"
+       y="61.711163"
+       id="text329-3"><tspan
+         sodipodi:role="line"
+         id="tspan327-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffd42a;stroke-width:0.264583"
+         x="99.176826"
+         y="61.711163">Sous-répertoire &quot;data&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="40.905964"
+       y="100.47609"
+       id="text416"><tspan
+         id="tspan414"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.264583"
+         x="40.905964"
+         y="100.47609"
+         sodipodi:role="line">mon_projet.Rproj</tspan></text>
+    <rect
+       style="opacity:0.99;fill:none;stroke:#707070;stroke-width:0.65633;stroke-dasharray:0.65633, 1.31266;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect470"
+       width="57.84927"
+       height="17.906914"
+       x="104.15613"
+       y="75.367218" />
+    <rect
+       style="opacity:0.99;fill:none;stroke:#707070;stroke-width:0.65633;stroke-dasharray:0.65633, 1.31266;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect470-3"
+       width="57.84927"
+       height="17.906914"
+       x="104.15613"
+       y="103.4174" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="111.4759"
+       y="89.315002"
+       id="text2485"><tspan
+         sodipodi:role="line"
+         id="tspan2483"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="111.4759"
+         y="89.315002">DEV_AFRICA_2018</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="109.13702"
+       y="117.30577"
+       id="text2485-9"><tspan
+         sodipodi:role="line"
+         id="tspan2483-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="109.13702"
+         y="117.30577">GADM_AFRICA_2020</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="119.14765"
+       y="138.9514"
+       id="text2485-6"><tspan
+         sodipodi:role="line"
+         id="tspan2483-2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="119.14765"
+         y="138.9514">elevation.tif</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="116.66109"
+       y="82.265884"
+       id="text2555"><tspan
+         sodipodi:role="line"
+         id="tspan2553"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="116.66109"
+         y="82.265884">Sous- répertoire</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="116.66109"
+       y="110.17791"
+       id="text2555-2"><tspan
+         sodipodi:role="line"
+         id="tspan2553-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="116.66109"
+         y="110.17791">Sous- répertoire</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:0;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-117.63781"
+       y="91.263741"
+       id="text2592"
+       transform="translate(166.64453,18.002191)"><tspan
+         id="tspan2590"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';fill:#f9f9f9;stroke-width:0.264583"
+         x="-117.63781"
+         y="91.263741">(Fichier projet)</tspan></text>
+  </g>
+</svg>

@@ -3,47 +3,25 @@ title: "Données"
 subtitle: "Présentation et téléchargement des données utilisés dans les modules"
 ---
 
-<!-- ::: column-margin -->
-
-<!-- ![](img/data.png){width="35%"} -->
-
-<!-- ::: -->
-
-:::{.callout-note}
-**Tous les jeux de données utilisés dans les différents modules sont présentés sur cette page.**
-:::
-
-
-
-## Téléchargement
-
-Vous pouvez récupérer l'intégralité des jeux de données utilisés dans les différents cours et exercices TIG'R à en cliquant sur ce lien : 
-
-::: {.center}
-[<span style="font-size: 400%;" class="bi bi-box-arrow-down"></span> <br/> Download]()</p>
-:::
-
-
-</br>
-
-## Les jeux de données
 
 \
 
-### [I. Afrique 2020 (UN - CEPII)]{.blue-data}
+## [I. Afrique data]{.blue-data}
 
-Présentationd es données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+Présentation des données, source, date... Bla bla bla
 
-</br>
+::: center
+<a href="https://bit.ly/3DaCAkX" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
+:::
 
-##### Affichage de données :
+\
 
-
+#### Affichage de données :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
-data <- read.csv2(file = "data/afrika_don.csv")
-metadata <- read.csv2(file = "data/afrika_don_meta.csv")
+data <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don.csv")
+metadata <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don_meta.csv")
 metadata$Type <- sapply(data, class)
 metadata <- metadata[, c(1,2,4,3)]
 
@@ -56,11 +34,9 @@ datatable(data ,  options = list(
 
 ```
 
+\
 
-</br>
-
-##### Dictionnaire des variables :
-
+#### Dictionnaire des variables :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -73,20 +49,22 @@ datatable(metadata , options = list(
 
 \
 
-### [II. Afrique 2020 (GADM)]{.blue-data}
+## [II. GADM Afrique]{.blue-data}
 
-Présentationd des données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+Présentation des données, source, date... Bla bla bla
 
-</br>
+::: center
+<a href="https://bit.ly/3DaAUb2" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
+:::
 
-##### Affichage de données :
+\
 
-
+#### Affichage de données :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
 
 library(sf)
-pays_afrique <- st_read("data/afrika_map.shp",  quiet = TRUE)
+pays_afrique <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 
 library(mapview)
 mapview(pays_afrique, zcol = "subregion")
@@ -94,11 +72,9 @@ mapview(pays_afrique, zcol = "subregion")
 
 ```
 
+\
 
-</br>
-
-##### Dictionnaire des variables :
-
+#### Dictionnaire des variables :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -114,16 +90,60 @@ datatable(pays_afrique ,  options = list(
 
 \
 
-### [III. Afrique 2018 (Elevation)]{.blue-data}
+## [III. Africapolis]{.blue-data}
 
-https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62
-Présentationd des données, source, date... Blabla bzoehfzh zekfh fze fzefgze fizefz fzeif 
+Présentation des données, source, date... Bla bla bla
 
-</br>
+::: center
+<a href="https://bit.ly/3wnQKeG" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
+:::
 
-##### Affichage de données :
+\
+
+#### Affichage d'un échantillon (uniquement Ghana, Bénin et Togo  :
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+
+africapolis_extract <- st_read("data/AFRICAPOLIS_2020/africapolis_extract.shp",  quiet = TRUE)
 
 
+# Affichage
+mapview(africapolis_extract)
+
+
+```
+
+\
+
+#### Dictionnaire des variables :
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+
+# install.packages("DT")
+library(DT)
+datatable(pays_afrique ,  options = list(
+  pageLength =5, autoWidth = TRUE
+))
+
+
+```
+
+\
+
+## [III. Elevation Bénin]{.blue-data}
+
+
+Présentation des données, source, date... Bla bla bla
+https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62 
+
+::: center
+<a href="https://bit.ly/3XqLAKR" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
+:::
+
+\
+
+#### Affichage de données :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
 
@@ -134,11 +154,9 @@ plot(Elevation_Benin)
 
 ```
 
+\
 
-</br>
-
-##### Caractèristiques du Raster :
-
+#### Caractèristiques du Raster :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -147,81 +165,15 @@ Elevation_Benin
 ```
 
 
+```{r eval = FALSE, include = FALSE, include = FALSE}
 
-
-
-
-```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
-library(vtable)
-
-st(data[,3:20], summ=c('propNA(x)', 'mean(x)',
-                'median(x)', 'min(x)', 'max(x)', 
-                'sd(x)'),
-         summ.names=c('% NA', 'moy',
-                'med', 'min', 'max', 
-                'sd'), title='')
+library(sf)
+africapolis_extract <- st_read("../data/AFRICAPOLIS_2020 (1)/AFRICAPOLIS2020.shp",  quiet = TRUE)
+africapolis_extract <- africapolis_extract[africapolis_extract$ISO3 %in% c("BEN", "TGO", "GHA"),]
+# Enregistrement en format ESRI Shapefile
+st_write(obj = africapolis_extract, 
+         dsn = "../data/AFRICAPOLIS_2020/africapolis_extract.shp", 
+         layer_options = "ENCODING=UTF-8", delete_layer = TRUE)
 
 ```
 
-
-```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
-
-st(data, vars = "SUBREG", summ=c('propNA(x)', 'mean(x)'),
-         summ.names=c('Freq', '%'), title='')
-
-
-```
-
-
-```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, message=FALSE}
-
-
-# data[,22]<- as.logical(data[,22])
-# data[,23]<- as.logical(data[,23])
-# data[,24]<- as.logical(data[,24])
-# data[,25]<- as.logical(data[,25])
-# data[,26]<- as.logical(data[,26])
-st(data[,22:26], summ=c('propNA(x)', 'mean(x)',
-                'median(x)', 'min(x)', 'max(x)', 
-                'sd(x)'),
-         summ.names=c('% NA', 'moy',
-                'med', 'min', 'max', 
-                'sd'), title='')
-
-```
-
-<!-- ```{r echo = FALSE, include = TRUE, eval = FALSE, warning= FALSE, out.width="100%"} -->
-
-<!-- par(mfrow=c(2,2)) -->
-
-<!-- for (i in 4:ncol(data)){ -->
-
-<!--   if (is.numeric( data[,i])){ -->
-
-<!--     if(length(unique(data[,i]))==2){ -->
-
-<!--       barplot(table(as.logical(data[,i])), main = metadata[i,2], xlab = colnames(data)[i]) -->
-
-<!--     } else { -->
-
-<!--   hist(data[,i], main = metadata[i,2], xlab = colnames(data)[i]) -->
-
-<!--   abline(v = summary(data[,i])[2], lwd = 1, col="green4" ) -->
-
-<!--   abline(v = summary(data[,i])[3], lwd = 1, col="green4") -->
-
-<!--   abline(v = summary(data[,i])[5], lwd = 1, col="green4") -->
-
-<!--   abline(v = summary(data[,i])[4], col="red", lwd=2) -->
-
-<!--   } -->
-
-<!--     } else { -->
-
-<!--     barplot(table(data[,i]), main = metadata[i,2], xlab = colnames(data)[i]) -->
-
-<!--   } -->
-
-<!-- } -->
-
-<!-- ``` -->

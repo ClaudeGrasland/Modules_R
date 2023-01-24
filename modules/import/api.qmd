@@ -1,5 +1,8 @@
 ---
 title: "Packages de données et API"
+subtitle: "Quelques packages forunisseurs de données"
 author: Work in progress
 ordre: 02
+code-fold: true
+code-tools: true
 ---

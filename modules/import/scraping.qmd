@@ -1,5 +1,10 @@
 ---
 title: "Initiation au web scraping"
-author: Work in progress
+subtitle: "Collecter des données du Web avec R (API, scraping...)"
 ordre: 04
+author: work in progress
+code-fold: true
+code-tools: true
 ---
+
+**Work in progress**

@@ -24,6 +24,6 @@ ordre: 01
 
 </br>
 
-::: {.center}
+::: center
 Revenir à la [page d'acceuil des modules](/modules.qmd)
 :::

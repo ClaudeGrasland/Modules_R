@@ -2,7 +2,7 @@ project:
   type: website
 lang: fr
 website:
-  title: "<b>TIG'R</b>"
+  title: TIG'R
   favicon: img/tigr2.png
   twitter-card: true
   site-url: https://tigr.netlify.app/
@@ -13,6 +13,7 @@ website:
 
   sidebar:
     style: "docked"
+    collapse-level: 1
     contents:
     
       - text: "**Introduction**"
@@ -31,7 +32,7 @@ website:
       - section: "**Import de données**"
         contents:
           - href: modules/import.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/import/import.qmd
             text: Import & export
           - href: modules/import/api.qmd
@@ -44,7 +45,7 @@ website:
       - section: "**Manipulation**"
         contents:
           - href: modules/manipulation.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/manipulation/manipulation.qmd
             text: R-base
           - href: modules/manipulation/datatable.qmd
@@ -55,7 +56,7 @@ website:
       - section: "**Graphique**"
         contents:
           - href: modules/graphique.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/graphique/Rbase_graph.qmd
             text: Graphique R-base
           - href: modules/graphique/ggplot2.qmd
@@ -66,7 +67,7 @@ website:
       - section: "**Statistique**"
         contents:
           - href: modules/statistique.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/statistique/statistique_uni.qmd
             text: Univariée
           - href: modules/statistique/statistique_bi.qmd
@@ -77,7 +78,7 @@ website:
       - section: "**Géomatique**"
         contents:
           - href: modules/geomatique.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/geomatique/geomatic_vector.qmd
             text: Données vectorielles
           - href: modules/geomatique/geomatic_raster.qmd
@@ -86,7 +87,7 @@ website:
       - section: "**Cartographie**"
         contents:
           - href: modules/cartographie.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/cartographie/map_sf.qmd
             text: Cartographie statique
           - href: modules/cartographie/map_2.qmd
@@ -95,7 +96,7 @@ website:
       - section: "**Notebook**"
         contents:
           - href: modules/notebook.qmd
-            text: Introduction
+            text: Liste des modules
           - href: modules/notebook/programmation_lettree.qmd
             text: La programmation lettrée
           - href: modules/notebook/notebook.qmd
