@@ -10,50 +10,54 @@ code-tools: true
 
 **Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.
 
-## Fonctions graphiques 
+Je rajoute une phrase
+
+```{r}
+print("hello")
+```
 
 
-### Trois types 
+## Fonctions graphiques
 
-Il y a trois types de fonctions graphiques en R: 
+### Trois types
 
-I. **Les fonctions, dites de niveau supérieur, qui servent à créer de nouveaux graphiques**. Exemple: 
+Il y a trois types de fonctions graphiques en R:
 
-  - plot()  
-  - barplot() 
-  - stripchart()
-  - hist()  
-  - boxplot()  
-  - curve()    
-  - etc....
-  
-  
-II. **les fonctions, dites de niveau inférieur, qui servent à jouter de l'information à un graphique existant**. Exemple: 
+I. **Les fonctions, dites de niveau supérieur, qui servent à créer de nouveaux graphiques**. Exemple:
 
-  - legend()
-  - title()
-  - density()
-  - points()
-  - lines()
-  - text()
-  - etc...
-  
-  
-III. **Les fonctions utilisées pour fixer et contrôler des paramètres graphiques généraux** tels que la disposition des figures, la taille des marges, la forme des axes, la police à utiliser, etc... Exemple: 
+-   plot()\
+-   barplot()
+-   stripchart()
+-   hist()\
+-   boxplot()\
+-   curve()\
+-   etc....
 
-  - par()
-  - layout()
+II. **les fonctions, dites de niveau inférieur, qui servent à jouter de l'information à un graphique existant**. Exemple:
+
+-   legend()
+-   title()
+-   density()
+-   points()
+-   lines()
+-   text()
+-   etc...
+
+III. **Les fonctions utilisées pour fixer et contrôler des paramètres graphiques généraux** tels que la disposition des figures, la taille des marges, la forme des axes, la police à utiliser, etc... Exemple:
+
+-   par()
+-   layout()
 
 \
 
 ### Fonction plot()
 
-La fonction la plus couramment utilisée pour produire des graphiques dans R est la fonction `plot()`. `plot()` est une fonction générique dont le comportement s’adapte automatiquement à la nature de ses arguments. Il y a deux syntaxes possibles pour cette fonction :
+La fonction la plus couramment utilisée pour produire des graphiques dans R est la fonction `plot()`. `plot()` est une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments. Il y a deux syntaxes possibles pour cette fonction :
 
-- syntaxe classique: `plot(x = varX, y = varY)`
-- syntaxe à base de formule: `plot(varY ~ varX)`,
+-   syntaxe classique: `plot(x = varX, y = varY)`
+-   syntaxe à base de formule: `plot(varY ~ varX)`,
 
-où varX et varY sont les noms des variables à mettre dans l’axe des x et l’axe des y, respectivement. L’expression `varY ~ varX` est un exemple de ce que R appelle formula (formule). Dans cette expression `varY` désigne la variable dépendante (à expliquer, càd., celui dont on cherche à étudier les variations) et `varX` la variable indépendante (explicative). Si vous tapez `methods(plot)`, vous allez voir, dans liste des méthodes, la fonction `plot.formula()`. C’est cette dernière qui est en réalité appelée à chaque fois qu’une formule est introduite comme argument.
+où varX et varY sont les noms des variables à mettre dans l'axe des x et l'axe des y, respectivement. L'expression `varY ~ varX` est un exemple de ce que R appelle formula (formule). Dans cette expression `varY` désigne la variable dépendante (à expliquer, càd., celui dont on cherche à étudier les variations) et `varX` la variable indépendante (explicative). Si vous tapez `methods(plot)`, vous allez voir, dans liste des méthodes, la fonction `plot.formula()`. C'est cette dernière qui est en réalité appelée à chaque fois qu'une formule est introduite comme argument.
 
 ```{r }
 
@@ -65,9 +69,7 @@ plot(x, y)   # format classique
 plot(y ~ x)  # formule ---> plot.formula
 ```
 
-
-Avec la syntaxe “formule”, la fonction `plot()` accepte l’argument `data` (voir le Help de `plot.formula()`) qui permet de simplifier davantage la syntaxe lorsqu’il s’agit de données stockées dans des data frames. Ainsi les deux lignes de codes suivantes sont équivalentes et produisent le même graphique que ci-dessus.
-
+Avec la syntaxe "formule", la fonction `plot()` accepte l'argument `data` (voir le Help de `plot.formula()`) qui permet de simplifier davantage la syntaxe lorsqu'il s'agit de données stockées dans des data frames. Ainsi les deux lignes de codes suivantes sont équivalentes et produisent le même graphique que ci-dessus.
 
 ```{r eval = FALSE}
 
@@ -96,7 +98,6 @@ plot(w ~ z, data = dt,
 ) 
 ```
 
-
 \
 
 ## Représenter des variables
@@ -124,7 +125,6 @@ hist(mpg$displ, freq = FALSE)
 density(mpg$displ)
 
 ```
-
 
 ### Deux variables quantitatives
 
@@ -167,6 +167,7 @@ boxplot(hwy ~ trans + drv, data = mpg)
 ```
 
 ## Tracer une fonction
+
 ```{r eval = FALSE}
 
 curve()
@@ -178,7 +179,7 @@ legend("topright", title = "Function", legend = c("x^2", "x^2.5", "x^3"), col = 
 
 ## Exporter un graphique
 
-Un graphique crée dans RStudio est affiché par défaut dans l’onglet **Plots**. Vous pouvez utiliser cet onglet pour zoomer sur un graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export**.
+Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Vous pouvez utiliser cet onglet pour zoomer sur un graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export**.
 
 Pour sauvegarder un graphique R (tel que vous le visualisez sur votre écran) en format PDF, vous pouvez aussi exécuter le code suivant en remplaçant filename par le le nom que vous voulez. Le fichier ainsi créé sera enregistré dans votre répertoire de travail R.
 
