@@ -60,7 +60,7 @@
     "href": "modules/graphique/Rbase_graph.html",
     "title": "Graphique de base",
     "section": "",
-    "text": "Le langage R met à disposition un ensemble de fonctions pour la représentation graphique via le package pré-installé graphics . Bien que l’on préférera des packages spécialisés et plus complets comme ggplot2 pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation peuvent être très utiles en matière d’exploration de données.\nJe rajoute une phrase"
+    "text": "Le langage R met à disposition un ensemble de fonctions pour la représentation graphique via le package pré-installé graphics . Bien que l’on préférera des packages spécialisés et plus complets comme ggplot2 pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation peuvent être très utiles en matière d’exploration de données."
   },
   {
     "objectID": "modules/graphique/Rbase_graph.html#fonctions-graphiques",
