@@ -1,6 +1,6 @@
 ---
-title: "Graphique de base"
-subtitle: "Representations graphiques en R-base"
+title: "Graphique R-base"
+subtitle: "Representations graphiques avec les fonctions primitives"
 author: Hugues pecout
 date: last-modified
 ordre: 01
@@ -11,93 +11,212 @@ code-tools: true
 **Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.
 
 
+## Principales fonctions
 
-## Fonctions graphiques
+### 3 types de fonction
 
-### Trois types
+Les fonctions graphiques peuvent être classées en trois catégories :
 
-Il y a trois types de fonctions graphiques en R:
+**I.** Les fonctions permettant de **créer différents types de graphiques** :
 
-I. **Les fonctions, dites de niveau supérieur, qui servent à créer de nouveaux graphiques**. Exemple:
-
--   plot()\
--   barplot()
--   stripchart()
--   hist()\
--   boxplot()\
--   curve()\
+-   `plot()` 
+-   `barplot()`
+-   `stripchart()`
+-   `hist()`
+-   `boxplot()`
+-   `curve()`
 -   etc....
 
-II. **les fonctions, dites de niveau inférieur, qui servent à jouter de l'information à un graphique existant**. Exemple:
 
--   legend()
--   title()
--   density()
--   points()
--   lines()
--   text()
+**II.** les fonctions permettant d'**ajouter de l'information à un graphique existant** :
+
+-   `legend()`
+-   `title()`
+-   `density()`
+-   `points()`
+-   `lines()`
+-   `abline()`
+-   `text()`
 -   etc...
 
-III. **Les fonctions utilisées pour fixer et contrôler des paramètres graphiques généraux** tels que la disposition des figures, la taille des marges, la forme des axes, la police à utiliser, etc... Exemple:
+**III.** Les fonctions utilisées pour **fixer et contrôler des paramètres graphiques généraux** :
 
--   par()
--   layout()
+-   `par()`
+-   `layout()`
 
 \
 
-### Fonction plot()
+### La fonction plot()
 
-La fonction la plus couramment utilisée pour produire des graphiques dans R est la fonction `plot()`. `plot()` est une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments. Il y a deux syntaxes possibles pour cette fonction :
+La fonction primitive de représentation graphique la plus couramment utilisée est la fonction `plot()`. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**. 
 
--   syntaxe classique: `plot(x = varX, y = varY)`
--   syntaxe à base de formule: `plot(varY ~ varX)`,
+Deux syntaxes sont possibles pour utiliser cette fonction :
 
-où varX et varY sont les noms des variables à mettre dans l'axe des x et l'axe des y, respectivement. L'expression `varY ~ varX` est un exemple de ce que R appelle formula (formule). Dans cette expression `varY` désigne la variable dépendante (à expliquer, càd., celui dont on cherche à étudier les variations) et `varX` la variable indépendante (explicative). Si vous tapez `methods(plot)`, vous allez voir, dans liste des méthodes, la fonction `plot.formula()`. C'est cette dernière qui est en réalité appelée à chaque fois qu'une formule est introduite comme argument.
+- Classique :
 
-```{r }
 
-# les données
+```{r eval = TRUE}
+#| code-fold: FALSE
+
 x <- seq(-pi, pi, 0.1)
 y <- sin(x)
 
-plot(x, y)   # format classique
-plot(y ~ x)  # formule ---> plot.formula
+
+plot(x, y) 
+
+
 ```
 
-Avec la syntaxe "formule", la fonction `plot()` accepte l'argument `data` (voir le Help de `plot.formula()`) qui permet de simplifier davantage la syntaxe lorsqu'il s'agit de données stockées dans des data frames. Ainsi les deux lignes de codes suivantes sont équivalentes et produisent le même graphique que ci-dessus.
+- syntaxe "formule" :
 
-```{r eval = FALSE}
+```{r eval = TRUE}
+#| code-fold: FALSE
 
 
-dt <- data.frame(z = x, w = y)
-plot(dt$w ~ dt$z)
-plot(w ~ z, data = dt)
+plot(y ~ x)        
+
 ```
+
+Dans l'expression `y ~ x`, `y` désigne la variable dépendante (à expliquer) et `varX` la variable indépendante (explicative). 
 
 La fonction `plot()` accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).
 
-```{r eval = FALSE}
+```{r eval = TRUE}
+#| code-fold: FALSE
 
-plot(w ~ z, data = dt,
+plot(y ~ x, 
   type = "o", # type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...
-  col = "blue", # couleur, tapez `colours()` pour la liste complète
-  pch = 4, # type de symboles, un chiffre entre 0 et 25, tapez `?points`
-  cex = 0.5, # taille des symboles
-  lty = 3, # type de lignes, un chiffre entre 1 et 6
-  lwd = 1.2, # taille de lignes
+  col = "red", # couleur, tapez `colours()` pour la liste complète
+  pch = 20, # type de symboles, un chiffre entre 0 et 25, tapez `?points`
+  cex = 1.1, # taille des symboles
+  lty = 1, # type de lignes, un chiffre entre 1 et 6
+  lwd = 1.4, # taille de lignes
   xlim = c(-2.5, 2.5), # limites de l'axe des x
   ylim = c(-1.5, 1.5), # limites de l'axe des y)
-  xlab = "La variable z", # titre pour l'axe des x
-  ylab = "Le sinus  de z", # titre pour l'axe des y
+  xlab = "La variable x", # titre pour l'axe des x
+  ylab = "Le sinus  de x", # titre pour l'axe des y
   main = "La fonction sinus entre -pi et pi" # titre général pour le graphique
 ) 
 ```
 
 \
 
-## Représenter des variables
+### Ajout d'éléménts
 
-### Variable quantitative
+Une fois le graphique construit, plusieurs fonctions primitives vous permettre d'ajouter différents éléments. Exemple :
+
+```{r eval = TRUE}
+#| code-fold: FALSE
+
+plot(y ~ x, 
+  type = "o", # type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...
+  col = "red", # couleur, tapez `colours()` pour la liste complète
+  pch = 20, # type de symboles, un chiffre entre 0 et 25, tapez `?points`
+  cex = 1.1, # taille des symboles
+  lty = 1, # type de lignes, un chiffre entre 1 et 6
+  lwd = 1.4, # taille de lignes
+  xlim = c(-2.5, 2.5), # limites de l'axe des x
+  ylim = c(-1.5, 1.5), # limites de l'axe des y)
+  xlab = "La variable x", # titre pour l'axe des x
+  ylab = "Le sinus  de x") # titre pour l'axe des y) 
+
+
+# Ajout d'une LEGENDE
+legend(x = 0.9, # Emplacement de la légende (coin haut gauche)
+       y = -1.1, # Emplacement de la légende (coin haut gauche)
+       legend = "Fonction sinus entre -pi et pi", 
+       bg = "lightgoldenrod",
+       col = "red",
+       pch = 20,
+       cex = 0.7, # Taille de lé lagende
+       lty = 1, 
+       lwd = 1.4)
+
+# Ajout d'une LIGNE (horizontale)
+abline(h = 0, # Coupe l'axe des y à cette valeur 
+       lty = 2, # Type de ligne
+       lwd = 0.5, # épaisseur
+       col = "grey50")
+
+# Ajout d'un POINT
+points(x = -0, 
+       y = 0, 
+       col = "red4", 
+       pch = 20,# Type de symbol
+       cex = 4)
+
+# Ajout de TEXTE
+text("x = 0 = y", # Texte à afficher
+     x = 0.4, # Emplacement du texte (centre)
+     y = -0.16, # Emplacement du texte (centre)  
+     col = "red4")     
+       
+# Ajout d'un TITRE
+title("Titre de mon graphique", 
+      cex.main = 1.2,  
+      font.main= 4, 
+      col.main= "red4")
+
+ 
+```
+
+\
+
+
+### Fenêtre graphique
+
+
+Deux fonctions (`par()` et `layout()`) permettent de gérer les paramètres graphiques (disposition figures, marges, axes, police...) :
+
+Exemple d'utilisation de la fonction `par()` qui contient un grand nombre d'arguments possibles (cf. `?par`) :
+
+```{r eval = TRUE}
+#| code-fold: FALSE
+
+par(bg = "royalblue1", # Couleur de fond
+    col= "white",      # couleur du graphique
+    mfrow = c(2,2),    # Fenêtre découper en deux lignes / deux colonnes (4 graphiques)
+    mar = c(5,3,4,1))  # Gestion des marges pour chaque graphique (B,L,T,R)
+
+
+plot(x = log(1:10), y = 10:1, main = "plot 1")
+
+plot(x = exp(1:10), y = log(1:10), main = "plot 2")
+
+plot(x = sin(1:10), y = 1:10, main = "plot 3")
+
+plot(x = 1:10, y = exp(1:10), main = "plot 4")
+```
+
+`layout()` propose moins d'arguments mais permet un meilleur ajustement de la disposition des figures. Pour cela, il est nécessaire de construire une matrice pour indiquer la position et l'espace de chaque graphique ajouté. Exemple :
+
+
+```{r eval = TRUE}
+#| code-fold: FALSE
+matrix(c(1,1,1,0,2,2,3,3,0),  3,  3,  byrow = TRUE)
+
+```
+
+Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique deux occupera uniquement les deux dernières colonnes de la seconde ligne, et le troisième sera situé dans les deux premières colonnes de la dernière ligne. Exemple :  
+
+```{r eval = TRUE}
+#| code-fold: FALSE
+
+layout(mat = matrix(c(1,1,1,0,2,2,3,3,0),  3,  3,  byrow = TRUE))
+
+plot(x = log(1:10), y = 10:1, main = "plot 1")
+
+plot(x = exp(1:10), y = log(1:10), main = "plot 2")
+
+plot(x = sin(1:10), y = 1:10, main = "plot 3")
+
+```
+
+
+
+## Représentation uni et bivariée
+
+### Var. quantitative
 
 ```{r eval = FALSE}
 
@@ -121,7 +240,7 @@ density(mpg$displ)
 
 ```
 
-### Deux variables quantitatives
+### 2 var. quantitatives
 
 ```{r eval = FALSE}
 
@@ -131,20 +250,20 @@ density(mpg$displ)
 plot(hwy ~ displ, data = mpg, pch = 16)
 ```
 
-### Variale qualitative
+### Var. qualitative
 
 ```{r eval = FALSE}
 
 ```
 
-### Deux variables qualitatives
+### 2 var. qualitatives
 
 ```{r eval = FALSE}
 plot()
 barplot()
 ```
 
-### Varibales qualitatives et quantitatives
+### Quali. vs Quanti.
 
 ```{r eval = FALSE}
 

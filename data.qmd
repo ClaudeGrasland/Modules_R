@@ -3,7 +3,6 @@ title: "Données"
 subtitle: "Présentation et téléchargement des données utilisés dans les modules"
 ---
 
-
 \
 
 ## [I. Afrique data]{.blue-data}
@@ -100,7 +99,7 @@ Présentation des données, source, date... Bla bla bla
 
 \
 
-#### Affichage d'un échantillon (uniquement Ghana, Bénin et Togo  :
+#### Affichage d'un échantillon (uniquement Ghana, Bénin et Togo :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
 
@@ -133,9 +132,7 @@ datatable(pays_afrique ,  options = list(
 
 ## [III. Elevation Bénin]{.blue-data}
 
-
-Présentation des données, source, date... Bla bla bla
-https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62 
+Présentation des données, source, date... Bla bla bla https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62
 
 ::: center
 <a href="https://bit.ly/3XqLAKR" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
@@ -164,7 +161,6 @@ Elevation_Benin
 
 ```
 
-
 ```{r eval = FALSE, include = FALSE, include = FALSE}
 
 library(sf)
@@ -176,4 +172,3 @@ st_write(obj = africapolis_extract,
          layer_options = "ENCODING=UTF-8", delete_layer = TRUE)
 
 ```
-
