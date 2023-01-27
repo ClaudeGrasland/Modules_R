@@ -441,10 +441,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#tableau-de-données" id="toc-tableau-de-données" class="nav-link active" data-scroll-target="#tableau-de-données"><strong>Tableau de données</strong></a>
   <ul class="collapse">
   <li><a href="#fichier-texte-simple" id="toc-fichier-texte-simple" class="nav-link" data-scroll-target="#fichier-texte-simple">Fichier texte simple</a></li>
-  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
-  <li><a href="#sas" id="toc-sas" class="nav-link" data-scroll-target="#sas">SAS</a></li>
-  <li><a href="#spss" id="toc-spss" class="nav-link" data-scroll-target="#spss">SPSS</a></li>
-  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
+  <li><a href="#fichier-excel" id="toc-fichier-excel" class="nav-link" data-scroll-target="#fichier-excel">Fichier Excel</a></li>
+  <li><a href="#sas-spss-stata" id="toc-sas-spss-stata" class="nav-link" data-scroll-target="#sas-spss-stata">SAS, SPSS &amp; Stata</a></li>
   </ul></li>
   <li><a href="#couche-géographique" id="toc-couche-géographique" class="nav-link" data-scroll-target="#couche-géographique"><strong>Couche géographique</strong></a>
   <ul class="collapse">
@@ -453,8 +451,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image"><strong>Image</strong></a>
   <ul class="collapse">
-  <li><a href="#import-7" id="toc-import-7" class="nav-link" data-scroll-target="#import-7">Import</a></li>
-  <li><a href="#export-7" id="toc-export-7" class="nav-link" data-scroll-target="#export-7">Export</a></li>
+  <li><a href="#import-4" id="toc-import-4" class="nav-link" data-scroll-target="#import-4">Import</a></li>
+  <li><a href="#export-4" id="toc-export-4" class="nav-link" data-scroll-target="#export-4">Export</a></li>
   </ul></li>
   <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice"><i class="bi bi-person-workspace"></i> Exercice</a></li>
   </ul>
@@ -483,7 +481,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">26 janvier 2023</p>
+      <p class="date">27 janvier 2023</p>
     </div>
   </div>
   
@@ -565,8 +563,8 @@ Important
 </p>
 </section>
 </section>
-<section id="excel" class="level3">
-<h3 class="anchored" data-anchor-id="excel">Excel</h3>
+<section id="fichier-excel" class="level3">
+<h3 class="anchored" data-anchor-id="fichier-excel">Fichier Excel</h3>
 <p>Il est parfois nécessaire d’importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d’importer ce genre de format, et même d’exporter vos données dans ce type de format.</p>
 <section id="import-1" class="level4">
 <h4 class="anchored" data-anchor-id="import-1">Import</h4>
@@ -631,9 +629,9 @@ Important
 </p>
 </section>
 </section>
-<section id="sas" class="level3">
-<h3 class="anchored" data-anchor-id="sas">SAS</h3>
-<p>Le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf…</p>
+<section id="sas-spss-stata" class="level3">
+<h3 class="anchored" data-anchor-id="sas-spss-stata">SAS, SPSS &amp; Stata</h3>
+<p>Le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> permet de gérer des fichiers propriétaires de différents formats comme SAS, SPSS, Stata, dbf…</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -650,75 +648,48 @@ Important
 <p>Tout comme <code>readxl</code>, ce package fait partie de l’écosystème <code>tidyverse</code> (cf.&nbsp;module <a href="">x</a>). Le tableau importé est mis en mémoire dans un objet <a href="https://tibble.tidyverse.org/"><code>tibble</code></a> et non <code>dataframe</code>. Vous pouvez utiliser la fonction <code>as.data.frame()</code> pour le convertir.</p>
 </div>
 </div>
-<section id="import-2" class="level4">
-<h4 class="anchored" data-anchor-id="import-2">Import</h4>
+<section id="fichier-sas" class="level4">
+<h4 class="anchored" data-anchor-id="fichier-sas">Fichier SAS</h4>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="at">data_file =</span> <span class="st">"../data/data_sas.sas7bdat"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="at">data_file =</span> <span class="st">"../data/data_sas.sas7bdat"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span> <span class="st">"../data/mon_tableau_sas.sas7bdat"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="export-2" class="level4">
-<h4 class="anchored" data-anchor-id="export-2">Export</h4>
+<section id="fichier-spss" class="level4">
+<h4 class="anchored" data-anchor-id="fichier-spss">Fichier SPSS</h4>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span> <span class="st">"../data/mon_tableau_sas.sas7bdat"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="at">file =</span>  <span class="st">"../data/data_spss.sav"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_spss.sav"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><br>
-</p>
 </section>
-</section>
-<section id="spss" class="level3">
-<h3 class="anchored" data-anchor-id="spss">SPSS</h3>
-<p>Vous pouvez utiliser le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> qui permet la lecture et l’écriture de fichier de données SAS.</p>
-<section id="import-3" class="level4">
-<h4 class="anchored" data-anchor-id="import-3">Import</h4>
+<section id="fichier-stata" class="level4">
+<h4 class="anchored" data-anchor-id="fichier-stata">Fichier Stata</h4>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="at">file =</span>  <span class="st">"../data/data_spss.sav"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="export-3" class="level4">
-<h4 class="anchored" data-anchor-id="export-3">Export</h4>
-<div class="cell">
-<details>
-<summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_spss.sav"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><br>
-</p>
-</section>
-</section>
-<section id="stata" class="level3">
-<h3 class="anchored" data-anchor-id="stata">Stata</h3>
-<p>Vous pouvez utiliser le package <a href="https://haven.tidyverse.org/"><code>haven</code></a> qui permet la lecture et l’écriture de fichier de données Stata.</p>
-<section id="import-4" class="level4">
-<h4 class="anchored" data-anchor-id="import-4">Import</h4>
-<div class="cell">
-<details>
-<summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="at">file =</span>  <span class="st">"../data/data_stata.dta"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="export-4" class="level4">
-<h4 class="anchored" data-anchor-id="export-4">Export</h4>
-<div class="cell">
-<details>
-<summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_stata.dta"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="at">file =</span>  <span class="st">"../data/data_stata.dta"</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_stata.dta"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><br>
@@ -732,7 +703,7 @@ Important
 <h3 class="anchored" data-anchor-id="vecteur">Vecteur</h3>
 <p>Le package <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage…). Pour cela, ce package interface avec la librairie système <a href="https://gdal.org/"><code>GDAL</code></a>. Les SIG fonctionnent de la même façon !</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -747,13 +718,13 @@ Note
 <p>L’installation du package <a href="https://r-spatial.github.io/sf/"><code>sf</code></a> demande un prérequis. La librairie système <a href="https://gdal.org/"><code>GDAL</code></a> doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d’exploitation comme GNU/Linux.</p>
 </div>
 </div>
-<section id="import-5" class="level4">
-<h4 class="anchored" data-anchor-id="import-5">Import</h4>
+<section id="import-2" class="level4">
+<h4 class="anchored" data-anchor-id="import-2">Import</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>map_africa <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map_africa)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>map_africa <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map_africa)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "sf"         "data.frame"</code></pre>
 </div>
@@ -772,24 +743,24 @@ Important
 </div>
 </div>
 </section>
-<section id="export-5" class="level4">
-<h4 class="anchored" data-anchor-id="export-5">Export</h4>
+<section id="export-2" class="level4">
+<h4 class="anchored" data-anchor-id="export-2">Export</h4>
 <p>La fonction <code>st_write()</code> permet d’enregistrer un objet sf sur sa machine, dans le format que l’on souhaite.</p>
 <div class="cell">
 <details>
 <summary>Voir les exemples</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format ESRI Shapefile</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.shp"</span>, </span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer_options =</span> <span class="st">"ENCODING=UTF-8"</span>)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format GeoPackage</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.gpkg"</span>, </span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer =</span> <span class="st">"pays"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format ESRI Shapefile</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.shp"</span>, </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer_options =</span> <span class="st">"ENCODING=UTF-8"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format GeoPackage</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.gpkg"</span>, </span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer =</span> <span class="st">"pays"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><br>
@@ -800,10 +771,10 @@ Important
 <h3 class="anchored" data-anchor-id="raster">Raster</h3>
 <p>Le package <a href="https://rspatial.org/index.html"><code>terra</code></a> permet aussi de lire et d’écrire des données géographiques vectorielles (comme <code>sf</code>) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"terra"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"terra"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="import-6" class="level4">
-<h4 class="anchored" data-anchor-id="import-6">Import</h4>
+<section id="import-3" class="level4">
+<h4 class="anchored" data-anchor-id="import-3">Import</h4>
 <p>Pour importer des données Raster, vous pouvez utiliser la fonction <code>rast()</code>.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -819,10 +790,10 @@ Important
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>Elevation_Benin <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"../data/elevation.tif"</span>) </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>Elevation_Benin</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>Elevation_Benin <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"../data/elevation.tif"</span>) </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>Elevation_Benin</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>class       : SpatRaster 
 dimensions  : 742, 369, 1  (nrow, ncol, nlyr)
@@ -834,14 +805,14 @@ name        : elevation </code></pre>
 </div>
 </div>
 </section>
-<section id="export-6" class="level4">
-<h4 class="anchored" data-anchor-id="export-6">Export</h4>
+<section id="export-3" class="level4">
+<h4 class="anchored" data-anchor-id="export-3">Export</h4>
 <p>La fonction <code>writeRaster()</code> permet d’enregistrer un objet SpatRaster sur sa machine, dans le format que l’on souhaite.</p>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(<span class="at">x =</span> Elevation_Benin, <span class="at">filename =</span> <span class="st">"../data/Benin_Elevation.tif"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(<span class="at">x =</span> Elevation_Benin, <span class="at">filename =</span> <span class="st">"../data/Benin_Elevation.tif"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><br>
@@ -851,16 +822,16 @@ name        : elevation </code></pre>
 </section>
 <section id="image" class="level2">
 <h2 class="anchored" data-anchor-id="image"><strong>Image</strong></h2>
-<section id="import-7" class="level3">
-<h3 class="anchored" data-anchor-id="import-7">Import</h3>
+<section id="import-4" class="level3">
+<h3 class="anchored" data-anchor-id="import-4">Import</h3>
 <p>Pour importer des images, le package <code>png</code>et <code>jpeg</code>, pré-installés avec le language R vous permet d’importer des images.</p>
 <section id="png" class="level4">
 <h4 class="anchored" data-anchor-id="png">PNG</h4>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>mon_image_png <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"../img/map.png"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mon_image_png <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"../img/map.png"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -869,14 +840,14 @@ name        : elevation </code></pre>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jpeg)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mon_image_jpg <span class="ot">&lt;-</span> <span class="fu">readJPEG</span>(<span class="st">"../img/wip.jpg"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jpeg)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>mon_image_jpg <span class="ot">&lt;-</span> <span class="fu">readJPEG</span>(<span class="st">"../img/wip.jpg"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
-<section id="export-7" class="level3">
-<h3 class="anchored" data-anchor-id="export-7">Export</h3>
+<section id="export-4" class="level3">
+<h3 class="anchored" data-anchor-id="export-4">Export</h3>
 <p>Il est également possible d’exporter les sorties graphiques en format image avec les fonctions primitives suivantes :</p>
 <ul>
 <li><code>bmp()</code></li>
@@ -888,14 +859,14 @@ name        : elevation </code></pre>
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"../img/mon_image.jpg"</span>)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) de l'image png</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"../img/mon_image.jpg"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) de l'image png</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="callout-important callout callout-style-default callout-captioned">
@@ -920,14 +891,14 @@ Important
 <div class="cell">
 <details>
 <summary>Voir l’exemple</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"../img/mon_image.pdf"</span>)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) du pdf</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"../img/mon_image.pdf"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) du pdf</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><br>
@@ -937,12 +908,8 @@ Important
 <section id="exercice" class="level2 title exo-title">
 <h2 class="title exo-title anchored" data-anchor-id="exercice"><i class="bi bi-person-workspace"></i> Exercice</h2>
 <div id="exo">
-<p><br>
-</p>
 <p><span class="question">1. Créez un projet Rstudio</span></p>
 <p><em>File/New Project/New Directory…</em></p>
-<p><br>
-</p>
 <p><span class="question">2. Téléchargez les données suivantes :</span></p>
 <table class="table">
 <colgroup>
@@ -982,12 +949,8 @@ Important
 </div>
 </div>
 </div>
-<p><br>
-</p>
 <p><span class="question">4. Créez un script R à la racine de votre projet Rstudio</span></p>
 <p><em>File/New File/R script</em></p>
-<p><br>
-</p>
 <p><span class="question">5. Importer les fichiers suivants en utilisant les fonctions adéquates :</span></p>
 <ul>
 <li>data/DEV_AFRIA_2018/<strong>afrika_don.csv</strong><br>
@@ -1002,32 +965,32 @@ Important
 <div class="cell">
 <details>
 <summary>Un peu d’aide ?</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier csv (afrika_don.csv)</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>()</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv2</span>()</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier Excel (afrika_don.xls)</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>()</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier ESRI Shapefile (afrika_map.shp)</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="fu">st_read</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier csv (afrika_don.csv)</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>()</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv2</span>()</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier Excel (afrika_don.xls)</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>()</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier ESRI Shapefile (afrika_map.shp)</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">st_read</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
 <summary>Correction</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier csv "afrika_don.csv"</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>data_from_csv <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier xls "afrika_don.xls"</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>data_from_xls <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.xls"</span>)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Importer du fichier shp "afrika_map.shp"</span></span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>data_from_shp <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier csv "afrika_don.csv"</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>data_from_csv <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier xls "afrika_don.xls"</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>data_from_xls <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.xls"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Importer du fichier shp "afrika_map.shp"</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>data_from_shp <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
@@ -1351,481 +1314,456 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb30" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Import et export de données"</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Les différents types et formats de données pris en charge par R"</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Hugues pecout</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 01</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>**De nombreuses de fonctions (primitives ou non) permettent d'importer et d'exporter des données de différents formats.**</span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Tableau de données**</span></span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fichier texte simple</span></span>
-<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>Un fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s'ouvrir avec n'importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.</span>
-<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>Plusieurs fonctions primitives permettent d'importer et d'exporter des fichiers texte simples, comme les fichiers **csv**, **txt** , **tsv**...</span>
-<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.delim()`</span> : fichiers délimités par un symbole quelconque et "." en séparateur décimal</span>
-<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.delim2()`</span> : fichiers délimités par un symbole quelconque et "," en séparateur décimal</span>
-<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.table()`</span> : pour des fichiers texte délimités par des espaces\</span>
-<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.csv()`</span> : pour des fichiers texte délimités par des virgules (format csv)</span>
-<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.csv2()`</span> : pour des fichiers texte délimités par des points-virgules (format csv français)</span>
-<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a>Pour que l'import de données s'effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :</span>
-<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a>**header** = valeur logique qui indique si la première ligne contient les noms des variables.&lt;br/&gt; **sep** = indique le caractère utilisé comme séparateur de champ (ex : ";")&lt;br/&gt; **encoding** = Chaîne de caractère qui précise l'encodage utilisé pour le fichier (ex : "UTF-8").<span class="kw">&lt;br/&gt;</span></span>
-<span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-33"><a href="#cb30-33" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-34"><a href="#cb30-34" aria-hidden="true" tabindex="-1"></a>N'oubliez pas d'assigner le résultat dans un objet pour garder en mémoire vos données importées.</span>
-<span id="cb30-35"><a href="#cb30-35" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-36"><a href="#cb30-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-37"><a href="#cb30-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb30-38"><a href="#cb30-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-39"><a href="#cb30-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple d'utilisation de read.table()</span></span>
-<span id="cb30-41"><a href="#cb30-41" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don_meta.csv"</span>, </span>
-<span id="cb30-42"><a href="#cb30-42" aria-hidden="true" tabindex="-1"></a>                           <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb30-43"><a href="#cb30-43" aria-hidden="true" tabindex="-1"></a>                           <span class="at">sep=</span> <span class="st">";"</span>,</span>
-<span id="cb30-44"><a href="#cb30-44" aria-hidden="true" tabindex="-1"></a>                           <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-46"><a href="#cb30-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-47"><a href="#cb30-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
-<span id="cb30-48"><a href="#cb30-48" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span>
-<span id="cb30-49"><a href="#cb30-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-50"><a href="#cb30-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-51"><a href="#cb30-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-52"><a href="#cb30-52" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-53"><a href="#cb30-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-54"><a href="#cb30-54" aria-hidden="true" tabindex="-1"></a>Des fonctions primitives permettent également d'exporter votre tableau de données vers différents format texte.</span>
-<span id="cb30-55"><a href="#cb30-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-56"><a href="#cb30-56" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.table()`</span> : pour tous les types de formats texte simple (séparateur à renseigner)</span>
-<span id="cb30-57"><a href="#cb30-57" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.csv()`</span> : pour exporter en csv (séparateur virgule)</span>
-<span id="cb30-58"><a href="#cb30-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.csv2()`</span> : pour exporter en csv (séparateur points-virgules)</span>
-<span id="cb30-59"><a href="#cb30-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-60"><a href="#cb30-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-61"><a href="#cb30-61" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-62"><a href="#cb30-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-63"><a href="#cb30-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.table()</span></span>
-<span id="cb30-64"><a href="#cb30-64" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x =</span> mon_tableau, </span>
-<span id="cb30-65"><a href="#cb30-65" aria-hidden="true" tabindex="-1"></a>            <span class="at">file =</span> <span class="st">"../data/tableau.txt"</span>, </span>
-<span id="cb30-66"><a href="#cb30-66" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">col.names =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb30-67"><a href="#cb30-67" aria-hidden="true" tabindex="-1"></a>            <span class="at">fileEncoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb30-68"><a href="#cb30-68" aria-hidden="true" tabindex="-1"></a>              </span>
-<span id="cb30-69"><a href="#cb30-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.csv()</span></span>
-<span id="cb30-70"><a href="#cb30-70" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/tableau.csv"</span>)</span>
-<span id="cb30-71"><a href="#cb30-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-72"><a href="#cb30-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-73"><a href="#cb30-73" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-74"><a href="#cb30-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-75"><a href="#cb30-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel</span></span>
-<span id="cb30-76"><a href="#cb30-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-77"><a href="#cb30-77" aria-hidden="true" tabindex="-1"></a>Il est parfois nécessaire d'importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d'importer ce genre de format, et même d'exporter vos données dans ce type de format.</span>
-<span id="cb30-78"><a href="#cb30-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-79"><a href="#cb30-79" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-80"><a href="#cb30-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-81"><a href="#cb30-81" aria-hidden="true" tabindex="-1"></a>Vous pouvez par exemple importer un fichier Excel avec le package <span class="co">[</span><span class="ot">`readxl`</span><span class="co">](https://readxl.tidyverse.org/)</span>.</span>
-<span id="cb30-82"><a href="#cb30-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-83"><a href="#cb30-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-84"><a href="#cb30-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-85"><a href="#cb30-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-86"><a href="#cb30-86" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
-<span id="cb30-87"><a href="#cb30-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-88"><a href="#cb30-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-89"><a href="#cb30-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-90"><a href="#cb30-90" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-91"><a href="#cb30-91" aria-hidden="true" tabindex="-1"></a>Le packages <span class="in">`readxl`</span> fait partie de l'écosystème <span class="in">`tidyverse`</span> (cf. module <span class="co">[</span><span class="ot">x</span><span class="co">]()</span>). Pour cette raison, le tableau importé est mis en mémoire dans un objet <span class="co">[</span><span class="ot">`tibble`</span><span class="co">](https://tibble.tidyverse.org/)</span> et non <span class="in">`dataframe`</span>. Il s'agit de deux objets très semblables mais pas identiques. Pour convertir un <span class="in">`tibble`</span> en <span class="in">`dataframe`</span>, vous pouvez utiliser la fonction <span class="in">`as.data.frame()`</span>.</span>
-<span id="cb30-92"><a href="#cb30-92" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-93"><a href="#cb30-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-94"><a href="#cb30-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb30-95"><a href="#cb30-95" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-96"><a href="#cb30-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-97"><a href="#cb30-97" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb30-98"><a href="#cb30-98" aria-hidden="true" tabindex="-1"></a>mon_tableau <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.xls"</span>, </span>
-<span id="cb30-99"><a href="#cb30-99" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sheet =</span> <span class="st">"afrika_meta"</span>, </span>
-<span id="cb30-100"><a href="#cb30-100" aria-hidden="true" tabindex="-1"></a>                          <span class="at">skip =</span> <span class="dv">0</span>,</span>
-<span id="cb30-101"><a href="#cb30-101" aria-hidden="true" tabindex="-1"></a>                          <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-102"><a href="#cb30-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-103"><a href="#cb30-103" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
-<span id="cb30-104"><a href="#cb30-104" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span>
-<span id="cb30-105"><a href="#cb30-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-106"><a href="#cb30-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-107"><a href="#cb30-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-108"><a href="#cb30-108" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-109"><a href="#cb30-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-110"><a href="#cb30-110" aria-hidden="true" tabindex="-1"></a>Pour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package <span class="co">[</span><span class="ot">`openxlsx`</span><span class="co">](https://cran.r-project.org/web/packages/openxlsx/index.html)</span> et sa fonction <span class="in">`write.xlsx()`</span>.</span>
-<span id="cb30-111"><a href="#cb30-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-112"><a href="#cb30-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-113"><a href="#cb30-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-114"><a href="#cb30-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-115"><a href="#cb30-115" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"openxlsx"</span>)</span>
-<span id="cb30-116"><a href="#cb30-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-117"><a href="#cb30-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-118"><a href="#cb30-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-119"><a href="#cb30-119" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-120"><a href="#cb30-120" aria-hidden="true" tabindex="-1"></a>Le packages <span class="in">`openxlsx`</span> permet uniquement de lire et écrire les fichiers Excel comportant l'extension **.xlsx**.</span>
-<span id="cb30-121"><a href="#cb30-121" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-122"><a href="#cb30-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-123"><a href="#cb30-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-124"><a href="#cb30-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-125"><a href="#cb30-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-126"><a href="#cb30-126" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb30-127"><a href="#cb30-127" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.xlsx"</span>)</span>
-<span id="cb30-128"><a href="#cb30-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-129"><a href="#cb30-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-130"><a href="#cb30-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-131"><a href="#cb30-131" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-132"><a href="#cb30-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-133"><a href="#cb30-133" aria-hidden="true" tabindex="-1"></a><span class="fu">### SAS</span></span>
-<span id="cb30-134"><a href="#cb30-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-135"><a href="#cb30-135" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`haven`</span><span class="co">](https://haven.tidyverse.org/)</span> permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf...</span>
-<span id="cb30-136"><a href="#cb30-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-137"><a href="#cb30-137" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-138"><a href="#cb30-138" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-139"><a href="#cb30-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-140"><a href="#cb30-140" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span>
-<span id="cb30-141"><a href="#cb30-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-142"><a href="#cb30-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-143"><a href="#cb30-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-144"><a href="#cb30-144" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-145"><a href="#cb30-145" aria-hidden="true" tabindex="-1"></a>Tout comme <span class="in">`readxl`</span>, ce package fait partie de l'écosystème <span class="in">`tidyverse`</span> (cf. module <span class="co">[</span><span class="ot">x</span><span class="co">]()</span>). Le tableau importé est mis en mémoire dans un objet <span class="co">[</span><span class="ot">`tibble`</span><span class="co">](https://tibble.tidyverse.org/)</span> et non <span class="in">`dataframe`</span>. Vous pouvez utiliser la fonction <span class="in">`as.data.frame()`</span> pour le convertir.</span>
-<span id="cb30-146"><a href="#cb30-146" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-147"><a href="#cb30-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-148"><a href="#cb30-148" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-149"><a href="#cb30-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-150"><a href="#cb30-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-151"><a href="#cb30-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-152"><a href="#cb30-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-153"><a href="#cb30-153" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-154"><a href="#cb30-154" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="at">data_file =</span> <span class="st">"../data/data_sas.sas7bdat"</span>)</span>
-<span id="cb30-155"><a href="#cb30-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-156"><a href="#cb30-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-157"><a href="#cb30-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-158"><a href="#cb30-158" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-159"><a href="#cb30-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-160"><a href="#cb30-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-161"><a href="#cb30-161" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-162"><a href="#cb30-162" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-163"><a href="#cb30-163" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span> <span class="st">"../data/mon_tableau_sas.sas7bdat"</span>)</span>
-<span id="cb30-164"><a href="#cb30-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-165"><a href="#cb30-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-166"><a href="#cb30-166" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-167"><a href="#cb30-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-168"><a href="#cb30-168" aria-hidden="true" tabindex="-1"></a><span class="fu">### SPSS</span></span>
-<span id="cb30-169"><a href="#cb30-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-170"><a href="#cb30-170" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser le package <span class="co">[</span><span class="ot">`haven`</span><span class="co">](https://haven.tidyverse.org/)</span> qui permet la lecture et l'écriture de fichier de données SAS.</span>
-<span id="cb30-171"><a href="#cb30-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-172"><a href="#cb30-172" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-173"><a href="#cb30-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-174"><a href="#cb30-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-175"><a href="#cb30-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-176"><a href="#cb30-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-177"><a href="#cb30-177" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-178"><a href="#cb30-178" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="at">file =</span>  <span class="st">"../data/data_spss.sav"</span>)</span>
-<span id="cb30-179"><a href="#cb30-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-180"><a href="#cb30-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-181"><a href="#cb30-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-182"><a href="#cb30-182" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-183"><a href="#cb30-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-184"><a href="#cb30-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-185"><a href="#cb30-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-186"><a href="#cb30-186" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-187"><a href="#cb30-187" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_spss.sav"</span>)</span>
-<span id="cb30-188"><a href="#cb30-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-189"><a href="#cb30-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-190"><a href="#cb30-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-191"><a href="#cb30-191" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-192"><a href="#cb30-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-193"><a href="#cb30-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### Stata</span></span>
-<span id="cb30-194"><a href="#cb30-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-195"><a href="#cb30-195" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser le package <span class="co">[</span><span class="ot">`haven`</span><span class="co">](https://haven.tidyverse.org/)</span> qui permet la lecture et l'écriture de fichier de données Stata.</span>
-<span id="cb30-196"><a href="#cb30-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-197"><a href="#cb30-197" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-198"><a href="#cb30-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-199"><a href="#cb30-199" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-200"><a href="#cb30-200" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-201"><a href="#cb30-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-202"><a href="#cb30-202" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-203"><a href="#cb30-203" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="at">file =</span>  <span class="st">"../data/data_stata.dta"</span>)</span>
-<span id="cb30-204"><a href="#cb30-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-205"><a href="#cb30-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-206"><a href="#cb30-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-207"><a href="#cb30-207" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-208"><a href="#cb30-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-209"><a href="#cb30-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-210"><a href="#cb30-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-211"><a href="#cb30-211" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
-<span id="cb30-212"><a href="#cb30-212" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_stata.dta"</span>)</span>
-<span id="cb30-213"><a href="#cb30-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-214"><a href="#cb30-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-215"><a href="#cb30-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-216"><a href="#cb30-216" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-217"><a href="#cb30-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-218"><a href="#cb30-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Couche géographique**</span></span>
-<span id="cb30-219"><a href="#cb30-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-220"><a href="#cb30-220" aria-hidden="true" tabindex="-1"></a><span class="fu">### Vecteur</span></span>
-<span id="cb30-221"><a href="#cb30-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-222"><a href="#cb30-222" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage...). Pour cela, ce package interface avec la librairie système <span class="co">[</span><span class="ot">`GDAL`</span><span class="co">](https://gdal.org/)</span>. Les SIG fonctionnent de la même façon !</span>
-<span id="cb30-223"><a href="#cb30-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-224"><a href="#cb30-224" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-225"><a href="#cb30-225" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-226"><a href="#cb30-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-227"><a href="#cb30-227" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb30-228"><a href="#cb30-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-229"><a href="#cb30-229" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-230"><a href="#cb30-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-231"><a href="#cb30-231" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb30-232"><a href="#cb30-232" aria-hidden="true" tabindex="-1"></a>L'installation du package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> demande un prérequis. La librairie système <span class="co">[</span><span class="ot">`GDAL`</span><span class="co">](https://gdal.org/)</span> doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d'exploitation comme GNU/Linux.</span>
-<span id="cb30-233"><a href="#cb30-233" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-234"><a href="#cb30-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-235"><a href="#cb30-235" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-236"><a href="#cb30-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-237"><a href="#cb30-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb30-238"><a href="#cb30-238" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-239"><a href="#cb30-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-240"><a href="#cb30-240" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb30-241"><a href="#cb30-241" aria-hidden="true" tabindex="-1"></a>map_africa <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-242"><a href="#cb30-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-243"><a href="#cb30-243" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map_africa)</span>
-<span id="cb30-244"><a href="#cb30-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-245"><a href="#cb30-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-246"><a href="#cb30-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-247"><a href="#cb30-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-248"><a href="#cb30-248" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-249"><a href="#cb30-249" aria-hidden="true" tabindex="-1"></a>Une couche géographique importée via la fonction <span class="in">`st_read()`</span> du package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> est mise en mémoire dans un objet sf (simple feature). Il s'agit en quelque sorte d'un dataframe ou chaque individu est associé à une géométrie.</span>
-<span id="cb30-250"><a href="#cb30-250" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-251"><a href="#cb30-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-252"><a href="#cb30-252" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-253"><a href="#cb30-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-254"><a href="#cb30-254" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`st_write()`</span> permet d'enregistrer un objet sf sur sa machine, dans le format que l'on souhaite.</span>
-<span id="cb30-255"><a href="#cb30-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-256"><a href="#cb30-256" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-257"><a href="#cb30-257" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir les exemples"</span></span>
-<span id="cb30-258"><a href="#cb30-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-259"><a href="#cb30-259" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb30-260"><a href="#cb30-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-261"><a href="#cb30-261" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format ESRI Shapefile</span></span>
-<span id="cb30-262"><a href="#cb30-262" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
-<span id="cb30-263"><a href="#cb30-263" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.shp"</span>, </span>
-<span id="cb30-264"><a href="#cb30-264" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer_options =</span> <span class="st">"ENCODING=UTF-8"</span>)</span>
-<span id="cb30-265"><a href="#cb30-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-266"><a href="#cb30-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-267"><a href="#cb30-267" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format GeoPackage</span></span>
-<span id="cb30-268"><a href="#cb30-268" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
-<span id="cb30-269"><a href="#cb30-269" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.gpkg"</span>, </span>
-<span id="cb30-270"><a href="#cb30-270" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer =</span> <span class="st">"pays"</span>)</span>
-<span id="cb30-271"><a href="#cb30-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-272"><a href="#cb30-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-273"><a href="#cb30-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-274"><a href="#cb30-274" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-275"><a href="#cb30-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-276"><a href="#cb30-276" aria-hidden="true" tabindex="-1"></a><span class="fu">### Raster</span></span>
-<span id="cb30-277"><a href="#cb30-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-278"><a href="#cb30-278" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`terra`</span><span class="co">](https://rspatial.org/index.html)</span> permet aussi de lire et d'écrire des données géographiques vectorielles (comme <span class="in">`sf`</span>) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.</span>
-<span id="cb30-279"><a href="#cb30-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-280"><a href="#cb30-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-281"><a href="#cb30-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-282"><a href="#cb30-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-283"><a href="#cb30-283" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"terra"</span>)</span>
-<span id="cb30-284"><a href="#cb30-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-285"><a href="#cb30-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-286"><a href="#cb30-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-287"><a href="#cb30-287" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
-<span id="cb30-288"><a href="#cb30-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-289"><a href="#cb30-289" aria-hidden="true" tabindex="-1"></a>Pour importer des données Raster, vous pouvez utiliser la fonction <span class="in">`rast()`</span>.</span>
-<span id="cb30-290"><a href="#cb30-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-291"><a href="#cb30-291" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-292"><a href="#cb30-292" aria-hidden="true" tabindex="-1"></a>Un Raster importé via la fonction <span class="in">`rast()`</span> du package <span class="co">[</span><span class="ot">`terra`</span><span class="co">](https://rspatial.org/index.html)</span> est mis en mémoire dans un objet SpatRaster.</span>
-<span id="cb30-293"><a href="#cb30-293" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-294"><a href="#cb30-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-295"><a href="#cb30-295" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb30-296"><a href="#cb30-296" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb30-297"><a href="#cb30-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-298"><a href="#cb30-298" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb30-299"><a href="#cb30-299" aria-hidden="true" tabindex="-1"></a>Elevation_Benin <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"../data/elevation.tif"</span>) </span>
-<span id="cb30-300"><a href="#cb30-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-301"><a href="#cb30-301" aria-hidden="true" tabindex="-1"></a>Elevation_Benin</span>
-<span id="cb30-302"><a href="#cb30-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-303"><a href="#cb30-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-304"><a href="#cb30-304" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
-<span id="cb30-305"><a href="#cb30-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-306"><a href="#cb30-306" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`writeRaster()`</span> permet d'enregistrer un objet SpatRaster sur sa machine, dans le format que l'on souhaite.</span>
-<span id="cb30-307"><a href="#cb30-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-308"><a href="#cb30-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-309"><a href="#cb30-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-310"><a href="#cb30-310" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb30-311"><a href="#cb30-311" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(<span class="at">x =</span> Elevation_Benin, <span class="at">filename =</span> <span class="st">"../data/Benin_Elevation.tif"</span>)</span>
-<span id="cb30-312"><a href="#cb30-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-313"><a href="#cb30-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-314"><a href="#cb30-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-315"><a href="#cb30-315" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-316"><a href="#cb30-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-317"><a href="#cb30-317" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Image**</span></span>
-<span id="cb30-318"><a href="#cb30-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-319"><a href="#cb30-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### Import</span></span>
-<span id="cb30-320"><a href="#cb30-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-321"><a href="#cb30-321" aria-hidden="true" tabindex="-1"></a>Pour importer des images, le package <span class="in">`png`</span>et <span class="in">`jpeg`</span>, pré-installés avec le language R vous permet d'importer des images.</span>
-<span id="cb30-322"><a href="#cb30-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-323"><a href="#cb30-323" aria-hidden="true" tabindex="-1"></a><span class="fu">#### PNG</span></span>
-<span id="cb30-324"><a href="#cb30-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-327"><a href="#cb30-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb30-328"><a href="#cb30-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-329"><a href="#cb30-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-330"><a href="#cb30-330" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
-<span id="cb30-331"><a href="#cb30-331" aria-hidden="true" tabindex="-1"></a>mon_image_png <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"../img/map.png"</span>)</span>
-<span id="cb30-332"><a href="#cb30-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-333"><a href="#cb30-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-334"><a href="#cb30-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-335"><a href="#cb30-335" aria-hidden="true" tabindex="-1"></a><span class="fu">#### JPEG</span></span>
-<span id="cb30-336"><a href="#cb30-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-339"><a href="#cb30-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb30-340"><a href="#cb30-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-341"><a href="#cb30-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-342"><a href="#cb30-342" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jpeg)</span>
-<span id="cb30-343"><a href="#cb30-343" aria-hidden="true" tabindex="-1"></a>mon_image_jpg <span class="ot">&lt;-</span> <span class="fu">readJPEG</span>(<span class="st">"../img/wip.jpg"</span>)</span>
-<span id="cb30-344"><a href="#cb30-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-345"><a href="#cb30-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-346"><a href="#cb30-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-347"><a href="#cb30-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
-<span id="cb30-348"><a href="#cb30-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-349"><a href="#cb30-349" aria-hidden="true" tabindex="-1"></a>Il est également possible d'exporter les sorties graphiques en format image avec les fonctions primitives suivantes :</span>
-<span id="cb30-350"><a href="#cb30-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-351"><a href="#cb30-351" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`bmp()`</span></span>
-<span id="cb30-352"><a href="#cb30-352" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`jpeg()`</span></span>
-<span id="cb30-353"><a href="#cb30-353" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`png()`</span></span>
-<span id="cb30-354"><a href="#cb30-354" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`tiff()`</span></span>
-<span id="cb30-355"><a href="#cb30-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-356"><a href="#cb30-356" aria-hidden="true" tabindex="-1"></a>Ces fonctions doivent être utilisées avec la fonction <span class="in">`dev.off()`</span>. Exemple :</span>
-<span id="cb30-357"><a href="#cb30-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-358"><a href="#cb30-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-359"><a href="#cb30-359" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-360"><a href="#cb30-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-361"><a href="#cb30-361" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
-<span id="cb30-362"><a href="#cb30-362" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"../img/mon_image.jpg"</span>)</span>
-<span id="cb30-363"><a href="#cb30-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-364"><a href="#cb30-364" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
-<span id="cb30-365"><a href="#cb30-365" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb30-366"><a href="#cb30-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-367"><a href="#cb30-367" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) de l'image png</span></span>
-<span id="cb30-368"><a href="#cb30-368" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb30-369"><a href="#cb30-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-370"><a href="#cb30-370" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-371"><a href="#cb30-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-372"><a href="#cb30-372" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb30-373"><a href="#cb30-373" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`dev.off()`</span> permet de clôturer la représentation graphique et d'enregistrer l'image. Si aucun dev.off() n'est exécuté à la suite de ces fonctions d'export, votre fenêtre graphique restera figée, et inutilisable.</span>
-<span id="cb30-374"><a href="#cb30-374" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-375"><a href="#cb30-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-376"><a href="#cb30-376" aria-hidden="true" tabindex="-1"></a>Il est également possible d'exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator...). Les fonction pour réaliser cela sont :</span>
-<span id="cb30-377"><a href="#cb30-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-378"><a href="#cb30-378" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pdf()`</span></span>
-<span id="cb30-379"><a href="#cb30-379" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`svg()`</span></span>
-<span id="cb30-380"><a href="#cb30-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-381"><a href="#cb30-381" aria-hidden="true" tabindex="-1"></a>L'utilisation de ces fonctions primitives est similaire à l'export d'images matricielles. Exemple :</span>
-<span id="cb30-382"><a href="#cb30-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-383"><a href="#cb30-383" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-384"><a href="#cb30-384" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
-<span id="cb30-385"><a href="#cb30-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-386"><a href="#cb30-386" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
-<span id="cb30-387"><a href="#cb30-387" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"../img/mon_image.pdf"</span>)</span>
-<span id="cb30-388"><a href="#cb30-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-389"><a href="#cb30-389" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
-<span id="cb30-390"><a href="#cb30-390" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb30-391"><a href="#cb30-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-392"><a href="#cb30-392" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) du pdf</span></span>
-<span id="cb30-393"><a href="#cb30-393" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb30-394"><a href="#cb30-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-395"><a href="#cb30-395" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-396"><a href="#cb30-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-397"><a href="#cb30-397" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-398"><a href="#cb30-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-399"><a href="#cb30-399" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
-<span id="cb30-400"><a href="#cb30-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-401"><a href="#cb30-401" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
-<span id="cb30-402"><a href="#cb30-402" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-403"><a href="#cb30-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-404"><a href="#cb30-404" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
-<span id="cb30-405"><a href="#cb30-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-406"><a href="#cb30-406" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
-<span id="cb30-407"><a href="#cb30-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-408"><a href="#cb30-408" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-409"><a href="#cb30-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-410"><a href="#cb30-410" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
-<span id="cb30-411"><a href="#cb30-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-412"><a href="#cb30-412" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
-<span id="cb30-413"><a href="#cb30-413" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
-<span id="cb30-414"><a href="#cb30-414" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaCAkX"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb30-415"><a href="#cb30-415" aria-hidden="true" tabindex="-1"></a>| Fond de carte Afrique (GADM 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaAUb2"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb30-416"><a href="#cb30-416" aria-hidden="true" tabindex="-1"></a>| Raster délévation du Bénin (???)  | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3XqLAKR"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb30-417"><a href="#cb30-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-418"><a href="#cb30-418" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-419"><a href="#cb30-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-420"><a href="#cb30-420" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
-<span id="cb30-421"><a href="#cb30-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-422"><a href="#cb30-422" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
-<span id="cb30-423"><a href="#cb30-423" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder.png"</span>)</span>
-<span id="cb30-424"><a href="#cb30-424" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-425"><a href="#cb30-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-426"><a href="#cb30-426" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-427"><a href="#cb30-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-428"><a href="#cb30-428" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Créez un script R à la racine de votre projet Rstudio</span><span class="co">]</span>{.question}</span>
-<span id="cb30-429"><a href="#cb30-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-430"><a href="#cb30-430" aria-hidden="true" tabindex="-1"></a>*File/New File/R script*</span>
-<span id="cb30-431"><a href="#cb30-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-432"><a href="#cb30-432" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb30-433"><a href="#cb30-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-434"><a href="#cb30-434" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Importer les fichiers suivants en utilisant les fonctions adéquates :</span><span class="co">]</span>{.question}</span>
-<span id="cb30-435"><a href="#cb30-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-436"><a href="#cb30-436" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/DEV_AFRIA_2018/**afrika_don.csv**\</span>
-<span id="cb30-437"><a href="#cb30-437" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/DEV_AFRICA_2018/**afrika_don.xls** (1er onglet)\</span>
-<span id="cb30-438"><a href="#cb30-438" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/GADM_AFRICA_2020/**afrika_map.shp**\</span>
-<span id="cb30-439"><a href="#cb30-439" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/**elevation.tif**</span>
-<span id="cb30-440"><a href="#cb30-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-441"><a href="#cb30-441" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb30-442"><a href="#cb30-442" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-443"><a href="#cb30-443" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-444"><a href="#cb30-444" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb30-445"><a href="#cb30-445" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb30-446"><a href="#cb30-446" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier csv (afrika_don.csv)</span></span>
-<span id="cb30-447"><a href="#cb30-447" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>()</span>
-<span id="cb30-448"><a href="#cb30-448" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv2</span>()</span>
-<span id="cb30-449"><a href="#cb30-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-450"><a href="#cb30-450" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier Excel (afrika_don.xls)</span></span>
-<span id="cb30-451"><a href="#cb30-451" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb30-452"><a href="#cb30-452" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>()</span>
-<span id="cb30-453"><a href="#cb30-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-454"><a href="#cb30-454" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier ESRI Shapefile (afrika_map.shp)</span></span>
-<span id="cb30-455"><a href="#cb30-455" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb30-456"><a href="#cb30-456" aria-hidden="true" tabindex="-1"></a><span class="fu">st_read</span>()</span>
-<span id="cb30-457"><a href="#cb30-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-458"><a href="#cb30-458" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-459"><a href="#cb30-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-460"><a href="#cb30-460" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb30-461"><a href="#cb30-461" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Correction"</span></span>
-<span id="cb30-462"><a href="#cb30-462" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb30-463"><a href="#cb30-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-464"><a href="#cb30-464" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier csv "afrika_don.csv"</span></span>
-<span id="cb30-465"><a href="#cb30-465" aria-hidden="true" tabindex="-1"></a>data_from_csv <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
-<span id="cb30-466"><a href="#cb30-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-467"><a href="#cb30-467" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier xls "afrika_don.xls"</span></span>
-<span id="cb30-468"><a href="#cb30-468" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb30-469"><a href="#cb30-469" aria-hidden="true" tabindex="-1"></a>data_from_xls <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.xls"</span>)</span>
-<span id="cb30-470"><a href="#cb30-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-471"><a href="#cb30-471" aria-hidden="true" tabindex="-1"></a><span class="co"># Importer du fichier shp "afrika_map.shp"</span></span>
-<span id="cb30-472"><a href="#cb30-472" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb30-473"><a href="#cb30-473" aria-hidden="true" tabindex="-1"></a>data_from_shp <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-474"><a href="#cb30-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-475"><a href="#cb30-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-476"><a href="#cb30-476" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-477"><a href="#cb30-477" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-478"><a href="#cb30-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-479"><a href="#cb30-479" aria-hidden="true" tabindex="-1"></a>\</span>
+<div class="sourceCode" id="cb27" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Import et export de données"</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Les différents types et formats de données pris en charge par R"</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Hugues pecout</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 01</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>**De nombreuses de fonctions (primitives ou non) permettent d'importer et d'exporter des données de différents formats.**</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Tableau de données**</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fichier texte simple</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>Un fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s'ouvrir avec n'importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>Plusieurs fonctions primitives permettent d'importer et d'exporter des fichiers texte simples, comme les fichiers **csv**, **txt** , **tsv**...</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.delim()`</span> : fichiers délimités par un symbole quelconque et "." en séparateur décimal</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.delim2()`</span> : fichiers délimités par un symbole quelconque et "," en séparateur décimal</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.table()`</span> : pour des fichiers texte délimités par des espaces\</span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.csv()`</span> : pour des fichiers texte délimités par des virgules (format csv)</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read.csv2()`</span> : pour des fichiers texte délimités par des points-virgules (format csv français)</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>Pour que l'import de données s'effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>**header** = valeur logique qui indique si la première ligne contient les noms des variables.&lt;br/&gt; **sep** = indique le caractère utilisé comme séparateur de champ (ex : ";")&lt;br/&gt; **encoding** = Chaîne de caractère qui précise l'encodage utilisé pour le fichier (ex : "UTF-8").<span class="kw">&lt;br/&gt;</span></span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>N'oubliez pas d'assigner le résultat dans un objet pour garder en mémoire vos données importées.</span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple d'utilisation de read.table()</span></span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don_meta.csv"</span>, </span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>                           <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>                           <span class="at">sep=</span> <span class="st">";"</span>,</span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>                           <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
+<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>Des fonctions primitives permettent également d'exporter votre tableau de données vers différents format texte.</span>
+<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.table()`</span> : pour tous les types de formats texte simple (séparateur à renseigner)</span>
+<span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.csv()`</span> : pour exporter en csv (séparateur virgule)</span>
+<span id="cb27-58"><a href="#cb27-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`write.csv2()`</span> : pour exporter en csv (séparateur points-virgules)</span>
+<span id="cb27-59"><a href="#cb27-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-60"><a href="#cb27-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.table()</span></span>
+<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x =</span> mon_tableau, </span>
+<span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a>            <span class="at">file =</span> <span class="st">"../data/tableau.txt"</span>, </span>
+<span id="cb27-66"><a href="#cb27-66" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">col.names =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb27-67"><a href="#cb27-67" aria-hidden="true" tabindex="-1"></a>            <span class="at">fileEncoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb27-68"><a href="#cb27-68" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple write.csv()</span></span>
+<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/tableau.csv"</span>)</span>
+<span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-73"><a href="#cb27-73" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-75"><a href="#cb27-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fichier Excel</span></span>
+<span id="cb27-76"><a href="#cb27-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-77"><a href="#cb27-77" aria-hidden="true" tabindex="-1"></a>Il est parfois nécessaire d'importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d'importer ce genre de format, et même d'exporter vos données dans ce type de format.</span>
+<span id="cb27-78"><a href="#cb27-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-79"><a href="#cb27-79" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
+<span id="cb27-80"><a href="#cb27-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-81"><a href="#cb27-81" aria-hidden="true" tabindex="-1"></a>Vous pouvez par exemple importer un fichier Excel avec le package <span class="co">[</span><span class="ot">`readxl`</span><span class="co">](https://readxl.tidyverse.org/)</span>.</span>
+<span id="cb27-82"><a href="#cb27-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-83"><a href="#cb27-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-84"><a href="#cb27-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-85"><a href="#cb27-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-86"><a href="#cb27-86" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb27-87"><a href="#cb27-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-88"><a href="#cb27-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-89"><a href="#cb27-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-90"><a href="#cb27-90" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-91"><a href="#cb27-91" aria-hidden="true" tabindex="-1"></a>Le packages <span class="in">`readxl`</span> fait partie de l'écosystème <span class="in">`tidyverse`</span> (cf. module <span class="co">[</span><span class="ot">x</span><span class="co">]()</span>). Pour cette raison, le tableau importé est mis en mémoire dans un objet <span class="co">[</span><span class="ot">`tibble`</span><span class="co">](https://tibble.tidyverse.org/)</span> et non <span class="in">`dataframe`</span>. Il s'agit de deux objets très semblables mais pas identiques. Pour convertir un <span class="in">`tibble`</span> en <span class="in">`dataframe`</span>, vous pouvez utiliser la fonction <span class="in">`as.data.frame()`</span>.</span>
+<span id="cb27-92"><a href="#cb27-92" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-93"><a href="#cb27-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-94"><a href="#cb27-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb27-95"><a href="#cb27-95" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-96"><a href="#cb27-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-97"><a href="#cb27-97" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb27-98"><a href="#cb27-98" aria-hidden="true" tabindex="-1"></a>mon_tableau <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.xls"</span>, </span>
+<span id="cb27-99"><a href="#cb27-99" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sheet =</span> <span class="st">"afrika_meta"</span>, </span>
+<span id="cb27-100"><a href="#cb27-100" aria-hidden="true" tabindex="-1"></a>                          <span class="at">skip =</span> <span class="dv">0</span>,</span>
+<span id="cb27-101"><a href="#cb27-101" aria-hidden="true" tabindex="-1"></a>                          <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-102"><a href="#cb27-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-103"><a href="#cb27-103" aria-hidden="true" tabindex="-1"></a><span class="co"># Le tableau importé est stocké dans un objet data.frame</span></span>
+<span id="cb27-104"><a href="#cb27-104" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mon_tableau)</span>
+<span id="cb27-105"><a href="#cb27-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-106"><a href="#cb27-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-107"><a href="#cb27-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-108"><a href="#cb27-108" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
+<span id="cb27-109"><a href="#cb27-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-110"><a href="#cb27-110" aria-hidden="true" tabindex="-1"></a>Pour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package <span class="co">[</span><span class="ot">`openxlsx`</span><span class="co">](https://cran.r-project.org/web/packages/openxlsx/index.html)</span> et sa fonction <span class="in">`write.xlsx()`</span>.</span>
+<span id="cb27-111"><a href="#cb27-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-112"><a href="#cb27-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-113"><a href="#cb27-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-114"><a href="#cb27-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-115"><a href="#cb27-115" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"openxlsx"</span>)</span>
+<span id="cb27-116"><a href="#cb27-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-117"><a href="#cb27-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-118"><a href="#cb27-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-119"><a href="#cb27-119" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-120"><a href="#cb27-120" aria-hidden="true" tabindex="-1"></a>Le packages <span class="in">`openxlsx`</span> permet uniquement de lire et écrire les fichiers Excel comportant l'extension **.xlsx**.</span>
+<span id="cb27-121"><a href="#cb27-121" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-122"><a href="#cb27-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-123"><a href="#cb27-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-124"><a href="#cb27-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-125"><a href="#cb27-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-126"><a href="#cb27-126" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb27-127"><a href="#cb27-127" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(<span class="at">x =</span> mon_tableau, <span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.xlsx"</span>)</span>
+<span id="cb27-128"><a href="#cb27-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-129"><a href="#cb27-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-130"><a href="#cb27-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-131"><a href="#cb27-131" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-132"><a href="#cb27-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-133"><a href="#cb27-133" aria-hidden="true" tabindex="-1"></a><span class="fu">### SAS, SPSS &amp; Stata</span></span>
+<span id="cb27-134"><a href="#cb27-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-135"><a href="#cb27-135" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`haven`</span><span class="co">](https://haven.tidyverse.org/)</span> permet de gérer des fichiers propriétaires de différents formats comme SAS, SPSS, Stata, dbf...</span>
+<span id="cb27-136"><a href="#cb27-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-137"><a href="#cb27-137" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-138"><a href="#cb27-138" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-139"><a href="#cb27-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-140"><a href="#cb27-140" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span>
+<span id="cb27-141"><a href="#cb27-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-142"><a href="#cb27-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-143"><a href="#cb27-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-144"><a href="#cb27-144" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-145"><a href="#cb27-145" aria-hidden="true" tabindex="-1"></a>Tout comme <span class="in">`readxl`</span>, ce package fait partie de l'écosystème <span class="in">`tidyverse`</span> (cf. module <span class="co">[</span><span class="ot">x</span><span class="co">]()</span>). Le tableau importé est mis en mémoire dans un objet <span class="co">[</span><span class="ot">`tibble`</span><span class="co">](https://tibble.tidyverse.org/)</span> et non <span class="in">`dataframe`</span>. Vous pouvez utiliser la fonction <span class="in">`as.data.frame()`</span> pour le convertir.</span>
+<span id="cb27-146"><a href="#cb27-146" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-147"><a href="#cb27-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-148"><a href="#cb27-148" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Fichier SAS</span></span>
+<span id="cb27-149"><a href="#cb27-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-150"><a href="#cb27-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-151"><a href="#cb27-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-152"><a href="#cb27-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-153"><a href="#cb27-153" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb27-154"><a href="#cb27-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-155"><a href="#cb27-155" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb27-156"><a href="#cb27-156" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="at">data_file =</span> <span class="st">"../data/data_sas.sas7bdat"</span>)</span>
+<span id="cb27-157"><a href="#cb27-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-158"><a href="#cb27-158" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb27-159"><a href="#cb27-159" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span> <span class="st">"../data/mon_tableau_sas.sas7bdat"</span>)</span>
+<span id="cb27-160"><a href="#cb27-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-161"><a href="#cb27-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-162"><a href="#cb27-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-163"><a href="#cb27-163" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Fichier SPSS</span></span>
+<span id="cb27-164"><a href="#cb27-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-165"><a href="#cb27-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-166"><a href="#cb27-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-167"><a href="#cb27-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-168"><a href="#cb27-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-169"><a href="#cb27-169" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb27-170"><a href="#cb27-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-171"><a href="#cb27-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb27-172"><a href="#cb27-172" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="at">file =</span>  <span class="st">"../data/data_spss.sav"</span>)</span>
+<span id="cb27-173"><a href="#cb27-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-174"><a href="#cb27-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb27-175"><a href="#cb27-175" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_spss.sav"</span>)</span>
+<span id="cb27-176"><a href="#cb27-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-177"><a href="#cb27-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-178"><a href="#cb27-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-179"><a href="#cb27-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-180"><a href="#cb27-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-181"><a href="#cb27-181" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Fichier Stata</span></span>
+<span id="cb27-182"><a href="#cb27-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-183"><a href="#cb27-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-184"><a href="#cb27-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-185"><a href="#cb27-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-186"><a href="#cb27-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-187"><a href="#cb27-187" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb27-188"><a href="#cb27-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-189"><a href="#cb27-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
+<span id="cb27-190"><a href="#cb27-190" aria-hidden="true" tabindex="-1"></a>mon_tableau  <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="at">file =</span>  <span class="st">"../data/data_stata.dta"</span>)</span>
+<span id="cb27-191"><a href="#cb27-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-192"><a href="#cb27-192" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
+<span id="cb27-193"><a href="#cb27-193" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(<span class="at">data =</span> mon_tableau, <span class="at">path =</span>  <span class="st">"../data/mon_tableau_stata.dta"</span>)</span>
+<span id="cb27-194"><a href="#cb27-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-195"><a href="#cb27-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-196"><a href="#cb27-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-197"><a href="#cb27-197" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-198"><a href="#cb27-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-199"><a href="#cb27-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Couche géographique**</span></span>
+<span id="cb27-200"><a href="#cb27-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-201"><a href="#cb27-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Vecteur</span></span>
+<span id="cb27-202"><a href="#cb27-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-203"><a href="#cb27-203" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage...). Pour cela, ce package interface avec la librairie système <span class="co">[</span><span class="ot">`GDAL`</span><span class="co">](https://gdal.org/)</span>. Les SIG fonctionnent de la même façon !</span>
+<span id="cb27-204"><a href="#cb27-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-205"><a href="#cb27-205" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-206"><a href="#cb27-206" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-207"><a href="#cb27-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-208"><a href="#cb27-208" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb27-209"><a href="#cb27-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-210"><a href="#cb27-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-211"><a href="#cb27-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-212"><a href="#cb27-212" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb27-213"><a href="#cb27-213" aria-hidden="true" tabindex="-1"></a>L'installation du package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> demande un prérequis. La librairie système <span class="co">[</span><span class="ot">`GDAL`</span><span class="co">](https://gdal.org/)</span> doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d'exploitation comme GNU/Linux.</span>
+<span id="cb27-214"><a href="#cb27-214" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-215"><a href="#cb27-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-216"><a href="#cb27-216" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
+<span id="cb27-217"><a href="#cb27-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-218"><a href="#cb27-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb27-219"><a href="#cb27-219" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-220"><a href="#cb27-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-221"><a href="#cb27-221" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb27-222"><a href="#cb27-222" aria-hidden="true" tabindex="-1"></a>map_africa <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-223"><a href="#cb27-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-224"><a href="#cb27-224" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(map_africa)</span>
+<span id="cb27-225"><a href="#cb27-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-226"><a href="#cb27-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-227"><a href="#cb27-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-228"><a href="#cb27-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-229"><a href="#cb27-229" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-230"><a href="#cb27-230" aria-hidden="true" tabindex="-1"></a>Une couche géographique importée via la fonction <span class="in">`st_read()`</span> du package <span class="co">[</span><span class="ot">`sf`</span><span class="co">](https://r-spatial.github.io/sf/)</span> est mise en mémoire dans un objet sf (simple feature). Il s'agit en quelque sorte d'un dataframe ou chaque individu est associé à une géométrie.</span>
+<span id="cb27-231"><a href="#cb27-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-232"><a href="#cb27-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-233"><a href="#cb27-233" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
+<span id="cb27-234"><a href="#cb27-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-235"><a href="#cb27-235" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`st_write()`</span> permet d'enregistrer un objet sf sur sa machine, dans le format que l'on souhaite.</span>
+<span id="cb27-236"><a href="#cb27-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-237"><a href="#cb27-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-238"><a href="#cb27-238" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir les exemples"</span></span>
+<span id="cb27-239"><a href="#cb27-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-240"><a href="#cb27-240" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb27-241"><a href="#cb27-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-242"><a href="#cb27-242" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format ESRI Shapefile</span></span>
+<span id="cb27-243"><a href="#cb27-243" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb27-244"><a href="#cb27-244" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.shp"</span>, </span>
+<span id="cb27-245"><a href="#cb27-245" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer_options =</span> <span class="st">"ENCODING=UTF-8"</span>)</span>
+<span id="cb27-246"><a href="#cb27-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-247"><a href="#cb27-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-248"><a href="#cb27-248" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement en format GeoPackage</span></span>
+<span id="cb27-249"><a href="#cb27-249" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(<span class="at">obj =</span> map_africa, </span>
+<span id="cb27-250"><a href="#cb27-250" aria-hidden="true" tabindex="-1"></a>         <span class="at">dsn =</span> <span class="st">"../data/map_africa.gpkg"</span>, </span>
+<span id="cb27-251"><a href="#cb27-251" aria-hidden="true" tabindex="-1"></a>         <span class="at">layer =</span> <span class="st">"pays"</span>)</span>
+<span id="cb27-252"><a href="#cb27-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-253"><a href="#cb27-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-254"><a href="#cb27-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-255"><a href="#cb27-255" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-256"><a href="#cb27-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-257"><a href="#cb27-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### Raster</span></span>
+<span id="cb27-258"><a href="#cb27-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-259"><a href="#cb27-259" aria-hidden="true" tabindex="-1"></a>Le package <span class="co">[</span><span class="ot">`terra`</span><span class="co">](https://rspatial.org/index.html)</span> permet aussi de lire et d'écrire des données géographiques vectorielles (comme <span class="in">`sf`</span>) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.</span>
+<span id="cb27-260"><a href="#cb27-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-261"><a href="#cb27-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-262"><a href="#cb27-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-263"><a href="#cb27-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-264"><a href="#cb27-264" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"terra"</span>)</span>
+<span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Import</span></span>
+<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a>Pour importer des données Raster, vous pouvez utiliser la fonction <span class="in">`rast()`</span>.</span>
+<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a>Un Raster importé via la fonction <span class="in">`rast()`</span> du package <span class="co">[</span><span class="ot">`terra`</span><span class="co">](https://rspatial.org/index.html)</span> est mis en mémoire dans un objet SpatRaster.</span>
+<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-276"><a href="#cb27-276" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb27-277"><a href="#cb27-277" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb27-278"><a href="#cb27-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-279"><a href="#cb27-279" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb27-280"><a href="#cb27-280" aria-hidden="true" tabindex="-1"></a>Elevation_Benin <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"../data/elevation.tif"</span>) </span>
+<span id="cb27-281"><a href="#cb27-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-282"><a href="#cb27-282" aria-hidden="true" tabindex="-1"></a>Elevation_Benin</span>
+<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Export</span></span>
+<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`writeRaster()`</span> permet d'enregistrer un objet SpatRaster sur sa machine, dans le format que l'on souhaite.</span>
+<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-290"><a href="#cb27-290" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-291"><a href="#cb27-291" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb27-292"><a href="#cb27-292" aria-hidden="true" tabindex="-1"></a><span class="fu">writeRaster</span>(<span class="at">x =</span> Elevation_Benin, <span class="at">filename =</span> <span class="st">"../data/Benin_Elevation.tif"</span>)</span>
+<span id="cb27-293"><a href="#cb27-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-294"><a href="#cb27-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-295"><a href="#cb27-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-296"><a href="#cb27-296" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-297"><a href="#cb27-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-298"><a href="#cb27-298" aria-hidden="true" tabindex="-1"></a><span class="fu">## **Image**</span></span>
+<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### Import</span></span>
+<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a>Pour importer des images, le package <span class="in">`png`</span>et <span class="in">`jpeg`</span>, pré-installés avec le language R vous permet d'importer des images.</span>
+<span id="cb27-303"><a href="#cb27-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-304"><a href="#cb27-304" aria-hidden="true" tabindex="-1"></a><span class="fu">#### PNG</span></span>
+<span id="cb27-305"><a href="#cb27-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a>mon_image_png <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"../img/map.png"</span>)</span>
+<span id="cb27-313"><a href="#cb27-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a><span class="fu">#### JPEG</span></span>
+<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-320"><a href="#cb27-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jpeg)</span>
+<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a>mon_image_jpg <span class="ot">&lt;-</span> <span class="fu">readJPEG</span>(<span class="st">"../img/wip.jpg"</span>)</span>
+<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-326"><a href="#cb27-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-327"><a href="#cb27-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-328"><a href="#cb27-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb27-329"><a href="#cb27-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-330"><a href="#cb27-330" aria-hidden="true" tabindex="-1"></a>Il est également possible d'exporter les sorties graphiques en format image avec les fonctions primitives suivantes :</span>
+<span id="cb27-331"><a href="#cb27-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-332"><a href="#cb27-332" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`bmp()`</span></span>
+<span id="cb27-333"><a href="#cb27-333" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`jpeg()`</span></span>
+<span id="cb27-334"><a href="#cb27-334" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`png()`</span></span>
+<span id="cb27-335"><a href="#cb27-335" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`tiff()`</span></span>
+<span id="cb27-336"><a href="#cb27-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-337"><a href="#cb27-337" aria-hidden="true" tabindex="-1"></a>Ces fonctions doivent être utilisées avec la fonction <span class="in">`dev.off()`</span>. Exemple :</span>
+<span id="cb27-338"><a href="#cb27-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-339"><a href="#cb27-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-340"><a href="#cb27-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"../img/mon_image.jpg"</span>)</span>
+<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) de l'image png</span></span>
+<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-353"><a href="#cb27-353" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb27-354"><a href="#cb27-354" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`dev.off()`</span> permet de clôturer la représentation graphique et d'enregistrer l'image. Si aucun dev.off() n'est exécuté à la suite de ces fonctions d'export, votre fenêtre graphique restera figée, et inutilisable.</span>
+<span id="cb27-355"><a href="#cb27-355" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-356"><a href="#cb27-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-357"><a href="#cb27-357" aria-hidden="true" tabindex="-1"></a>Il est également possible d'exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator...). Les fonction pour réaliser cela sont :</span>
+<span id="cb27-358"><a href="#cb27-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pdf()`</span></span>
+<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`svg()`</span></span>
+<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a>L'utilisation de ces fonctions primitives est similaire à l'export d'images matricielles. Exemple :</span>
+<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-365"><a href="#cb27-365" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Voir l'exemple"</span></span>
+<span id="cb27-366"><a href="#cb27-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-367"><a href="#cb27-367" aria-hidden="true" tabindex="-1"></a><span class="co"># Ouverture de la création de l'image</span></span>
+<span id="cb27-368"><a href="#cb27-368" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"../img/mon_image.pdf"</span>)</span>
+<span id="cb27-369"><a href="#cb27-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-370"><a href="#cb27-370" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la représentation graphique souhaitée</span></span>
+<span id="cb27-371"><a href="#cb27-371" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture (enregistrement) du pdf</span></span>
+<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-379"><a href="#cb27-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
+<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
+<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
+<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
+<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
+<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
+<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
+<span id="cb27-393"><a href="#cb27-393" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaCAkX"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb27-394"><a href="#cb27-394" aria-hidden="true" tabindex="-1"></a>| Fond de carte Afrique (GADM 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaAUb2"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb27-395"><a href="#cb27-395" aria-hidden="true" tabindex="-1"></a>| Raster délévation du Bénin (???)  | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3XqLAKR"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb27-396"><a href="#cb27-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-397"><a href="#cb27-397" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb27-398"><a href="#cb27-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-399"><a href="#cb27-399" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb27-400"><a href="#cb27-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-401"><a href="#cb27-401" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
+<span id="cb27-402"><a href="#cb27-402" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder.png"</span>)</span>
+<span id="cb27-403"><a href="#cb27-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-404"><a href="#cb27-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-405"><a href="#cb27-405" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Créez un script R à la racine de votre projet Rstudio</span><span class="co">]</span>{.question}</span>
+<span id="cb27-406"><a href="#cb27-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a>*File/New File/R script*</span>
+<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Importer les fichiers suivants en utilisant les fonctions adéquates :</span><span class="co">]</span>{.question}</span>
+<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/DEV_AFRIA_2018/**afrika_don.csv**\</span>
+<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/DEV_AFRICA_2018/**afrika_don.xls** (1er onglet)\</span>
+<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/GADM_AFRICA_2020/**afrika_map.shp**\</span>
+<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>data/**elevation.tif**</span>
+<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-416"><a href="#cb27-416" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb27-417"><a href="#cb27-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-418"><a href="#cb27-418" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-419"><a href="#cb27-419" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb27-420"><a href="#cb27-420" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb27-421"><a href="#cb27-421" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier csv (afrika_don.csv)</span></span>
+<span id="cb27-422"><a href="#cb27-422" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>()</span>
+<span id="cb27-423"><a href="#cb27-423" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv2</span>()</span>
+<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier Excel (afrika_don.xls)</span></span>
+<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>()</span>
+<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer un fichier ESRI Shapefile (afrika_map.shp)</span></span>
+<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb27-431"><a href="#cb27-431" aria-hidden="true" tabindex="-1"></a><span class="fu">st_read</span>()</span>
+<span id="cb27-432"><a href="#cb27-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-433"><a href="#cb27-433" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-434"><a href="#cb27-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-435"><a href="#cb27-435" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb27-436"><a href="#cb27-436" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Correction"</span></span>
+<span id="cb27-437"><a href="#cb27-437" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier csv "afrika_don.csv"</span></span>
+<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a>data_from_csv <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
+<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a><span class="co"># Import du fichier xls "afrika_don.xls"</span></span>
+<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a>data_from_xls <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"data/DEV_AFRICA_2018/afrika_don.xls"</span>)</span>
+<span id="cb27-445"><a href="#cb27-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a><span class="co"># Importer du fichier shp "afrika_map.shp"</span></span>
+<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a>data_from_shp <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/GADM_AFRICA_2020/afrika_map.shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a>\</span>
 </code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

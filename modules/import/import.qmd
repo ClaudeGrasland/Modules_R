@@ -72,7 +72,7 @@ write.csv(x = mon_tableau, file = "../data/tableau.csv")
 
 \
 
-### Excel
+### Fichier Excel
 
 Il est parfois nécessaire d'importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d'importer ce genre de format, et même d'exporter vos données dans ce type de format.
 
@@ -130,9 +130,9 @@ write.xlsx(x = mon_tableau, file = "../data/DEV_AFRICA_2018/afrika_don.xlsx")
 
 \
 
-### SAS
+### SAS, SPSS & Stata
 
-Le package [`haven`](https://haven.tidyverse.org/) permet de gérer des fichiers propriètaires de différents formats : SAS, SPSS, Stata, dbf...
+Le package [`haven`](https://haven.tidyverse.org/) permet de gérer des fichiers propriétaires de différents formats comme SAS, SPSS, Stata, dbf...
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
@@ -145,70 +145,51 @@ install.packages("haven")
 Tout comme `readxl`, ce package fait partie de l'écosystème `tidyverse` (cf. module [x]()). Le tableau importé est mis en mémoire dans un objet [`tibble`](https://tibble.tidyverse.org/) et non `dataframe`. Vous pouvez utiliser la fonction `as.data.frame()` pour le convertir.
 :::
 
-#### Import
+#### Fichier SAS
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Voir l'exemple"
 
 library(haven)
+
+# Import
 mon_tableau  <- read_sas(data_file = "../data/data_sas.sas7bdat")
 
-```
-
-#### Export
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Voir l'exemple"
-library(haven)
+# Export
 write_sas(data = mon_tableau, path = "../data/mon_tableau_sas.sas7bdat")
+
 ```
 
-\
+#### Fichier SPSS
 
-### SPSS
-
-Vous pouvez utiliser le package [`haven`](https://haven.tidyverse.org/) qui permet la lecture et l'écriture de fichier de données SAS.
-
-#### Import
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Voir l'exemple"
 
 library(haven)
+
+# Import
 mon_tableau  <- read_sav(file =  "../data/data_spss.sav")
 
-```
-
-#### Export
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Voir l'exemple"
-library(haven)
+# Export
 write_sav(data = mon_tableau, path =  "../data/mon_tableau_spss.sav")
 
 ```
 
-\
 
-### Stata
 
-Vous pouvez utiliser le package [`haven`](https://haven.tidyverse.org/) qui permet la lecture et l'écriture de fichier de données Stata.
+#### Fichier Stata
 
-#### Import
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Voir l'exemple"
 
 library(haven)
+
+# Import
 mon_tableau  <- read_stata(file =  "../data/data_stata.dta")
 
-```
-
-#### Export
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Voir l'exemple"
-library(haven)
+# Export
 write_dta(data = mon_tableau, path =  "../data/mon_tableau_stata.dta")
 
 ```
@@ -395,13 +376,11 @@ dev.off()
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-\
+
 
 [1. Créez un projet Rstudio]{.question}
 
 *File/New Project/New Directory...*
-
-\
 
 [2. Téléchargez les données suivantes :]{.question}
 
@@ -419,13 +398,9 @@ dev.off()
 knitr::include_graphics("../img/folder.png")
 ```
 
-\
-
 [4. Créez un script R à la racine de votre projet Rstudio]{.question}
 
 *File/New File/R script*
-
-\
 
 [5. Importer les fichiers suivants en utilisant les fonctions adéquates :]{.question}
 

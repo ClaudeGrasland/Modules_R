@@ -142,7 +142,7 @@ Présentation des données, source, date... Bla bla bla https://energydata.info/
 
 #### Affichage de données :
 
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE, fig.align='center'}
 
 library(terra)
 Elevation_Benin <- rast("data/elevation.tif") 

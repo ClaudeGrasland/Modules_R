@@ -1,3 +1,50 @@
 ---
 title: "Manipulation de données Raster"
+subtitle: "Le package `terra` pour manipuler les données RASTER"
+author: 
+- Hugues pecout
+- Timothée Giraud
+date: last-modified
+ordre: 02
+code-fold: true
+code-tools: true
 ---
+
+::: {.callout-note}
+
+Ce module est très fortement inspiré du manuel [géomatique avec R](https://rcarto.github.io/geomatique_avec_r/) (T. Giraud & H. Pecout, 2023). 
+
+:::
+
+## Le package terra
+
+
+## L'objet SpatRaster
+
+### import/export...
+
+### Affichage
+
+
+## Modifications de la zone d’étude
+
+### Projection
+
+### crop
+
+### mask
+
+### aggrégation / désaggragation
+
+### Fusion
+
+### Segregate ???
+
+## Algèbre spatiale
+
+### Opérations locales
+### Opérations focales
+### Opérations globales
+### Opérations zonales
+
+## Transformation et conversion

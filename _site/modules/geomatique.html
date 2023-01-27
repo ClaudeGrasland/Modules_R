@@ -75,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-author','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -406,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
 
@@ -437,60 +437,49 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Trier par</option>
-       <option value="index" data-direction="asc">Ordre par défaut</option>
-         <option value="listing-title" data-direction="asc">
-          Titre
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Auteur·rice
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1674840824000" data-listing-file-modified-sort="1674840824796" data-listing-reading-time-sort="0.7">
 <div class="body">
 <a href="../modules/geomatique/geomatic_vector.html">
 <h3 class="no-anchor listing-title">
 Manipulation de données vectorielles
 </h3>
 <div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
+Le package <code>sf</code> pour manipuler les données vectorielles
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/geomatique/geomatic_vector.html"> </a>
+<a href="../modules/geomatique/geomatic_vector.html">
+<div class="listing-date">
+27 janv. 2023
+</div>
+<div class="listing-author">
+Timothée Giraud, Hugues pecout
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1674839843000" data-listing-file-modified-sort="1674839843161" data-listing-reading-time-sort="0.25">
 <div class="body">
 <a href="../modules/geomatique/geomatic_raster.html">
 <h3 class="no-anchor listing-title">
 Manipulation de données Raster
 </h3>
 <div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
+Le package <code>terra</code> pour manipuler les données RASTER
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/geomatique/geomatic_raster.html"> </a>
+<a href="../modules/geomatique/geomatic_raster.html">
+<div class="listing-date">
+27 janv. 2023
+</div>
+<div class="listing-author">
+Hugues pecout, Timothée Giraud
+</div>
+</a>
 </div>
 </div>
 </div>

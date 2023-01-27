@@ -15,7 +15,6 @@ page-layout: full
 ordre: 05
 ---
 
-
 ::: column-margin
 ![](img/import.png){width="50%"}
 :::

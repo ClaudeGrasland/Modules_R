@@ -1,6 +1,6 @@
 ---
-title: "Graphique avec ggplot2"
-subtitle: "Representations graphiques avec ggplot2"
+title: "Graphique avec `ggplot2`"
+subtitle: "Representations graphiques avec `ggplot2`"
 author: Hugues pecout
 date: last-modified
 ordre: 02

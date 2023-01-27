@@ -13,30 +13,39 @@ code-tools: true
 
 ## Principales fonctions
 
-### 3 types de fonction
-
 Les fonctions graphiques peuvent être classées en trois catégories :
 
 **I.** Les fonctions permettant de **créer différents types de graphiques** :
 
--   `plot()` 
--   `barplot()`
--   `stripchart()`
--   `hist()`
--   `boxplot()`
--   `curve()`
+-   **`plot()`      : Fonction générique de représentation graphique**
+-   `matplot()`      : Dispersions de toutes le variables d'un tableau (un graphique)
+-   `pairs()`        : Matrice de nuage de point pour l'ensemble des variables d'un tableau
+-   `stripchart()`   : diagrammes de dispersion
+-   `dotchart()`     : diagramme en points de Cleveland
+-   `boxplot()`      : diagramme en boîte
+-   `qqnorm()`       : diagramme quantile-quantile théorique normal
+-   `qqplot()`       : diagramme quantile-quantile empirique
+-   `barplot()`      : diagramme à barres
+-   `pie()`          : diagramme en secteurs
+-   `mosaicplot()`   : diagramme en mosaïque
+-   `spineplot()`    : diagrammes en épine (entre l'histogramme et le mosaic plot)
+-   `hist()`         : histogramme
+-   `curve()`        : Représentation d'une expression mathématique
 -   etc....
 
 
 **II.** les fonctions permettant d'**ajouter de l'information à un graphique existant** :
 
--   `legend()`
--   `title()`
--   `density()`
--   `points()`
--   `lines()`
--   `abline()`
--   `text()`
+-   `legend()`  : légende
+-   `title()`   : titre
+-   `density()` : courbe de densité à noyau
+-   `points()`  : point
+-   `rug()`     : représentation stripchart le long de l'axe des x
+-   `lines()`   : segments de droites reliant des points
+-   `matlines()` : segments de droites reliant des points (utiliser avec `matplot()`)
+-   `abline()`  : droites traversant toute la zone graphique
+-   `text()`    : texte dans la zone graphique
+-   `mtext()`   : texte dans la marge
 -   etc...
 
 **III.** Les fonctions utilisées pour **fixer et contrôler des paramètres graphiques généraux** :
@@ -50,12 +59,29 @@ Les fonctions graphiques peuvent être classées en trois catégories :
 
 La fonction primitive de représentation graphique la plus couramment utilisée est la fonction `plot()`. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**. 
 
-Deux syntaxes sont possibles pour utiliser cette fonction :
+
+
+:::{.callout-warning}
+
+**En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.**
+
+:::
+
+Il est même possible d'exécuter cette fonction sur l'ensemble d'un dataframe. Des nuages de points par couple de variables seront alors automatiquement produits :
+
+```{r eval = TRUE, fig.align='center'}
+#| code-fold: FALSE
+
+plot(iris) 
+
+```
+
+Deux syntaxes sont possibles pour utiliser cette fonction sur deux variables :
 
 - Classique :
 
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
 
 x <- seq(-pi, pi, 0.1)
@@ -69,7 +95,7 @@ plot(x, y)
 
 - syntaxe "formule" :
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
 
 
@@ -81,7 +107,7 @@ Dans l'expression `y ~ x`, `y` désigne la variable dépendante (à expliquer) e
 
 La fonction `plot()` accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
 
 plot(y ~ x, 
@@ -105,7 +131,7 @@ plot(y ~ x,
 
 Une fois le graphique construit, plusieurs fonctions primitives vous permettre d'ajouter différents éléments. Exemple :
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
 
 plot(y ~ x, 
@@ -166,11 +192,11 @@ title("Titre de mon graphique",
 ### Fenêtre graphique
 
 
-Deux fonctions (`par()` et `layout()`) permettent de gérer les paramètres graphiques (disposition figures, marges, axes, police...) :
+Deux fonctions - `par()` et `layout()` - permettent de gérer les paramètres graphiques, comme la disposition des figures, les marges, les axes, la police... :
 
 Exemple d'utilisation de la fonction `par()` qui contient un grand nombre d'arguments possibles (cf. `?par`) :
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.width=10}
 #| code-fold: FALSE
 
 par(bg = "royalblue1", # Couleur de fond
@@ -188,145 +214,463 @@ plot(x = sin(1:10), y = 1:10, main = "plot 3")
 plot(x = 1:10, y = exp(1:10), main = "plot 4")
 ```
 
+\
+
 `layout()` propose moins d'arguments mais permet un meilleur ajustement de la disposition des figures. Pour cela, il est nécessaire de construire une matrice pour indiquer la position et l'espace de chaque graphique ajouté. Exemple :
 
 
 ```{r eval = TRUE}
 #| code-fold: FALSE
-matrix(c(1,1,1,0,2,2,3,3,0),  3,  3,  byrow = TRUE)
+matrix(c(1,1,1,2,0,3,2,0,3),  3,  3,  byrow = TRUE)
 
 ```
 
-Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique deux occupera uniquement les deux dernières colonnes de la seconde ligne, et le troisième sera situé dans les deux premières colonnes de la dernière ligne. Exemple :  
+Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique 2 occupera les deux dernières lignes de la première colonne, et le 3e sera situé dans les deux dernières lignes de la dernière colonne. Exemple :  
 
-```{r eval = TRUE}
+```{r eval = TRUE, fig.width=10}
 #| code-fold: FALSE
 
-layout(mat = matrix(c(1,1,1,0,2,2,3,3,0),  3,  3,  byrow = TRUE))
+par(bg  = "royalblue1",  col= "white")
 
-plot(x = log(1:10), y = 10:1, main = "plot 1")
+# Découpage de la fenêtre graphique
+layout(mat = matrix(c(1,1,1,2,0,3,2,0,3),  3,  3,  byrow = TRUE))
 
-plot(x = exp(1:10), y = log(1:10), main = "plot 2")
-
-plot(x = sin(1:10), y = 1:10, main = "plot 3")
+plot(x = exp(1:10), y = log(1:10), main = "plot 1")
+plot(x = sin(1:10), y = 1:10, main = "plot 2")
+plot(x = log(1:10), y = 10:1, main = "plot 3")
 
 ```
 
+\
+
+## Principaux graphiques
 
 
-## Représentation uni et bivariée
 
-### Var. quantitative
+### Variable Quanti.
 
-```{r eval = FALSE}
+Pour représenter la distribution d'un variable quantitative, plusieurs types de graphiques peuvent être utilisés.
 
+
+
+#### stripchart()
+
+La fonction `stripchart()` permet de représenter la distribution d'une variable quantitative.
+
+```{r eval = TRUE, fig.width=10}
+
+par(mfrow = c(2,2)) 
 
 # gauche supérieur
-stripchart(mpg$displ, xlab = "displ", pch = 16)
+stripchart(cars$speed, xlab = "speed", pch = 16)
+
 # droite supérieur
-stripchart(mpg$displ, xlab = "displ", method = "stack", pch = 16)
+stripchart(cars$speed, xlab = "speed", method = "stack", pch = 16)
+
 # gauche inférieur
-stripchart(mpg$displ, xlab = "displ", method = "jitter", pch = 16)
+stripchart(cars$speed, xlab = "speed", method = "jitter", pch = "#")
+
 # droite inférieur
-stripchart(mpg$displ, ylab = "displ", method = "jitter", vertical = TRUE, pch = "+")
-
-plot(mpg$drv)   #---> barplot()
-barplot(mpg$drv)
-
-# Pour la distribution
-hist(mpg$displ)
-hist(mpg$displ, freq = FALSE)
-density(mpg$displ)
+stripchart(cars$speed, ylab = "speed", method = "jitter", vertical = TRUE)
 
 ```
 
-### 2 var. quantitatives
+#### hist()
 
-```{r eval = FALSE}
+La fonction `hist()` permet de construire un histogramme.
 
+```{r eval = TRUE, fig.width=10}
 
+par(mfrow = c(2,2)) 
 
+# gauche supérieur
+hist(cars$speed)
 
-plot(hwy ~ displ, data = mpg, pch = 16)
-```
+# droite supérieur
+hist(cars$speed, breaks = quantile(cars$speed), main = "Histogramme par quartile")
 
-### Var. qualitative
+# gauche inférieur
+hist(cars$speed, freq = FALSE, main = "Histogramme des proportions")
 
-```{r eval = FALSE}
-
-```
-
-### 2 var. qualitatives
-
-```{r eval = FALSE}
-plot()
-barplot()
-```
-
-### Quali. vs Quanti.
-
-```{r eval = FALSE}
-
-stripchart(hwy ~ trans, data = mpg, vertical = TRUE, pch = 16, metho = "jitter")
-
-boxplot(hwy ~ trans, data = mpg)
-
-plot()
-
-boxplot(hwy ~ trans, data = mpg)
-stripchart(hwy ~ trans, data = mpg, vertical = TRUE, pch = 16, metho = "jitter", add = TRUE)
-
-boxplot(hwy ~ trans + drv, data = mpg)
+# droite inférieur
+hist(cars$speed, freq = FALSE, main = "Histogramme et densité échantillonnale")
+lines(density(cars$speed))
 
 ```
 
-## Tracer une fonction
+#### boxplot()
 
-```{r eval = FALSE}
+La fonction `boxplot()`permet de construire une boîte à moustache. Elle peut être associée à la fonction `stripchart()`.
 
-curve()
-curve(x^2, from = 0, to = 20, col = "red", lty = 1, ylab = "y")
-curve(x^(2.5), from = 0, to = 20, col = "gray", lty = 2, add = TRUE)
-curve(x^(3), from = 0, to = 20, col = "blue", lty = 3, add = TRUE)
-legend("topright", title = "Function", legend = c("x^2", "x^2.5", "x^3"), col = c("red", "gray", "blue"), lty = 1:3, bty = "n", inset = c(0.2, 0))
+```{r eval = TRUE, fig.align = 'center'}
+
+
+par(mfrow = c(1,2)) 
+
+# gauche
+boxplot(cars$dist)
+
+# droite
+boxplot(cars$dist, horizontal=T, varwidth= TRUE, col = "red4", outline = FALSE)
+stripchart(cars$dist,  pch = 16, metho = "jitter", add = TRUE)
 ```
+
+
+\
+
+### 2 variables Quanti.
+
+
+#### plot()
+
+Utilisez la fonction `plot()` pour représenter deux variables quantitatives.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+plot(speed ~ dist, data = cars, pch = 16)
+
+# Ajout d'une marque pour chaque individus le long de l'axe des abcisses
+rug(cars$dist)
+
+```
+
+### Variable Quali.
+
+#### plot()
+
+La fonction `plot()` peut être utilisée pour une variable qualitative. Pour cela la variable doit être stockée dans le format `factor`.
+
+```{r eval = TRUE, fig.align = 'center'}
+#| code-fold: FALSE
+
+class(esoph$alcgp)
+
+plot(esoph$agegp)
+
+```
+
+#### barplot()
+
+Vous pouvez utiliser la fonction `barplot()` sur une table de fréquence.
+
+```{r eval = TRUE, fig.align = 'center'}
+#| code-fold: FALSE
+
+# Calcul table de fréquence
+table_freq <- table(esoph$agegp)
+
+# Fréquence par modalité
+table_freq 
+
+barplot(table_freq )
+
+```
+
+\
+
+
+### 2 variables Quali.
+
+Comme avec une variable qualitative, vous pouvez utiliser les fonction `plot()` et `barplot()` pour représenter La répartition d'individus en fonction de deux variables qualitatives. 
+
+
+#### plot()
+
+Comme avec une seule variable, **les variables qualitatives croisées doivent être stockée en `factor`**.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+plot(alcgp ~ agegp, data = esoph)
+
+```
+
+
+#### barplot()
+
+La fonction `barplot` fonctionne également sur deux variables qualitatives.
+Dans un premier temps, calculez le tableau croisé à partir des deux variables qualitatives ciblées :
+
+```{r eval = TRUE, fig.align = 'center'}
+#| code-fold: FALSE
+
+# Calcul table de fréquence
+table_freq <- table(esoph$alcgp, esoph$agegp)
+
+# Fréquence par modalité
+table_freq 
+
+```
+
+Puis utilisez la fonction `barplot()` :
+
+```{r eval = TRUE, fig.align = 'center'}
+
+par(mfrow = c(2,2)) 
+
+# gauche supérieur
+barplot(table_freq)
+
+# droite supérieur
+barplot(table_freq, horiz = TRUE)
+
+# gauche inférieur
+barplot(table_freq, horiz = TRUE, beside=TRUE)
+
+# droite inférieur
+barplot(table_freq, beside=TRUE, legend.text = levels(esoph$alcgp), 
+        args.legend=list(x="bottomright"))
+
+
+```
+
+
+
+\
+
+### Quanti. et Quali.
+
+#### plot()
+
+La fonction généraliste `plot()` peut être utilisée. Si la variable qualitative est appelée en première, le graphique prendra la forme d'un *spine plot* (%). Dans le cas contraire, la fonction renverra un ensemble de *boxplots*.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+par(mfrow = c(1,2)) 
+
+
+# Spine plot
+plot(agegp ~ ncases, data = esoph, main = "Spine plot")
+
+# Boxplot
+plot(ncases ~ agegp, data = esoph, main = "Boxplots")
+
+
+
+```
+
+Il est également possible d'utiliser directement la fonction boxplot pour représenter la distribution de chaque individus pour une variable quantitative, par modalité d'une variable qualitative :
+
+```{r eval = TRUE, fig.align = 'center'}
+
+boxplot(ncases ~ agegp, data = esoph)
+
+```
+
+L'argument `col` de la fonction `plot()` permet aussi de représenter trois variables (quantitative ~ quantitative + qualitative). Pour cela, il est préférable d'utiliser une variable qualitative stockée en format `factor`.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+# Conversion de la variable qualitative en format factor
+mtcars$cyl <- as.factor(mtcars$cyl)
+
+# Nuage de point
+plot(disp ~ wt, 
+     data = mtcars, 
+     col = cyl, # Couleur des points en fonction d'une variable qualitative
+     pch = 16, 
+     xlab = "Weight",
+     ylab = "Displacement")
+
+# Ajout d'une légende
+legend(x = "bottomright", 
+       title = "Number of cylinders",
+       legend = levels(mtcars$cyl), 
+       col =  1:3, 
+       ncol = 3, 
+       pch = 16)
+
+
+```
+\
+
+
+### Tableau complet
+
+La fonction `pairs()` (ou `plot()`) permet de construire une matrice du nuages de points entre toutes les variables d'un tableau, quelque soit leur type.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+pairs(iris)
+
+```
+
+
+\
+
+
+### Expression math.
+
+La fonction `curve()` permet de tracer de représenter une expression mathématique.
+
+```{r eval = TRUE, fig.align = 'center'}
+
+curve(expr = (x), col = "grey30", from = -2, to = 2)
+curve(expr = x^2,  col = "green4", add = TRUE)
+curve(expr = x^3, col = "red", add = TRUE)
+
+legend("bottomright", title = "Function", 
+       legend = c("(x)", "x^2", "x^3"), 
+       col = c("grey30", "green4", "red"), 
+       lty = 1)
+
+
+```
+
 
 ## Exporter un graphique
 
-Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Vous pouvez utiliser cet onglet pour zoomer sur un graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export**.
+Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Dans cet onglet, vous pouvez zoomer sur le graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export** :
 
-Pour sauvegarder un graphique R (tel que vous le visualisez sur votre écran) en format PDF, vous pouvez aussi exécuter le code suivant en remplaçant filename par le le nom que vous voulez. Le fichier ainsi créé sera enregistré dans votre répertoire de travail R.
+![](../img/plot.png){fig-align="center"}
+
+
+L'export d'un graphique peut être automatisé en ligne de code R de différente manière (cf. [module import](/modules/import/import.html#image)). 
+Le procédure d'export la plus simple peut être réalisé avec la fonction `dev.print()`. **Cette fonction permet aussi bien un export en format vectoriel que matricielle du graphique affiché.**
 
 ```{r eval = FALSE}
-dev.print(pdf, "filename.pdf") # <-- remplacez 'filename' (gardez l'extension pdf)
+#| code-fold: FALSE
+
+# Format pdf
+dev.print(device = pdf, "graph_export.pdf", width = 600) 
+
+# format svg
+dev.print(device = svg, file = "graph_export.svg", width = 6)
+
+# format png
+dev.print(device = png, file = "graph_export.png", width = 600)
+
+# format png
+dev.print(device = jpeg, file = "graph_export.jpeg", width = 600)
+
 ```
+
+\
 
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-\
 
 [1. Créez un projet Rstudio]{.question}
 
 *File/New Project/New Directory...*
 
-\
+[2. Téléchargez les données suivantes :]{.question}
 
-------------------------------------------------------------------------
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder2.png")
+```
+
+[4. Importez le fichier "afrika_don.csv" dans un data.frame]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
+... <- read.csv2(file = "...")
 
+```
+
+[5. Construisez un histogramme par quartile pour la variable "POP" :]{.question}
+
+```{r echo = FALSE, message = FALSE , eval = TRUE}
+  
+  
+My_data <- read.csv2(file = "../data/DEV_AFRICA_2018/afrika_don.csv")
+
+hist(My_data$POP, breaks  = quantile(My_data$POP))
 
 ```
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+hist(..., breaks  = quantile(...))
+
+```
+
+[6. Améliorez la mise en page, en ajoutant par exemple un peu de couleur, un titre, une source... :]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = TRUE, echo = FALSE}
+
+par(bg = "cornsilk3")
+
+hist(My_data$POP, 
+     breaks  = quantile(My_data$POP),
+     col = "green4",
+     border = "white",
+     xlab = "Nombre d'habitants (millions)", 
+     ylab = "Proportion", 
+     main = "Répartition des pays africains selon leur population")
+
+rug(My_data$POP)
+mtext(side = 4, "source : UN, 2020", cex = 0.8)
+
+```
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un exemple ?"
+
+par(bg = "cornsilk3")
+
+hist(My_data$POP, 
+     breaks  = quantile(My_data$POP),
+     col = "green4",
+     border = "white",
+     xlab = "Nombre d'habitants (millions)", 
+     ylab = "Proportion", 
+     main = "Répartition des pays africains selon leur population")
+
+rug(My_data$POP)
+mtext(side = 4, "source : UN, 2020", cex = 0.8)
+
+
+```
+
+[7. Exportez le graphique à l'aide d'une fonction (format png)]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+dev.print(device = ..., file = "...")
+
+```
+
+------------------------------------------------------------------------
+
+\
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Correction"
   
+# Import des données
+data <- read.csv2(file = "../data/DEV_AFRICA_2018/afrika_don.csv")
 
+# Paramétrage de la couleur de fond de la fenêtre graphique
+par(bg = "cornsilk3")
 
+# Histogramme sur la variable 'POP'
+hist(data$POP, 
+     breaks  = quantile(data$POP),
+     col = "green4",
+     border = "white",
+     xlab = "Nombre d'habitants (millions)", 
+     ylab = "Proportion", 
+     main = "Répartition des pays africains selon leur population")
 
+# Ajout de marques pour chaque individus (axe des abscisses)
+rug(data$POP)
+
+# Ajout de la source des données
+mtext(side = 4, "source : UN, 2020", cex = 0.8)
+
+# Export en PNG
+dev.print(device = png, file = "mon_graphique.png", width = 600)
 
 ```
 :::
