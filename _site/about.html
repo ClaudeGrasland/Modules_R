@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -65,6 +84,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="TIG’R - Crédits">
+<meta name="twitter:description" content="TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences…">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -99,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ressources.html">
- <span class="menu-text">Ressources externes</span></a>
+ <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -161,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/import.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/import.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -172,6 +192,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./modules/import/api.html" class="sidebar-item-text sidebar-link">Package &amp; API</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/import/connectBD.html" class="sidebar-item-text sidebar-link">Connexion BD</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -196,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/manipulation.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/manipulation.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -206,12 +231,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/manipulation/datatable.html" class="sidebar-item-text sidebar-link">data.table</a>
+  <a href="./modules/manipulation/datatable.html" class="sidebar-item-text sidebar-link">Le package <code>data.table</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/manipulation/tidyverse.html" class="sidebar-item-text sidebar-link">tidyverse</a>
+  <a href="./modules/manipulation/tidyverse.html" class="sidebar-item-text sidebar-link">Le package <code>tidyverse</code></a>
   </div>
 </li>
       </ul>
@@ -226,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/graphique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/graphique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,12 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/graphique/ggplot2.html" class="sidebar-item-text sidebar-link">Graphique avec ggplot2</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./modules/graphique/package_graph.html" class="sidebar-item-text sidebar-link">Divers</a>
+  <a href="./modules/graphique/ggplot2.html" class="sidebar-item-text sidebar-link">Graphique avec <code>ggplot2</code></a>
   </div>
 </li>
       </ul>
@@ -256,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/statistique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/statistique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -286,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/geomatique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/geomatique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -311,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/cartographie.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/cartographie.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -321,14 +341,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/cartographie/map_2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
+  <a href="./modules/cartographie/map_dyn.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false"><strong>Notebook</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false"><strong>Reproductibilité</strong></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -336,22 +356,27 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/notebook.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="./modules/reproductibilite.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/notebook/programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
+  <a href="./modules/reproductibilite/minicran.html" class="sidebar-item-text sidebar-link">Le package <code>miniCRAN</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/notebook/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
+  <a href="./modules/reproductibilite/renv.html" class="sidebar-item-text sidebar-link">Le package <code>renv</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/notebook/quarto.html" class="sidebar-item-text sidebar-link">Exemple Quarto</a>
+  <a href="./modules/reproductibilite/programmation_lettree.html" class="sidebar-item-text sidebar-link">Literate programming</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/reproductibilite/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
   </div>
 </li>
       </ul>
@@ -366,11 +391,18 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#conditions-dutilisation" id="toc-conditions-dutilisation" class="nav-link active" data-scroll-target="#conditions-dutilisation">Conditions d’utilisation</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -389,8 +421,45 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique <a href="https://ee2023.netlify.app/">Méthodes et outils de sciences territoriales</a> organisée par le <a href="https://cist.cnrs.fr/">Collègue Internationnal des Sciences Territoirales</a>. Ce site internet a depuis été ouvert aux contributions extérieurs.</p>
+<div class="center">
+<p><strong>Liste des contributeurs</strong> à ce jour, par ordre alphabétique :</p>
+<p><strong>Julien Dansou, Timothée Giraud, Hugues Pecout…</strong></p>
+</div>
+<p><br>
+</p>
+<section id="conditions-dutilisation" class="level3">
+<h3 class="anchored" data-anchor-id="conditions-dutilisation">Conditions d’utilisation</h3>
+<p>Le contenu de ce site web (support de cours et exercice inclus) est soumis à la <a href="https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf">Licence ouverte V2.0 d’Etalab</a>. Le « Réutilisateur » est <strong>libre de réutiliser l’ « Information »</strong> :</p>
+<ul>
+<li>de la reproduire, la copier,<br>
+</li>
+<li>de l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,<br>
+</li>
+<li>de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,<br>
+</li>
+<li>de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.</li>
+</ul>
+<p><strong>Sous réserve de :</strong></p>
+<ul>
+<li>mentionner la paternité de l’ « Information » : sa source (cf.&nbsp;<a href="#citation">citation</a> et la date de dernière mise à jour de l’ « Information » réutilisée.</li>
+</ul>
+<div class="center">
+<p><img src="img/etalab.gif" class="img-fluid" style="width:7.0%"></p>
+</div>
+<p><br>
+</p>
+</section>
+<section id="citation" class="level3">
+<h3 class="anchored" data-anchor-id="citation">Citation</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-WinNT" class="csl-entry" role="doc-biblioentry">
+Pecout H., et al. 2023. <span>«&nbsp;<span>TIG’R : </span> Traitement de l’information géographique avec R&nbsp;»</span>. 2023. <a href="https://ee2023.netlify.app/">https://ee2023.netlify.app/</a>.
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

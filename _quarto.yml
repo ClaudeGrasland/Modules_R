@@ -32,11 +32,13 @@ website:
       - section: "**Import de données**"
         contents:
           - href: modules/import.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/import/import.qmd
             text: Import & export
           - href: modules/import/api.qmd
             text: Package & API
+          - href: modules/import/connectBD.qmd
+            text: Connexion BD
           - href: modules/import/osm.qmd
             text: OpenStreetMap
           - href: modules/import/scraping.qmd 
@@ -45,29 +47,27 @@ website:
       - section: "**Manipulation**"
         contents:
           - href: modules/manipulation.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/manipulation/manipulation.qmd
             text: R-base
           - href: modules/manipulation/datatable.qmd
-            text: data.table
+            text: Le package `data.table`
           - href: modules/manipulation/tidyverse.qmd 
-            text: tidyverse
+            text: Le package `tidyverse`
             
       - section: "**Graphique**"
         contents:
           - href: modules/graphique.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/graphique/Rbase_graph.qmd
             text: Graphique R-base
           - href: modules/graphique/ggplot2.qmd
-            text: Graphique avec ggplot2
-          - href: modules/graphique/package_graph.qmd 
-            text: Divers
+            text: Graphique avec `ggplot2`
             
       - section: "**Statistique**"
         contents:
           - href: modules/statistique.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/statistique/statistique_uni.qmd
             text: Univariée
           - href: modules/statistique/statistique_bi.qmd
@@ -78,7 +78,7 @@ website:
       - section: "**Géomatique**"
         contents:
           - href: modules/geomatique.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/geomatique/geomatic_vector.qmd
             text: Données vectorielles
           - href: modules/geomatique/geomatic_raster.qmd
@@ -87,22 +87,25 @@ website:
       - section: "**Cartographie**"
         contents:
           - href: modules/cartographie.qmd
-            text: Liste des modules
+            text: Toutes les leçons
           - href: modules/cartographie/map_sf.qmd
             text: Cartographie statique
-          - href: modules/cartographie/map_2.qmd
+          - href: modules/cartographie/map_dyn.qmd
             text: Cartographie dynamique              
             
-      - section: "**Notebook**"
+      - section: "**Reproductibilité**"
         contents:
-          - href: modules/notebook.qmd
-            text: Liste des modules
-          - href: modules/notebook/programmation_lettree.qmd
-            text: La programmation lettrée
-          - href: modules/notebook/notebook.qmd
+          - href: modules/reproductibilite.qmd
+            text: Toutes les leçons
+          - href: modules/reproductibilite/minicran.qmd
+            text: Le package `miniCRAN`
+          - href: modules/reproductibilite/renv.qmd
+            text: Le package `renv`
+          - href: modules/reproductibilite/programmation_lettree.qmd
+            text: Literate programming
+          - href: modules/reproductibilite/notebook.qmd
             text: Les notebooks  
-          - href: modules/notebook/quarto.qmd
-            text: Exemple Quarto    
+
             
       - text: "---"
       
@@ -120,7 +123,7 @@ website:
       #   href: packages.qmd
       - text: Modules
         href: modules.qmd       
-      - text: Ressources externes
+      - text: Ressources
         href: ressources.qmd
 
         

@@ -2,7 +2,7 @@
 title: "Exploiter les données OSM"
 subtitle: "Récupérer des données d'OpenStreetMap avec R"
 author: work in progress
-ordre: 03
+ordre: 04
 code-fold: true
 code-tools: true
 ---

@@ -3,12 +3,14 @@ title: "Manipulation"
 subtitle: "Gestion & traitement de données"
 image : img/data.png
 listing: 
+  id : manipulation
   contents : manipulation
-  sort: "date desc"
+  sort: "ordre asc"
+  fields: [date, author, title]
   type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+  categories: false
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 ordre: 02
 ---
@@ -17,4 +19,12 @@ ordre: 02
 ![](img/data.png){width="50%"}
 :::
 
-[Tous les modules](/modules.qmd)
+::: {#manipulation}
+:::
+
+
+</br>
+
+::: center
+Revenir à la [page d'acceuil des modules](/modules.qmd)
+:::

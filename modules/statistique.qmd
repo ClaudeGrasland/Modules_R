@@ -3,16 +3,28 @@ title: "Statistique"
 subtitle: "Stat. descriptive uni, bi et multivariée"
 image : img/statistic.png
 listing: 
+  id : statistique
   contents : statistique
-  sort: "date desc"
+  sort: "ordre asc"
+  fields: [date, author, title]
   type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+  categories: false
+  sort-ui: false
+  filter-ui: false
 page-layout: full
-ordre: 04
+ordre: 03
 ---
 
 ::: column-margin
 ![](img/statistic.png){width="50%"}
+:::
+
+
+::: {#statistique}
+:::
+
+</br>
+
+::: center
+Revenir à la [page d'acceuil des modules](/modules.qmd)
 :::

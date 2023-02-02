@@ -1,0 +1,10 @@
+---
+title: "Connexion à une BD"
+subtitle: "Comment se connecter à une base de données avec R"
+ordre: 03
+author: work in progress
+code-fold: true
+code-tools: true
+---
+
+**Work in progress**

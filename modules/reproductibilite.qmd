@@ -1,0 +1,31 @@
+---
+title: "Reproductibilité"
+subtitle: "Bonnes pratiques pour la recherche reproductible"
+image : img/video-player.png
+listing: 
+  id : reproductibilite
+  contents : reproductibilite
+  sort: "ordre asc"
+  fields: [date, author, title]
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+ordre: 07
+---
+
+::: column-margin
+![](img/video-player.png){width="50%"}
+:::
+
+
+::: {#reproductibilite}
+:::
+
+
+</br>
+
+::: center
+Revenir à la [page d'acceuil des modules](/modules.qmd)
+:::

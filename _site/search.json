@@ -30,30 +30,30 @@
   {
     "objectID": "modules/import.html",
     "href": "modules/import.html",
-    "title": "Import",
+    "title": "Données",
     "section": "",
-    "text": "Import et export de données\n\n\nLes différents types et formats de données pris en charge par R\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nPackages de données et API\n\n\nQuelques packages forunisseurs de données\n\n\n\n\n\n\nWork in progress\n\n\n\n\n\n\n\n\nExploiter les données OSM\n\n\nRécupérer des données d’OpenStreetMap avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nInitiation au web scraping\n\n\nCollecter des données du Web avec R (API, scraping…)\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Import et export de données\n\n\nLes différents types et formats de données pris en charge par R\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nPackages de données et API\n\n\nQuelques packages forunisseurs de données\n\n\n\n\n\n\nWork in progress\n\n\n\n\n\n\n\n\nConnexion à une BD\n\n\nComment se connecter à une base de données avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nExploiter les données OSM\n\n\nRécupérer des données d’OpenStreetMap avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nWeb scraping\n\n\nCollecte automatique de données issues du web\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/geomatique.html",
     "href": "modules/geomatique.html",
     "title": "Géomatique",
     "section": "",
-    "text": "Tous les modules\n\n\n\n\n\n\n\n\n\n\nManipulation de données vectorielles\n\n\nLe package sf pour manipuler les données vectorielles\n\n\n\n\n\n\n27 janv. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nManipulation de données Raster\n\n\nLe package terra pour manipuler les données RASTER\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\nAucun article correspondant"
+    "text": "Manipulation de données vectorielles\n\n\nLe package sf pour manipuler les données vectorielles\n\n\n\n\n\n\n27 janv. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nManipulation de données Raster\n\n\nLe package terra pour manipuler les données RASTER\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/cartographie.html",
     "href": "modules/cartographie.html",
     "title": "Cartographie",
     "section": "",
-    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nCartographie statique\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie dynamqiue\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Cartographie avec mapsf\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nCartographie dynamique\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
-    "objectID": "modules/graphique/package_graph.html",
-    "href": "modules/graphique/package_graph.html",
-    "title": "Aperçu des packages graphiques",
+    "objectID": "modules/reproductibilite.html",
+    "href": "modules/reproductibilite.html",
+    "title": "Reproductibilité",
     "section": "",
-    "text": "work in progress"
+    "text": "Le package miniCRAN\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nLe package renv\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nLiterate programming\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\nRédiger un notebook, l’exemple de Quarto\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/graphique/Rbase_graph.html",
@@ -95,21 +95,21 @@
     "href": "modules/statistique.html",
     "title": "Statistique",
     "section": "",
-    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Statistique descriptive univariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/manipulation.html",
     "href": "modules/manipulation.html",
     "title": "Manipulation",
     "section": "",
-    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Utilisation du tidyverse\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/graphique.html",
     "href": "modules/graphique.html",
     "title": "Graphique",
     "section": "",
-    "text": "Graphique R-base\n\n\nRepresentations graphiques avec les fonctions primitives\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nGraphique avec ggplot2\n\n\nRepresentations graphiques avec ggplot2\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nAperçu des packages graphiques\n\n\nVue d’ensemble des packages disponibles pour la représentation graphique\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Graphique R-base\n\n\nRepresentations graphiques avec les fonctions primitives\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nGraphique avec ggplot2\n\n\nRepresentations graphiques avec ggplot2\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/import/import.html",
@@ -156,16 +156,16 @@
   {
     "objectID": "modules/import/scraping.html",
     "href": "modules/import/scraping.html",
-    "title": "Initiation au web scraping",
+    "title": "Web scraping",
     "section": "",
     "text": "Work in progress"
   },
   {
-    "objectID": "modules/notebook.html",
-    "href": "modules/notebook.html",
-    "title": "Notebook",
+    "objectID": "modules/import/connectBD.html",
+    "href": "modules/import/connectBD.html",
+    "title": "Connexion à une BD",
     "section": "",
-    "text": "Tous les modules\n\n\n\n\n\n\n   \n     \n     \n       Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nExemple Quarto\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLa programmation lettrée\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLes notebooks (exécutables)\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant"
+    "text": "Work in progress"
   },
   {
     "objectID": "modules/geomatique/geomatic_vector.html",
@@ -173,55 +173,6 @@
     "title": "Manipulation de données vectorielles",
     "section": "",
     "text": "Note\n\n\n\nCe module est très fortement inspiré du manuel géomatique avec R (T. Giraud & H. Pecout, 2023)."
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html",
-    "href": "modules/geomatique/geomatic_raster.html",
-    "title": "Manipulation de données Raster",
-    "section": "",
-    "text": "Note\n\n\n\nCe module est très fortement inspiré du manuel géomatique avec R (T. Giraud & H. Pecout, 2023)."
-  },
-  {
-    "objectID": "modules.html",
-    "href": "modules.html",
-    "title": "Modules thématiques",
-    "section": "",
-    "text": "Import\n\n\nImport, collecte (API) et export de données\n\n\n\n\n\n\n\n\n\n\n\n\n\nManipulation\n\n\nGestion & traitement de données\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistique\n\n\nStat. descriptive uni, bi et multivariée\n\n\n\n\n\n\n\n\n\n\n\n\n\nGraphique\n\n\nReprésentation graphique\n\n\n\n\n\n\n\n\n\n\n\n\n\nGéomatique\n\n\nTraitement données vecteur et raster\n\n\n\n\n\n\n\n\n\n\n\n\n\nCartographie\n\n\nCartographie thématique\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotebook\n\n\nConstruction de document combinant du texte et du code\n\n\n\n\n\n\n\nAucun article correspondant"
-  },
-  {
-    "objectID": "presentation.html",
-    "href": "presentation.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.\nSi vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les ressources annexes. Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :\n\n\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\nLes modules thématiques\nLe contenu de TIG’R est organisé en sept modules thématiques :\n\nImport de données (Import, collecte (API) et export de données)\nManipulation de données (gestion & traitement de données)\nStatistique descriptives (uni, bi et multivariée)\nReprésentation graphique (R-base & ggplot2)\nGéomatique (traitement des données vectorielles et raster)\nCartographie thématique (statique et interactive\nNotebook (Production de document combinant du texte et du code)\n\n\n\n\n\n\n\nNote\n\n\n\nChaque module comprend au moins un cours d’introduction et un exercice appliqué.\n\n\n\n\nLes données\nLes différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur cette page.\n\n\nLes packages\nAfin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tentent de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des références dans la communauté R et laisser présager une certaine stabilité du code présenté.\nLes packages utilisés dans les différents modules thématiques sont :\n\nreadxl\nopenxlsx\nhaven\ndplyr\nlubridate\nFactoMineR\nggplot2\nsf\nterra\nmapsf\nrmarkdown\nknitr\n\n\n# Liste de package à installer\npackages <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\",  \"FactoMineR\", \"sf\", \n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Détéction de package à installer\nmissing_packages <- packages [!(packages  %in% installed.packages()[,\"Package\"])]\n\n# Installation des packages manquants\nif(length(missing_packages)) install.packages(missing_packages)\n\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\nCitation TIG’R\n\n\nPecout H., et Dansou J. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#iomqjgoqigr",
-    "href": "modules/geomatique/geomatic_vector.html#iomqjgoqigr",
-    "title": "Manipulation de données vectorielles",
-    "section": "iomqjgoqigr",
-    "text": "iomqjgoqigr"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#iomqjgoqigr",
-    "href": "modules/geomatique/geomatic_raster.html#iomqjgoqigr",
-    "title": "Manipulation de données Raster",
-    "section": "iomqjgoqigr",
-    "text": "iomqjgoqigr"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#principales-fonctions",
-    "href": "modules/geomatique/geomatic_vector.html#principales-fonctions",
-    "title": "Manipulation de données vectorielles",
-    "section": "Principales fonctions",
-    "text": "Principales fonctions\nLes fonctions graphiques peuvent être classées en trois catégories :"
   },
   {
     "objectID": "modules/geomatique/geomatic_vector.html#le-package-sf",
@@ -273,6 +224,13 @@
     "text": "Géoréférencement"
   },
   {
+    "objectID": "modules/geomatique/geomatic_raster.html",
+    "href": "modules/geomatique/geomatic_raster.html",
+    "title": "Manipulation de données Raster",
+    "section": "",
+    "text": "Note\n\n\n\nCe module est très fortement inspiré du manuel géomatique avec R (T. Giraud & H. Pecout, 2023)."
+  },
+  {
     "objectID": "modules/geomatique/geomatic_raster.html#le-package-terra",
     "href": "modules/geomatique/geomatic_raster.html#le-package-terra",
     "title": "Manipulation de données Raster",
@@ -306,5 +264,40 @@
     "title": "Manipulation de données Raster",
     "section": "Transformation et conversion",
     "text": "Transformation et conversion"
+  },
+  {
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Ressources",
+    "section": "",
+    "text": "De très nombreuses ressources diverses et gratuites (livres, articles, agrégateurs, cours, exercices, sites web, vidéos…) pour la pratique de R en sciences humaines et sociale sont référencées sur le site internet rzine.fr. Quelques exemples :\n analyse-R : Site web pour l’introduction à l’analyse d’enquêtes avec R et RStudio , crée et maintenue par Joseph Larmarange.\n Cartographie avec R : Manuel pour la création de cartes thématiques conformes aux règles de la sémiologie graphique et de la cartographie, T. giraud & H. Pecout.\n ElementR : Site web du groupe d’utilisateur·rice·s pour le traitement de l’information géographique avec R, coordonnée l’UMR Géographie-Cités, l’UMR PRODIG et l’UAR RIATE.\n Géomatique avec R : Manuel pour la gestion et le traitements de données spatiales, T. giraud & H. Pecout.\n guide-R : Guide pour l’analyse de données d’enquêtes avec R (version actualisée et restructurée de nombreux chapitres d’analyse-R).\n Parcours R : Supports de formations R MTES & MCTRCT.\n Une introduction à R et au tidyverse : Manuel d’introduction à R, accessible et régulièrement mis à jour, par Julien Barnier.\n UtilitR : Documentation collaborative et open source sur R, destinée en premier lieu aux agents de l’INSEE."
+  },
+  {
+    "objectID": "modules.html",
+    "href": "modules.html",
+    "title": "Modules thématiques",
+    "section": "",
+    "text": "Données\n\n\nImport, collecte , connexion BD…\n\n\n\n\n\n\n\n\n\n\n\n\n\nManipulation\n\n\nGestion & traitement de données\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistique\n\n\nStat. descriptive uni, bi et multivariée\n\n\n\n\n\n\n\n\n\n\n\n\n\nGraphique\n\n\nReprésentation graphique\n\n\n\n\n\n\n\n\n\n\n\n\n\nGéomatique\n\n\nTraitement données vecteur et raster\n\n\n\n\n\n\n\n\n\n\n\n\n\nCartographie\n\n\nCartographie thématique\n\n\n\n\n\n\n\n\n\n\n\n\n\nReproductibilité\n\n\nBonnes pratiques pour la recherche reproductible\n\n\n\n\n\n\n\nAucun article correspondant"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Crédits",
+    "section": "",
+    "text": "TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales. Ce site internet a depuis été ouvert aux contributions extérieurs.\n\nListe des contributeurs à ce jour, par ordre alphabétique :\nJulien Dansou, Timothée Giraud, Hugues Pecout…\n\n\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\n\n\n\n\n\nCitation\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.\nSi vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les ressources annexes. Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :\n\n\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\n\nConsulter en plein écran\n\n\n\n\nLes modules thématiques\nLe contenu de TIG’R est organisé en sept modules thématiques :\n\nDonnées (Import, collecte , connexion BD… et export de données)\nManipulation de données (gestion & traitement de données)\nStatistique descriptives (uni, bi et multivariée)\nReprésentation graphique (R-base & ggplot2)\nGéomatique (traitement des données vectorielles et raster)\nCartographie thématique (statique et interactive)\nReproductibilité (Bonnes pratiques pour la recherche reproductible)\n\n\n\n\n\n\n\nNote\n\n\n\nChaque module comprend au moins un cours d’introduction et un exercice appliqué.\n\n\n\n\nLes packages utilisés\nAfin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tentent de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des références dans la communauté R et laisser présager une certaine stabilité du code présenté.\nLes packages utilisés dans les différents modules thématiques sont :\n\nreadxl\nopenxlsx\nhaven\ndplyr\nlubridate\nstringr\nFactoMineR\nggplot2\nsf\nterra\nmapsf\nrmarkdown\nknitr\n\n\n# Liste des packages à installer pour réaliser l'ensemble des leçons\npackages <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Détection de package à installer\nmissing_packages <- packages [!(packages  %in% installed.packages()[,\"Package\"])]\n\n# Installation des packages manquants\nif(length(missing_packages)) install.packages(missing_packages)\n\n\n\nLe miniCRAN\nAfin de pouvoir reproduire les différentes leçon sans être dépendant d’une connexion internet, un miniCRAN (répertoire contenant les sources de l’ensemble des packages) est mis à disposition :\n\n Télécharger le miniCRAN\n\nUne fois le répertoire décompressé, vous pouvez installer les différents packages en local de la manière suivante :\n\n# Chemin d'accès jusqu'au répertoire \"miniCRAN\" copié sur votre machine.\nURL_dossier <- paste0(\"file:///\", \"C:/Users/<username>/.../\", \"miniCRAN\")\n\n# Installation de ggplot2 depuis la source (répertoire miniCRAN)\ninstall.packages(\"ggplot2\", \n                 repos = URL_dossier,\n                 type = \"source\")\n\n\n\n\n\n\n\nNote\n\n\n\nModifier “C:/Users/username/…/” par le chemin d’accès correct.\n\n\n\n\nLes données utilisées\nLes différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur cette page.\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\nCitation TIG’R\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
   }
 ]

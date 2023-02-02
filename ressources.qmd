@@ -1,6 +1,6 @@
 ---
-title: "Ressources annexes"
-subtitle: "Ressources supplémentaires"
+title: "Ressources"
+subtitle: "Quelques ressources supplémentaires pour complèter TIG'R"
 ---
 
 ::: column-margin
@@ -8,3 +8,31 @@ subtitle: "Ressources supplémentaires"
 :::
 
 ------------------------------------------------------------------------
+
+
+**De très nombreuses ressources diverses et gratuites** (livres, articles, agrégateurs, cours, exercices, sites web, vidéos...) **pour la pratique de R en sciences humaines et sociale sont référencées sur le site internet** [**rzine.fr**](https://rzine.fr/publication/). Quelques exemples :
+
+
+
+<i class="bi bi-diagram-2"></i> [**analyse-R**](https://larmarange.github.io/analyse-R/) : Site web pour l'introduction à l’analyse d’enquêtes avec R et RStudio , crée et maintenue par Joseph Larmarange.
+
+<i class="bi bi-book"></i> [**Cartographie avec R**](https://rcarto.github.io/cartographie_avec_r/) : Manuel pour la création de cartes thématiques conformes aux règles de la sémiologie graphique et de la cartographie, T. giraud & H. Pecout.
+
+<i class="bi bi-diagram-2"></i> [**ElementR**](https://elementr.netlify.app/) : Site web du groupe d'utilisateur·rice·s pour le traitement de l’information géographique avec R, coordonnée l'UMR [Géographie-Cités](https://geographie-cites.cnrs.fr/), l'UMR [PRODIG](https://www.prodig.cnrs.fr/) et l'[UAR RIATE](https://riate.cnrs.fr/). 
+
+<i class="bi bi-book"></i> [**Géomatique avec R**](https://rcarto.github.io/geomatique_avec_r/) : Manuel pour la gestion et le traitements de données spatiales, T. giraud & H. Pecout.
+
+<i class="bi bi-book"></i> [**guide-R**](https://larmarange.github.io/guide-R/) : Guide pour l’analyse de données d’enquêtes avec R (version actualisée et restructurée de nombreux chapitres d’analyse-R).
+
+<i class="bi bi-diagram-2"></i> [**Parcours R**](https://mtes-mct.github.io/parcours-r/) : Supports de formations R [MTES & MCTRCT](https://www.ecologie.gouv.fr/).
+
+<i class="bi bi-book"></i> [**Une introduction à R et au tidyverse**](https://juba.github.io/tidyverse/) : Manuel d'introduction à R, accessible et régulièrement mis à jour, par Julien Barnier.
+
+<i class="bi bi-diagram-2"></i> [**UtilitR**](https://www.utilitr.org/) : Documentation collaborative et open source sur R, destinée en premier lieu aux agents de l’INSEE.
+
+
+
+
+
+
+

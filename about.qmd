@@ -1,6 +1,47 @@
 ---
 title: "Crédits"
+# subtitle: Présentation des modules de formations TIG'R
+bibliography: biblio/tigr.bib
+nocite: '@*'
+# csl: geo.csl
 ---
+
+TIG'R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l'école thématique [Méthodes et outils de sciences territoriales](https://ee2023.netlify.app/) organisée par le [Collègue Internationnal des Sciences Territoirales](https://cist.cnrs.fr/). Ce site internet a depuis été ouvert aux contributions extérieurs. 
+
+:::{.center}
+**Liste des contributeurs** à ce jour, par ordre alphabétique : 
+
+**Julien Dansou, Timothée Giraud, Hugues Pecout...**
+:::
+
+\
+
+### Conditions d'utilisation
+
+Le contenu de ce site web (support de cours et exercice inclus) est soumis à la [Licence ouverte V2.0 d'Etalab](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf). Le « Réutilisateur » est **libre de réutiliser l' « Information »** :
+
+-   de la reproduire, la copier,\
+-   de l'adapter, la modifier, l'extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\
+-   de la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\
+-   de l'exploiter à titre commercial, par exemple en la combinant avec d'autres informations, ou en l'incluant dans son propre produit ou application.
+
+**Sous réserve de :**
+
+-   mentionner la paternité de l' « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l' « Information » réutilisée.
+
+
+:::{.center}
+![](img/etalab.gif){width="7%"}
+:::
+
+\
+
+### Citation
+
+::: {#refs}
+:::
+
+
 
 
 

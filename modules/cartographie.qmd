@@ -3,12 +3,13 @@ title: "Cartographie"
 subtitle: "Cartographie thématique"
 image: img/map.png
 listing: 
+  id : cartographie
   contents : cartographie
-  sort: "date desc"
+  fields: [date, author, title]
   type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+  categories: false
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 ordre: 07
 ---
@@ -17,4 +18,12 @@ ordre: 07
 ![](img/map.png){width="50%"}
 :::
 
-[Tous les modules](/modules.qmd)
+::: {#cartographie}
+:::
+
+
+</br>
+
+::: center
+Revenir à la [page d'acceuil des modules](/modules.qmd)
+:::

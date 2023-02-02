@@ -68,20 +68,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-manipulation .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-author','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-manipulation'] = new List('listing-manipulation', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html">
- <span class="menu-text">Ressources externes</span></a>
+ <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/import.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/import.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -210,6 +210,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/import/api.html" class="sidebar-item-text sidebar-link">Package &amp; API</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/import/connectBD.html" class="sidebar-item-text sidebar-link">Connexion BD</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -234,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/manipulation.html" class="sidebar-item-text sidebar-link active">Liste des modules</a>
+  <a href="../modules/manipulation.html" class="sidebar-item-text sidebar-link active">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -244,12 +249,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/manipulation/datatable.html" class="sidebar-item-text sidebar-link">data.table</a>
+  <a href="../modules/manipulation/datatable.html" class="sidebar-item-text sidebar-link">Le package <code>data.table</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/manipulation/tidyverse.html" class="sidebar-item-text sidebar-link">tidyverse</a>
+  <a href="../modules/manipulation/tidyverse.html" class="sidebar-item-text sidebar-link">Le package <code>tidyverse</code></a>
   </div>
 </li>
       </ul>
@@ -264,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/graphique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/graphique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -274,12 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/graphique/ggplot2.html" class="sidebar-item-text sidebar-link">Graphique avec ggplot2</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../modules/graphique/package_graph.html" class="sidebar-item-text sidebar-link">Divers</a>
+  <a href="../modules/graphique/ggplot2.html" class="sidebar-item-text sidebar-link">Graphique avec <code>ggplot2</code></a>
   </div>
 </li>
       </ul>
@@ -294,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/statistique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/statistique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -324,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/geomatique.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/geomatique.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -349,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/cartographie.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/cartographie.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,14 +359,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/cartographie/map_2.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
+  <a href="../modules/cartographie/map_dyn.html" class="sidebar-item-text sidebar-link">Cartographie dynamique</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false"><strong>Notebook</strong></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false"><strong>Reproductibilité</strong></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -374,22 +374,27 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/notebook.html" class="sidebar-item-text sidebar-link">Liste des modules</a>
+  <a href="../modules/reproductibilite.html" class="sidebar-item-text sidebar-link">Toutes les leçons</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/notebook/programmation_lettree.html" class="sidebar-item-text sidebar-link">La programmation lettrée</a>
+  <a href="../modules/reproductibilite/minicran.html" class="sidebar-item-text sidebar-link">Le package <code>miniCRAN</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/notebook/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
+  <a href="../modules/reproductibilite/renv.html" class="sidebar-item-text sidebar-link">Le package <code>renv</code></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/notebook/quarto.html" class="sidebar-item-text sidebar-link">Exemple Quarto</a>
+  <a href="../modules/reproductibilite/programmation_lettree.html" class="sidebar-item-text sidebar-link">Literate programming</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/reproductibilite/notebook.html" class="sidebar-item-text sidebar-link">Les notebooks</a>
   </div>
 </li>
       </ul>
@@ -406,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Catégories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tous <span class="quarto-category-count">(3)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
 
@@ -431,31 +436,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="img/data.png" class="img-fluid" style="width:50.0%"></p>
-</div></div><p><a href="../modules.html">Tous les modules</a></p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Trier par</option>
-       <option value="index" data-direction="asc">Ordre par défaut</option>
-         <option value="listing-title" data-direction="asc">
-          Titre
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Auteur·rice
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
+</div></div><div id="listing-manipulation" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1672998040318" data-listing-reading-time-sort="0.005">
 <div class="body">
@@ -464,9 +445,6 @@ ul.task-list li input[type="checkbox"] {
 Utilisation du tidyverse
 </h3>
 <div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
 
 </div>
 </a>
@@ -484,9 +462,6 @@ Manipulation en R-base
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
-
-</div>
 </a>
 </div>
 <div class="metadata">
@@ -502,10 +477,6 @@ Utilisation de data.table
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
-
-
-</div>
 </a>
 </div>
 <div class="metadata">
@@ -516,7 +487,16 @@ Utilisation de data.table
 <div class="listing-no-matching d-none">
 Aucun article correspondant
 </div>
-</div></main> <!-- /main -->
+</div>
+<p><br></p>
+<div class="center">
+<p>Revenir à la <a href="../modules.html">page d’acceuil des modules</a></p>
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

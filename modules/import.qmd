@@ -1,6 +1,6 @@
 ---
-title: "Import"
-subtitle: "Import, collecte (API) et export de données"
+title: "Données"
+subtitle: "Import, collecte , connexion BD..."
 image : img/import.png
 listing: 
   id: import

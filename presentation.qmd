@@ -43,29 +43,25 @@ Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_F
 :::
 :::
 
-\
+
 
 ### Les modules thématiques
 
 Le contenu de TIG'R est organisé en sept modules thématiques :
 
--   [**Import de données**](modules/import.qmd) (Import, collecte (API) et export de données)
+-   [**Données**](modules/import.qmd) (Import, collecte , connexion BD… et export de données)
 -   [**Manipulation de données**](modules/manipulation.qmd) (gestion & traitement de données)
 -   [**Statistique descriptives**](modules/statistique.qmd) (uni, bi et multivariée)
 -   [**Représentation graphique**](modules/graphique.qmd) (R-base & ggplot2)
 -   [**Géomatique**](modules/geomatique.qmd) (traitement des données vectorielles et raster)
--   [**Cartographie thématique**](modules/cartographie.qmd) (statique et interactive
--   [**Notebook**](modules/notebook.qmd) (Production de document combinant du texte et du code)
+-   [**Cartographie thématique**](modules/cartographie.qmd) (statique et interactive)
+-   [**Reproductibilité**](modules/reproductibilite.qmd) (Bonnes pratiques pour la recherche reproductible)
 
 ::: callout-note
 Chaque module comprend au moins un cours d'introduction et un exercice appliqué.
 :::
 
-### Les données
-
-Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur [cette page](data.qmd).
-
-### Les packages
+### Les packages utilisés
 
 Afin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tentent de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des références dans la communauté R et laisser présager une certaine stabilité du code présenté.
 
@@ -76,6 +72,7 @@ Les packages utilisés dans les différents modules thématiques sont :
 -   [haven](https://haven.tidyverse.org/)
 -   [dplyr](https://dplyr.tidyverse.org/)
 -   [lubridate](https://lubridate.tidyverse.org/)
+-   [stringr](https://stringr.tidyverse.org/)
 -   [FactoMineR](http://factominer.free.fr/index_fr.html)
 -   [ggplot2](https://ggplot2.tidyverse.org/)
 -   [sf](https://r-spatial.github.io/sf/)
@@ -86,14 +83,14 @@ Les packages utilisés dans les différents modules thématiques sont :
 
 ```{r}
 
-# Liste de package à installer
+# Liste des packages à installer pour réaliser l'ensemble des leçons
 packages <- c("readxl", "openxlsx", "haven",
               "dplyr", "lubridate", "stringr",
-              "ggplot2", "sf", "FactoMineR", "rmapshaper",
+              "ggplot2", "FactoMineR", "sf",
               "terra", "mapsf", "rmarkdown", "knitr")
 
 
-# Détéction de package à installer
+# Détection de package à installer
 missing_packages <- packages [!(packages  %in% installed.packages()[,"Package"])]
 
 # Installation des packages manquants
@@ -101,6 +98,34 @@ if(length(missing_packages)) install.packages(missing_packages)
 
 
 ```
+
+
+### Le miniCRAN
+
+Afin de pouvoir reproduire les différentes leçon sans être dépendant d'une connexion internet, un [miniCRAN](modules/reproductibilite/minicran.qmd) (répertoire contenant les sources de l'ensemble des packages) est mis à disposition :
+
+::: center
+<a href="https://bit.ly/3X1L4lk" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger le miniCRAN</a>
+:::
+
+Une fois le répertoire décompressé, vous pouvez installer les différents packages en local de la manière suivante :
+
+
+```{r eval = FALSE, echo = TRUE}
+
+# Chemin d'accès jusqu'au répertoire "miniCRAN" copié sur votre machine.
+URL_dossier <- paste0("file:///", "C:/Users/<username>/.../", "miniCRAN")
+
+# Installation de ggplot2 depuis la source (répertoire miniCRAN)
+install.packages("ggplot2", 
+                 repos = URL_dossier,
+                 type = "source")
+
+```
+
+::: callout-note
+Modifier "*C:/Users/username/.../*" par le chemin d’accès correct.
+:::
 
 
 ```{r eval = FALSE, echo = FALSE, include = FALSE }
@@ -125,12 +150,19 @@ list.files(Mon_dossier, recursive = TRUE, full.names = FALSE)
 pkgAvail(repos = Mon_dossier, type = "win.binary")[, c(1:3, 5)]
 
 
+# install.packages("ggplot2", 
+#                  repos = paste0("file:///","/home/hugues/Bureau/Modules_R/miniCRAN"),
+#                  type = "source")
 
-install.packages("ggplot2", 
-                 repos = paste0("file:///","/home/hugues/Bureau/Modules_R/miniCRAN"),
-                 type = "source")
+# file <- "miniCRAN.zip"
+# zip(zipfile = file , 
+#     files = "/home/hugues/Documents/5.Cours/Modules_R/miniCRAN/")
 
 ```
+
+### Les données utilisées
+
+Les différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur [cette page](data.qmd).
 
 ### Conditions d'utilisation
 
@@ -144,6 +176,8 @@ Le contenu de ce site web (support de cours et exercice inclus) est soumis à la
 **Sous réserve de :**
 
 -   mentionner la paternité de l' « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l' « Information » réutilisée.
+
+
 
 ### Citation TIG'R
 

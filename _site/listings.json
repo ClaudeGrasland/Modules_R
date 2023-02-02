@@ -4,6 +4,7 @@
     "items": [
       "/modules/import/import.html",
       "/modules/import/api.html",
+      "/modules/import/connectBD.html",
       "/modules/import/osm.html",
       "/modules/import/scraping.html"
     ]
@@ -19,7 +20,16 @@
     "listing": "/modules/cartographie.html",
     "items": [
       "/modules/cartographie/map_sf.html",
-      "/modules/cartographie/map_2.html"
+      "/modules/cartographie/map_dyn.html"
+    ]
+  },
+  {
+    "listing": "/modules/reproductibilite.html",
+    "items": [
+      "/modules/reproductibilite/minicran.html",
+      "/modules/reproductibilite/renv.html",
+      "/modules/reproductibilite/programmation_lettree.html",
+      "/modules/reproductibilite/notebook.html"
     ]
   },
   {
@@ -42,16 +52,7 @@
     "listing": "/modules/graphique.html",
     "items": [
       "/modules/graphique/Rbase_graph.html",
-      "/modules/graphique/ggplot2.html",
-      "/modules/graphique/package_graph.html"
-    ]
-  },
-  {
-    "listing": "/modules/notebook.html",
-    "items": [
-      "/modules/notebook/quarto.html",
-      "/modules/notebook/programmation_lettree.html",
-      "/modules/notebook/notebook.html"
+      "/modules/graphique/ggplot2.html"
     ]
   },
   {
@@ -63,7 +64,7 @@
       "/modules/graphique.html",
       "/modules/geomatique.html",
       "/modules/cartographie.html",
-      "/modules/notebook.html"
+      "/modules/reproductibilite.html"
     ]
   }
 ]

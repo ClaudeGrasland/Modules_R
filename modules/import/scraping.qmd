@@ -1,7 +1,7 @@
 ---
-title: "Initiation au web scraping"
-subtitle: "Collecter des données du Web avec R (API, scraping...)"
-ordre: 04
+title: "Web scraping"
+subtitle: "Collecte automatique de données issues du web"
+ordre: 05
 author: work in progress
 code-fold: true
 code-tools: true
