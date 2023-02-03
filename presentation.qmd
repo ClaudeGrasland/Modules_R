@@ -10,44 +10,35 @@ nocite: '@*'
 <a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode">![](img/logo.png){width="50%"}</a>
 :::
 
-Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
 
-Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :
+**TIG'R est un site collaboratif qui met à disposition des leçons entièrement reproductibles pour le traitement de l'information géographique avec R**. 
+Les différentes leçon peuvent être utilisées indépendamment les unes des autres.  Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions...) pour comprendre les différents cours et exercices proposés.
 
-::: columns
-::: {.column width="49%"}
-<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Si vous êtes enseignant, vous pouvez également utilisés ces deux diaporamas pour introduire au langage R :
 
+
+<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
 </iframe>
 
 <center style="font-size:80%;">
-
 Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/)
-
 </center>
-:::
 
-::: {.column width="2%"}
-:::
+\
 
-::: {.column width="49%" sytle="margin-left:40px"}
-<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
-
+<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
 </iframe>
 
 <center style="font-size:80%;">
-
 Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)
-
 </center>
-:::
-:::
+
 
 
 
 ### Les modules thématiques
 
-Le contenu de TIG'R est organisé en sept modules thématiques :
+Les leçons TIG'R sont classées en  sept modules thématiques qui segmente l'ensemble de la chaîne de traitement de données géographiques :
 
 -   [**Données**](modules/import.qmd) (Import, collecte , connexion BD… et export de données)
 -   [**Manipulation de données**](modules/manipulation.qmd) (gestion & traitement de données)
@@ -57,9 +48,7 @@ Le contenu de TIG'R est organisé en sept modules thématiques :
 -   [**Cartographie thématique**](modules/cartographie.qmd) (statique et interactive)
 -   [**Reproductibilité**](modules/reproductibilite.qmd) (Bonnes pratiques pour la recherche reproductible)
 
-::: callout-note
-Chaque module comprend au moins un cours d'introduction et un exercice appliqué.
-:::
+
 
 ### Les packages utilisés
 
@@ -80,6 +69,9 @@ Les packages utilisés dans les différents modules thématiques sont :
 -   [mapsf](https://riatelab.github.io/mapsf/index.html)
 -   [rmarkdown](https://rmarkdown.rstudio.com/)
 -   [knitr](https://yihui.org/knitr/)
+
+
+#### Installation
 
 ```{r}
 

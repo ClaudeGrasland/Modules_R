@@ -1,0 +1,26 @@
+\babel@toc {french}{}\relax 
+\contentsline {subsection}{\numberline {0.1}\textbf {Tableau de données}}{1}{subsection.0.1}%
+\contentsline {subsubsection}{\numberline {0.1.1}Fichier texte simple}{1}{subsubsection.0.1.1}%
+\contentsline {paragraph}{\numberline {0.1.1.1}Import}{1}{paragraph.0.1.1.1}%
+\contentsline {paragraph}{\numberline {0.1.1.2}Export}{2}{paragraph.0.1.1.2}%
+\contentsline {subsubsection}{\numberline {0.1.2}Fichier Excel}{3}{subsubsection.0.1.2}%
+\contentsline {paragraph}{\numberline {0.1.2.1}Import}{3}{paragraph.0.1.2.1}%
+\contentsline {paragraph}{\numberline {0.1.2.2}Export}{3}{paragraph.0.1.2.2}%
+\contentsline {subsubsection}{\numberline {0.1.3}SAS, SPSS \& Stata}{4}{subsubsection.0.1.3}%
+\contentsline {paragraph}{\numberline {0.1.3.1}Fichier SAS}{4}{paragraph.0.1.3.1}%
+\contentsline {paragraph}{\numberline {0.1.3.2}Fichier SPSS}{4}{paragraph.0.1.3.2}%
+\contentsline {paragraph}{\numberline {0.1.3.3}Fichier Stata}{5}{paragraph.0.1.3.3}%
+\contentsline {subsection}{\numberline {0.2}\textbf {Couche géographique}}{5}{subsection.0.2}%
+\contentsline {subsubsection}{\numberline {0.2.1}Vecteur}{5}{subsubsection.0.2.1}%
+\contentsline {paragraph}{\numberline {0.2.1.1}Import}{5}{paragraph.0.2.1.1}%
+\contentsline {paragraph}{\numberline {0.2.1.2}Export}{6}{paragraph.0.2.1.2}%
+\contentsline {subsubsection}{\numberline {0.2.2}Raster}{6}{subsubsection.0.2.2}%
+\contentsline {paragraph}{\numberline {0.2.2.1}Import}{7}{paragraph.0.2.2.1}%
+\contentsline {paragraph}{\numberline {0.2.2.2}Export}{7}{paragraph.0.2.2.2}%
+\contentsline {subsection}{\numberline {0.3}\textbf {Image}}{7}{subsection.0.3}%
+\contentsline {subsubsection}{\numberline {0.3.1}Import}{7}{subsubsection.0.3.1}%
+\contentsline {paragraph}{\numberline {0.3.1.1}PNG}{8}{paragraph.0.3.1.1}%
+\contentsline {paragraph}{\numberline {0.3.1.2}JPEG}{8}{paragraph.0.3.1.2}%
+\contentsline {subsubsection}{\numberline {0.3.2}Export}{8}{subsubsection.0.3.2}%
+\contentsline {subsection}{\numberline {0.4} Exercice}{9}{subsection.0.4}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

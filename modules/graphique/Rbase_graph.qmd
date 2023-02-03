@@ -10,42 +10,40 @@ code-tools: true
 
 **Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.
 
-
 ## Principales fonctions
 
 Les fonctions graphiques peuvent être classées en trois catégories :
 
 **I.** Les fonctions permettant de **créer différents types de graphiques** :
 
--   **`plot()`      : Fonction générique de représentation graphique**
--   `matplot()`      : Dispersions de toutes le variables d'un tableau (un graphique)
--   `pairs()`        : Matrice de nuage de point pour l'ensemble des variables d'un tableau
--   `stripchart()`   : diagrammes de dispersion
--   `dotchart()`     : diagramme en points de Cleveland
--   `boxplot()`      : diagramme en boîte
--   `qqnorm()`       : diagramme quantile-quantile théorique normal
--   `qqplot()`       : diagramme quantile-quantile empirique
--   `barplot()`      : diagramme à barres
--   `pie()`          : diagramme en secteurs
--   `mosaicplot()`   : diagramme en mosaïque
--   `spineplot()`    : diagrammes en épine (entre l'histogramme et le mosaic plot)
--   `hist()`         : histogramme
--   `curve()`        : Représentation d'une expression mathématique
+-   **`plot()` : Fonction générique de représentation graphique**
+-   `matplot()` : Dispersions de toutes le variables d'un tableau (un graphique)
+-   `pairs()` : Matrice de nuage de point pour l'ensemble des variables d'un tableau
+-   `stripchart()` : diagrammes de dispersion
+-   `dotchart()` : diagramme en points de Cleveland
+-   `boxplot()` : diagramme en boîte
+-   `qqnorm()` : diagramme quantile-quantile théorique normal
+-   `qqplot()` : diagramme quantile-quantile empirique
+-   `barplot()` : diagramme à barres
+-   `pie()` : diagramme en secteurs
+-   `mosaicplot()` : diagramme en mosaïque
+-   `spineplot()` : diagrammes en épine (entre l'histogramme et le mosaic plot)
+-   `hist()` : histogramme
+-   `curve()` : Représentation d'une expression mathématique
 -   etc....
-
 
 **II.** les fonctions permettant d'**ajouter de l'information à un graphique existant** :
 
--   `legend()`  : légende
--   `title()`   : titre
+-   `legend()` : légende
+-   `title()` : titre
 -   `density()` : courbe de densité à noyau
--   `points()`  : point
--   `rug()`     : représentation stripchart le long de l'axe des x
--   `lines()`   : segments de droites reliant des points
+-   `points()` : point
+-   `rug()` : représentation stripchart le long de l'axe des x
+-   `lines()` : segments de droites reliant des points
 -   `matlines()` : segments de droites reliant des points (utiliser avec `matplot()`)
--   `abline()`  : droites traversant toute la zone graphique
--   `text()`    : texte dans la zone graphique
--   `mtext()`   : texte dans la marge
+-   `abline()` : droites traversant toute la zone graphique
+-   `text()` : texte dans la zone graphique
+-   `mtext()` : texte dans la marge
 -   etc...
 
 **III.** Les fonctions utilisées pour **fixer et contrôler des paramètres graphiques généraux** :
@@ -57,14 +55,10 @@ Les fonctions graphiques peuvent être classées en trois catégories :
 
 ### La fonction plot()
 
-La fonction primitive de représentation graphique la plus couramment utilisée est la fonction `plot()`. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**. 
+La fonction primitive de représentation graphique la plus couramment utilisée est la fonction `plot()`. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**.
 
-
-
-:::{.callout-warning}
-
+::: callout-warning
 **En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.**
-
 :::
 
 Il est même possible d'exécuter cette fonction sur l'ensemble d'un dataframe. Des nuages de points par couple de variables seront alors automatiquement produits :
@@ -78,8 +72,7 @@ plot(iris)
 
 Deux syntaxes sont possibles pour utiliser cette fonction sur deux variables :
 
-- Classique :
-
+-   Classique :
 
 ```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
@@ -93,7 +86,7 @@ plot(x, y)
 
 ```
 
-- syntaxe "formule" :
+-   syntaxe "formule" :
 
 ```{r eval = TRUE, fig.align='center'}
 #| code-fold: FALSE
@@ -103,7 +96,7 @@ plot(y ~ x)
 
 ```
 
-Dans l'expression `y ~ x`, `y` désigne la variable dépendante (à expliquer) et `varX` la variable indépendante (explicative). 
+Dans l'expression `y ~ x`, `y` désigne la variable dépendante (à expliquer) et `varX` la variable indépendante (explicative).
 
 La fonction `plot()` accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).
 
@@ -188,9 +181,7 @@ title("Titre de mon graphique",
 
 \
 
-
 ### Fenêtre graphique
-
 
 Deux fonctions - `par()` et `layout()` - permettent de gérer les paramètres graphiques, comme la disposition des figures, les marges, les axes, la police... :
 
@@ -218,14 +209,13 @@ plot(x = 1:10, y = exp(1:10), main = "plot 4")
 
 `layout()` propose moins d'arguments mais permet un meilleur ajustement de la disposition des figures. Pour cela, il est nécessaire de construire une matrice pour indiquer la position et l'espace de chaque graphique ajouté. Exemple :
 
-
 ```{r eval = TRUE}
 #| code-fold: FALSE
 matrix(c(1,1,1,2,0,3,2,0,3),  3,  3,  byrow = TRUE)
 
 ```
 
-Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique 2 occupera les deux dernières lignes de la première colonne, et le 3e sera situé dans les deux dernières lignes de la dernière colonne. Exemple :  
+Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique 2 occupera les deux dernières lignes de la première colonne, et le 3e sera situé dans les deux dernières lignes de la dernière colonne. Exemple :
 
 ```{r eval = TRUE, fig.width=10}
 #| code-fold: FALSE
@@ -245,13 +235,9 @@ plot(x = log(1:10), y = 10:1, main = "plot 3")
 
 ## Principaux graphiques
 
-
-
 ### Variable Quanti.
 
 Pour représenter la distribution d'un variable quantitative, plusieurs types de graphiques peuvent être utilisés.
-
-
 
 #### stripchart()
 
@@ -315,11 +301,9 @@ boxplot(cars$dist, horizontal=T, varwidth= TRUE, col = "red4", outline = FALSE)
 stripchart(cars$dist,  pch = 16, metho = "jitter", add = TRUE)
 ```
 
-
 \
 
 ### 2 variables Quanti.
-
 
 #### plot()
 
@@ -368,11 +352,9 @@ barplot(table_freq )
 
 \
 
-
 ### 2 variables Quali.
 
-Comme avec une variable qualitative, vous pouvez utiliser les fonction `plot()` et `barplot()` pour représenter La répartition d'individus en fonction de deux variables qualitatives. 
-
+Comme avec une variable qualitative, vous pouvez utiliser les fonction `plot()` et `barplot()` pour représenter La répartition d'individus en fonction de deux variables qualitatives.
 
 #### plot()
 
@@ -384,11 +366,9 @@ plot(alcgp ~ agegp, data = esoph)
 
 ```
 
-
 #### barplot()
 
-La fonction `barplot` fonctionne également sur deux variables qualitatives.
-Dans un premier temps, calculez le tableau croisé à partir des deux variables qualitatives ciblées :
+La fonction `barplot` fonctionne également sur deux variables qualitatives. Dans un premier temps, calculez le tableau croisé à partir des deux variables qualitatives ciblées :
 
 ```{r eval = TRUE, fig.align = 'center'}
 #| code-fold: FALSE
@@ -423,8 +403,6 @@ barplot(table_freq, beside=TRUE, legend.text = levels(esoph$alcgp),
 
 ```
 
-
-
 \
 
 ### Quanti. et Quali.
@@ -456,7 +434,7 @@ boxplot(ncases ~ agegp, data = esoph)
 
 ```
 
-L'argument `col` de la fonction `plot()` permet aussi de représenter trois variables (quantitative ~ quantitative + qualitative). Pour cela, il est préférable d'utiliser une variable qualitative stockée en format `factor`.
+L'argument `col` de la fonction `plot()` permet aussi de représenter trois variables (quantitative \~ quantitative + qualitative). Pour cela, il est préférable d'utiliser une variable qualitative stockée en format `factor`.
 
 ```{r eval = TRUE, fig.align = 'center'}
 
@@ -481,8 +459,8 @@ legend(x = "bottomright",
 
 
 ```
-\
 
+\
 
 ### Tableau complet
 
@@ -494,9 +472,7 @@ pairs(iris)
 
 ```
 
-
 \
-
 
 ### Expression math.
 
@@ -516,16 +492,13 @@ legend("bottomright", title = "Function",
 
 ```
 
-
 ## Exporter un graphique
 
 Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Dans cet onglet, vous pouvez zoomer sur le graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export** :
 
 ![](../img/plot.png){fig-align="center"}
 
-
-L'export d'un graphique peut être automatisé en ligne de code R de différente manière (cf. [module import](/modules/import/import.html#image)). 
-Le procédure d'export la plus simple peut être réalisé avec la fonction `dev.print()`. **Cette fonction permet aussi bien un export en format vectoriel que matricielle du graphique affiché.**
+L'export d'un graphique peut être automatisé en ligne de code R de différente manière (cf. [module import](/modules/import/import.html#image)). Le procédure d'export la plus simple peut être réalisé avec la fonction `dev.print()`. **Cette fonction permet aussi bien un export en format vectoriel que matricielle du graphique affiché.**
 
 ```{r eval = FALSE}
 #| code-fold: FALSE
@@ -549,7 +522,6 @@ dev.print(device = jpeg, file = "graph_export.jpeg", width = 600)
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-
 [1. Créez un projet Rstudio]{.question}
 
 *File/New Project/New Directory...*
@@ -559,7 +531,6 @@ dev.print(device = jpeg, file = "graph_export.jpeg", width = 600)
 |             Intitulé              |                                                                     Téléchargement                                                                      |
 |:-----------------------------------------:|:---------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 

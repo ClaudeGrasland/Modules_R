@@ -147,7 +147,7 @@ div.csl-indent {
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="TIG’R - Introduction">
-<meta name="twitter:description" content="Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres.">
+<meta name="twitter:description" content="TIG’R est un site collaboratif qui met à disposition des leçons entièrement reproductibles pour le traitement de l’information géographique avec R.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -491,28 +491,23 @@ div.csl-indent {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="http://localhost:6276/" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><img src="img/logo.png" class="img-fluid" style="width:50.0%"></a></p>
-</div></div><p>Les différents modules thématiques peuvent être utilisés indépendamment les uns des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.</p>
-<p>Si vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les <a href="./ressources.html">ressources annexes</a>. Vous pouvez également consulter ces deux supports de communication utilisés pour introduire au langage R :</p>
-<div class="columns">
-<div class="column" style="width:49%;">
-<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+</div></div><p><strong>TIG’R est un site collaboratif qui met à disposition des leçons entièrement reproductibles pour le traitement de l’information géographique avec R</strong>. Les différentes leçon peuvent être utilisées indépendamment les unes des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.</p>
+<p>Si vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les <a href="./ressources.html">ressources annexes</a>. Si vous êtes enseignant, vous pouvez également utilisés ces deux diaporamas pour introduire au langage R :</p>
+<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
 </iframe>
 <center style="font-size:80%;">
-<p>Consulter en <a href="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/"><strong>plein écran</strong></a></p>
+Consulter en <a href="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/"><strong>plein écran</strong></a>
 </center>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" data-sytle="margin-left:40px" style="width:49%;">
-<iframe class="slide" width="100%" height="225px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+<p><br>
+</p>
+<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
 </iframe>
 <center style="font-size:80%;">
-<p>Consulter en <a href="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/"><strong>plein écran</strong></a></p>
+Consulter en <a href="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/"><strong>plein écran</strong></a>
 </center>
-</div>
-</div>
 <section id="les-modules-thématiques" class="level3">
 <h3 class="anchored" data-anchor-id="les-modules-thématiques">Les modules thématiques</h3>
-<p>Le contenu de TIG’R est organisé en sept modules thématiques :</p>
+<p>Les leçons TIG’R sont classées en sept modules thématiques qui segmente l’ensemble de la chaîne de traitement de données géographiques :</p>
 <ul>
 <li><a href="./modules/import.html"><strong>Données</strong></a> (Import, collecte , connexion BD… et export de données)</li>
 <li><a href="./modules/manipulation.html"><strong>Manipulation de données</strong></a> (gestion &amp; traitement de données)</li>
@@ -522,19 +517,6 @@ div.csl-indent {
 <li><a href="./modules/cartographie.html"><strong>Cartographie thématique</strong></a> (statique et interactive)</li>
 <li><a href="./modules/reproductibilite.html"><strong>Reproductibilité</strong></a> (Bonnes pratiques pour la recherche reproductible)</li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Chaque module comprend au moins un cours d’introduction et un exercice appliqué.</p>
-</div>
-</div>
 </section>
 <section id="les-packages-utilisés" class="level3">
 <h3 class="anchored" data-anchor-id="les-packages-utilisés">Les packages utilisés</h3>
@@ -555,6 +537,8 @@ Note
 <li><a href="https://rmarkdown.rstudio.com/">rmarkdown</a></li>
 <li><a href="https://yihui.org/knitr/">knitr</a></li>
 </ul>
+<section id="installation" class="level4">
+<h4 class="anchored" data-anchor-id="installation">Installation</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste des packages à installer pour réaliser l'ensemble des leçons</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"readxl"</span>, <span class="st">"openxlsx"</span>, <span class="st">"haven"</span>,</span>
@@ -569,6 +553,7 @@ Note
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation des packages manquants</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">length</span>(missing_packages)) <span class="fu">install.packages</span>(missing_packages)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 </section>
 <section id="le-minicran" class="level3">
 <h3 class="anchored" data-anchor-id="le-minicran">Le miniCRAN</h3>

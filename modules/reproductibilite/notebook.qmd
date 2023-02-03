@@ -1,6 +1,6 @@
 ---
 title: "Les notebooks (exécutables)"
-subtitle: "Rédiger un notebook, l'exemple de Quarto"
+subtitle: ""
 ordre: 04
 author: work in progress
 code-fold: true

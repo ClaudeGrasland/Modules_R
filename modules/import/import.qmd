@@ -6,6 +6,16 @@ date: last-modified
 ordre: 01
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    output-file: "import"
+    output-ext:  "pdf"
 ---
 
 **De nombreuses de fonctions (primitives ou non) permettent d'importer et d'exporter des données de différents formats.**
@@ -448,3 +458,8 @@ data_from_shp <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 :::
 
 \
+\
+
+::: center
+<a href="/import.pdf" class="btn btn-success" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a>
+:::
