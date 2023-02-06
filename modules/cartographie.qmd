@@ -5,6 +5,7 @@ image: img/map.png
 listing: 
   id : cartographie
   contents : cartographie
+  sort: "ordre asc"
   fields: [date, author, title]
   type: default
   categories: false
@@ -20,7 +21,6 @@ ordre: 07
 
 ::: {#cartographie}
 :::
-
 
 </br>
 

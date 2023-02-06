@@ -9,7 +9,7 @@
 <meta name="author" content="Hugues pecout">
 <meta name="author" content="Timothée Giraud">
 
-<title>TIG’R - Manipulation de données Raster</title>
+<title>TIG’R - Géomatique avec R - raster</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,8 +131,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="TIG’R - Manipulation de données Raster">
-<meta name="twitter:description" content="Le package `terra` pour manipuler les données RASTER">
+<meta name="twitter:title" content="TIG’R - Géomatique avec R - raster">
+<meta name="twitter:description" content="Le package `terra` pour manipuler les données géographiques RASTER">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Manipulation de données Raster</h1>
+      <h1 class="quarto-secondary-nav-title">Géomatique avec R - raster</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -444,29 +444,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#le-package-terra" id="toc-le-package-terra" class="nav-link active" data-scroll-target="#le-package-terra">Le package terra</a></li>
-  <li><a href="#lobjet-spatraster" id="toc-lobjet-spatraster" class="nav-link" data-scroll-target="#lobjet-spatraster">L’objet SpatRaster</a>
-  <ul class="collapse">
-  <li><a href="#importexport" id="toc-importexport" class="nav-link" data-scroll-target="#importexport">import/export…</a></li>
-  <li><a href="#affichage" id="toc-affichage" class="nav-link" data-scroll-target="#affichage">Affichage</a></li>
-  </ul></li>
-  <li><a href="#modifications-de-la-zone-détude" id="toc-modifications-de-la-zone-détude" class="nav-link" data-scroll-target="#modifications-de-la-zone-détude">Modifications de la zone d’étude</a>
-  <ul class="collapse">
-  <li><a href="#projection" id="toc-projection" class="nav-link" data-scroll-target="#projection">Projection</a></li>
-  <li><a href="#crop" id="toc-crop" class="nav-link" data-scroll-target="#crop">crop</a></li>
-  <li><a href="#mask" id="toc-mask" class="nav-link" data-scroll-target="#mask">mask</a></li>
-  <li><a href="#aggrégation-désaggragation" id="toc-aggrégation-désaggragation" class="nav-link" data-scroll-target="#aggrégation-désaggragation">aggrégation / désaggragation</a></li>
-  <li><a href="#fusion" id="toc-fusion" class="nav-link" data-scroll-target="#fusion">Fusion</a></li>
-  <li><a href="#segregate" id="toc-segregate" class="nav-link" data-scroll-target="#segregate">Segregate ???</a></li>
-  </ul></li>
-  <li><a href="#algèbre-spatiale" id="toc-algèbre-spatiale" class="nav-link" data-scroll-target="#algèbre-spatiale">Algèbre spatiale</a>
-  <ul class="collapse">
-  <li><a href="#opérations-locales" id="toc-opérations-locales" class="nav-link" data-scroll-target="#opérations-locales">Opérations locales</a></li>
-  <li><a href="#opérations-focales" id="toc-opérations-focales" class="nav-link" data-scroll-target="#opérations-focales">Opérations focales</a></li>
-  <li><a href="#opérations-globales" id="toc-opérations-globales" class="nav-link" data-scroll-target="#opérations-globales">Opérations globales</a></li>
-  <li><a href="#opérations-zonales" id="toc-opérations-zonales" class="nav-link" data-scroll-target="#opérations-zonales">Opérations zonales</a></li>
-  </ul></li>
-  <li><a href="#transformation-et-conversion" id="toc-transformation-et-conversion" class="nav-link" data-scroll-target="#transformation-et-conversion">Transformation et conversion</a></li>
+  <li><a href="#exercice" id="toc-exercice" class="nav-link active" data-scroll-target="#exercice">Exercice</a></li>
   </ul>
 </nav>
     </div>
@@ -475,8 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Manipulation de données Raster</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Le package <code>terra</code> pour manipuler les données RASTER</p>
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Géomatique avec R - raster</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Le package <code>terra</code> pour manipuler les données géographiques RASTER</p>
 </div>
 
 
@@ -494,7 +472,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">27 janvier 2023</p>
+      <p class="date">6 février 2023</p>
     </div>
   </div>
   
@@ -504,6 +482,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<p>Le support de cours pour cette leçon est consultable à ce lien :</p>
+<p><br>
+</p>
+<div class="center">
+<p><a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Géomatique avec R - Les données RASTER</a></p>
+</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -514,59 +498,11 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ce module est très fortement inspiré du manuel <a href="https://rcarto.github.io/geomatique_avec_r/">géomatique avec R</a> (T. Giraud &amp; H. Pecout, 2023).</p>
+<p>Il s’agit d’un document initialement conçu pour accompagner le cours <em>‘Cartographie avec R’</em> du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en <a href="https://github.com/rCarto/geomatique_avec_r/issues">postant une issue</a> sur le <a href="https://github.com/rCarto/geomatique_avec_r">dépôt GitHub</a> de ce document.</p>
 </div>
 </div>
-<section id="le-package-terra" class="level2">
-<h2 class="anchored" data-anchor-id="le-package-terra">Le package terra</h2>
-</section>
-<section id="lobjet-spatraster" class="level2">
-<h2 class="anchored" data-anchor-id="lobjet-spatraster">L’objet SpatRaster</h2>
-<section id="importexport" class="level3">
-<h3 class="anchored" data-anchor-id="importexport">import/export…</h3>
-</section>
-<section id="affichage" class="level3">
-<h3 class="anchored" data-anchor-id="affichage">Affichage</h3>
-</section>
-</section>
-<section id="modifications-de-la-zone-détude" class="level2">
-<h2 class="anchored" data-anchor-id="modifications-de-la-zone-détude">Modifications de la zone d’étude</h2>
-<section id="projection" class="level3">
-<h3 class="anchored" data-anchor-id="projection">Projection</h3>
-</section>
-<section id="crop" class="level3">
-<h3 class="anchored" data-anchor-id="crop">crop</h3>
-</section>
-<section id="mask" class="level3">
-<h3 class="anchored" data-anchor-id="mask">mask</h3>
-</section>
-<section id="aggrégation-désaggragation" class="level3">
-<h3 class="anchored" data-anchor-id="aggrégation-désaggragation">aggrégation / désaggragation</h3>
-</section>
-<section id="fusion" class="level3">
-<h3 class="anchored" data-anchor-id="fusion">Fusion</h3>
-</section>
-<section id="segregate" class="level3">
-<h3 class="anchored" data-anchor-id="segregate">Segregate ???</h3>
-</section>
-</section>
-<section id="algèbre-spatiale" class="level2">
-<h2 class="anchored" data-anchor-id="algèbre-spatiale">Algèbre spatiale</h2>
-<section id="opérations-locales" class="level3">
-<h3 class="anchored" data-anchor-id="opérations-locales">Opérations locales</h3>
-</section>
-<section id="opérations-focales" class="level3">
-<h3 class="anchored" data-anchor-id="opérations-focales">Opérations focales</h3>
-</section>
-<section id="opérations-globales" class="level3">
-<h3 class="anchored" data-anchor-id="opérations-globales">Opérations globales</h3>
-</section>
-<section id="opérations-zonales" class="level3">
-<h3 class="anchored" data-anchor-id="opérations-zonales">Opérations zonales</h3>
-</section>
-</section>
-<section id="transformation-et-conversion" class="level2">
-<h2 class="anchored" data-anchor-id="transformation-et-conversion">Transformation et conversion</h2>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice</h2>
 
 
 <!-- -->
@@ -886,8 +822,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Manipulation de données Raster"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Le package `terra` pour manipuler les données RASTER"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Géomatique avec R - raster"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Le package `terra` pour manipuler les données géographiques RASTER"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">- Hugues pecout</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">- Timothée Giraud</span></span>
@@ -897,44 +833,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Le support de cours pour cette leçon est consultable à ce lien :</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Ce module est très fortement inspiré du manuel <span class="co">[</span><span class="ot">géomatique avec R</span><span class="co">](https://rcarto.github.io/geomatique_avec_r/)</span> (T. Giraud &amp; H. Pecout, 2023). </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>\</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Le package terra</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-info"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-eye"</span><span class="kw">&gt;&lt;/i&gt;</span> Géomatique avec R - Les données RASTER<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## L'objet SpatRaster</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### import/export...</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Affichage</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Il s'agit d'un document initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Vous pouvez nous envoyer vos remarques et suggestions en <span class="co">[</span><span class="ot">postant une issue</span><span class="co">](https://github.com/rCarto/geomatique_avec_r/issues)</span> sur le <span class="co">[</span><span class="ot">dépôt GitHub</span><span class="co">](https://github.com/rCarto/geomatique_avec_r)</span> de ce document.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modifications de la zone d’étude</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### Projection</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### crop</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### mask</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### aggrégation / désaggragation</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fusion</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### Segregate ???</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Algèbre spatiale</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Opérations locales</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Opérations focales</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Opérations globales</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### Opérations zonales</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Transformation et conversion</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercice</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

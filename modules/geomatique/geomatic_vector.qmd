@@ -1,6 +1,6 @@
 ---
-title: "Manipulation de données vectorielles"
-subtitle: "Le package `sf` pour manipuler les données vectorielles"
+title: "Géomatique avec R - vecteur"
+subtitle: "Le package `sf` pour manipuler les données géographiques vectorielles"
 author: 
 - Timothée Giraud
 - Hugues pecout
@@ -10,72 +10,22 @@ code-fold: true
 code-tools: true
 ---
 
+Le support de cours pour cette leçon est consultable à ce lien :
 
-::: {.callout-note}
+\
 
-Ce module est très fortement inspiré du manuel [géomatique avec R](https://rcarto.github.io/geomatique_avec_r/) (T. Giraud & H. Pecout, 2023). 
+::: center
+<a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-vectorielles.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Géomatique avec R - Les données vectorielles</a>
+:::
 
+:::{.callout-note}
+Il s'agit d'un document initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
+Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
 :::
 
 
-## Le package sf
-
-<img src="../img/sf.gif" align="right" width="150"/> 
-Le package `sf` a été publié fin 2016 par Edzer Pebesma (également auteur du package `sp`). Son objectif est de combiner les fonctionnalités de `sp`, `rgeos` et `rgdal` dans un package unique plus ergonomique. 
-Ce package propose des objets plus simples (suivant le standard [*simple feature*](https://en.wikipedia.org/wiki/Simple_Features)) dont la manipulation est plus aisée. Une attention particulière a été portée à la compatibilité du package avec la syntaxe *pipe* et les opérateurs du `tidyverse`.
-
-
-`sf` utilise directement les librairies systèmes **GDAL**, **GEOS** et **PROJ**.
-
-```{r imgsfdep, echo = FALSE, fig.align = 'center'}
-knitr::include_graphics("../img/sf_deps.png")
-```
-
-::: {.center}
-
-[From r-spatial.org](https://r-spatial.org/r/2020/03/17/wkt.html)</small>
-
-:::
-
-```{block2, type='linky'}
-Site web du package `sf` :  
-[Simple Features for R](https://r-spatial.github.io/sf/)
-```
-
-
-## L'objet sf
-
-
-### import/export...
-
-### Affichage
-
-
-## Projection
-
-## Sélection
-
-### Par attribut
-
-### Spatiale
-
-
-## Géotraitements
-
-### Buffer
-
-### Clip
-
-## Mesure
-
-### Matrice de distance
-
-## Géoréférencement
 
 
 
-
-
-
-
+## Exercice
 

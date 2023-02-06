@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-author','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -438,26 +438,33 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="img/map.png" class="img-fluid" style="width:50.0%"></p>
 </div></div><div id="listing-cartographie" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1675346837500" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1675701335000" data-listing-file-modified-sort="1675701335440" data-listing-reading-time-sort="0.38">
 <div class="body">
 <a href="../modules/cartographie/map_sf.html">
 <h3 class="no-anchor listing-title">
 Cartographie avec <code>mapsf</code>
 </h3>
 <div class="listing-subtitle">
-
+Présentation du package <code>mapsf</code> pour la cartographie thématique
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/cartographie/map_sf.html"> </a>
+<a href="../modules/cartographie/map_sf.html">
+<div class="listing-date">
+6 févr. 2023
+</div>
+<div class="listing-author">
+Timothée Giraud, Hugues pecout
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1675346870671" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1675701078191" data-listing-reading-time-sort="0.005">
 <div class="body">
 <a href="../modules/cartographie/map_dyn.html">
 <h3 class="no-anchor listing-title">
-Cartographie dynamique
+Cartographie 3D et anamorphoses
 </h3>
 <div class="listing-subtitle">
 
@@ -465,7 +472,11 @@ Cartographie dynamique
 </a>
 </div>
 <div class="metadata">
-<a href="../modules/cartographie/map_dyn.html"> </a>
+<a href="../modules/cartographie/map_dyn.html">
+<div class="listing-author">
+work in progress
+</div>
+</a>
 </div>
 </div>
 </div>

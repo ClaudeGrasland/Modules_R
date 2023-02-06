@@ -22,7 +22,6 @@ ordre: 02
 ::: {#manipulation}
 :::
 
-
 </br>
 
 ::: center

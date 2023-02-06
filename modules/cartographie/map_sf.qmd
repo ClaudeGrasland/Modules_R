@@ -1,3 +1,30 @@
 ---
 title: "Cartographie avec `mapsf`"
+subtitle: "Présentation du package `mapsf` pour la cartographie thématique"
+author: 
+- Timothée Giraud
+- Hugues pecout
+date: last-modified
+ordre: 01
+code-fold: true
+code-tools: true
 ---
+
+Le support de cours pour cette leçon est consultable à ce lien :
+
+\
+
+::: center
+<a href="https://rcarto.github.io/cartographie_avec_r/" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Cartographie avec R - Le package `mapsf`</a>
+:::
+
+:::{.callout-note}
+Il s'agit d'un document initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
+Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
+:::
+
+
+
+
+
+## Exercice

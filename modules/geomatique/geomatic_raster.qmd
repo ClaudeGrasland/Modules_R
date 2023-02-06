@@ -1,6 +1,6 @@
 ---
-title: "Manipulation de données Raster"
-subtitle: "Le package `terra` pour manipuler les données RASTER"
+title: "Géomatique avec R - raster"
+subtitle: "Le package `terra` pour manipuler les données géographiques RASTER"
 author: 
 - Hugues pecout
 - Timothée Giraud
@@ -10,41 +10,24 @@ code-fold: true
 code-tools: true
 ---
 
-::: {.callout-note}
+Le support de cours pour cette leçon est consultable à ce lien :
 
-Ce module est très fortement inspiré du manuel [géomatique avec R](https://rcarto.github.io/geomatique_avec_r/) (T. Giraud & H. Pecout, 2023). 
+\
 
+::: center
+<a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Géomatique avec R - Les données RASTER</a>
 :::
 
-## Le package terra
+
+:::{.callout-note}
+Il s'agit d'un document initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
+Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
+:::
 
 
-## L'objet SpatRaster
-
-### import/export...
-
-### Affichage
 
 
-## Modifications de la zone d’étude
 
-### Projection
+## Exercice
 
-### crop
 
-### mask
-
-### aggrégation / désaggragation
-
-### Fusion
-
-### Segregate ???
-
-## Algèbre spatiale
-
-### Opérations locales
-### Opérations focales
-### Opérations globales
-### Opérations zonales
-
-## Transformation et conversion
