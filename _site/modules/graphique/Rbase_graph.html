@@ -487,7 +487,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">3 février 2023</p>
+      <p class="date">10 février 2023</p>
     </div>
   </div>
   
@@ -1191,33 +1191,8 @@ Avertissement
 <hr>
 <p><br>
 </p>
-<div class="cell">
-<details>
-<summary>Correction</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des données</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Paramétrage de la couleur de fond de la fenêtre graphique</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogramme sur la variable 'POP'</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(data<span class="sc">$</span>POP, </span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(data<span class="sc">$</span>POP),</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
-<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de marques pour chaque individus (axe des abscisses)</span></span>
-<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(data<span class="sc">$</span>POP)</span>
-<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de la source des données</span></span>
-<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
-<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Export en PNG</span></span>
-<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> png, <span class="at">file =</span> <span class="st">"mon_graphique.png"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="center">
+<p><a href="../../correction/graphique_rbase.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a></p>
 </div>
 </div>
 <p><br>
@@ -1540,655 +1515,659 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb35" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Graphique R-base"</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Representations graphiques avec les fonctions primitives"</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Hugues pecout</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 01</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>**Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principales fonctions</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>Les fonctions graphiques peuvent être classées en trois catégories :</span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>**I.** Les fonctions permettant de **créer différents types de graphiques** :</span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`plot()` : Fonction générique de représentation graphique**</span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`matplot()`</span> : Dispersions de toutes le variables d'un tableau (un graphique)</span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pairs()`</span> : Matrice de nuage de point pour l'ensemble des variables d'un tableau</span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`stripchart()`</span> : diagrammes de dispersion</span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`dotchart()`</span> : diagramme en points de Cleveland</span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`boxplot()`</span> : diagramme en boîte</span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`qqnorm()`</span> : diagramme quantile-quantile théorique normal</span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`qqplot()`</span> : diagramme quantile-quantile empirique</span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`barplot()`</span> : diagramme à barres</span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pie()`</span> : diagramme en secteurs</span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mosaicplot()`</span> : diagramme en mosaïque</span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`spineplot()`</span> : diagrammes en épine (entre l'histogramme et le mosaic plot)</span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`hist()`</span> : histogramme</span>
-<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`curve()`</span> : Représentation d'une expression mathématique</span>
-<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>etc....</span>
-<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a>**II.** les fonctions permettant d'**ajouter de l'information à un graphique existant** :</span>
-<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`legend()`</span> : légende</span>
-<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`title()`</span> : titre</span>
-<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`density()`</span> : courbe de densité à noyau</span>
-<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`points()`</span> : point</span>
-<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`rug()`</span> : représentation stripchart le long de l'axe des x</span>
-<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`lines()`</span> : segments de droites reliant des points</span>
-<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`matlines()`</span> : segments de droites reliant des points (utiliser avec <span class="in">`matplot()`</span>)</span>
-<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`abline()`</span> : droites traversant toute la zone graphique</span>
-<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`text()`</span> : texte dans la zone graphique</span>
-<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mtext()`</span> : texte dans la marge</span>
-<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>etc...</span>
-<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a>**III.** Les fonctions utilisées pour **fixer et contrôler des paramètres graphiques généraux** :</span>
-<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`par()`</span></span>
-<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`layout()`</span></span>
-<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="fu">### La fonction plot()</span></span>
-<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a>La fonction primitive de représentation graphique la plus couramment utilisée est la fonction <span class="in">`plot()`</span>. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**.</span>
-<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-60"><a href="#cb35-60" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
-<span id="cb35-61"><a href="#cb35-61" aria-hidden="true" tabindex="-1"></a>**En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.**</span>
-<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a>Il est même possible d'exécuter cette fonction sur l'ensemble d'un dataframe. Des nuages de points par couple de variables seront alors automatiquement produits :</span>
-<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
-<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-68"><a href="#cb35-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-69"><a href="#cb35-69" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(iris) </span>
-<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a>Deux syntaxes sont possibles pour utiliser cette fonction sur deux variables :</span>
-<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-75"><a href="#cb35-75" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Classique :</span>
-<span id="cb35-76"><a href="#cb35-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-77"><a href="#cb35-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
-<span id="cb35-78"><a href="#cb35-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-79"><a href="#cb35-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-80"><a href="#cb35-80" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span>pi, pi, <span class="fl">0.1</span>)</span>
-<span id="cb35-81"><a href="#cb35-81" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">sin</span>(x)</span>
-<span id="cb35-82"><a href="#cb35-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-83"><a href="#cb35-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-84"><a href="#cb35-84" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y) </span>
-<span id="cb35-85"><a href="#cb35-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-86"><a href="#cb35-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-87"><a href="#cb35-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-88"><a href="#cb35-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-89"><a href="#cb35-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>syntaxe "formule" :</span>
-<span id="cb35-90"><a href="#cb35-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-91"><a href="#cb35-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
-<span id="cb35-92"><a href="#cb35-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-93"><a href="#cb35-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-94"><a href="#cb35-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-95"><a href="#cb35-95" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x)        </span>
-<span id="cb35-96"><a href="#cb35-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-97"><a href="#cb35-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-98"><a href="#cb35-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a>Dans l'expression <span class="in">`y ~ x`</span>, <span class="in">`y`</span> désigne la variable dépendante (à expliquer) et <span class="in">`varX`</span> la variable indépendante (explicative).</span>
-<span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-101"><a href="#cb35-101" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`plot()`</span> accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).</span>
-<span id="cb35-102"><a href="#cb35-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-103"><a href="#cb35-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
-<span id="cb35-104"><a href="#cb35-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-105"><a href="#cb35-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-106"><a href="#cb35-106" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x, </span>
-<span id="cb35-107"><a href="#cb35-107" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"o"</span>, <span class="co"># type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...</span></span>
-<span id="cb35-108"><a href="#cb35-108" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="st">"red"</span>, <span class="co"># couleur, tapez `colours()` pour la liste complète</span></span>
-<span id="cb35-109"><a href="#cb35-109" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">20</span>, <span class="co"># type de symboles, un chiffre entre 0 et 25, tapez `?points`</span></span>
-<span id="cb35-110"><a href="#cb35-110" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">1.1</span>, <span class="co"># taille des symboles</span></span>
-<span id="cb35-111"><a href="#cb35-111" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span>, <span class="co"># type de lignes, un chiffre entre 1 et 6</span></span>
-<span id="cb35-112"><a href="#cb35-112" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="fl">1.4</span>, <span class="co"># taille de lignes</span></span>
-<span id="cb35-113"><a href="#cb35-113" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>), <span class="co"># limites de l'axe des x</span></span>
-<span id="cb35-114"><a href="#cb35-114" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>), <span class="co"># limites de l'axe des y)</span></span>
-<span id="cb35-115"><a href="#cb35-115" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"La variable x"</span>, <span class="co"># titre pour l'axe des x</span></span>
-<span id="cb35-116"><a href="#cb35-116" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Le sinus  de x"</span>, <span class="co"># titre pour l'axe des y</span></span>
-<span id="cb35-117"><a href="#cb35-117" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"La fonction sinus entre -pi et pi"</span> <span class="co"># titre général pour le graphique</span></span>
-<span id="cb35-118"><a href="#cb35-118" aria-hidden="true" tabindex="-1"></a>) </span>
-<span id="cb35-119"><a href="#cb35-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-120"><a href="#cb35-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-121"><a href="#cb35-121" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-122"><a href="#cb35-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-123"><a href="#cb35-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ajout d'éléménts</span></span>
-<span id="cb35-124"><a href="#cb35-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-125"><a href="#cb35-125" aria-hidden="true" tabindex="-1"></a>Une fois le graphique construit, plusieurs fonctions primitives vous permettre d'ajouter différents éléments. Exemple :</span>
-<span id="cb35-126"><a href="#cb35-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-127"><a href="#cb35-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
-<span id="cb35-128"><a href="#cb35-128" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-129"><a href="#cb35-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-130"><a href="#cb35-130" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x, </span>
-<span id="cb35-131"><a href="#cb35-131" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"o"</span>, <span class="co"># type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...</span></span>
-<span id="cb35-132"><a href="#cb35-132" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="st">"red"</span>, <span class="co"># couleur, tapez `colours()` pour la liste complète</span></span>
-<span id="cb35-133"><a href="#cb35-133" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">20</span>, <span class="co"># type de symboles, un chiffre entre 0 et 25, tapez `?points`</span></span>
-<span id="cb35-134"><a href="#cb35-134" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">1.1</span>, <span class="co"># taille des symboles</span></span>
-<span id="cb35-135"><a href="#cb35-135" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span>, <span class="co"># type de lignes, un chiffre entre 1 et 6</span></span>
-<span id="cb35-136"><a href="#cb35-136" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="fl">1.4</span>, <span class="co"># taille de lignes</span></span>
-<span id="cb35-137"><a href="#cb35-137" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>), <span class="co"># limites de l'axe des x</span></span>
-<span id="cb35-138"><a href="#cb35-138" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>), <span class="co"># limites de l'axe des y)</span></span>
-<span id="cb35-139"><a href="#cb35-139" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"La variable x"</span>, <span class="co"># titre pour l'axe des x</span></span>
-<span id="cb35-140"><a href="#cb35-140" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Le sinus  de x"</span>) <span class="co"># titre pour l'axe des y) </span></span>
-<span id="cb35-141"><a href="#cb35-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-142"><a href="#cb35-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-143"><a href="#cb35-143" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une LEGENDE</span></span>
-<span id="cb35-144"><a href="#cb35-144" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="fl">0.9</span>, <span class="co"># Emplacement de la légende (coin haut gauche)</span></span>
-<span id="cb35-145"><a href="#cb35-145" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="sc">-</span><span class="fl">1.1</span>, <span class="co"># Emplacement de la légende (coin haut gauche)</span></span>
-<span id="cb35-146"><a href="#cb35-146" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="st">"Fonction sinus entre -pi et pi"</span>, </span>
-<span id="cb35-147"><a href="#cb35-147" aria-hidden="true" tabindex="-1"></a>       <span class="at">bg =</span> <span class="st">"lightgoldenrod"</span>,</span>
-<span id="cb35-148"><a href="#cb35-148" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"red"</span>,</span>
-<span id="cb35-149"><a href="#cb35-149" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">20</span>,</span>
-<span id="cb35-150"><a href="#cb35-150" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="co"># Taille de lé lagende</span></span>
-<span id="cb35-151"><a href="#cb35-151" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">1</span>, </span>
-<span id="cb35-152"><a href="#cb35-152" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd =</span> <span class="fl">1.4</span>)</span>
-<span id="cb35-153"><a href="#cb35-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-154"><a href="#cb35-154" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une LIGNE (horizontale)</span></span>
-<span id="cb35-155"><a href="#cb35-155" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="co"># Coupe l'axe des y à cette valeur </span></span>
-<span id="cb35-156"><a href="#cb35-156" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">2</span>, <span class="co"># Type de ligne</span></span>
-<span id="cb35-157"><a href="#cb35-157" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="co"># épaisseur</span></span>
-<span id="cb35-158"><a href="#cb35-158" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"grey50"</span>)</span>
-<span id="cb35-159"><a href="#cb35-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-160"><a href="#cb35-160" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un POINT</span></span>
-<span id="cb35-161"><a href="#cb35-161" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(<span class="at">x =</span> <span class="sc">-</span><span class="dv">0</span>, </span>
-<span id="cb35-162"><a href="#cb35-162" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="dv">0</span>, </span>
-<span id="cb35-163"><a href="#cb35-163" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"red4"</span>, </span>
-<span id="cb35-164"><a href="#cb35-164" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">20</span>,<span class="co"># Type de symbol</span></span>
-<span id="cb35-165"><a href="#cb35-165" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="dv">4</span>)</span>
-<span id="cb35-166"><a href="#cb35-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-167"><a href="#cb35-167" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de TEXTE</span></span>
-<span id="cb35-168"><a href="#cb35-168" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="st">"x = 0 = y"</span>, <span class="co"># Texte à afficher</span></span>
-<span id="cb35-169"><a href="#cb35-169" aria-hidden="true" tabindex="-1"></a>     <span class="at">x =</span> <span class="fl">0.4</span>, <span class="co"># Emplacement du texte (centre)</span></span>
-<span id="cb35-170"><a href="#cb35-170" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.16</span>, <span class="co"># Emplacement du texte (centre)  </span></span>
-<span id="cb35-171"><a href="#cb35-171" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"red4"</span>)     </span>
-<span id="cb35-172"><a href="#cb35-172" aria-hidden="true" tabindex="-1"></a>       </span>
-<span id="cb35-173"><a href="#cb35-173" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un TITRE</span></span>
-<span id="cb35-174"><a href="#cb35-174" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span>(<span class="st">"Titre de mon graphique"</span>, </span>
-<span id="cb35-175"><a href="#cb35-175" aria-hidden="true" tabindex="-1"></a>      <span class="at">cex.main =</span> <span class="fl">1.2</span>,  </span>
-<span id="cb35-176"><a href="#cb35-176" aria-hidden="true" tabindex="-1"></a>      <span class="at">font.main=</span> <span class="dv">4</span>, </span>
-<span id="cb35-177"><a href="#cb35-177" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.main=</span> <span class="st">"red4"</span>)</span>
-<span id="cb35-178"><a href="#cb35-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-179"><a href="#cb35-179" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb35-180"><a href="#cb35-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-181"><a href="#cb35-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-182"><a href="#cb35-182" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-183"><a href="#cb35-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-184"><a href="#cb35-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fenêtre graphique</span></span>
-<span id="cb35-185"><a href="#cb35-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-186"><a href="#cb35-186" aria-hidden="true" tabindex="-1"></a>Deux fonctions - <span class="in">`par()`</span> et <span class="in">`layout()`</span> - permettent de gérer les paramètres graphiques, comme la disposition des figures, les marges, les axes, la police... :</span>
-<span id="cb35-187"><a href="#cb35-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-188"><a href="#cb35-188" aria-hidden="true" tabindex="-1"></a>Exemple d'utilisation de la fonction <span class="in">`par()`</span> qui contient un grand nombre d'arguments possibles (cf. <span class="in">`?par`</span>) :</span>
-<span id="cb35-189"><a href="#cb35-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-190"><a href="#cb35-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
-<span id="cb35-191"><a href="#cb35-191" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-192"><a href="#cb35-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-193"><a href="#cb35-193" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"royalblue1"</span>, <span class="co"># Couleur de fond</span></span>
-<span id="cb35-194"><a href="#cb35-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span> <span class="st">"white"</span>,      <span class="co"># couleur du graphique</span></span>
-<span id="cb35-195"><a href="#cb35-195" aria-hidden="true" tabindex="-1"></a>    <span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>),    <span class="co"># Fenêtre découper en deux lignes / deux colonnes (4 graphiques)</span></span>
-<span id="cb35-196"><a href="#cb35-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">1</span>))  <span class="co"># Gestion des marges pour chaque graphique (B,L,T,R)</span></span>
-<span id="cb35-197"><a href="#cb35-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-198"><a href="#cb35-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-199"><a href="#cb35-199" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">main =</span> <span class="st">"plot 1"</span>)</span>
-<span id="cb35-200"><a href="#cb35-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-201"><a href="#cb35-201" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 2"</span>)</span>
-<span id="cb35-202"><a href="#cb35-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-203"><a href="#cb35-203" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">sin</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">main =</span> <span class="st">"plot 3"</span>)</span>
-<span id="cb35-204"><a href="#cb35-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-205"><a href="#cb35-205" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 4"</span>)</span>
-<span id="cb35-206"><a href="#cb35-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-207"><a href="#cb35-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-208"><a href="#cb35-208" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-209"><a href="#cb35-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-210"><a href="#cb35-210" aria-hidden="true" tabindex="-1"></a><span class="in">`layout()`</span> propose moins d'arguments mais permet un meilleur ajustement de la disposition des figures. Pour cela, il est nécessaire de construire une matrice pour indiquer la position et l'espace de chaque graphique ajouté. Exemple :</span>
-<span id="cb35-211"><a href="#cb35-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-212"><a href="#cb35-212" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE}</span></span>
-<span id="cb35-213"><a href="#cb35-213" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-214"><a href="#cb35-214" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>),  <span class="dv">3</span>,  <span class="dv">3</span>,  <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-215"><a href="#cb35-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-216"><a href="#cb35-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-217"><a href="#cb35-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-218"><a href="#cb35-218" aria-hidden="true" tabindex="-1"></a>Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique 2 occupera les deux dernières lignes de la première colonne, et le 3e sera situé dans les deux dernières lignes de la dernière colonne. Exemple :</span>
-<span id="cb35-219"><a href="#cb35-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-220"><a href="#cb35-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
-<span id="cb35-221"><a href="#cb35-221" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-222"><a href="#cb35-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-223"><a href="#cb35-223" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg  =</span> <span class="st">"royalblue1"</span>,  <span class="at">col=</span> <span class="st">"white"</span>)</span>
-<span id="cb35-224"><a href="#cb35-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-225"><a href="#cb35-225" aria-hidden="true" tabindex="-1"></a><span class="co"># Découpage de la fenêtre graphique</span></span>
-<span id="cb35-226"><a href="#cb35-226" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="at">mat =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>),  <span class="dv">3</span>,  <span class="dv">3</span>,  <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb35-227"><a href="#cb35-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-228"><a href="#cb35-228" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 1"</span>)</span>
-<span id="cb35-229"><a href="#cb35-229" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">sin</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">main =</span> <span class="st">"plot 2"</span>)</span>
-<span id="cb35-230"><a href="#cb35-230" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">main =</span> <span class="st">"plot 3"</span>)</span>
-<span id="cb35-231"><a href="#cb35-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-232"><a href="#cb35-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-233"><a href="#cb35-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-234"><a href="#cb35-234" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-235"><a href="#cb35-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-236"><a href="#cb35-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principaux graphiques</span></span>
-<span id="cb35-237"><a href="#cb35-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-238"><a href="#cb35-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable Quanti.</span></span>
-<span id="cb35-239"><a href="#cb35-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-240"><a href="#cb35-240" aria-hidden="true" tabindex="-1"></a>Pour représenter la distribution d'un variable quantitative, plusieurs types de graphiques peuvent être utilisés.</span>
-<span id="cb35-241"><a href="#cb35-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-242"><a href="#cb35-242" aria-hidden="true" tabindex="-1"></a><span class="fu">#### stripchart()</span></span>
-<span id="cb35-243"><a href="#cb35-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-244"><a href="#cb35-244" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`stripchart()`</span> permet de représenter la distribution d'une variable quantitative.</span>
-<span id="cb35-245"><a href="#cb35-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-246"><a href="#cb35-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
-<span id="cb35-247"><a href="#cb35-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-248"><a href="#cb35-248" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
-<span id="cb35-249"><a href="#cb35-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-250"><a href="#cb35-250" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
-<span id="cb35-251"><a href="#cb35-251" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span>
-<span id="cb35-252"><a href="#cb35-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-253"><a href="#cb35-253" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
-<span id="cb35-254"><a href="#cb35-254" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"stack"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span>
-<span id="cb35-255"><a href="#cb35-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-256"><a href="#cb35-256" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
-<span id="cb35-257"><a href="#cb35-257" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"jitter"</span>, <span class="at">pch =</span> <span class="st">"#"</span>)</span>
-<span id="cb35-258"><a href="#cb35-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-259"><a href="#cb35-259" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
-<span id="cb35-260"><a href="#cb35-260" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">ylab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"jitter"</span>, <span class="at">vertical =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-261"><a href="#cb35-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-262"><a href="#cb35-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-263"><a href="#cb35-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-264"><a href="#cb35-264" aria-hidden="true" tabindex="-1"></a><span class="fu">#### hist()</span></span>
-<span id="cb35-265"><a href="#cb35-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-266"><a href="#cb35-266" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`hist()`</span> permet de construire un histogramme.</span>
-<span id="cb35-267"><a href="#cb35-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-268"><a href="#cb35-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
-<span id="cb35-269"><a href="#cb35-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-270"><a href="#cb35-270" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
-<span id="cb35-271"><a href="#cb35-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-272"><a href="#cb35-272" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
-<span id="cb35-273"><a href="#cb35-273" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed)</span>
-<span id="cb35-274"><a href="#cb35-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-275"><a href="#cb35-275" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
-<span id="cb35-276"><a href="#cb35-276" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">breaks =</span> <span class="fu">quantile</span>(cars<span class="sc">$</span>speed), <span class="at">main =</span> <span class="st">"Histogramme par quartile"</span>)</span>
-<span id="cb35-277"><a href="#cb35-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-278"><a href="#cb35-278" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
-<span id="cb35-279"><a href="#cb35-279" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">freq =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Histogramme des proportions"</span>)</span>
-<span id="cb35-280"><a href="#cb35-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-281"><a href="#cb35-281" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
-<span id="cb35-282"><a href="#cb35-282" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">freq =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Histogramme et densité échantillonnale"</span>)</span>
-<span id="cb35-283"><a href="#cb35-283" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(cars<span class="sc">$</span>speed))</span>
-<span id="cb35-284"><a href="#cb35-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-285"><a href="#cb35-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-286"><a href="#cb35-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-287"><a href="#cb35-287" aria-hidden="true" tabindex="-1"></a><span class="fu">#### boxplot()</span></span>
-<span id="cb35-288"><a href="#cb35-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-289"><a href="#cb35-289" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`boxplot()`</span>permet de construire une boîte à moustache. Elle peut être associée à la fonction <span class="in">`stripchart()`</span>.</span>
-<span id="cb35-290"><a href="#cb35-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-291"><a href="#cb35-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-292"><a href="#cb35-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-293"><a href="#cb35-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-294"><a href="#cb35-294" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)) </span>
-<span id="cb35-295"><a href="#cb35-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-296"><a href="#cb35-296" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche</span></span>
-<span id="cb35-297"><a href="#cb35-297" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(cars<span class="sc">$</span>dist)</span>
-<span id="cb35-298"><a href="#cb35-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-299"><a href="#cb35-299" aria-hidden="true" tabindex="-1"></a><span class="co"># droite</span></span>
-<span id="cb35-300"><a href="#cb35-300" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(cars<span class="sc">$</span>dist, <span class="at">horizontal=</span>T, <span class="at">varwidth=</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"red4"</span>, <span class="at">outline =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb35-301"><a href="#cb35-301" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>dist,  <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">metho =</span> <span class="st">"jitter"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-302"><a href="#cb35-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-303"><a href="#cb35-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-304"><a href="#cb35-304" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-305"><a href="#cb35-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-306"><a href="#cb35-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2 variables Quanti.</span></span>
-<span id="cb35-307"><a href="#cb35-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-308"><a href="#cb35-308" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
-<span id="cb35-309"><a href="#cb35-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-310"><a href="#cb35-310" aria-hidden="true" tabindex="-1"></a>Utilisez la fonction <span class="in">`plot()`</span> pour représenter deux variables quantitatives.</span>
-<span id="cb35-311"><a href="#cb35-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-312"><a href="#cb35-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-313"><a href="#cb35-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-314"><a href="#cb35-314" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(speed <span class="sc">~</span> dist, <span class="at">data =</span> cars, <span class="at">pch =</span> <span class="dv">16</span>)</span>
-<span id="cb35-315"><a href="#cb35-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-316"><a href="#cb35-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une marque pour chaque individus le long de l'axe des abcisses</span></span>
-<span id="cb35-317"><a href="#cb35-317" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(cars<span class="sc">$</span>dist)</span>
-<span id="cb35-318"><a href="#cb35-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-319"><a href="#cb35-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-320"><a href="#cb35-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-321"><a href="#cb35-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable Quali.</span></span>
-<span id="cb35-322"><a href="#cb35-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-323"><a href="#cb35-323" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
-<span id="cb35-324"><a href="#cb35-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-325"><a href="#cb35-325" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`plot()`</span> peut être utilisée pour une variable qualitative. Pour cela la variable doit être stockée dans le format <span class="in">`factor`</span>.</span>
-<span id="cb35-326"><a href="#cb35-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-327"><a href="#cb35-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-328"><a href="#cb35-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-329"><a href="#cb35-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-330"><a href="#cb35-330" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(esoph<span class="sc">$</span>alcgp)</span>
-<span id="cb35-331"><a href="#cb35-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-332"><a href="#cb35-332" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(esoph<span class="sc">$</span>agegp)</span>
-<span id="cb35-333"><a href="#cb35-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-334"><a href="#cb35-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-335"><a href="#cb35-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-336"><a href="#cb35-336" aria-hidden="true" tabindex="-1"></a><span class="fu">#### barplot()</span></span>
-<span id="cb35-337"><a href="#cb35-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-338"><a href="#cb35-338" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser la fonction <span class="in">`barplot()`</span> sur une table de fréquence.</span>
-<span id="cb35-339"><a href="#cb35-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-340"><a href="#cb35-340" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-341"><a href="#cb35-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-342"><a href="#cb35-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-343"><a href="#cb35-343" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul table de fréquence</span></span>
-<span id="cb35-344"><a href="#cb35-344" aria-hidden="true" tabindex="-1"></a>table_freq <span class="ot">&lt;-</span> <span class="fu">table</span>(esoph<span class="sc">$</span>agegp)</span>
-<span id="cb35-345"><a href="#cb35-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-346"><a href="#cb35-346" aria-hidden="true" tabindex="-1"></a><span class="co"># Fréquence par modalité</span></span>
-<span id="cb35-347"><a href="#cb35-347" aria-hidden="true" tabindex="-1"></a>table_freq </span>
-<span id="cb35-348"><a href="#cb35-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-349"><a href="#cb35-349" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq )</span>
-<span id="cb35-350"><a href="#cb35-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-351"><a href="#cb35-351" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-352"><a href="#cb35-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-353"><a href="#cb35-353" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-354"><a href="#cb35-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-355"><a href="#cb35-355" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2 variables Quali.</span></span>
-<span id="cb35-356"><a href="#cb35-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-357"><a href="#cb35-357" aria-hidden="true" tabindex="-1"></a>Comme avec une variable qualitative, vous pouvez utiliser les fonction <span class="in">`plot()`</span> et <span class="in">`barplot()`</span> pour représenter La répartition d'individus en fonction de deux variables qualitatives.</span>
-<span id="cb35-358"><a href="#cb35-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-359"><a href="#cb35-359" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
-<span id="cb35-360"><a href="#cb35-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-361"><a href="#cb35-361" aria-hidden="true" tabindex="-1"></a>Comme avec une seule variable, **les variables qualitatives croisées doivent être stockée en `factor`**.</span>
-<span id="cb35-362"><a href="#cb35-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-363"><a href="#cb35-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-364"><a href="#cb35-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-365"><a href="#cb35-365" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(alcgp <span class="sc">~</span> agegp, <span class="at">data =</span> esoph)</span>
-<span id="cb35-366"><a href="#cb35-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-367"><a href="#cb35-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-368"><a href="#cb35-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-369"><a href="#cb35-369" aria-hidden="true" tabindex="-1"></a><span class="fu">#### barplot()</span></span>
-<span id="cb35-370"><a href="#cb35-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-371"><a href="#cb35-371" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`barplot`</span> fonctionne également sur deux variables qualitatives. Dans un premier temps, calculez le tableau croisé à partir des deux variables qualitatives ciblées :</span>
-<span id="cb35-372"><a href="#cb35-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-373"><a href="#cb35-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-374"><a href="#cb35-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-375"><a href="#cb35-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-376"><a href="#cb35-376" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul table de fréquence</span></span>
-<span id="cb35-377"><a href="#cb35-377" aria-hidden="true" tabindex="-1"></a>table_freq <span class="ot">&lt;-</span> <span class="fu">table</span>(esoph<span class="sc">$</span>alcgp, esoph<span class="sc">$</span>agegp)</span>
-<span id="cb35-378"><a href="#cb35-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-379"><a href="#cb35-379" aria-hidden="true" tabindex="-1"></a><span class="co"># Fréquence par modalité</span></span>
-<span id="cb35-380"><a href="#cb35-380" aria-hidden="true" tabindex="-1"></a>table_freq </span>
-<span id="cb35-381"><a href="#cb35-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-382"><a href="#cb35-382" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-383"><a href="#cb35-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-384"><a href="#cb35-384" aria-hidden="true" tabindex="-1"></a>Puis utilisez la fonction <span class="in">`barplot()`</span> :</span>
-<span id="cb35-385"><a href="#cb35-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-386"><a href="#cb35-386" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-387"><a href="#cb35-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-388"><a href="#cb35-388" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
-<span id="cb35-389"><a href="#cb35-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-390"><a href="#cb35-390" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
-<span id="cb35-391"><a href="#cb35-391" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq)</span>
-<span id="cb35-392"><a href="#cb35-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-393"><a href="#cb35-393" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
-<span id="cb35-394"><a href="#cb35-394" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">horiz =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-395"><a href="#cb35-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-396"><a href="#cb35-396" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
-<span id="cb35-397"><a href="#cb35-397" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">horiz =</span> <span class="cn">TRUE</span>, <span class="at">beside=</span><span class="cn">TRUE</span>)</span>
-<span id="cb35-398"><a href="#cb35-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-399"><a href="#cb35-399" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
-<span id="cb35-400"><a href="#cb35-400" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">beside=</span><span class="cn">TRUE</span>, <span class="at">legend.text =</span> <span class="fu">levels</span>(esoph<span class="sc">$</span>alcgp), </span>
-<span id="cb35-401"><a href="#cb35-401" aria-hidden="true" tabindex="-1"></a>        <span class="at">args.legend=</span><span class="fu">list</span>(<span class="at">x=</span><span class="st">"bottomright"</span>))</span>
-<span id="cb35-402"><a href="#cb35-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-403"><a href="#cb35-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-404"><a href="#cb35-404" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-405"><a href="#cb35-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-406"><a href="#cb35-406" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-407"><a href="#cb35-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-408"><a href="#cb35-408" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quanti. et Quali.</span></span>
-<span id="cb35-409"><a href="#cb35-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-410"><a href="#cb35-410" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
-<span id="cb35-411"><a href="#cb35-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-412"><a href="#cb35-412" aria-hidden="true" tabindex="-1"></a>La fonction généraliste <span class="in">`plot()`</span> peut être utilisée. Si la variable qualitative est appelée en première, le graphique prendra la forme d'un *spine plot* (%). Dans le cas contraire, la fonction renverra un ensemble de *boxplots*.</span>
-<span id="cb35-413"><a href="#cb35-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-414"><a href="#cb35-414" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-415"><a href="#cb35-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-416"><a href="#cb35-416" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)) </span>
-<span id="cb35-417"><a href="#cb35-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-418"><a href="#cb35-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-419"><a href="#cb35-419" aria-hidden="true" tabindex="-1"></a><span class="co"># Spine plot</span></span>
-<span id="cb35-420"><a href="#cb35-420" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(agegp <span class="sc">~</span> ncases, <span class="at">data =</span> esoph, <span class="at">main =</span> <span class="st">"Spine plot"</span>)</span>
-<span id="cb35-421"><a href="#cb35-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-422"><a href="#cb35-422" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot</span></span>
-<span id="cb35-423"><a href="#cb35-423" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ncases <span class="sc">~</span> agegp, <span class="at">data =</span> esoph, <span class="at">main =</span> <span class="st">"Boxplots"</span>)</span>
-<span id="cb35-424"><a href="#cb35-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-425"><a href="#cb35-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-426"><a href="#cb35-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-427"><a href="#cb35-427" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-428"><a href="#cb35-428" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-429"><a href="#cb35-429" aria-hidden="true" tabindex="-1"></a>Il est également possible d'utiliser directement la fonction boxplot pour représenter la distribution de chaque individus pour une variable quantitative, par modalité d'une variable qualitative :</span>
-<span id="cb35-430"><a href="#cb35-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-431"><a href="#cb35-431" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-432"><a href="#cb35-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-433"><a href="#cb35-433" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(ncases <span class="sc">~</span> agegp, <span class="at">data =</span> esoph)</span>
-<span id="cb35-434"><a href="#cb35-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-435"><a href="#cb35-435" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-436"><a href="#cb35-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-437"><a href="#cb35-437" aria-hidden="true" tabindex="-1"></a>L'argument <span class="in">`col`</span> de la fonction <span class="in">`plot()`</span> permet aussi de représenter trois variables (quantitative \~ quantitative + qualitative). Pour cela, il est préférable d'utiliser une variable qualitative stockée en format <span class="in">`factor`</span>.</span>
-<span id="cb35-438"><a href="#cb35-438" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-439"><a href="#cb35-439" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-440"><a href="#cb35-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-441"><a href="#cb35-441" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversion de la variable qualitative en format factor</span></span>
-<span id="cb35-442"><a href="#cb35-442" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>cyl <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(mtcars<span class="sc">$</span>cyl)</span>
-<span id="cb35-443"><a href="#cb35-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-444"><a href="#cb35-444" aria-hidden="true" tabindex="-1"></a><span class="co"># Nuage de point</span></span>
-<span id="cb35-445"><a href="#cb35-445" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(disp <span class="sc">~</span> wt, </span>
-<span id="cb35-446"><a href="#cb35-446" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> mtcars, </span>
-<span id="cb35-447"><a href="#cb35-447" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> cyl, <span class="co"># Couleur des points en fonction d'une variable qualitative</span></span>
-<span id="cb35-448"><a href="#cb35-448" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">16</span>, </span>
-<span id="cb35-449"><a href="#cb35-449" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Weight"</span>,</span>
-<span id="cb35-450"><a href="#cb35-450" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Displacement"</span>)</span>
-<span id="cb35-451"><a href="#cb35-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-452"><a href="#cb35-452" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une légende</span></span>
-<span id="cb35-453"><a href="#cb35-453" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>, </span>
-<span id="cb35-454"><a href="#cb35-454" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Number of cylinders"</span>,</span>
-<span id="cb35-455"><a href="#cb35-455" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(mtcars<span class="sc">$</span>cyl), </span>
-<span id="cb35-456"><a href="#cb35-456" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span>  <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
-<span id="cb35-457"><a href="#cb35-457" aria-hidden="true" tabindex="-1"></a>       <span class="at">ncol =</span> <span class="dv">3</span>, </span>
-<span id="cb35-458"><a href="#cb35-458" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">16</span>)</span>
-<span id="cb35-459"><a href="#cb35-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-460"><a href="#cb35-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-461"><a href="#cb35-461" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-462"><a href="#cb35-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-463"><a href="#cb35-463" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-464"><a href="#cb35-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-465"><a href="#cb35-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tableau complet</span></span>
-<span id="cb35-466"><a href="#cb35-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-467"><a href="#cb35-467" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`pairs()`</span> (ou <span class="in">`plot()`</span>) permet de construire une matrice du nuages de points entre toutes les variables d'un tableau, quelque soit leur type.</span>
-<span id="cb35-468"><a href="#cb35-468" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-469"><a href="#cb35-469" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-470"><a href="#cb35-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-471"><a href="#cb35-471" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(iris)</span>
-<span id="cb35-472"><a href="#cb35-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-473"><a href="#cb35-473" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-474"><a href="#cb35-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-475"><a href="#cb35-475" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-476"><a href="#cb35-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-477"><a href="#cb35-477" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expression math.</span></span>
-<span id="cb35-478"><a href="#cb35-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-479"><a href="#cb35-479" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`curve()`</span> permet de tracer de représenter une expression mathématique.</span>
-<span id="cb35-480"><a href="#cb35-480" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-481"><a href="#cb35-481" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
-<span id="cb35-482"><a href="#cb35-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-483"><a href="#cb35-483" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> (x), <span class="at">col =</span> <span class="st">"grey30"</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">to =</span> <span class="dv">2</span>)</span>
-<span id="cb35-484"><a href="#cb35-484" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> x<span class="sc">^</span><span class="dv">2</span>,  <span class="at">col =</span> <span class="st">"green4"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-485"><a href="#cb35-485" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> x<span class="sc">^</span><span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-486"><a href="#cb35-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-487"><a href="#cb35-487" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">title =</span> <span class="st">"Function"</span>, </span>
-<span id="cb35-488"><a href="#cb35-488" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"(x)"</span>, <span class="st">"x^2"</span>, <span class="st">"x^3"</span>), </span>
-<span id="cb35-489"><a href="#cb35-489" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"grey30"</span>, <span class="st">"green4"</span>, <span class="st">"red"</span>), </span>
-<span id="cb35-490"><a href="#cb35-490" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">1</span>)</span>
-<span id="cb35-491"><a href="#cb35-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-492"><a href="#cb35-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-493"><a href="#cb35-493" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-494"><a href="#cb35-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-495"><a href="#cb35-495" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exporter un graphique</span></span>
-<span id="cb35-496"><a href="#cb35-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-497"><a href="#cb35-497" aria-hidden="true" tabindex="-1"></a>Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Dans cet onglet, vous pouvez zoomer sur le graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export** :</span>
-<span id="cb35-498"><a href="#cb35-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-499"><a href="#cb35-499" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/plot.png)</span>{fig-align="center"}</span>
-<span id="cb35-500"><a href="#cb35-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-501"><a href="#cb35-501" aria-hidden="true" tabindex="-1"></a>L'export d'un graphique peut être automatisé en ligne de code R de différente manière (cf. <span class="co">[</span><span class="ot">module import</span><span class="co">](/modules/import/import.html#image)</span>). Le procédure d'export la plus simple peut être réalisé avec la fonction <span class="in">`dev.print()`</span>. **Cette fonction permet aussi bien un export en format vectoriel que matricielle du graphique affiché.**</span>
-<span id="cb35-502"><a href="#cb35-502" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-503"><a href="#cb35-503" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
-<span id="cb35-504"><a href="#cb35-504" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb35-505"><a href="#cb35-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-506"><a href="#cb35-506" aria-hidden="true" tabindex="-1"></a><span class="co"># Format pdf</span></span>
-<span id="cb35-507"><a href="#cb35-507" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> pdf, <span class="st">"graph_export.pdf"</span>, <span class="at">width =</span> <span class="dv">600</span>) </span>
-<span id="cb35-508"><a href="#cb35-508" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-509"><a href="#cb35-509" aria-hidden="true" tabindex="-1"></a><span class="co"># format svg</span></span>
-<span id="cb35-510"><a href="#cb35-510" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> svg, <span class="at">file =</span> <span class="st">"graph_export.svg"</span>, <span class="at">width =</span> <span class="dv">6</span>)</span>
-<span id="cb35-511"><a href="#cb35-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-512"><a href="#cb35-512" aria-hidden="true" tabindex="-1"></a><span class="co"># format png</span></span>
-<span id="cb35-513"><a href="#cb35-513" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> png, <span class="at">file =</span> <span class="st">"graph_export.png"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
-<span id="cb35-514"><a href="#cb35-514" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-515"><a href="#cb35-515" aria-hidden="true" tabindex="-1"></a><span class="co"># format png</span></span>
-<span id="cb35-516"><a href="#cb35-516" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> jpeg, <span class="at">file =</span> <span class="st">"graph_export.jpeg"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
-<span id="cb35-517"><a href="#cb35-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-518"><a href="#cb35-518" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-519"><a href="#cb35-519" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-520"><a href="#cb35-520" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-521"><a href="#cb35-521" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-522"><a href="#cb35-522" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
-<span id="cb35-523"><a href="#cb35-523" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-524"><a href="#cb35-524" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
-<span id="cb35-525"><a href="#cb35-525" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
-<span id="cb35-526"><a href="#cb35-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-527"><a href="#cb35-527" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
-<span id="cb35-528"><a href="#cb35-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-529"><a href="#cb35-529" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
-<span id="cb35-530"><a href="#cb35-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-531"><a href="#cb35-531" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
-<span id="cb35-532"><a href="#cb35-532" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
-<span id="cb35-533"><a href="#cb35-533" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaCAkX"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb35-534"><a href="#cb35-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-535"><a href="#cb35-535" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
-<span id="cb35-536"><a href="#cb35-536" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-537"><a href="#cb35-537" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
-<span id="cb35-538"><a href="#cb35-538" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder2.png"</span>)</span>
-<span id="cb35-539"><a href="#cb35-539" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-540"><a href="#cb35-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-541"><a href="#cb35-541" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importez le fichier "afrika_don.csv" dans un data.frame</span><span class="co">]</span>{.question}</span>
-<span id="cb35-542"><a href="#cb35-542" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-543"><a href="#cb35-543" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb35-544"><a href="#cb35-544" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb35-545"><a href="#cb35-545" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-546"><a href="#cb35-546" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"..."</span>)</span>
-<span id="cb35-547"><a href="#cb35-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-548"><a href="#cb35-548" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-549"><a href="#cb35-549" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-550"><a href="#cb35-550" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Construisez un histogramme par quartile pour la variable "POP" :</span><span class="co">]</span>{.question}</span>
-<span id="cb35-551"><a href="#cb35-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-552"><a href="#cb35-552" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb35-553"><a href="#cb35-553" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-554"><a href="#cb35-554" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-555"><a href="#cb35-555" aria-hidden="true" tabindex="-1"></a>My_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
-<span id="cb35-556"><a href="#cb35-556" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-557"><a href="#cb35-557" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP))</span>
-<span id="cb35-558"><a href="#cb35-558" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-559"><a href="#cb35-559" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-560"><a href="#cb35-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-561"><a href="#cb35-561" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb35-562"><a href="#cb35-562" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb35-563"><a href="#cb35-563" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-564"><a href="#cb35-564" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(..., <span class="at">breaks  =</span> <span class="fu">quantile</span>(...))</span>
-<span id="cb35-565"><a href="#cb35-565" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-566"><a href="#cb35-566" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-567"><a href="#cb35-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-568"><a href="#cb35-568" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Améliorez la mise en page, en ajoutant par exemple un peu de couleur, un titre, une source... :</span><span class="co">]</span>{.question}</span>
-<span id="cb35-569"><a href="#cb35-569" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-570"><a href="#cb35-570" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE, echo = FALSE}</span></span>
-<span id="cb35-571"><a href="#cb35-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-572"><a href="#cb35-572" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
-<span id="cb35-573"><a href="#cb35-573" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-574"><a href="#cb35-574" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, </span>
-<span id="cb35-575"><a href="#cb35-575" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP),</span>
-<span id="cb35-576"><a href="#cb35-576" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
-<span id="cb35-577"><a href="#cb35-577" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
-<span id="cb35-578"><a href="#cb35-578" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
-<span id="cb35-579"><a href="#cb35-579" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
-<span id="cb35-580"><a href="#cb35-580" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
-<span id="cb35-581"><a href="#cb35-581" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-582"><a href="#cb35-582" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(My_data<span class="sc">$</span>POP)</span>
-<span id="cb35-583"><a href="#cb35-583" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
-<span id="cb35-584"><a href="#cb35-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-585"><a href="#cb35-585" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-586"><a href="#cb35-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-587"><a href="#cb35-587" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb35-588"><a href="#cb35-588" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un exemple ?"</span></span>
-<span id="cb35-589"><a href="#cb35-589" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-590"><a href="#cb35-590" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
-<span id="cb35-591"><a href="#cb35-591" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-592"><a href="#cb35-592" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, </span>
-<span id="cb35-593"><a href="#cb35-593" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP),</span>
-<span id="cb35-594"><a href="#cb35-594" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
-<span id="cb35-595"><a href="#cb35-595" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
-<span id="cb35-596"><a href="#cb35-596" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
-<span id="cb35-597"><a href="#cb35-597" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
-<span id="cb35-598"><a href="#cb35-598" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
-<span id="cb35-599"><a href="#cb35-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-600"><a href="#cb35-600" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(My_data<span class="sc">$</span>POP)</span>
-<span id="cb35-601"><a href="#cb35-601" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
-<span id="cb35-602"><a href="#cb35-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-603"><a href="#cb35-603" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-604"><a href="#cb35-604" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-605"><a href="#cb35-605" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-606"><a href="#cb35-606" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Exportez le graphique à l'aide d'une fonction (format png)</span><span class="co">]</span>{.question}</span>
-<span id="cb35-607"><a href="#cb35-607" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-608"><a href="#cb35-608" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb35-609"><a href="#cb35-609" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb35-610"><a href="#cb35-610" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-611"><a href="#cb35-611" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> ..., <span class="at">file =</span> <span class="st">"..."</span>)</span>
-<span id="cb35-612"><a href="#cb35-612" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-613"><a href="#cb35-613" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-614"><a href="#cb35-614" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-615"><a href="#cb35-615" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb35-616"><a href="#cb35-616" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-617"><a href="#cb35-617" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb35-618"><a href="#cb35-618" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-619"><a href="#cb35-619" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb35-620"><a href="#cb35-620" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Correction"</span></span>
-<span id="cb35-621"><a href="#cb35-621" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb35-622"><a href="#cb35-622" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des données</span></span>
-<span id="cb35-623"><a href="#cb35-623" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
-<span id="cb35-624"><a href="#cb35-624" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-625"><a href="#cb35-625" aria-hidden="true" tabindex="-1"></a><span class="co"># Paramétrage de la couleur de fond de la fenêtre graphique</span></span>
-<span id="cb35-626"><a href="#cb35-626" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
-<span id="cb35-627"><a href="#cb35-627" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-628"><a href="#cb35-628" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogramme sur la variable 'POP'</span></span>
-<span id="cb35-629"><a href="#cb35-629" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(data<span class="sc">$</span>POP, </span>
-<span id="cb35-630"><a href="#cb35-630" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(data<span class="sc">$</span>POP),</span>
-<span id="cb35-631"><a href="#cb35-631" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
-<span id="cb35-632"><a href="#cb35-632" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
-<span id="cb35-633"><a href="#cb35-633" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
-<span id="cb35-634"><a href="#cb35-634" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
-<span id="cb35-635"><a href="#cb35-635" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
-<span id="cb35-636"><a href="#cb35-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-637"><a href="#cb35-637" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de marques pour chaque individus (axe des abscisses)</span></span>
-<span id="cb35-638"><a href="#cb35-638" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(data<span class="sc">$</span>POP)</span>
-<span id="cb35-639"><a href="#cb35-639" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-640"><a href="#cb35-640" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de la source des données</span></span>
-<span id="cb35-641"><a href="#cb35-641" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
-<span id="cb35-642"><a href="#cb35-642" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-643"><a href="#cb35-643" aria-hidden="true" tabindex="-1"></a><span class="co"># Export en PNG</span></span>
-<span id="cb35-644"><a href="#cb35-644" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> png, <span class="at">file =</span> <span class="st">"mon_graphique.png"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
-<span id="cb35-645"><a href="#cb35-645" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-646"><a href="#cb35-646" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-647"><a href="#cb35-647" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-648"><a href="#cb35-648" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-649"><a href="#cb35-649" aria-hidden="true" tabindex="-1"></a>\</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Graphique R-base"</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Representations graphiques avec les fonctions primitives"</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Hugues pecout</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 01</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>**Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principales fonctions</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>Les fonctions graphiques peuvent être classées en trois catégories :</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>**I.** Les fonctions permettant de **créer différents types de graphiques** :</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**`plot()` : Fonction générique de représentation graphique**</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`matplot()`</span> : Dispersions de toutes le variables d'un tableau (un graphique)</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pairs()`</span> : Matrice de nuage de point pour l'ensemble des variables d'un tableau</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`stripchart()`</span> : diagrammes de dispersion</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`dotchart()`</span> : diagramme en points de Cleveland</span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`boxplot()`</span> : diagramme en boîte</span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`qqnorm()`</span> : diagramme quantile-quantile théorique normal</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`qqplot()`</span> : diagramme quantile-quantile empirique</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`barplot()`</span> : diagramme à barres</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pie()`</span> : diagramme en secteurs</span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mosaicplot()`</span> : diagramme en mosaïque</span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`spineplot()`</span> : diagrammes en épine (entre l'histogramme et le mosaic plot)</span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`hist()`</span> : histogramme</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`curve()`</span> : Représentation d'une expression mathématique</span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>etc....</span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>**II.** les fonctions permettant d'**ajouter de l'information à un graphique existant** :</span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`legend()`</span> : légende</span>
+<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`title()`</span> : titre</span>
+<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`density()`</span> : courbe de densité à noyau</span>
+<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`points()`</span> : point</span>
+<span id="cb34-41"><a href="#cb34-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`rug()`</span> : représentation stripchart le long de l'axe des x</span>
+<span id="cb34-42"><a href="#cb34-42" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`lines()`</span> : segments de droites reliant des points</span>
+<span id="cb34-43"><a href="#cb34-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`matlines()`</span> : segments de droites reliant des points (utiliser avec <span class="in">`matplot()`</span>)</span>
+<span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`abline()`</span> : droites traversant toute la zone graphique</span>
+<span id="cb34-45"><a href="#cb34-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`text()`</span> : texte dans la zone graphique</span>
+<span id="cb34-46"><a href="#cb34-46" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mtext()`</span> : texte dans la marge</span>
+<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>etc...</span>
+<span id="cb34-48"><a href="#cb34-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-49"><a href="#cb34-49" aria-hidden="true" tabindex="-1"></a>**III.** Les fonctions utilisées pour **fixer et contrôler des paramètres graphiques généraux** :</span>
+<span id="cb34-50"><a href="#cb34-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-51"><a href="#cb34-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`par()`</span></span>
+<span id="cb34-52"><a href="#cb34-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`layout()`</span></span>
+<span id="cb34-53"><a href="#cb34-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-54"><a href="#cb34-54" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-55"><a href="#cb34-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-56"><a href="#cb34-56" aria-hidden="true" tabindex="-1"></a><span class="fu">### La fonction plot()</span></span>
+<span id="cb34-57"><a href="#cb34-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-58"><a href="#cb34-58" aria-hidden="true" tabindex="-1"></a>La fonction primitive de représentation graphique la plus couramment utilisée est la fonction <span class="in">`plot()`</span>. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**.</span>
+<span id="cb34-59"><a href="#cb34-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-60"><a href="#cb34-60" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb34-61"><a href="#cb34-61" aria-hidden="true" tabindex="-1"></a>**En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.**</span>
+<span id="cb34-62"><a href="#cb34-62" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb34-63"><a href="#cb34-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-64"><a href="#cb34-64" aria-hidden="true" tabindex="-1"></a>Il est même possible d'exécuter cette fonction sur l'ensemble d'un dataframe. Des nuages de points par couple de variables seront alors automatiquement produits :</span>
+<span id="cb34-65"><a href="#cb34-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-66"><a href="#cb34-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
+<span id="cb34-67"><a href="#cb34-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-68"><a href="#cb34-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-69"><a href="#cb34-69" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(iris) </span>
+<span id="cb34-70"><a href="#cb34-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-71"><a href="#cb34-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-72"><a href="#cb34-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-73"><a href="#cb34-73" aria-hidden="true" tabindex="-1"></a>Deux syntaxes sont possibles pour utiliser cette fonction sur deux variables :</span>
+<span id="cb34-74"><a href="#cb34-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-75"><a href="#cb34-75" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Classique :</span>
+<span id="cb34-76"><a href="#cb34-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-77"><a href="#cb34-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
+<span id="cb34-78"><a href="#cb34-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-79"><a href="#cb34-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-80"><a href="#cb34-80" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span>pi, pi, <span class="fl">0.1</span>)</span>
+<span id="cb34-81"><a href="#cb34-81" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">sin</span>(x)</span>
+<span id="cb34-82"><a href="#cb34-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-83"><a href="#cb34-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-84"><a href="#cb34-84" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y) </span>
+<span id="cb34-85"><a href="#cb34-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-86"><a href="#cb34-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-87"><a href="#cb34-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-88"><a href="#cb34-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-89"><a href="#cb34-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>syntaxe "formule" :</span>
+<span id="cb34-90"><a href="#cb34-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-91"><a href="#cb34-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
+<span id="cb34-92"><a href="#cb34-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-93"><a href="#cb34-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-94"><a href="#cb34-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-95"><a href="#cb34-95" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x)        </span>
+<span id="cb34-96"><a href="#cb34-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-97"><a href="#cb34-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-98"><a href="#cb34-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-99"><a href="#cb34-99" aria-hidden="true" tabindex="-1"></a>Dans l'expression <span class="in">`y ~ x`</span>, <span class="in">`y`</span> désigne la variable dépendante (à expliquer) et <span class="in">`varX`</span> la variable indépendante (explicative).</span>
+<span id="cb34-100"><a href="#cb34-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-101"><a href="#cb34-101" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`plot()`</span> accepte une multitude d'arguments qui permettent de façonner les graphiques (voir le Help pour plus de détails).</span>
+<span id="cb34-102"><a href="#cb34-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-103"><a href="#cb34-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
+<span id="cb34-104"><a href="#cb34-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-105"><a href="#cb34-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-106"><a href="#cb34-106" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x, </span>
+<span id="cb34-107"><a href="#cb34-107" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"o"</span>, <span class="co"># type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...</span></span>
+<span id="cb34-108"><a href="#cb34-108" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="st">"red"</span>, <span class="co"># couleur, tapez `colours()` pour la liste complète</span></span>
+<span id="cb34-109"><a href="#cb34-109" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">20</span>, <span class="co"># type de symboles, un chiffre entre 0 et 25, tapez `?points`</span></span>
+<span id="cb34-110"><a href="#cb34-110" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">1.1</span>, <span class="co"># taille des symboles</span></span>
+<span id="cb34-111"><a href="#cb34-111" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span>, <span class="co"># type de lignes, un chiffre entre 1 et 6</span></span>
+<span id="cb34-112"><a href="#cb34-112" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="fl">1.4</span>, <span class="co"># taille de lignes</span></span>
+<span id="cb34-113"><a href="#cb34-113" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>), <span class="co"># limites de l'axe des x</span></span>
+<span id="cb34-114"><a href="#cb34-114" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>), <span class="co"># limites de l'axe des y)</span></span>
+<span id="cb34-115"><a href="#cb34-115" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"La variable x"</span>, <span class="co"># titre pour l'axe des x</span></span>
+<span id="cb34-116"><a href="#cb34-116" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Le sinus  de x"</span>, <span class="co"># titre pour l'axe des y</span></span>
+<span id="cb34-117"><a href="#cb34-117" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"La fonction sinus entre -pi et pi"</span> <span class="co"># titre général pour le graphique</span></span>
+<span id="cb34-118"><a href="#cb34-118" aria-hidden="true" tabindex="-1"></a>) </span>
+<span id="cb34-119"><a href="#cb34-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-120"><a href="#cb34-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-121"><a href="#cb34-121" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-122"><a href="#cb34-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-123"><a href="#cb34-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ajout d'éléménts</span></span>
+<span id="cb34-124"><a href="#cb34-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-125"><a href="#cb34-125" aria-hidden="true" tabindex="-1"></a>Une fois le graphique construit, plusieurs fonctions primitives vous permettre d'ajouter différents éléments. Exemple :</span>
+<span id="cb34-126"><a href="#cb34-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-127"><a href="#cb34-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align='center'}</span></span>
+<span id="cb34-128"><a href="#cb34-128" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-129"><a href="#cb34-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-130"><a href="#cb34-130" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x, </span>
+<span id="cb34-131"><a href="#cb34-131" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"o"</span>, <span class="co"># type de tracé: points ("p"), lignes ("l"), les deux ("b" ou "o"), ...</span></span>
+<span id="cb34-132"><a href="#cb34-132" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="st">"red"</span>, <span class="co"># couleur, tapez `colours()` pour la liste complète</span></span>
+<span id="cb34-133"><a href="#cb34-133" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">20</span>, <span class="co"># type de symboles, un chiffre entre 0 et 25, tapez `?points`</span></span>
+<span id="cb34-134"><a href="#cb34-134" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">1.1</span>, <span class="co"># taille des symboles</span></span>
+<span id="cb34-135"><a href="#cb34-135" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span>, <span class="co"># type de lignes, un chiffre entre 1 et 6</span></span>
+<span id="cb34-136"><a href="#cb34-136" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="fl">1.4</span>, <span class="co"># taille de lignes</span></span>
+<span id="cb34-137"><a href="#cb34-137" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>), <span class="co"># limites de l'axe des x</span></span>
+<span id="cb34-138"><a href="#cb34-138" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>), <span class="co"># limites de l'axe des y)</span></span>
+<span id="cb34-139"><a href="#cb34-139" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"La variable x"</span>, <span class="co"># titre pour l'axe des x</span></span>
+<span id="cb34-140"><a href="#cb34-140" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Le sinus  de x"</span>) <span class="co"># titre pour l'axe des y) </span></span>
+<span id="cb34-141"><a href="#cb34-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-142"><a href="#cb34-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-143"><a href="#cb34-143" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une LEGENDE</span></span>
+<span id="cb34-144"><a href="#cb34-144" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="fl">0.9</span>, <span class="co"># Emplacement de la légende (coin haut gauche)</span></span>
+<span id="cb34-145"><a href="#cb34-145" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="sc">-</span><span class="fl">1.1</span>, <span class="co"># Emplacement de la légende (coin haut gauche)</span></span>
+<span id="cb34-146"><a href="#cb34-146" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="st">"Fonction sinus entre -pi et pi"</span>, </span>
+<span id="cb34-147"><a href="#cb34-147" aria-hidden="true" tabindex="-1"></a>       <span class="at">bg =</span> <span class="st">"lightgoldenrod"</span>,</span>
+<span id="cb34-148"><a href="#cb34-148" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"red"</span>,</span>
+<span id="cb34-149"><a href="#cb34-149" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">20</span>,</span>
+<span id="cb34-150"><a href="#cb34-150" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="co"># Taille de lé lagende</span></span>
+<span id="cb34-151"><a href="#cb34-151" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">1</span>, </span>
+<span id="cb34-152"><a href="#cb34-152" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd =</span> <span class="fl">1.4</span>)</span>
+<span id="cb34-153"><a href="#cb34-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-154"><a href="#cb34-154" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une LIGNE (horizontale)</span></span>
+<span id="cb34-155"><a href="#cb34-155" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="co"># Coupe l'axe des y à cette valeur </span></span>
+<span id="cb34-156"><a href="#cb34-156" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">2</span>, <span class="co"># Type de ligne</span></span>
+<span id="cb34-157"><a href="#cb34-157" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="co"># épaisseur</span></span>
+<span id="cb34-158"><a href="#cb34-158" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"grey50"</span>)</span>
+<span id="cb34-159"><a href="#cb34-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-160"><a href="#cb34-160" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un POINT</span></span>
+<span id="cb34-161"><a href="#cb34-161" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(<span class="at">x =</span> <span class="sc">-</span><span class="dv">0</span>, </span>
+<span id="cb34-162"><a href="#cb34-162" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="dv">0</span>, </span>
+<span id="cb34-163"><a href="#cb34-163" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"red4"</span>, </span>
+<span id="cb34-164"><a href="#cb34-164" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">20</span>,<span class="co"># Type de symbol</span></span>
+<span id="cb34-165"><a href="#cb34-165" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="dv">4</span>)</span>
+<span id="cb34-166"><a href="#cb34-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-167"><a href="#cb34-167" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de TEXTE</span></span>
+<span id="cb34-168"><a href="#cb34-168" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="st">"x = 0 = y"</span>, <span class="co"># Texte à afficher</span></span>
+<span id="cb34-169"><a href="#cb34-169" aria-hidden="true" tabindex="-1"></a>     <span class="at">x =</span> <span class="fl">0.4</span>, <span class="co"># Emplacement du texte (centre)</span></span>
+<span id="cb34-170"><a href="#cb34-170" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.16</span>, <span class="co"># Emplacement du texte (centre)  </span></span>
+<span id="cb34-171"><a href="#cb34-171" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"red4"</span>)     </span>
+<span id="cb34-172"><a href="#cb34-172" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb34-173"><a href="#cb34-173" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un TITRE</span></span>
+<span id="cb34-174"><a href="#cb34-174" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span>(<span class="st">"Titre de mon graphique"</span>, </span>
+<span id="cb34-175"><a href="#cb34-175" aria-hidden="true" tabindex="-1"></a>      <span class="at">cex.main =</span> <span class="fl">1.2</span>,  </span>
+<span id="cb34-176"><a href="#cb34-176" aria-hidden="true" tabindex="-1"></a>      <span class="at">font.main=</span> <span class="dv">4</span>, </span>
+<span id="cb34-177"><a href="#cb34-177" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.main=</span> <span class="st">"red4"</span>)</span>
+<span id="cb34-178"><a href="#cb34-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-179"><a href="#cb34-179" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb34-180"><a href="#cb34-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-181"><a href="#cb34-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-182"><a href="#cb34-182" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-183"><a href="#cb34-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-184"><a href="#cb34-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fenêtre graphique</span></span>
+<span id="cb34-185"><a href="#cb34-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-186"><a href="#cb34-186" aria-hidden="true" tabindex="-1"></a>Deux fonctions - <span class="in">`par()`</span> et <span class="in">`layout()`</span> - permettent de gérer les paramètres graphiques, comme la disposition des figures, les marges, les axes, la police... :</span>
+<span id="cb34-187"><a href="#cb34-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-188"><a href="#cb34-188" aria-hidden="true" tabindex="-1"></a>Exemple d'utilisation de la fonction <span class="in">`par()`</span> qui contient un grand nombre d'arguments possibles (cf. <span class="in">`?par`</span>) :</span>
+<span id="cb34-189"><a href="#cb34-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-190"><a href="#cb34-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
+<span id="cb34-191"><a href="#cb34-191" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-192"><a href="#cb34-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-193"><a href="#cb34-193" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"royalblue1"</span>, <span class="co"># Couleur de fond</span></span>
+<span id="cb34-194"><a href="#cb34-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span> <span class="st">"white"</span>,      <span class="co"># couleur du graphique</span></span>
+<span id="cb34-195"><a href="#cb34-195" aria-hidden="true" tabindex="-1"></a>    <span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>),    <span class="co"># Fenêtre découper en deux lignes / deux colonnes (4 graphiques)</span></span>
+<span id="cb34-196"><a href="#cb34-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">1</span>))  <span class="co"># Gestion des marges pour chaque graphique (B,L,T,R)</span></span>
+<span id="cb34-197"><a href="#cb34-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-198"><a href="#cb34-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-199"><a href="#cb34-199" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">main =</span> <span class="st">"plot 1"</span>)</span>
+<span id="cb34-200"><a href="#cb34-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-201"><a href="#cb34-201" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 2"</span>)</span>
+<span id="cb34-202"><a href="#cb34-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-203"><a href="#cb34-203" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">sin</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">main =</span> <span class="st">"plot 3"</span>)</span>
+<span id="cb34-204"><a href="#cb34-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-205"><a href="#cb34-205" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 4"</span>)</span>
+<span id="cb34-206"><a href="#cb34-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-207"><a href="#cb34-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-208"><a href="#cb34-208" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-209"><a href="#cb34-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-210"><a href="#cb34-210" aria-hidden="true" tabindex="-1"></a><span class="in">`layout()`</span> propose moins d'arguments mais permet un meilleur ajustement de la disposition des figures. Pour cela, il est nécessaire de construire une matrice pour indiquer la position et l'espace de chaque graphique ajouté. Exemple :</span>
+<span id="cb34-211"><a href="#cb34-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-212"><a href="#cb34-212" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE}</span></span>
+<span id="cb34-213"><a href="#cb34-213" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-214"><a href="#cb34-214" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>),  <span class="dv">3</span>,  <span class="dv">3</span>,  <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-215"><a href="#cb34-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-216"><a href="#cb34-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-217"><a href="#cb34-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-218"><a href="#cb34-218" aria-hidden="true" tabindex="-1"></a>Avec la matrice ci-dessus, la fenêtre graphique sera paramétrée pour contenir trois graphiques. Le graphique 1 occupera toute la première ligne. le graphique 2 occupera les deux dernières lignes de la première colonne, et le 3e sera situé dans les deux dernières lignes de la dernière colonne. Exemple :</span>
+<span id="cb34-219"><a href="#cb34-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-220"><a href="#cb34-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
+<span id="cb34-221"><a href="#cb34-221" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-222"><a href="#cb34-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-223"><a href="#cb34-223" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg  =</span> <span class="st">"royalblue1"</span>,  <span class="at">col=</span> <span class="st">"white"</span>)</span>
+<span id="cb34-224"><a href="#cb34-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-225"><a href="#cb34-225" aria-hidden="true" tabindex="-1"></a><span class="co"># Découpage de la fenêtre graphique</span></span>
+<span id="cb34-226"><a href="#cb34-226" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="at">mat =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>),  <span class="dv">3</span>,  <span class="dv">3</span>,  <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb34-227"><a href="#cb34-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-228"><a href="#cb34-228" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">main =</span> <span class="st">"plot 1"</span>)</span>
+<span id="cb34-229"><a href="#cb34-229" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">sin</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">main =</span> <span class="st">"plot 2"</span>)</span>
+<span id="cb34-230"><a href="#cb34-230" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">log</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">y =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">main =</span> <span class="st">"plot 3"</span>)</span>
+<span id="cb34-231"><a href="#cb34-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-232"><a href="#cb34-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-233"><a href="#cb34-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-234"><a href="#cb34-234" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-235"><a href="#cb34-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-236"><a href="#cb34-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principaux graphiques</span></span>
+<span id="cb34-237"><a href="#cb34-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-238"><a href="#cb34-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable Quanti.</span></span>
+<span id="cb34-239"><a href="#cb34-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-240"><a href="#cb34-240" aria-hidden="true" tabindex="-1"></a>Pour représenter la distribution d'un variable quantitative, plusieurs types de graphiques peuvent être utilisés.</span>
+<span id="cb34-241"><a href="#cb34-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-242"><a href="#cb34-242" aria-hidden="true" tabindex="-1"></a><span class="fu">#### stripchart()</span></span>
+<span id="cb34-243"><a href="#cb34-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-244"><a href="#cb34-244" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`stripchart()`</span> permet de représenter la distribution d'une variable quantitative.</span>
+<span id="cb34-245"><a href="#cb34-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-246"><a href="#cb34-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
+<span id="cb34-247"><a href="#cb34-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-248"><a href="#cb34-248" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
+<span id="cb34-249"><a href="#cb34-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-250"><a href="#cb34-250" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
+<span id="cb34-251"><a href="#cb34-251" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb34-252"><a href="#cb34-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-253"><a href="#cb34-253" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
+<span id="cb34-254"><a href="#cb34-254" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"stack"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb34-255"><a href="#cb34-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-256"><a href="#cb34-256" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
+<span id="cb34-257"><a href="#cb34-257" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">xlab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"jitter"</span>, <span class="at">pch =</span> <span class="st">"#"</span>)</span>
+<span id="cb34-258"><a href="#cb34-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-259"><a href="#cb34-259" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
+<span id="cb34-260"><a href="#cb34-260" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>speed, <span class="at">ylab =</span> <span class="st">"speed"</span>, <span class="at">method =</span> <span class="st">"jitter"</span>, <span class="at">vertical =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-261"><a href="#cb34-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-262"><a href="#cb34-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-263"><a href="#cb34-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-264"><a href="#cb34-264" aria-hidden="true" tabindex="-1"></a><span class="fu">#### hist()</span></span>
+<span id="cb34-265"><a href="#cb34-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-266"><a href="#cb34-266" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`hist()`</span> permet de construire un histogramme.</span>
+<span id="cb34-267"><a href="#cb34-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-268"><a href="#cb34-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.width=10}</span></span>
+<span id="cb34-269"><a href="#cb34-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-270"><a href="#cb34-270" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
+<span id="cb34-271"><a href="#cb34-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-272"><a href="#cb34-272" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
+<span id="cb34-273"><a href="#cb34-273" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed)</span>
+<span id="cb34-274"><a href="#cb34-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-275"><a href="#cb34-275" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
+<span id="cb34-276"><a href="#cb34-276" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">breaks =</span> <span class="fu">quantile</span>(cars<span class="sc">$</span>speed), <span class="at">main =</span> <span class="st">"Histogramme par quartile"</span>)</span>
+<span id="cb34-277"><a href="#cb34-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-278"><a href="#cb34-278" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
+<span id="cb34-279"><a href="#cb34-279" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">freq =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Histogramme des proportions"</span>)</span>
+<span id="cb34-280"><a href="#cb34-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-281"><a href="#cb34-281" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
+<span id="cb34-282"><a href="#cb34-282" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(cars<span class="sc">$</span>speed, <span class="at">freq =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Histogramme et densité échantillonnale"</span>)</span>
+<span id="cb34-283"><a href="#cb34-283" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(cars<span class="sc">$</span>speed))</span>
+<span id="cb34-284"><a href="#cb34-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-285"><a href="#cb34-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-286"><a href="#cb34-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-287"><a href="#cb34-287" aria-hidden="true" tabindex="-1"></a><span class="fu">#### boxplot()</span></span>
+<span id="cb34-288"><a href="#cb34-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-289"><a href="#cb34-289" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`boxplot()`</span>permet de construire une boîte à moustache. Elle peut être associée à la fonction <span class="in">`stripchart()`</span>.</span>
+<span id="cb34-290"><a href="#cb34-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-291"><a href="#cb34-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-292"><a href="#cb34-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-293"><a href="#cb34-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-294"><a href="#cb34-294" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)) </span>
+<span id="cb34-295"><a href="#cb34-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-296"><a href="#cb34-296" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche</span></span>
+<span id="cb34-297"><a href="#cb34-297" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(cars<span class="sc">$</span>dist)</span>
+<span id="cb34-298"><a href="#cb34-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-299"><a href="#cb34-299" aria-hidden="true" tabindex="-1"></a><span class="co"># droite</span></span>
+<span id="cb34-300"><a href="#cb34-300" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(cars<span class="sc">$</span>dist, <span class="at">horizontal=</span>T, <span class="at">varwidth=</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"red4"</span>, <span class="at">outline =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb34-301"><a href="#cb34-301" aria-hidden="true" tabindex="-1"></a><span class="fu">stripchart</span>(cars<span class="sc">$</span>dist,  <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">metho =</span> <span class="st">"jitter"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-302"><a href="#cb34-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-303"><a href="#cb34-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-304"><a href="#cb34-304" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-305"><a href="#cb34-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-306"><a href="#cb34-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2 variables Quanti.</span></span>
+<span id="cb34-307"><a href="#cb34-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-308"><a href="#cb34-308" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
+<span id="cb34-309"><a href="#cb34-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-310"><a href="#cb34-310" aria-hidden="true" tabindex="-1"></a>Utilisez la fonction <span class="in">`plot()`</span> pour représenter deux variables quantitatives.</span>
+<span id="cb34-311"><a href="#cb34-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-312"><a href="#cb34-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-313"><a href="#cb34-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-314"><a href="#cb34-314" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(speed <span class="sc">~</span> dist, <span class="at">data =</span> cars, <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb34-315"><a href="#cb34-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-316"><a href="#cb34-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une marque pour chaque individus le long de l'axe des abcisses</span></span>
+<span id="cb34-317"><a href="#cb34-317" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(cars<span class="sc">$</span>dist)</span>
+<span id="cb34-318"><a href="#cb34-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-319"><a href="#cb34-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-320"><a href="#cb34-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-321"><a href="#cb34-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable Quali.</span></span>
+<span id="cb34-322"><a href="#cb34-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-323"><a href="#cb34-323" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
+<span id="cb34-324"><a href="#cb34-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-325"><a href="#cb34-325" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`plot()`</span> peut être utilisée pour une variable qualitative. Pour cela la variable doit être stockée dans le format <span class="in">`factor`</span>.</span>
+<span id="cb34-326"><a href="#cb34-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-327"><a href="#cb34-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-328"><a href="#cb34-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-329"><a href="#cb34-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-330"><a href="#cb34-330" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(esoph<span class="sc">$</span>alcgp)</span>
+<span id="cb34-331"><a href="#cb34-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-332"><a href="#cb34-332" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(esoph<span class="sc">$</span>agegp)</span>
+<span id="cb34-333"><a href="#cb34-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-334"><a href="#cb34-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-335"><a href="#cb34-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-336"><a href="#cb34-336" aria-hidden="true" tabindex="-1"></a><span class="fu">#### barplot()</span></span>
+<span id="cb34-337"><a href="#cb34-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-338"><a href="#cb34-338" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser la fonction <span class="in">`barplot()`</span> sur une table de fréquence.</span>
+<span id="cb34-339"><a href="#cb34-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-340"><a href="#cb34-340" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-341"><a href="#cb34-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-342"><a href="#cb34-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-343"><a href="#cb34-343" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul table de fréquence</span></span>
+<span id="cb34-344"><a href="#cb34-344" aria-hidden="true" tabindex="-1"></a>table_freq <span class="ot">&lt;-</span> <span class="fu">table</span>(esoph<span class="sc">$</span>agegp)</span>
+<span id="cb34-345"><a href="#cb34-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-346"><a href="#cb34-346" aria-hidden="true" tabindex="-1"></a><span class="co"># Fréquence par modalité</span></span>
+<span id="cb34-347"><a href="#cb34-347" aria-hidden="true" tabindex="-1"></a>table_freq </span>
+<span id="cb34-348"><a href="#cb34-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-349"><a href="#cb34-349" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq )</span>
+<span id="cb34-350"><a href="#cb34-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-351"><a href="#cb34-351" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-352"><a href="#cb34-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-353"><a href="#cb34-353" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-354"><a href="#cb34-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-355"><a href="#cb34-355" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2 variables Quali.</span></span>
+<span id="cb34-356"><a href="#cb34-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-357"><a href="#cb34-357" aria-hidden="true" tabindex="-1"></a>Comme avec une variable qualitative, vous pouvez utiliser les fonction <span class="in">`plot()`</span> et <span class="in">`barplot()`</span> pour représenter La répartition d'individus en fonction de deux variables qualitatives.</span>
+<span id="cb34-358"><a href="#cb34-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-359"><a href="#cb34-359" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
+<span id="cb34-360"><a href="#cb34-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-361"><a href="#cb34-361" aria-hidden="true" tabindex="-1"></a>Comme avec une seule variable, **les variables qualitatives croisées doivent être stockée en `factor`**.</span>
+<span id="cb34-362"><a href="#cb34-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-363"><a href="#cb34-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-364"><a href="#cb34-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-365"><a href="#cb34-365" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(alcgp <span class="sc">~</span> agegp, <span class="at">data =</span> esoph)</span>
+<span id="cb34-366"><a href="#cb34-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-367"><a href="#cb34-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-368"><a href="#cb34-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-369"><a href="#cb34-369" aria-hidden="true" tabindex="-1"></a><span class="fu">#### barplot()</span></span>
+<span id="cb34-370"><a href="#cb34-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-371"><a href="#cb34-371" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`barplot`</span> fonctionne également sur deux variables qualitatives. Dans un premier temps, calculez le tableau croisé à partir des deux variables qualitatives ciblées :</span>
+<span id="cb34-372"><a href="#cb34-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-373"><a href="#cb34-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-374"><a href="#cb34-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-375"><a href="#cb34-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-376"><a href="#cb34-376" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul table de fréquence</span></span>
+<span id="cb34-377"><a href="#cb34-377" aria-hidden="true" tabindex="-1"></a>table_freq <span class="ot">&lt;-</span> <span class="fu">table</span>(esoph<span class="sc">$</span>alcgp, esoph<span class="sc">$</span>agegp)</span>
+<span id="cb34-378"><a href="#cb34-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-379"><a href="#cb34-379" aria-hidden="true" tabindex="-1"></a><span class="co"># Fréquence par modalité</span></span>
+<span id="cb34-380"><a href="#cb34-380" aria-hidden="true" tabindex="-1"></a>table_freq </span>
+<span id="cb34-381"><a href="#cb34-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-382"><a href="#cb34-382" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-383"><a href="#cb34-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-384"><a href="#cb34-384" aria-hidden="true" tabindex="-1"></a>Puis utilisez la fonction <span class="in">`barplot()`</span> :</span>
+<span id="cb34-385"><a href="#cb34-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-386"><a href="#cb34-386" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-387"><a href="#cb34-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-388"><a href="#cb34-388" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </span>
+<span id="cb34-389"><a href="#cb34-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-390"><a href="#cb34-390" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche supérieur</span></span>
+<span id="cb34-391"><a href="#cb34-391" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq)</span>
+<span id="cb34-392"><a href="#cb34-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-393"><a href="#cb34-393" aria-hidden="true" tabindex="-1"></a><span class="co"># droite supérieur</span></span>
+<span id="cb34-394"><a href="#cb34-394" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">horiz =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-395"><a href="#cb34-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-396"><a href="#cb34-396" aria-hidden="true" tabindex="-1"></a><span class="co"># gauche inférieur</span></span>
+<span id="cb34-397"><a href="#cb34-397" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">horiz =</span> <span class="cn">TRUE</span>, <span class="at">beside=</span><span class="cn">TRUE</span>)</span>
+<span id="cb34-398"><a href="#cb34-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-399"><a href="#cb34-399" aria-hidden="true" tabindex="-1"></a><span class="co"># droite inférieur</span></span>
+<span id="cb34-400"><a href="#cb34-400" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_freq, <span class="at">beside=</span><span class="cn">TRUE</span>, <span class="at">legend.text =</span> <span class="fu">levels</span>(esoph<span class="sc">$</span>alcgp), </span>
+<span id="cb34-401"><a href="#cb34-401" aria-hidden="true" tabindex="-1"></a>        <span class="at">args.legend=</span><span class="fu">list</span>(<span class="at">x=</span><span class="st">"bottomright"</span>))</span>
+<span id="cb34-402"><a href="#cb34-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-403"><a href="#cb34-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-404"><a href="#cb34-404" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-405"><a href="#cb34-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-406"><a href="#cb34-406" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-407"><a href="#cb34-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-408"><a href="#cb34-408" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quanti. et Quali.</span></span>
+<span id="cb34-409"><a href="#cb34-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-410"><a href="#cb34-410" aria-hidden="true" tabindex="-1"></a><span class="fu">#### plot()</span></span>
+<span id="cb34-411"><a href="#cb34-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-412"><a href="#cb34-412" aria-hidden="true" tabindex="-1"></a>La fonction généraliste <span class="in">`plot()`</span> peut être utilisée. Si la variable qualitative est appelée en première, le graphique prendra la forme d'un *spine plot* (%). Dans le cas contraire, la fonction renverra un ensemble de *boxplots*.</span>
+<span id="cb34-413"><a href="#cb34-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-414"><a href="#cb34-414" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-415"><a href="#cb34-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-416"><a href="#cb34-416" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)) </span>
+<span id="cb34-417"><a href="#cb34-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-418"><a href="#cb34-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-419"><a href="#cb34-419" aria-hidden="true" tabindex="-1"></a><span class="co"># Spine plot</span></span>
+<span id="cb34-420"><a href="#cb34-420" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(agegp <span class="sc">~</span> ncases, <span class="at">data =</span> esoph, <span class="at">main =</span> <span class="st">"Spine plot"</span>)</span>
+<span id="cb34-421"><a href="#cb34-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-422"><a href="#cb34-422" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot</span></span>
+<span id="cb34-423"><a href="#cb34-423" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ncases <span class="sc">~</span> agegp, <span class="at">data =</span> esoph, <span class="at">main =</span> <span class="st">"Boxplots"</span>)</span>
+<span id="cb34-424"><a href="#cb34-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-425"><a href="#cb34-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-426"><a href="#cb34-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-427"><a href="#cb34-427" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-428"><a href="#cb34-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-429"><a href="#cb34-429" aria-hidden="true" tabindex="-1"></a>Il est également possible d'utiliser directement la fonction boxplot pour représenter la distribution de chaque individus pour une variable quantitative, par modalité d'une variable qualitative :</span>
+<span id="cb34-430"><a href="#cb34-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-431"><a href="#cb34-431" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-432"><a href="#cb34-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-433"><a href="#cb34-433" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(ncases <span class="sc">~</span> agegp, <span class="at">data =</span> esoph)</span>
+<span id="cb34-434"><a href="#cb34-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-435"><a href="#cb34-435" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-436"><a href="#cb34-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-437"><a href="#cb34-437" aria-hidden="true" tabindex="-1"></a>L'argument <span class="in">`col`</span> de la fonction <span class="in">`plot()`</span> permet aussi de représenter trois variables (quantitative \~ quantitative + qualitative). Pour cela, il est préférable d'utiliser une variable qualitative stockée en format <span class="in">`factor`</span>.</span>
+<span id="cb34-438"><a href="#cb34-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-439"><a href="#cb34-439" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-440"><a href="#cb34-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-441"><a href="#cb34-441" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversion de la variable qualitative en format factor</span></span>
+<span id="cb34-442"><a href="#cb34-442" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>cyl <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(mtcars<span class="sc">$</span>cyl)</span>
+<span id="cb34-443"><a href="#cb34-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-444"><a href="#cb34-444" aria-hidden="true" tabindex="-1"></a><span class="co"># Nuage de point</span></span>
+<span id="cb34-445"><a href="#cb34-445" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(disp <span class="sc">~</span> wt, </span>
+<span id="cb34-446"><a href="#cb34-446" aria-hidden="true" tabindex="-1"></a>     <span class="at">data =</span> mtcars, </span>
+<span id="cb34-447"><a href="#cb34-447" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> cyl, <span class="co"># Couleur des points en fonction d'une variable qualitative</span></span>
+<span id="cb34-448"><a href="#cb34-448" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">16</span>, </span>
+<span id="cb34-449"><a href="#cb34-449" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Weight"</span>,</span>
+<span id="cb34-450"><a href="#cb34-450" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Displacement"</span>)</span>
+<span id="cb34-451"><a href="#cb34-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-452"><a href="#cb34-452" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'une légende</span></span>
+<span id="cb34-453"><a href="#cb34-453" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>, </span>
+<span id="cb34-454"><a href="#cb34-454" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Number of cylinders"</span>,</span>
+<span id="cb34-455"><a href="#cb34-455" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(mtcars<span class="sc">$</span>cyl), </span>
+<span id="cb34-456"><a href="#cb34-456" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span>  <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
+<span id="cb34-457"><a href="#cb34-457" aria-hidden="true" tabindex="-1"></a>       <span class="at">ncol =</span> <span class="dv">3</span>, </span>
+<span id="cb34-458"><a href="#cb34-458" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb34-459"><a href="#cb34-459" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-460"><a href="#cb34-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-461"><a href="#cb34-461" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-462"><a href="#cb34-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-463"><a href="#cb34-463" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-464"><a href="#cb34-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-465"><a href="#cb34-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tableau complet</span></span>
+<span id="cb34-466"><a href="#cb34-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-467"><a href="#cb34-467" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`pairs()`</span> (ou <span class="in">`plot()`</span>) permet de construire une matrice du nuages de points entre toutes les variables d'un tableau, quelque soit leur type.</span>
+<span id="cb34-468"><a href="#cb34-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-469"><a href="#cb34-469" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-470"><a href="#cb34-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-471"><a href="#cb34-471" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(iris)</span>
+<span id="cb34-472"><a href="#cb34-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-473"><a href="#cb34-473" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-474"><a href="#cb34-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-475"><a href="#cb34-475" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-476"><a href="#cb34-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-477"><a href="#cb34-477" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expression math.</span></span>
+<span id="cb34-478"><a href="#cb34-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-479"><a href="#cb34-479" aria-hidden="true" tabindex="-1"></a>La fonction <span class="in">`curve()`</span> permet de tracer de représenter une expression mathématique.</span>
+<span id="cb34-480"><a href="#cb34-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-481"><a href="#cb34-481" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE, fig.align = 'center'}</span></span>
+<span id="cb34-482"><a href="#cb34-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-483"><a href="#cb34-483" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> (x), <span class="at">col =</span> <span class="st">"grey30"</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">to =</span> <span class="dv">2</span>)</span>
+<span id="cb34-484"><a href="#cb34-484" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> x<span class="sc">^</span><span class="dv">2</span>,  <span class="at">col =</span> <span class="st">"green4"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-485"><a href="#cb34-485" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="at">expr =</span> x<span class="sc">^</span><span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-486"><a href="#cb34-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-487"><a href="#cb34-487" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">title =</span> <span class="st">"Function"</span>, </span>
+<span id="cb34-488"><a href="#cb34-488" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"(x)"</span>, <span class="st">"x^2"</span>, <span class="st">"x^3"</span>), </span>
+<span id="cb34-489"><a href="#cb34-489" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"grey30"</span>, <span class="st">"green4"</span>, <span class="st">"red"</span>), </span>
+<span id="cb34-490"><a href="#cb34-490" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="dv">1</span>)</span>
+<span id="cb34-491"><a href="#cb34-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-492"><a href="#cb34-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-493"><a href="#cb34-493" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-494"><a href="#cb34-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-495"><a href="#cb34-495" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exporter un graphique</span></span>
+<span id="cb34-496"><a href="#cb34-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-497"><a href="#cb34-497" aria-hidden="true" tabindex="-1"></a>Un graphique crée dans RStudio est affiché par défaut dans l'onglet **Plots**. Dans cet onglet, vous pouvez zoomer sur le graphique en cliquant sur le bouton **Zoom**. Vous pouvez aussi enregistrer le graphique en cliquant sur le bouton **Export** :</span>
+<span id="cb34-498"><a href="#cb34-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-499"><a href="#cb34-499" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/plot.png)</span>{fig-align="center"}</span>
+<span id="cb34-500"><a href="#cb34-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-501"><a href="#cb34-501" aria-hidden="true" tabindex="-1"></a>L'export d'un graphique peut être automatisé en ligne de code R de différente manière (cf. <span class="co">[</span><span class="ot">module import</span><span class="co">](/modules/import/import.html#image)</span>). Le procédure d'export la plus simple peut être réalisé avec la fonction <span class="in">`dev.print()`</span>. **Cette fonction permet aussi bien un export en format vectoriel que matricielle du graphique affiché.**</span>
+<span id="cb34-502"><a href="#cb34-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-503"><a href="#cb34-503" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb34-504"><a href="#cb34-504" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb34-505"><a href="#cb34-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-506"><a href="#cb34-506" aria-hidden="true" tabindex="-1"></a><span class="co"># Format pdf</span></span>
+<span id="cb34-507"><a href="#cb34-507" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> pdf, <span class="st">"graph_export.pdf"</span>, <span class="at">width =</span> <span class="dv">600</span>) </span>
+<span id="cb34-508"><a href="#cb34-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-509"><a href="#cb34-509" aria-hidden="true" tabindex="-1"></a><span class="co"># format svg</span></span>
+<span id="cb34-510"><a href="#cb34-510" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> svg, <span class="at">file =</span> <span class="st">"graph_export.svg"</span>, <span class="at">width =</span> <span class="dv">6</span>)</span>
+<span id="cb34-511"><a href="#cb34-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-512"><a href="#cb34-512" aria-hidden="true" tabindex="-1"></a><span class="co"># format png</span></span>
+<span id="cb34-513"><a href="#cb34-513" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> png, <span class="at">file =</span> <span class="st">"graph_export.png"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
+<span id="cb34-514"><a href="#cb34-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-515"><a href="#cb34-515" aria-hidden="true" tabindex="-1"></a><span class="co"># format png</span></span>
+<span id="cb34-516"><a href="#cb34-516" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> jpeg, <span class="at">file =</span> <span class="st">"graph_export.jpeg"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
+<span id="cb34-517"><a href="#cb34-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-518"><a href="#cb34-518" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-519"><a href="#cb34-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-520"><a href="#cb34-520" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-521"><a href="#cb34-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-522"><a href="#cb34-522" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
+<span id="cb34-523"><a href="#cb34-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-524"><a href="#cb34-524" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
+<span id="cb34-525"><a href="#cb34-525" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
+<span id="cb34-526"><a href="#cb34-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-527"><a href="#cb34-527" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
+<span id="cb34-528"><a href="#cb34-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-529"><a href="#cb34-529" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
+<span id="cb34-530"><a href="#cb34-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-531"><a href="#cb34-531" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
+<span id="cb34-532"><a href="#cb34-532" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
+<span id="cb34-533"><a href="#cb34-533" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3DaCAkX"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb34-534"><a href="#cb34-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-535"><a href="#cb34-535" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb34-536"><a href="#cb34-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-537"><a href="#cb34-537" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
+<span id="cb34-538"><a href="#cb34-538" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder2.png"</span>)</span>
+<span id="cb34-539"><a href="#cb34-539" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-540"><a href="#cb34-540" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-541"><a href="#cb34-541" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importez le fichier "afrika_don.csv" dans un data.frame</span><span class="co">]</span>{.question}</span>
+<span id="cb34-542"><a href="#cb34-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-543"><a href="#cb34-543" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb34-544"><a href="#cb34-544" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb34-545"><a href="#cb34-545" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-546"><a href="#cb34-546" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"..."</span>)</span>
+<span id="cb34-547"><a href="#cb34-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-548"><a href="#cb34-548" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-549"><a href="#cb34-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-550"><a href="#cb34-550" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Construisez un histogramme par quartile pour la variable "POP" :</span><span class="co">]</span>{.question}</span>
+<span id="cb34-551"><a href="#cb34-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-552"><a href="#cb34-552" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb34-553"><a href="#cb34-553" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-554"><a href="#cb34-554" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-555"><a href="#cb34-555" aria-hidden="true" tabindex="-1"></a>My_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
+<span id="cb34-556"><a href="#cb34-556" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-557"><a href="#cb34-557" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP))</span>
+<span id="cb34-558"><a href="#cb34-558" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-559"><a href="#cb34-559" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-560"><a href="#cb34-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-561"><a href="#cb34-561" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb34-562"><a href="#cb34-562" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb34-563"><a href="#cb34-563" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-564"><a href="#cb34-564" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(..., <span class="at">breaks  =</span> <span class="fu">quantile</span>(...))</span>
+<span id="cb34-565"><a href="#cb34-565" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-566"><a href="#cb34-566" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-567"><a href="#cb34-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-568"><a href="#cb34-568" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Améliorez la mise en page, en ajoutant par exemple un peu de couleur, un titre, une source... :</span><span class="co">]</span>{.question}</span>
+<span id="cb34-569"><a href="#cb34-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-570"><a href="#cb34-570" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE, echo = FALSE}</span></span>
+<span id="cb34-571"><a href="#cb34-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-572"><a href="#cb34-572" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
+<span id="cb34-573"><a href="#cb34-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-574"><a href="#cb34-574" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, </span>
+<span id="cb34-575"><a href="#cb34-575" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP),</span>
+<span id="cb34-576"><a href="#cb34-576" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
+<span id="cb34-577"><a href="#cb34-577" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
+<span id="cb34-578"><a href="#cb34-578" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
+<span id="cb34-579"><a href="#cb34-579" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb34-580"><a href="#cb34-580" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
+<span id="cb34-581"><a href="#cb34-581" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-582"><a href="#cb34-582" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(My_data<span class="sc">$</span>POP)</span>
+<span id="cb34-583"><a href="#cb34-583" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb34-584"><a href="#cb34-584" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-585"><a href="#cb34-585" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-586"><a href="#cb34-586" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-587"><a href="#cb34-587" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb34-588"><a href="#cb34-588" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un exemple ?"</span></span>
+<span id="cb34-589"><a href="#cb34-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-590"><a href="#cb34-590" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
+<span id="cb34-591"><a href="#cb34-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-592"><a href="#cb34-592" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(My_data<span class="sc">$</span>POP, </span>
+<span id="cb34-593"><a href="#cb34-593" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(My_data<span class="sc">$</span>POP),</span>
+<span id="cb34-594"><a href="#cb34-594" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
+<span id="cb34-595"><a href="#cb34-595" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
+<span id="cb34-596"><a href="#cb34-596" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
+<span id="cb34-597"><a href="#cb34-597" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb34-598"><a href="#cb34-598" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
+<span id="cb34-599"><a href="#cb34-599" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-600"><a href="#cb34-600" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(My_data<span class="sc">$</span>POP)</span>
+<span id="cb34-601"><a href="#cb34-601" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb34-602"><a href="#cb34-602" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-603"><a href="#cb34-603" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-604"><a href="#cb34-604" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-605"><a href="#cb34-605" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-606"><a href="#cb34-606" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Exportez le graphique à l'aide d'une fonction (format png)</span><span class="co">]</span>{.question}</span>
+<span id="cb34-607"><a href="#cb34-607" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-608"><a href="#cb34-608" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb34-609"><a href="#cb34-609" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb34-610"><a href="#cb34-610" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-611"><a href="#cb34-611" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> ..., <span class="at">file =</span> <span class="st">"..."</span>)</span>
+<span id="cb34-612"><a href="#cb34-612" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-613"><a href="#cb34-613" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-614"><a href="#cb34-614" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-615"><a href="#cb34-615" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb34-616"><a href="#cb34-616" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-617"><a href="#cb34-617" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb34-618"><a href="#cb34-618" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-619"><a href="#cb34-619" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb34-620"><a href="#cb34-620" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/correction/graphique_rbase.zip"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb34-621"><a href="#cb34-621" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb34-622"><a href="#cb34-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-623"><a href="#cb34-623" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}</span></span>
+<span id="cb34-624"><a href="#cb34-624" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Correction"</span></span>
+<span id="cb34-625"><a href="#cb34-625" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-626"><a href="#cb34-626" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des données</span></span>
+<span id="cb34-627"><a href="#cb34-627" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="at">file =</span> <span class="st">"../data/DEV_AFRICA_2018/afrika_don.csv"</span>)</span>
+<span id="cb34-628"><a href="#cb34-628" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-629"><a href="#cb34-629" aria-hidden="true" tabindex="-1"></a><span class="co"># Paramétrage de la couleur de fond de la fenêtre graphique</span></span>
+<span id="cb34-630"><a href="#cb34-630" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"cornsilk3"</span>)</span>
+<span id="cb34-631"><a href="#cb34-631" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-632"><a href="#cb34-632" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogramme sur la variable 'POP'</span></span>
+<span id="cb34-633"><a href="#cb34-633" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(data<span class="sc">$</span>POP, </span>
+<span id="cb34-634"><a href="#cb34-634" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks  =</span> <span class="fu">quantile</span>(data<span class="sc">$</span>POP),</span>
+<span id="cb34-635"><a href="#cb34-635" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"green4"</span>,</span>
+<span id="cb34-636"><a href="#cb34-636" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>,</span>
+<span id="cb34-637"><a href="#cb34-637" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Nombre d'habitants (millions)"</span>, </span>
+<span id="cb34-638"><a href="#cb34-638" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb34-639"><a href="#cb34-639" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Répartition des pays africains selon leur population"</span>)</span>
+<span id="cb34-640"><a href="#cb34-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-641"><a href="#cb34-641" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de marques pour chaque individus (axe des abscisses)</span></span>
+<span id="cb34-642"><a href="#cb34-642" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(data<span class="sc">$</span>POP)</span>
+<span id="cb34-643"><a href="#cb34-643" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-644"><a href="#cb34-644" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout de la source des données</span></span>
+<span id="cb34-645"><a href="#cb34-645" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">4</span>, <span class="st">"source : UN, 2020"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb34-646"><a href="#cb34-646" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-647"><a href="#cb34-647" aria-hidden="true" tabindex="-1"></a><span class="co"># Export en PNG</span></span>
+<span id="cb34-648"><a href="#cb34-648" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.print</span>(<span class="at">device =</span> png, <span class="at">file =</span> <span class="st">"mon_graphique.png"</span>, <span class="at">width =</span> <span class="dv">600</span>)</span>
+<span id="cb34-649"><a href="#cb34-649" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-650"><a href="#cb34-650" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb34-651"><a href="#cb34-651" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb34-652"><a href="#cb34-652" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-653"><a href="#cb34-653" aria-hidden="true" tabindex="-1"></a>\</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

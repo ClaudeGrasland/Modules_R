@@ -10,12 +10,13 @@ format:
   html:
     theme: cosmo
     code-copy: true
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
-    output-file: "import"
-    output-ext:  "pdf"
+    css: styles.css
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   output-file: "import"
+  #   output-ext:  "pdf"
 ---
 
 **De nombreuses de fonctions (primitives ou non) permettent d'importer et d'exporter des données de différents formats.**
@@ -400,7 +401,7 @@ dev.off()
 | Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Raster délévation du Bénin (???)  | <a href="https://bit.ly/3XqLAKR" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 
-\
+
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 
@@ -419,8 +420,6 @@ knitr::include_graphics("../img/folder.png")
 -   data/GADM_AFRICA_2020/**afrika_map.shp**\
 -   data/**elevation.tif**
 
-------------------------------------------------------------------------
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
@@ -436,9 +435,23 @@ read_excel()
 library(sf)
 st_read()
 
+# Pour importer un fichier TIF (elevation.tif)
+library(terra)
+rast()
+
 ```
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
+------------------------------------------------------------------------
+
+\
+
+::: center
+<a href="/correction/import.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
+
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
 #| code-summary: "Correction"
   
 
@@ -449,9 +462,13 @@ data_from_csv <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don.csv")
 library(readxl)
 data_from_xls <- read_excel(path = "data/DEV_AFRICA_2018/afrika_don.xls")
 
-# Importer du fichier shp "afrika_map.shp"
+# Import du fichier shp "afrika_map.shp"
 library(sf)
 data_from_shp <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
+
+## Import du fichier tif "elevation.tif"
+library(terra)
+data_tif <- rast("data/elevation.tif") 
 
 
 ```
@@ -460,6 +477,6 @@ data_from_shp <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 \
 \
 
-::: center
-<a href="/import.pdf" class="btn btn-success" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a>
-:::
+<!-- ::: center -->
+<!-- <a href="/import.pdf" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a> -->
+<!-- ::: -->

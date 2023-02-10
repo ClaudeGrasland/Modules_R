@@ -10,7 +10,10 @@ code-fold: true
 code-tools: true
 ---
 
-Le support de cours pour cette leçon est consultable à ce lien :
+:::{.callout-note}
+Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
+Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
+:::
 
 \
 
@@ -18,13 +21,155 @@ Le support de cours pour cette leçon est consultable à ce lien :
 <a href="https://rcarto.github.io/cartographie_avec_r/" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Cartographie avec R - Le package `mapsf`</a>
 :::
 
-:::{.callout-note}
-Il s'agit d'un document initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
-Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
+\
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder3.png")
+```
+
+[4. Importer les fichiers suivants en utilisant les fonctions adéquates :]{.question}
+
+-   data/DEV_AFRIA_2018/**afrika_don.csv**\
+-   data/GADM_AFRICA_2020/**afrika_map.shp**\
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Pour importer le fichier csv (afrika_don.csv)
+read.csv()
+read.csv2()
+
+# Pour importer le fichier ESRI Shapefile (afrika_map.shp)
+library(sf)
+st_read()
+
+
+```
+
+[5. Faire une jointure entre le fond de carte des pays et le tableau de données statistiques]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Faire une jointure
+merge()
+
+```
+
+[6. Construire carte thématique représentant le nombre d'habitants (Variable **POP**)]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Créer une carte choroplèthe
+
+```
+
+
+[7. Construire carte thématique représentant la part d'utilisateurs d'internet sur la population totale (Variable **INTERN**)]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Créer une carte choroplèthe
+
+```
+
+
+------------------------------------------------------------------------
+
+\
+
+::: center
+<a href="/correction/graphique_rbase.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
 
+```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
+#| code-summary: "Correction"
+  
+# Import des données
+data <- read.csv2(file = "../data/DEV_AFRICA_2018/afrika_don.csv")
+
+library(sf)
+basemap <- st_read("../data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
+
+data_map <- merge(basemap, data, by="iso3", all.x = TRUE)
+
+plot(st_geometry(basemap))
+
+hist(data_map$INTERN)
+
+library(mapsf)
+mf_theme("jsk")
+mf_init(x = data_map)
+mf_shadow(data_map, add = TRUE)
+mf_map(
+  x = data_map,
+  var = "INTERN",
+  type = "choro",
+  breaks = "quantile",
+  nbreaks = 6,
+  pal = "Greens",
+  border = "white",
+  lwd = 0.5,
+  col_na = "grey80",
+  leg_pos = "topright",
+  leg_title = "% des utilisateurs",
+  add = TRUE
+)
+# layout
+mf_layout(
+  title = "L'utilisation d'internet en Afrique, 2020",
+  credits = paste0(
+    "Sources: Human Development Report 2020\n",
+    "mapsf ",
+    packageVersion("mapsf")
+  )
+)
 
 
 
+mf_theme("darkula")
+mf_map(data_map, col = "grey70", border = "white", lwd = 0.3)
 
-## Exercice
+mf_map(
+  x = data_map,
+  var = "POP",
+  type = "prop",
+  inches = 0.35,
+  col = "brown4",
+  leg_pos = "bottomleft2",
+  leg_title = "Population en millions", add =TRUE,
+)
+
+mf_layout(
+  title = "Répartition de la population en Afrique, 2020",
+  credits = paste0(
+    "Sources: Human Development Report 2020\n",
+    "mapsf ",
+    packageVersion("mapsf")
+  )
+)
+
+
+
+```
+:::
+
+\

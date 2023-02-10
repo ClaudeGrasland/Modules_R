@@ -616,7 +616,11 @@ dev.print(device = ..., file = "...")
 
 \
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
+::: center
+<a href="/correction/graphique_rbase.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
+
+```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
 #| code-summary: "Correction"
   
 # Import des données

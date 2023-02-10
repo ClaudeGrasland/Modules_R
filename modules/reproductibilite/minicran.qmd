@@ -147,8 +147,8 @@ Pour connaitre l'ensemble des fonctionnalités offertes par le package `miniCRAN
 \
 \
 
-::: center
-<a href="/miniCRAN.pdf" class="btn btn-success" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a>
-:::
+<!-- ::: center -->
+<!-- <a href="/miniCRAN.pdf" class="btn btn-success" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a> -->
+<!-- ::: -->
 
 
