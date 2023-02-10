@@ -49,6 +49,20 @@
     "text": "Cartographie avec mapsf\n\n\nPrésentation du package mapsf pour la cartographie thématique\n\n\n\n\n\n\n6 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nCartographie 3D et anamorphoses\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
+    "objectID": "modules/cartographie/map_sf.html",
+    "href": "modules/cartographie/map_sf.html",
+    "title": "Cartographie avec mapsf",
+    "section": "",
+    "text": "Le support de cours pour cette leçon est consultable à ce lien :"
+  },
+  {
+    "objectID": "modules/cartographie/map_sf.html#exercice",
+    "href": "modules/cartographie/map_sf.html#exercice",
+    "title": "Cartographie avec mapsf",
+    "section": "Exercice",
+    "text": "Exercice"
+  },
+  {
     "objectID": "modules/reproductibilite.html",
     "href": "modules/reproductibilite.html",
     "title": "Reproductibilité",
@@ -182,53 +196,11 @@
     "text": "Le support de cours pour cette leçon est consultable à ce lien :"
   },
   {
-    "objectID": "modules/geomatique/geomatic_vector.html#le-package-sf",
-    "href": "modules/geomatique/geomatic_vector.html#le-package-sf",
+    "objectID": "modules/geomatique/geomatic_vector.html#exercice",
+    "href": "modules/geomatique/geomatic_vector.html#exercice",
     "title": "Géomatique avec R - vecteur",
-    "section": "Le package sf",
-    "text": "Le package sf\n Le package sf a été publié fin 2016 par Edzer Pebesma (également auteur du package sp). Son objectif est de combiner les fonctionnalités de sp, rgeos et rgdal dans un package unique plus ergonomique. Ce package propose des objets plus simples (suivant le standard simple feature) dont la manipulation est plus aisée. Une attention particulière a été portée à la compatibilité du package avec la syntaxe pipe et les opérateurs du tidyverse.\nsf utilise directement les librairies systèmes GDAL, GEOS et PROJ.\n\n\n\n\n\n\n\n\n\n\nFrom r-spatial.org\n\n\n\n\nSite web du package sf :\nSimple Features for R"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#lobjet-sf",
-    "href": "modules/geomatique/geomatic_vector.html#lobjet-sf",
-    "title": "Géomatique avec R - vecteur",
-    "section": "L’objet sf",
-    "text": "L’objet sf\n\nimport/export…\n\n\nAffichage"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#projection",
-    "href": "modules/geomatique/geomatic_vector.html#projection",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Projection",
-    "text": "Projection"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#sélection",
-    "href": "modules/geomatique/geomatic_vector.html#sélection",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Sélection",
-    "text": "Sélection\n\nPar attribut\n\n\nSpatiale"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#géotraitements",
-    "href": "modules/geomatique/geomatic_vector.html#géotraitements",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Géotraitements",
-    "text": "Géotraitements\n\nBuffer\n\n\nClip"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#mesure",
-    "href": "modules/geomatique/geomatic_vector.html#mesure",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Mesure",
-    "text": "Mesure\n\nMatrice de distance"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#géoréférencement",
-    "href": "modules/geomatique/geomatic_vector.html#géoréférencement",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Géoréférencement",
-    "text": "Géoréférencement"
+    "section": "Exercice",
+    "text": "Exercice"
   },
   {
     "objectID": "modules/geomatique/geomatic_raster.html",
@@ -238,39 +210,11 @@
     "text": "Le support de cours pour cette leçon est consultable à ce lien :"
   },
   {
-    "objectID": "modules/geomatique/geomatic_raster.html#le-package-terra",
-    "href": "modules/geomatique/geomatic_raster.html#le-package-terra",
+    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
+    "href": "modules/geomatique/geomatic_raster.html#exercice",
     "title": "Géomatique avec R - raster",
-    "section": "Le package terra",
-    "text": "Le package terra"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#lobjet-spatraster",
-    "href": "modules/geomatique/geomatic_raster.html#lobjet-spatraster",
-    "title": "Géomatique avec R - raster",
-    "section": "L’objet SpatRaster",
-    "text": "L’objet SpatRaster\n\nimport/export…\n\n\nAffichage"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#modifications-de-la-zone-détude",
-    "href": "modules/geomatique/geomatic_raster.html#modifications-de-la-zone-détude",
-    "title": "Géomatique avec R - raster",
-    "section": "Modifications de la zone d’étude",
-    "text": "Modifications de la zone d’étude\n\nProjection\n\n\ncrop\n\n\nmask\n\n\naggrégation / désaggragation\n\n\nFusion\n\n\nSegregate ???"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#algèbre-spatiale",
-    "href": "modules/geomatique/geomatic_raster.html#algèbre-spatiale",
-    "title": "Géomatique avec R - raster",
-    "section": "Algèbre spatiale",
-    "text": "Algèbre spatiale\n\nOpérations locales\n\n\nOpérations focales\n\n\nOpérations globales\n\n\nOpérations zonales"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#transformation-et-conversion",
-    "href": "modules/geomatique/geomatic_raster.html#transformation-et-conversion",
-    "title": "Géomatique avec R - raster",
-    "section": "Transformation et conversion",
-    "text": "Transformation et conversion"
+    "section": "Exercice",
+    "text": "Exercice"
   },
   {
     "objectID": "ressources.html",
@@ -306,40 +250,5 @@
     "title": "",
     "section": "",
     "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#exercice",
-    "href": "modules/geomatique/geomatic_vector.html#exercice",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Exercice",
-    "text": "Exercice"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#correction",
-    "href": "modules/geomatique/geomatic_vector.html#correction",
-    "title": "Géomatique avec R - vecteur",
-    "section": "Correction",
-    "text": "Correction\n\n\n\n\n\n\nNote\n\n\n\nCe module est très fortement inspiré du manuel géomatique avec R (T. Giraud & H. Pecout, 2023)."
-  },
-  {
-    "objectID": "modules/cartographie/map_sf.html",
-    "href": "modules/cartographie/map_sf.html",
-    "title": "Cartographie avec mapsf",
-    "section": "",
-    "text": "Le support de cours pour cette leçon est consultable à ce lien :"
-  },
-  {
-    "objectID": "modules/cartographie/map_sf.html#exercice",
-    "href": "modules/cartographie/map_sf.html#exercice",
-    "title": "Cartographie avec mapsf",
-    "section": "Exercice",
-    "text": "Exercice"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
-    "href": "modules/geomatique/geomatic_raster.html#exercice",
-    "title": "Géomatique avec R - raster",
-    "section": "Exercice",
-    "text": "Exercice"
   }
 ]
