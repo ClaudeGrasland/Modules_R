@@ -38,7 +38,7 @@ Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_F
 
 ### Les modules thématiques
 
-Les leçons TIG'R sont classées en  sept modules thématiques qui segmente l'ensemble de la chaîne de traitement de données géographiques :
+Les leçons TIG'R sont classées en  sept modules thématiques qui segmentent l'ensemble de la chaîne de traitement de données géographiques :
 
 -   [**Données**](modules/import.qmd) (Import, collecte , connexion BD… et export de données)
 -   [**Manipulation de données**](modules/manipulation.qmd) (gestion & traitement de données)

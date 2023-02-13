@@ -43,7 +43,7 @@ Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](htt
 knitr::include_graphics("../img/folder3.png")
 ```
 
-[4. Importer les fichiers suivants en utilisant les fonctions adéquates :]{.question}
+[4. Importez les fichiers suivants en utilisant les fonctions adéquates :]{.question}
 
 -   data/DEV_AFRIA_2018/**afrika_don.csv**\
 -   data/GADM_AFRICA_2020/**afrika_map.shp**\
@@ -62,32 +62,68 @@ st_read()
 
 ```
 
-[5. Faire une jointure entre le fond de carte des pays et le tableau de données statistiques]{.question}
+[5. Faîte une jointure entre le fond de carte des pays et le tableau de données statistiques]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
-# Faire une jointure
-merge()
+# Jointure en R-base
+merge() 
+
+# Ou 
+jointure avec le package dplyr
+left_join()
 
 ```
 
-[6. Construire carte thématique représentant le nombre d'habitants (Variable **POP**)]{.question}
+[6. Construisez une carte thématique représentant la variable **POP** (nombre d'habitants)]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# Créer une carte en symboles proportionnels
+mf_map()
+# OU
+mf_prop()
+
+
+```
+
+
+[7. Construisez une thématique représentant la variable **INTERN** (part des utilisateurs d'internet dans la population totale)]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
 # Créer une carte choroplèthe
+mf_map()
+# OU
+mf_choro()
 
 ```
 
 
-[7. Construire carte thématique représentant la part d'utilisateurs d'internet sur la population totale (Variable **INTERN**)]{.question}
+[8. Exportez ces deux cartes en format svg et png, à l'aide d'une fonction du package mapsf]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
-# Créer une carte choroplèthe
+mf_export()
+dev.off()
+
+```
+
+
+
+[9.  Construisez une carte thématique représentant la variable **POP** ET la variable **INTERN**]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Créer une carte de stocks et de ratios
+mf_map()
+# OU
+mf_prop_choro()
 
 ```
 
@@ -97,75 +133,130 @@ merge()
 \
 
 ::: center
-<a href="/correction/graphique_rbase.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+<a href="/correction/cartographie_mapsf.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
 #| code-summary: "Correction"
-  
-# Import des données
-data <- read.csv2(file = "../data/DEV_AFRICA_2018/afrika_don.csv")
 
+##--------------------##  
+## Import des données ##
+##--------------------##
+
+# Tableau csv
+data <- read.csv2(file = "./data/DEV_AFRICA_2018/afrika_don.csv")
+
+# ESRI shapefile (données géographiques)
 library(sf)
-basemap <- st_read("../data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
+basemap <- st_read("./data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 
+
+##----------##
+## Jointure ##
+##----------##
+
+# R-base
 data_map <- merge(basemap, data, by="iso3", all.x = TRUE)
 
-plot(st_geometry(basemap))
+# OU avec le package dplyr
+library(dplyr)
+data_map <-left_join(basemap, data, by = "iso3")
 
-hist(data_map$INTERN)
+
+
+##----------------------------------##  
+## Carte en symboles proportionnels ##
+##----------------------------------##
 
 library(mapsf)
-mf_theme("jsk")
-mf_init(x = data_map)
-mf_shadow(data_map, add = TRUE)
-mf_map(
-  x = data_map,
-  var = "INTERN",
-  type = "choro",
-  breaks = "quantile",
-  nbreaks = 6,
-  pal = "Greens",
-  border = "white",
-  lwd = 0.5,
-  col_na = "grey80",
-  leg_pos = "topright",
-  leg_title = "% des utilisateurs",
-  add = TRUE
-)
-# layout
-mf_layout(
-  title = "L'utilisation d'internet en Afrique, 2020",
-  credits = paste0(
-    "Sources: Human Development Report 2020\n",
-    "mapsf ",
-    packageVersion("mapsf")
-  )
-)
 
+# Initialisation de l'export de la carte (format svg)
+mf_export(data_map, "Population_in_Afica_2020.svg", width = 100)
 
-
+# Utilisation du thème darkula
 mf_theme("darkula")
-mf_map(data_map, col = "grey70", border = "white", lwd = 0.3)
 
-mf_map(
-  x = data_map,
-  var = "POP",
-  type = "prop",
-  inches = 0.35,
-  col = "brown4",
-  leg_pos = "bottomleft2",
-  leg_title = "Population en millions", add =TRUE,
-)
+# Affichage du fond de carte (pays africains)
+mf_map(data_map, col = "grey70", border = "black", lwd = 0.2)
 
-mf_layout(
-  title = "Répartition de la population en Afrique, 2020",
-  credits = paste0(
-    "Sources: Human Development Report 2020\n",
-    "mapsf ",
-    packageVersion("mapsf")
-  )
-)
+# Affichage de cercles proportionnels (nombre d'habitants)
+mf_map(x = data_map,
+       var = "POP",
+       symbol = "circle",
+       type = "prop",
+       inches = 0.40,
+       col = "brown4",
+       border = "white",
+       lwd = 0.5,
+       leg_pos = "bottomleft2",
+       leg_title = "Nombre d'habitants (en millions)", 
+       add = TRUE)
+
+# Ajout d'un titre et des sources
+mf_layout(title = "Répartition de la population en Afrique, 2020",
+          credits = paste0("Sources: Human Development Report 2020\n",
+                           "mapsf ", 
+                           packageVersion("mapsf")))
+
+# Enregistrement du fichier svg
+dev.off()
+
+
+
+##-------------------------------##  
+## Carte choroplèthe avec Export ##
+##-------------------------------##
+
+# Visualisation de la forme de la distribution de la variable "INTERN" 
+hist(data_map$INTERN)
+
+# Initialisation de l'export de la carte
+mf_export(data_map, "Internet_users_in_Afica_2020.png", width = 700)
+
+# Utilisation du thème jsk
+mf_theme("jsk")
+
+# Initialisation d'une carte centré sur la couche géographique "data_map" (pays d'Afrique)
+mf_init(x = data_map)
+
+# Ajour d'un effet d'ombrage pour la couche "data_map"
+mf_shadow(data_map, add = TRUE)
+
+# Ajout d'un aplat de couleur en fonction de la valeur de "INTERN"
+mf_map(x = data_map,
+       var = "INTERN",
+       type = "choro",
+       breaks = "quantile",  # Discrétisation par quantiles
+       nbreaks = 6,          # En 6 classes
+       pal = "Greens",       # Palette de couleur verte
+       leg_val_rnd = 1, 
+       border = "grey50",
+       lwd = 0.5,
+       col_na = "grey80",
+       leg_pos = "topright",
+       leg_title = "Part des utilisateurs (%)",
+       add = TRUE)
+
+# Ajout d'étiquettes pour chaque pays
+mf_label(x = data_map, 
+         var = "name.x", 
+         col = "grey10", 
+         cex = 0.5,
+         overlap = FALSE,          
+         bg = "white",
+         halo = TRUE, 
+         lines = FALSE)
+
+# Ajout d'un titre et des sources
+mf_layout(title = "L'utilisation d'internet en Afrique, 2020",
+          credits = paste0("Sources: Human Development Report 2020\n",
+                           "mapsf ",
+                           packageVersion("mapsf")))
+
+# Enregistrement du fichier png
+dev.off()
+
+
 
 
 
