@@ -116,7 +116,7 @@
     "href": "modules/manipulation.html",
     "title": "Manipulation",
     "section": "",
-    "text": "Utilisation du tidyverse\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nManipulation en R-base\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Manipulation de tableau de données\n\n\nLes fonctions primitives pour manipuler un tableau de données\n\n\n\n\n\n\n14 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/graphique.html",
@@ -250,5 +250,68 @@
     "title": "",
     "section": "",
     "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html",
+    "href": "modules/manipulation/manipulation.html",
+    "title": "Manipulation de tableau de données",
+    "section": "",
+    "text": "Plusieurs packages comme data.table ou tidyverse (dplyr, tidyr, stringr…) sont d’excellentes extensions qui facilitent la manipulation de données. Cependant, le langage R et ses fonctions primitives permettent déjà de faire beaucoup de choses facilement et sans charger de packages supplémentaires… Une bonne pratique en matière de reproductibilité !\nDans cette leçon, nous nous intéressons principalement à la manipulation de tableau, et plus précisément à la manipulation de l’objet data.frame avec R."
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#tableau-de-données",
+    "href": "modules/manipulation/manipulation.html#tableau-de-données",
+    "title": "Manipulation de données",
+    "section": "Tableau de données",
+    "text": "Tableau de données\n\nFichier texte simple"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#interroger-un-objet",
+    "href": "modules/manipulation/manipulation.html#interroger-un-objet",
+    "title": "Manipulation de tableau de données",
+    "section": "Interroger un objet",
+    "text": "Interroger un objet"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#séléctionnerextraire",
+    "href": "modules/manipulation/manipulation.html#séléctionnerextraire",
+    "title": "Manipulation de tableau de données",
+    "section": "Séléctionner/extraire",
+    "text": "Séléctionner/extraire\n\n# df[ligne, colonne]\nmon_tableau[mtcars$cyl==4 & mtcars$wt > 3,  c(1:7) ]\n\n# subset()\nmon_tableau(mtcars, cyl==4 & mtcars$wt > 3, select=c(1:7))"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#regrouper",
+    "href": "modules/manipulation/manipulation.html#regrouper",
+    "title": "Manipulation de tableau de données",
+    "section": "Regrouper",
+    "text": "Regrouper"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#joindre",
+    "href": "modules/manipulation/manipulation.html#joindre",
+    "title": "Manipulation de tableau de données",
+    "section": "Joindre",
+    "text": "Joindre"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#trier",
+    "href": "modules/manipulation/manipulation.html#trier",
+    "title": "Manipulation de tableau de données",
+    "section": "Trier",
+    "text": "Trier\n\nChaîne de caractère"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#le-data.frame",
+    "href": "modules/manipulation/manipulation.html#le-data.frame",
+    "title": "Manipulation de tableau de données",
+    "section": "Le data.frame",
+    "text": "Le data.frame\nLe data.frame est un objet primitif de R qui permet de stocker un tableau de données.\nChaque colonne d’un data.frame est en fait un vecteur (liste d’éléments de même type). On peut donc dire qu’un data.frame est en réalité un ensemble de vecteurs de même longueur (même nombre d’éléments). Pour bien comprendre cela, il suffit de construire un data.frame de toute pièce :\n\n# Construction de plusieurs vecteurs de même longueur (3 éléments à chaque fois)\nnom <- c(\"Modibo Keïta\", \"Moussa Traoré\", \"Alpha Oumar Konaré\")\nnaissance <- c(\"1915-06-04\", \"1936-09-25\", \"1946-02-02\")\narrivee_pouvoir <- c(1960, 1968, 1992)\nduree_pouvoir <- c(8, 22, 10)\nparcours_militaire <- c(FALSE, TRUE, FALSE)\n\n# Construction du data.frame à partir de ces vecteurs\nmon_tableau <- data.frame(nom,\n                          naissance,\n                          arrivee_pouvoir,\n                          duree_pouvoir,\n                          parcours_militaire)\n\nmon_tableau :\n\n\n\n\n\nnom\nnaissance\narrivee_pouvoir\nduree_pouvoir\nparcours_militaire\n\n\n\n\nModibo Keïta\n1915-06-04\n1960\n8\nFALSE\n\n\nMoussa Traoré\n1936-09-25\n1968\n22\nTRUE\n\n\nAlpha Oumar Konaré\n1946-02-02\n1992\n10\nFALSE"
+  },
+  {
+    "objectID": "modules/manipulation/manipulation.html#interroger-un-data.frame",
+    "href": "modules/manipulation/manipulation.html#interroger-un-data.frame",
+    "title": "Manipulation de tableau de données",
+    "section": "Interroger un data.frame",
+    "text": "Interroger un data.frame\nPlusieurs fonctions permettent d’interroger un data.frame sur sa structure et sa composition. Quelques exemples :\n\nhead(mon_tableau)\ntail(mon_tableau)\nView(mon_tableau)\n\nsummary(mon_tableau)\ntail(mon_tableau))\nstr(mon_tableau)\nclass(mon_tableau)\nlength(mon_tableau)\ncolnames(mon_tableau)\ndim(mon_tableau)\nncol(mon_tableau)\nnrow(mon_tableau)"
   }
 ]

@@ -1,3 +1,109 @@
 ---
-title: "Manipulation en  R-base"
+title: "Manipulation de tableau de données"
+subtitle: "Les fonctions primitives pour manipuler un tableau de données"
+author: Hugues pecout
+date: last-modified
+ordre: 01
+code-fold: true
+code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    css: styles.css
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   output-file: "import"
+  #   output-ext:  "pdf"
 ---
+
+
+**Plusieurs packages comme `data.table` ou `tidyverse` (`dplyr`, `tidyr`, `stringr`...) sont d'excellentes extensions qui facilitent la manipulation de données. Cependant, le langage R et ses fonctions primitives permettent déjà de faire beaucoup de choses facilement et sans charger de packages supplémentaires... Une bonne pratique en matière de reproductibilité !**    
+
+Dans cette leçon, nous nous intéressons principalement à la manipulation de tableau, et plus précisément à la manipulation de l'objet data.frame avec R.
+
+## Le data.frame
+
+Le `data.frame` est un objet primitif de R qui permet de stocker un tableau de données.
+
+Chaque colonne d'un `data.frame` est en fait un `vecteur` (liste d’éléments de même type). On peut donc dire qu'un `data.frame` est en réalité un ensemble de `vecteurs` de même longueur (même nombre d'éléments). Pour bien comprendre cela, il suffit de construire un `data.frame` de toute pièce :
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Construction de plusieurs vecteurs de même longueur (3 éléments à chaque fois)
+nom <- c("Modibo Keïta", "Moussa Traoré", "Alpha Oumar Konaré")
+naissance <- c("1915-06-04", "1936-09-25", "1946-02-02")
+arrivee_pouvoir <- c(1960, 1968, 1992)
+duree_pouvoir <- c(8, 22, 10)
+parcours_militaire <- c(FALSE, TRUE, FALSE)
+
+# Construction du data.frame à partir de ces vecteurs
+mon_tableau <- data.frame(nom,
+                          naissance,
+                          arrivee_pouvoir,
+                          duree_pouvoir,
+                          parcours_militaire)
+
+
+```
+
+**mon_tableau :**
+
+```{r warning = FALSE, message = FALSE , eval = TRUE, include=TRUE, echo=FALSE}
+
+knitr::kable(mon_tableau, "simple")
+```
+
+## Interroger un `data.frame`
+
+Plusieurs fonctions permettent d'interroger un `data.frame`  sur sa structure et sa composition. Quelques exemples :
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+head(mon_tableau)
+tail(mon_tableau)
+View(mon_tableau)
+
+summary(mon_tableau)
+tail(mon_tableau))
+str(mon_tableau)
+class(mon_tableau)
+length(mon_tableau)
+colnames(mon_tableau)
+dim(mon_tableau)
+ncol(mon_tableau)
+nrow(mon_tableau)
+
+```
+
+
+## Séléctionner/extraire
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+
+# df[ligne, colonne]
+mon_tableau[mtcars$cyl==4 & mtcars$wt > 3,  c(1:7) ]
+
+# subset()
+mon_tableau(mtcars, cyl==4 & mtcars$wt > 3, select=c(1:7))
+
+```
+
+
+## Regrouper
+
+
+## Joindre
+
+
+## Trier
+
+
+### Chaîne de caractère

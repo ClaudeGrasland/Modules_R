@@ -43,8 +43,8 @@
   {
     "listing": "/modules/manipulation.html",
     "items": [
-      "/modules/manipulation/tidyverse.html",
       "/modules/manipulation/manipulation.html",
+      "/modules/manipulation/tidyverse.html",
       "/modules/manipulation/datatable.html"
     ]
   },
