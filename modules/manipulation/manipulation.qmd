@@ -19,8 +19,7 @@ format:
   #   output-ext:  "pdf"
 ---
 
-
-**Plusieurs packages comme `data.table` ou `tidyverse` (`dplyr`, `tidyr`, `stringr`...) sont d'excellentes extensions qui facilitent la manipulation de données. Cependant, le langage R et ses fonctions primitives permettent déjà de faire beaucoup de choses facilement et sans charger de packages supplémentaires... Une bonne pratique en matière de reproductibilité !**    
+**Plusieurs packages comme `data.table` ou `tidyverse` (`dplyr`, `tidyr`, `stringr`...) sont d'excellentes extensions qui facilitent la manipulation de données. Cependant, le langage R et ses fonctions primitives permettent déjà de faire beaucoup de choses facilement et sans charger de packages supplémentaires... Une bonne pratique en matière de reproductibilité !**
 
 Dans cette leçon, nous nous intéressons principalement à la manipulation de tableau, et plus précisément à la manipulation de l'objet data.frame avec R.
 
@@ -28,7 +27,7 @@ Dans cette leçon, nous nous intéressons principalement à la manipulation de t
 
 Le `data.frame` est un objet primitif de R qui permet de stocker un tableau de données.
 
-Chaque colonne d'un `data.frame` est en fait un `vecteur` (liste d’éléments de même type). On peut donc dire qu'un `data.frame` est en réalité un ensemble de `vecteurs` de même longueur (même nombre d'éléments). Pour bien comprendre cela, il suffit de construire un `data.frame` de toute pièce :
+Chaque colonne d'un `data.frame` est en fait un `vecteur` (liste d'éléments de même type). On peut donc dire qu'un `data.frame` est en réalité un ensemble de `vecteurs` de même longueur (même nombre d'éléments). Pour bien comprendre cela, il suffit de construire un `data.frame` de toute pièce :
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
@@ -59,7 +58,96 @@ knitr::kable(mon_tableau, "simple")
 
 ## Interroger un `data.frame`
 
-Plusieurs fonctions permettent d'interroger un `data.frame`  sur sa structure et sa composition. Quelques exemples :
+Plusieurs fonctions permettent de visualiser la structure d'un `data.frame`. Exemples :
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+# Afficher le tableau de données
+View(mon_tableau)
+
+```
+
+Cette fonction est l'équivalent du *clic* sur l'objet `data.frame` dans l'onglet environnement de l'EDI Rstudio :
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("../img/view1.png")
+```
+
+Il est également possible d'afficher, directement dans la console, les premières lignes ou dernières lignes d'un `data.frame`. 
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+# Afficher les premières lignes (6 par défaut)
+head(mon_tableau)
+
+# Afficher les denrières lignes (6 par défaut)
+head(mon_tableau, n = 10)
+
+```
+
+La fonction `str()` permet d'interroger la structure d'un tableau et de ses variables.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Pour connaitre la structure d'un tableau
+str(mon_tableau)
+
+
+```
+
+Cette fonction est l'équivalent du *clic* sur l'icône bleu situé à gauche d'un `data.frame` dans l'onglet environnement de l'EDI Rstudio :
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("../img/view2.png")
+```
+
+
+Un ensemble de fonction permettent d'interroger les dimensions d'un `data.frame`. Exemples :
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Nombre de colonnes
+ncol(mon_tableau)
+
+# Nombre de lignes
+nrow(mon_tableau)
+
+# Dimension d'un tableau (nombre de colonnes et de lignes)
+dim(mon_tableau)
+
+
+
+length(mon_tableau)
+colnames(mon_tableau)
+
+
+
+# Pou connaitre le type d'un objet
+class(mon_tableau)
+
+```
+
+
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+colnames(mon_tableau)
+
+summary(mon_tableau)
+
+length(mon_tableau)
+colnames(mon_tableau)
+dim(mon_tableau)
+ncol(mon_tableau)
+nrow(mon_tableau)
+
+```
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
@@ -80,9 +168,26 @@ nrow(mon_tableau)
 
 ```
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-fold: FALSE
+
+head(mon_tableau)
+tail(mon_tableau)
+View(mon_tableau)
+
+summary(mon_tableau)
+tail(mon_tableau))
+str(mon_tableau)
+class(mon_tableau)
+length(mon_tableau)
+colnames(mon_tableau)
+dim(mon_tableau)
+ncol(mon_tableau)
+nrow(mon_tableau)
+
+```
 
 ## Séléctionner/extraire
-
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
@@ -96,14 +201,10 @@ mon_tableau(mtcars, cyl==4 & mtcars$wt > 3, select=c(1:7))
 
 ```
 
-
 ## Regrouper
-
 
 ## Joindre
 
-
 ## Trier
-
 
 ### Chaîne de caractère
