@@ -5,9 +5,9 @@ subtitle: "Présentation et téléchargement des données utilisés dans les mod
 
 \
 
-## [I. Afrique data]{.blue-data}
+## [I. UN & CEPII data]{.blue-data}
 
-Présentation des données, source, date... Bla bla bla
+Indicateurs nationaux produits par les Nations-Unis (*Human Development Report 2020*) et le centre français d’étude et de recherche en économie internationale, couvrant la majorité des pays d'Afrique (2020).
 
 ::: center
 <a href="https://bit.ly/3DaCAkX" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
@@ -15,7 +15,13 @@ Présentation des données, source, date... Bla bla bla
 
 \
 
-#### Affichage de données :
+
+
+Ce tableau de données comporte 26 variables décrivant 49 pays.
+
+
+#### Dictionnaire des variables :
+
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
 
@@ -24,33 +30,34 @@ metadata <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don_meta.csv")
 metadata$Type <- sapply(data, class)
 metadata <- metadata[, c(1,2,4,3)]
 
-# install.packages("DT")
+
 library(DT)
-datatable(data ,  options = list(
-  pageLength =5, autoWidth = TRUE
-))
-
-
-```
-
-\
-
-#### Dictionnaire des variables :
-
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
-
-
 datatable(metadata , options = list(
   pageLength = 5, autoWidth = TRUE
 ))
 
+
 ```
 
 \
 
-## [II. GADM Afrique]{.blue-data}
+#### Affichage de données :
 
-Présentation des données, source, date... Bla bla bla
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+datatable(data ,  options = list(
+  pageLength =5, autoWidth = TRUE
+))
+
+```
+
+\
+
+## [II. GADM data]{.blue-data}
+
+Couche géographique des frontières nationales des pays d'Afrique issues de la base de données [GAMD](https://gadm.org/index.html) (2023).
+Cette couche géographique comporte peu d'attributs : code iso3, nom, sous-région d'appartenance.
+
 
 ::: center
 <a href="https://bit.ly/3DaAUb2" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
@@ -58,12 +65,27 @@ Présentation des données, source, date... Bla bla bla
 
 \
 
-#### Affichage de données :
+#### Attributs de la couche géographique :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
 
 library(sf)
 pays_afrique <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
+
+# install.packages("DT")
+library(DT)
+datatable(pays_afrique ,  options = list(
+  pageLength =5, autoWidth = TRUE
+))
+
+
+```
+
+#### Affichege de géométrie :
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
+
+
 
 library(mapview)
 mapview(pays_afrique, zcol = "subregion")
@@ -73,25 +95,11 @@ mapview(pays_afrique, zcol = "subregion")
 
 \
 
-#### Dictionnaire des variables :
 
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
-
-
-# install.packages("DT")
-library(DT)
-datatable(pays_afrique ,  options = list(
-  pageLength =5, autoWidth = TRUE
-))
-
-
-```
-
-\
 
 ## [III. Africapolis]{.blue-data}
 
-Présentation des données, source, date... Bla bla bla
+Extraction (**Ghana, Bénin et Togo**) de la base de données géographique [AFRICAPOLIS](https://africapolis.org/fr?country=Angola&keyfigure=totalPop&type=abs&year=2015) (2023), sur l'emprise des agglomérations urbaines en Afrique.
 
 ::: center
 <a href="https://bit.ly/3wnQKeG" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
@@ -99,29 +107,15 @@ Présentation des données, source, date... Bla bla bla
 
 \
 
-#### Affichage d'un échantillon (uniquement Ghana, Bénin et Togo :
+#### Attributs de la couche géographique :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE}
 
 africapolis_extract <- st_read("data/AFRICAPOLIS_2020/africapolis_extract.shp",  quiet = TRUE)
 
-
-# Affichage
-mapview(africapolis_extract)
-
-
-```
-
-\
-
-#### Dictionnaire des variables :
-
-```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
-
-
 # install.packages("DT")
 library(DT)
-datatable(pays_afrique ,  options = list(
+datatable(africapolis_extract,  options = list(
   pageLength =5, autoWidth = TRUE
 ))
 
@@ -130,9 +124,22 @@ datatable(pays_afrique ,  options = list(
 
 \
 
+#### Affichage de la couche géographique :
+
+```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE}
+
+# Affichage
+mapview(africapolis_extract)
+
+```
+
+\
+
+
 ## [III. Elevation Bénin]{.blue-data}
 
-Présentation des données, source, date... Bla bla bla https://energydata.info/dataset/benin-elevation-2008/resource/55593816-3ef3-45bf-b7f0-7aea16ddaf62
+Données numériques d'élévation (raster en format TIF) pour le Bénin provenant de la base de données [SRTM 90m Digital Elevation du CIAT. 
+Database v4.1](https://bigdata.cgiar.org/srtm-90m-digital-elevation-database/). Les données SRTM originales de l'USGS/NASA ont été fournies dans des cellules d'environ 90m x 90m.
 
 ::: center
 <a href="https://bit.ly/3XqLAKR" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger les données</a>
@@ -140,14 +147,14 @@ Présentation des données, source, date... Bla bla bla https://energydata.info/
 
 \
 
-#### Affichage de données :
+#### Affichage du raster :
 
 ```{r echo = FALSE, include = TRUE, eval = TRUE, warning= FALSE, message=FALSE, fig.align='center'}
 
 library(terra)
 Elevation_Benin <- rast("data/elevation.tif") 
 
-plot(Elevation_Benin)
+plot(Elevation_Benin, col=terrain.colors(50))
 
 ```
 

@@ -46,6 +46,8 @@ mon_tableau <- data.frame(nom,
                           duree_pouvoir,
                           parcours_militaire)
 
+# Vérification du type d'objet créer
+class(mon_tableau)
 
 ```
 
@@ -56,7 +58,7 @@ mon_tableau <- data.frame(nom,
 knitr::kable(mon_tableau, "simple")
 ```
 
-## Interroger un `data.frame`
+## Interroger un df
 
 Plusieurs fonctions permettent de visualiser la structure d'un `data.frame`. Exemples :
 
@@ -70,7 +72,7 @@ View(mon_tableau)
 
 Cette fonction est l'équivalent du *clic* sur l'objet `data.frame` dans l'onglet environnement de l'EDI Rstudio :
 
-```{r, echo=FALSE, out.width="90%", fig.align='center'}
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("../img/view1.png")
 ```
 
@@ -105,13 +107,15 @@ knitr::include_graphics("../img/view2.png")
 ```
 
 
-Un ensemble de fonction permettent d'interroger les dimensions d'un `data.frame`. Exemples :
+Un ensemble de fonction permettent d'interroger les dimensions d'un `data.frame`. Ex :
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
 
 # Nombre de colonnes
+# length(mon_tableau) ou :
 ncol(mon_tableau)
+
 
 # Nombre de lignes
 nrow(mon_tableau)
@@ -120,91 +124,318 @@ nrow(mon_tableau)
 dim(mon_tableau)
 
 
-
-length(mon_tableau)
-colnames(mon_tableau)
-
-
-
-# Pou connaitre le type d'un objet
-class(mon_tableau)
-
 ```
 
+La fonction `colnames()` permet de récupérer les noms de colonnes.
 
-
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
+```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
 
 colnames(mon_tableau)
+
+```
+
+Enfin la fonction `summary()`, qui peut être utilisée sur n'importe quel type d'objet, renvoie un résumé statistique pour chaque colonne lorsqu'elle est exécutée sur un `data.frame`.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
 
 summary(mon_tableau)
 
-length(mon_tableau)
-colnames(mon_tableau)
-dim(mon_tableau)
-ncol(mon_tableau)
-nrow(mon_tableau)
+```
+
+
+
+## Créer un colonne
+
+La syntaxe suivante `mon_tableau$nom` utilisant le symbole "$" permet de sélectionner une colonne (ici 'nom') d'un `data.frame`. Cette syntaxe peut également être utilisée pour créer une nouvelle colonne. Exemple :
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+mon_tableau$new_col <- c("val1", "val2", "val3")
 
 ```
+
+Cette syntaxe permet également créer une nouvelle colonne à partir de colonnes existantes :
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+mon_tableau$fin_pouv <- mon_tableau$arrivee_pouvoir + mon_tableau$duree_pouvoir
+
+```
+
+**mon_tableau avec ses deux nouvelles colonnes :**
+
+```{r warning = FALSE, message = FALSE , eval = TRUE, include=TRUE, echo=FALSE}
+knitr::kable(mon_tableau, "simple")
+```
+
+\
+
+## Séléctionner
+
+Le symbole "$" permet de sélectionner une colonne d'un tableau. Pour sélectionner plusieurs colonnes et également des lignes précises, deux solutions sont possibles. 
+
+#### Les crochets [ , ]
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
 
-head(mon_tableau)
-tail(mon_tableau)
-View(mon_tableau)
+# df[toutes les lignes, 4e colonne]
+mon_tableau[, 4]
 
-summary(mon_tableau)
-tail(mon_tableau))
-str(mon_tableau)
-class(mon_tableau)
-length(mon_tableau)
-colnames(mon_tableau)
-dim(mon_tableau)
-ncol(mon_tableau)
-nrow(mon_tableau)
+# df[lignes 1 à 2, toutes les colonnes]
+mon_tableau[1:2, ]
+
+# df[toutes les lignes, 1er et 3e colonne]
+mon_tableau[, c(1,3)]
+
+# df[toutes les lignes où la durée du pouvoir est égal ou supérieur à 10]
+mon_tableau[duree_pouvoir  <= 10, ]
+
 
 ```
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
+Exemple, sélection des valeurs situées ligne 2, dans les colonnes "nom" et "naissance" :
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
 
-head(mon_tableau)
-tail(mon_tableau)
-View(mon_tableau)
-
-summary(mon_tableau)
-tail(mon_tableau))
-str(mon_tableau)
-class(mon_tableau)
-length(mon_tableau)
-colnames(mon_tableau)
-dim(mon_tableau)
-ncol(mon_tableau)
-nrow(mon_tableau)
+# df[ligne 2, colonne "nom"]
+mon_tableau[2 , c("nom", "naissance")]
 
 ```
 
-## Séléctionner/extraire
 
-```{r warning = FALSE, message = FALSE , eval = FALSE}
+#### La fonction `subset()`
+
+La fonction primitive `subset()` permet également de réaliser des sélections dans un `data.frame`. Avec cette fonction, il n'est pas possible de sélectionner des lignes avec leur index. La sélection de ligne doit forcément répondre à une condition. 
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
 
-
-# df[ligne, colonne]
-mon_tableau[mtcars$cyl==4 & mtcars$wt > 3,  c(1:7) ]
-
-# subset()
-mon_tableau(mtcars, cyl==4 & mtcars$wt > 3, select=c(1:7))
+subset(mon_tableau,   
+       subset = duree_pouvoir <= 10,
+       select = c("nom", "naissance"))
 
 ```
+
+\
 
 ## Regrouper
 
+#### Fonction `aggregate()`
+
+La fonction primitive pour regrouper des lignes d'un `data.frame` en fonction d'une valeur n'est pas très simple d'utilisation. De plus, elle ne permet de calculer qu'une seul nouvelle variable à partir du regroupement opéré. La fonction `goup_by()` du package `dplyr` lui est souvent préférée.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+#  Regroupement les lignes sur variable "parcours_militaire"
+# et calcul du nombre d'individus regroupés
+aggregate(mon_tableau$parcours_militaire, 
+          by=list(militaire=parcours_militaire),
+          FUN = length)
+  
+  
+```
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+#  Regroupement les lignes sur variable "parcours_militaire"
+# et calcul de la durée moyenne au pouvoir pour chaque groupe
+aggregate(duree_pouvoir ~ parcours_militaire, 
+          data = mon_tableau, 
+          FUN = mean)
+  
+  
+```
+
+\
+
 ## Joindre
+
+Un jointure peut s'effectuer à l'aide de la fonction primitive `merge()`.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Construction d'un second tableau 
+nom <- c("Modibo Keïta", "Moussa Traoré", "Alpha Oumar Konaré")
+deces <-  c(1977, 2020, NA)
+mon_tableau_bis <- data.frame(nom, deces)
+
+# Jointure de deux tableaux par le "nom"
+merge(mon_tableau, mon_tableau_bis, by="nom")
+
+```
+
+\
 
 ## Trier
 
-### Chaîne de caractère
+La fonction primitive `sort()` peut être utilisée pour trier les éléments d'un vecteur, mais pour trier un tableau en fonction des valeurs d'une ou de plusieurs variables, utilisez la fonction `order()`. Il est obligatoire d'assigner le résultat dans un objet pour que le tri opéré soit gardé en mémoire.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+mon_tableau[order(duree_pouvoir, decreasing = TRUE), 1:4]
+
+```
+
+\
+
+## Chaîne de caractère
+
+La manipulation de chaîne de caractère dans un tableau est une opération classique. Si il existe des packages très puissant comme [`stringr`](https://stringr.tidyverse.org/) pour traiter les chaînes de caractère, les fonctions primitives du langage R offrent un certain nombre de fonctionnalités. 
+
+#### Concatener 
+
+Les fonction paste et paste0 permet de concatener des chaîne de caractère
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+paste(mon_tableau$nom, "a été président du Mali pendant", mon_tableau$duree_pouvoir, "ans")
+
+```
+
+
+#### Gérer la casse 
+
+Plusieurs foncntions primitives permettent de gérer la casse d'une chaîne de caractère.
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Transformation en minuscule
+tolower(mon_tableau$nom)
+
+# Transformation en majuscule
+toupper(mon_tableau$nom)
+
+# Minuscule ou majuscule 
+casefold(mon_tableau$nom, upper = TRUE)
+
+```
+
+
+
+#### Modifier
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Pour extraire une partie de chaîne de caractère
+substring(text = mon_tableau$naissance, first =  1, last = 4)
+
+# Pour remplacer une partie de chaîne de caractère
+gsub(x = mon_tableau$naissance , pattern = "-" , replacement = "/")
+
+# Découper une chaîne de caractère 
+strsplit(x = mon_tableau$naissance, split = "-")
+
+```
+  
+\
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder3.png")
+```
+
+[4. Importez les fichiers suivants en utilisant les fonctions adéquates :]{.question}
+
+-   data/DEV_AFRIA_2018/**afrika_don.csv**\
+-   data/GADM_AFRICA_2020/**afrika_map.shp**\
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Pour importer le fichier csv (afrika_don.csv)
+read.csv()
+read.csv2()
+
+# Pour importer le fichier ESRI Shapefile (afrika_map.shp)
+library(sf)
+st_read()
+
+
+```
+
+[5. Faîte une jointure entre le fond de carte des pays et le tableau de données]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+merge(x = ... , y = ... , by = "...", all.x = ...) 
+
+```
+
+
+[6. Créez une nouvelle colonne stockant le nom de chaque pays en MAJUSCULE]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+data_map_fr <- data_map[data_map$... == ... , ]
+
+```
+
+
+[7. Sélectionnez uniquement les pays francophone (LANGR = 1)]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+data_map_fr <- data_map[data_map$... == ... , ]
+
+```
+
+[8. Calculer le nombre de pays francophone par sous-région]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+aggregate(... ~ ... , data = ... , FUN = ...)
+
+```
+
+[9. Modifiez les noms des colonnes du tableau de regroupement crée pour les rendre plus intelligibles]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+colnames(...) <- c("...", "...")
+
+```
+------------------------------------------------------------------------
+
+
+\
+
+::: center
+<a href="/correction/Manipulation_dataframe.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
+
+
+:::

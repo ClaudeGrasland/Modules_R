@@ -10,9 +10,8 @@ code-fold: true
 code-tools: true
 ---
 
-:::{.callout-note}
-Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
-Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
+::: callout-note
+Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
 :::
 
 \
@@ -34,22 +33,154 @@ Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une iss
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
 |:-----------------------------------------:|:---------------------------:|
-| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Couche géographique des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 
 ```{r, echo=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("../img/folder2.png")
+knitr::include_graphics("../img/folder4.png")
 ```
 
+[4. Importez les fichiers suivants en utilisant les fonctions adéquates :]{.question}
 
-
-[7. Exportez le graphique à l'aide d'une fonction (format png)]{.question}
+-   data/GADM_AFRICA_2020/**afrika_map.shp**\
+-   data/AFRICAPOLIS_2020/**africapolis_extract.shp**\
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
-dev.print(device = ..., file = "...")
+
+# Pour importer des fichiers ESRI Shapefile 
+library(sf)
+... <- st_read()
+... <- st_read()
+
+```
+
+[4. Vérifiez que ces deux couches soient bien dans le même système de référence géographique. Si ce n'est pas le cas, harmonisez-les en WGS84]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Pour connaitre le système de référence et de projection d'une couche
+st_crs()
+
+# Pour transformer la projection d'une couche
+st_transform()
+
+# Pour importer des fichiers ESRI Shapefile 
+library(sf)
+... <- st_read()
+... <- st_read()
+
+```
+
+
+[5. Créez une nouvelle couche géographique à partir des centroïdes des agglomérations urbaines (AFRICAPOLIS) ]{.question}
+
+Attention, les polygones des agglomérations urbaines comportent des erreurs topologiques. **Vous devez d'abords corriger leurs géométries pour réussir à extraire leurs centroïdes**.
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Correction de de la topologie des polygones 
+... <- st_make_valid(...)
+
+# Extraction des centroïdes des polygones
+... <- st_centroid(...)
+
+
+```
+
+
+[6. Créez une quatrième couche géographique (point) à partir des coordonnées de l'Hôtel Djegba, à Ouidah (Bénin) : ]{.question}
+
+- Latitude = **6.323648667935729**
+- Longitude = **2.080248682100427**
+- CRS = **WGS84** (4326)
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Création d'un data.frame avec une colonne latitude et longitude
+djegba_hotel <- data.frame(name = "...", 
+                           lat = ..., 
+                           long = ...)
+
+# Création d'un couche géographique à partir de ces cordonnées
+djegba_hotel_geo <- st_as_sf(..., 
+                             coords = c("...", "..."), 
+                             crs = ...)
+
+```
+
+[7. Affichez les quatre couches géographiques avec `mapview` pour contrôler vos données : ]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+library(mapview)
+mapview(...) + 
+  mapview(...) + 
+  mapview(...) + 
+  mapview(...)
+
+```
+
+
+[8. Calculez la part de la superficie des agglomérations urbaines sur la superficie totale du Ghana, Togo et Bénin]{.question}
+
+Voici les étapes à suivre :
+
+A. Calculez la surface des agglomérations urbaines. Stocker ce résultat dans des nouvelles colonnes \
+
+B. 
+
+Intersecter les pays par les agglomération urbaine afin de récupérer le pays de localisation pour chaque 
+
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# A. Extraction des 3 pays étudié
+
+
+# B.
+
+
+  route_com <- st_intersection(route, com[,"INSEE_COM"])
+
+```
+
+[9. ]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+
+```
+
+
+[10. ]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+
+```
+
+
+[11. ]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
 
 ```
 
@@ -92,5 +223,3 @@ dev.print(device = png, file = "mon_graphique.png", width = 600)
 :::
 
 \
-
-

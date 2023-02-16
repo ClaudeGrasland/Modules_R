@@ -173,7 +173,6 @@ write_sas(data = mon_tableau, path = "../data/mon_tableau_sas.sas7bdat")
 
 #### Fichier SPSS
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Voir l'exemple"
 
@@ -187,10 +186,7 @@ write_sav(data = mon_tableau, path =  "../data/mon_tableau_spss.sav")
 
 ```
 
-
-
 #### Fichier Stata
-
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Voir l'exemple"
@@ -387,8 +383,6 @@ dev.off()
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-
-
 [1. Créez un projet Rstudio]{.question}
 
 *File/New Project/New Directory...*
@@ -400,8 +394,6 @@ dev.off()
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Raster délévation du Bénin (???)  | <a href="https://bit.ly/3XqLAKR" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
-
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 
@@ -449,8 +441,6 @@ rast()
 <a href="/correction/import.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
 
-
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
 #| code-summary: "Correction"
   
@@ -478,5 +468,7 @@ data_tif <- rast("data/elevation.tif")
 \
 
 <!-- ::: center -->
+
 <!-- <a href="/import.pdf" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a> -->
+
 <!-- ::: -->

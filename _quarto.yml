@@ -35,25 +35,25 @@ website:
             text: Toutes les leçons
           - href: modules/import/import.qmd
             text: Import & export
-          - href: modules/import/api.qmd
-            text: Package & API
-          - href: modules/import/connectBD.qmd
-            text: Connexion BD
-          - href: modules/import/osm.qmd
-            text: OpenStreetMap
-          - href: modules/import/scraping.qmd 
-            text: Web scraping
+          # - href: modules/import/api.qmd
+          #   text: Package & API
+          # - href: modules/import/connectBD.qmd
+          #   text: Connexion BD
+          # - href: modules/import/osm.qmd
+          #   text: OpenStreetMap
+          # - href: modules/import/scraping.qmd 
+          #   text: Web scraping
             
       - section: "**Manipulation**"
         contents:
           - href: modules/manipulation.qmd
             text: Toutes les leçons
           - href: modules/manipulation/manipulation.qmd
-            text: R-base
-          - href: modules/manipulation/datatable.qmd
-            text: Le package `data.table`
-          - href: modules/manipulation/tidyverse.qmd 
-            text: Le package `tidyverse`
+            text: Manipulation de tableau
+          # - href: modules/manipulation/datatable.qmd
+          #   text: Le package `data.table`
+          # - href: modules/manipulation/tidyverse.qmd 
+          #   text: Le package `tidyverse`
             
       - section: "**Graphique**"
         contents:
@@ -61,19 +61,19 @@ website:
             text: Toutes les leçons
           - href: modules/graphique/Rbase_graph.qmd
             text: Graphique R-base
-          - href: modules/graphique/ggplot2.qmd
-            text: Graphique avec `ggplot2`
+          # - href: modules/graphique/ggplot2.qmd
+          #   text: Graphique avec `ggplot2`
             
       - section: "**Statistique**"
         contents:
           - href: modules/statistique.qmd
             text: Toutes les leçons
-          - href: modules/statistique/statistique_uni.qmd
-            text: Univariée
-          - href: modules/statistique/statistique_bi.qmd
-            text: Bivariée
-          - href: modules/statistique/statistique_multi.qmd
-            text: Multivariée
+          # - href: modules/statistique/statistique_uni.qmd
+          #   text: Univariée
+          # - href: modules/statistique/statistique_bi.qmd
+          #   text: Bivariée
+          # - href: modules/statistique/statistique_multi.qmd
+          #   text: Multivariée
           
       - section: "**Géomatique**"
         contents:
@@ -90,21 +90,22 @@ website:
             text: Toutes les leçons
           - href: modules/cartographie/map_sf.qmd
             text: Cartographie statique
-          - href: modules/cartographie/map_dyn.qmd
-            text: Cartographie dynamique              
+          # - href: modules/cartographie/map_dyn.qmd
+          #   text: Cartographie dynamique              
             
+          
       - section: "**Reproductibilité**"
         contents:
           - href: modules/reproductibilite.qmd
             text: Toutes les leçons
           - href: modules/reproductibilite/minicran.qmd
             text: Le package `miniCRAN`
-          - href: modules/reproductibilite/renv.qmd
-            text: Le package `renv`
-          - href: modules/reproductibilite/programmation_lettree.qmd
-            text: Literate programming
-          - href: modules/reproductibilite/notebook.qmd
-            text: Les notebooks  
+          # - href: modules/reproductibilite/renv.qmd
+          #   text: Le package `renv`
+          # - href: modules/reproductibilite/programmation_lettree.qmd
+          #   text: Literate programming
+          # - href: modules/reproductibilite/notebook.qmd
+          #   text: Les notebooks  
 
             
       - text: "---"
