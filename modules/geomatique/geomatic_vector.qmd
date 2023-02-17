@@ -59,7 +59,7 @@ library(sf)
 
 ```
 
-[4. Vérifiez que ces deux couches soient bien dans le même système de référence géographique. Si ce n'est pas le cas, harmonisez-les en WGS84]{.question}
+[4. Vérifiez que ces deux couches sont bien dans le même système de référence géographique. Si ce n'est pas le cas, harmonisez-les en WGS84.]{.question}
 
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
@@ -70,11 +70,6 @@ st_crs()
 
 # Pour transformer la projection d'une couche
 st_transform()
-
-# Pour importer des fichiers ESRI Shapefile 
-library(sf)
-... <- st_read()
-... <- st_read()
 
 ```
 
@@ -111,15 +106,14 @@ djegba_hotel <- data.frame(name = "...",
                            lat = ..., 
                            long = ...)
 
-# Création d'un couche géographique à partir de ces cordonnées
+# Création d'une couche géographique à partir de ces cordonnées
 djegba_hotel_geo <- st_as_sf(..., 
                              coords = c("...", "..."), 
                              crs = ...)
 
 ```
 
-[7. Affichez les quatre couches géographiques avec `mapview` pour contrôler vos données : ]{.question}
-
+[7. Affichez les quatre couches géographiques importées ou créées avec `mapview` pour contrôler vos données : ]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -135,54 +129,87 @@ mapview(...) +
 
 [8. Calculez la part de la superficie des agglomérations urbaines sur la superficie totale du Ghana, Togo et Bénin]{.question}
 
-Voici les étapes à suivre :
+Pour vous aider, voici les étapes à suivre :
 
-A. Calculez la surface des agglomérations urbaines. Stocker ce résultat dans des nouvelles colonnes \
-
-B. 
-
-Intersecter les pays par les agglomération urbaine afin de récupérer le pays de localisation pour chaque 
-
-
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-
-# A. Extraction des 3 pays étudié
-
-
-# B.
-
-
-  route_com <- st_intersection(route, com[,"INSEE_COM"])
-
-```
-
-[9. ]{.question}
+A. Calculez les surfaces de chaque agglomérations urbaines. Stockez directement ces valeurs dans la couche géographique concernée en créant une nouvelle colonne\
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
+# st_area() permet de calculer la surface des polygones d'un objet sf
+...$... <- st_area(...)
 
 ```
 
 
-[10. ]{.question}
+B. Calculez la superficie total des aires urbaines du Ghana, Togo et Bénin en regroupement les agglomérations par leur pays de localisation (iso3)\
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+library(dplyr)
+
+... <- ... %>% 
+          group_by(...) %>% 
+          summarise(... = sum(...))
+
+```
+
+C. Calculez les surfaces totales de chaque pays d'Afrique. Stockez directement ces valeurs dans la couche géographique concernée en créant une nouvelle colonne\
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+...$... <- st_area(...)
+
+```
+
+D. Réalisez une jointure entre la couche géographique des agglomérations urbaines regroupées par pays et le tableau des attributs de la couche géographique des pays d'Afrique.
+
+Attention il n'est pas possible de joindre deux couches géographiques entre-elles car chacune possède sa propre géométrie. Vous devez donc supprimez la géométrie de la couche géographique des pays d'Afrique pour réaliser la jointure. Pour cela, vous pouvez utiliser la fonction `st_drop_geometry()`.
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+... <- merge(x = ..., 
+             y= st_drop_geometry(...),
+             by.x="...",  
+             by.y="...")
+
+```
+
+
+E. A partir des deux colonnes stockant la superficie totale des agglomérations urbaines par pays et la surface totale de ces mêmes pays, calculez la part de la superficie des agglomérations urbaines sur la superficie totale. Stockez les valeurs dans une nouvelle colonne.
+
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
+# Calcul d'un nouvelle attribut (% de la surface des agglomérations) 
+# à partir de deux colonnes existantes
+...$... <- ...$... / ...$... * 100
+                
+# Pour arrondir les valeurs calculées :
+round()
 
 ```
-
-
-[11. ]{.question}
+  
+  
+[9. Quel pays est, proportionnellement à sa superficie, le plus recouvert par des agglomérations urbaines.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
+View(...)
+
+# Ou 
+
+...[...$...== max(...$...), ]
 
 ```
+
+
 
 ------------------------------------------------------------------------
 

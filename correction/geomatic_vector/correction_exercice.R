@@ -68,20 +68,25 @@ mapview(pays) +
 
 
 # pays_GTB <- pays[pays$iso3 %in% c("GHA", "TGO", "BEN"), ] 
-pays$sup_pays <- st_area(pays)
+
 africapolis$sup_urb <- st_area(africapolis)
 
 
 library(dplyr)
-test <- africapolis %>% 
-  group_by(ISO3) %>% 
-  summarise(sup_urb = sum(sup_urb))
-
-test2 <-merge(test, st_drop_geometry(pays),by.x="ISO3", by.y="iso3")
-
-test2$part_urb <- round(test2$sup_urb / test2$sup_pays * 100, 2)
+surf_agglo_by_pays <- africapolis %>% 
+                          group_by(ISO3) %>% 
+                          summarise(sup_urb = sum(sup_urb))
 
 
+
+pays$sup_pays <- st_area(pays)
+
+
+surf_agglo_by_pays <-merge(surf_agglo_by_pays, st_drop_geometry(pays),by.x="ISO3", by.y="iso3")
+
+surf_agglo_by_pays$part_urb <- round(surf_agglo_by_pays$sup_urb / surf_agglo_by_pays$sup_pays * 100, 2)
+
+surf_agglo_by_pays[surf_agglo_by_pays$part_urb == max(surf_agglo_by_pays$part_urb), ]
 
 intersection<- st_intersection(pays, africapolis)
 
