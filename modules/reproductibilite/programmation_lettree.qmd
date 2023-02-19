@@ -1,8 +1,20 @@
 ---
-title: "Literate programming"
-subtitle: ""
+title: "Programmation lettrée et notebook"
+subtitle: "Optimiser le partage et la reproductibilité de son code"
 ordre: 03
-author: work in progress
+author: Hugues Pecout
 code-fold: true
 code-tools: true
 ---
+
+
+
+Un diaporama de [présentation](https://ee-cist.github.io/OUT1_NotebookR/)
+
+
+
+<iframe class="slide" src="https://ee-cist.github.io/OUT1_NotebookR/">
+
+</iframe>
+
+

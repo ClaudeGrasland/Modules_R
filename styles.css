@@ -37,8 +37,11 @@ color:#2a8cbe;
 
 
 #exo{
-background-color:#2a8cbe;
-padding: 30px;
+
+  border-radius: 25px;
+  border: 2px solid #2a8cbe;
+  padding: 30px;
+
 
 }
 
@@ -48,6 +51,15 @@ color:#2a8cbe;
 }
 
 .question{
-color:white;
+color:#2a8cbe;
 font-weight: bold;
+}
+
+
+.slide{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 750px;
+    height: inherit !important; 
 }

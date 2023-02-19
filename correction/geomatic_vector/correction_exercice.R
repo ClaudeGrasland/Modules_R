@@ -1,94 +1,134 @@
-#### EXERCICE GEOMATIQUE avec R ####
+######################################################
+####--------- EXERCICE GEOMATIQUE avec R--------- ####
+######################################################
 
 
-##--------------------##  
-## Import des données ##
-##--------------------##
+##------------------ PACKAGES ----------------------##
 
-# Import du fond de carte pays
+# install.packages("sf")
+# install.packages("mapview")
+# install.packages("dplyr")
+
+
+
+##------------------- IMPORT -----------------------##
+
 library(sf)
-pays <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
-
-# Import des données AFRICAPOLIS
 africapolis <- st_read("data/AFRICAPOLIS_2020/africapolis_extract.shp",  quiet = TRUE)
 
 
-##---------------------------------------------##  
-## Contrôle et transformation de la projection ##
-##---------------------------------------------##
+
+
+
+##---------- Contrôle CRS et reprojection ----------##  
 
 # Connaitre le système de référence et de projection d'une couche
-st_crs(pays)
 st_crs(africapolis)
-
-# Transformation de la projection d'une couche 
-# Pays == africapolis
-pays <- st_transform(pays, crs = st_crs(africapolis))
-
-
-##-------------------------------------##  
-## création d'une couche de centroïdes ##
-##-------------------------------------##
-
-# Correction de la topologie des polygones
-africapolis <- st_make_valid(africapolis)
-
-# Extraction des centroïdes (création d'une couche géographique ponctuelle)
-africapolis_centre <- st_centroid(africapolis)
+ 
+# Reprojection en UTM zone 31N
+africapolis <- st_transform(africapolis, crs = 32631)
 
 
 
-##------------------------------------##
-## Création d'une couche géographique ##
-##------------------------------------##
 
-# Création d'un data.frame avec une colonne latitude et longitude
-djegba_hotel <- data.frame(name = "Hotel Djegba", 
-                           lat = 2.080248682100427, 
-                           long = 6.323648667935729)
-
-# Création d'un couche géographique à partir de ces cordonnées
-djegba_hotel_geo <- st_as_sf(djegba_hotel, 
-                             coords = c("lat", "long"), 
-                             crs = 4326)
+##------------ Affichage de la couche --------------##
 
 
-##----------------------------------##
-## Affichage intéractif des couches ##
-##----------------------------------##
+# Affichage de la geometrie
+plot(st_geometry(africapolis))
 
-# Affichage interactif du point sur le fond de carte OpenStreetMap
+
+# Affichage sur un fond de carte dynamique
 library(mapview)
-mapview(pays) +
-  mapview(africapolis) + 
-  mapview(africapolis_centre ) + 
-  mapview(djegba_hotel_geo) 
+mapview(africapolis)
 
 
 
 
-# pays_GTB <- pays[pays$iso3 %in% c("GHA", "TGO", "BEN"), ] 
 
-africapolis$sup_urb <- st_area(africapolis)
+##--------------- Calcul de surface ----------------##
 
+
+# Calcul des surface (dans l'unité du crs)
+africapolis$superficie <- st_area(africapolis)
+
+
+
+
+
+##------ Regroupement - calcul surface totale ------##
 
 library(dplyr)
-surf_agglo_by_pays <- africapolis %>% 
-                          group_by(ISO3) %>% 
-                          summarise(sup_urb = sum(sup_urb))
+
+Surf_tot <- africapolis %>% 
+                group_by(ISO3) %>% 
+                summarise(superficie_tot = sum(superficie),
+                          nb_agglo = n())
+
+# Affichage du résultat
+View(Surf_tot)
 
 
 
-pays$sup_pays <- st_area(pays)
 
 
-surf_agglo_by_pays <-merge(surf_agglo_by_pays, st_drop_geometry(pays),by.x="ISO3", by.y="iso3")
+##----- Création d'une couche géographique (sf) -----##
 
-surf_agglo_by_pays$part_urb <- round(surf_agglo_by_pays$sup_urb / surf_agglo_by_pays$sup_pays * 100, 2)
 
-surf_agglo_by_pays[surf_agglo_by_pays$part_urb == max(surf_agglo_by_pays$part_urb), ]
+# Création d'un data.frame avec une colonne latitude et longitude
+IRSP <- data.frame(name = "Institut Régional de Santé Publique", 
+                   lat = 2.0879482065861783, 
+                   long =  6.349223507626634)
 
-intersection<- st_intersection(pays, africapolis)
+# Création d'un couche géographique à partir de ces cordonnées
+IRSP_geo <- st_as_sf(IRSP, 
+                     coords = c("lat", "long"), 
+                     crs = 4326)
 
-st_crs(africapolis)
+
+# Reprojection en UTM zone 31N
+IRSP_geo <- st_transform(IRSP_geo, crs = 32631)
+
+
+
+
+
+##----------- Création d'une zone tampon ------------##
+
+# Zone dtampon de 50000 métres
+IRSP_buff_50km <- st_buffer(x = IRSP_geo, dist = 50000)
+
+
+
+
+
+
+##--------------- Sélection spatiale ----------------##
+
+# Quelles agglomérations intersectent la zone tampon ?
+africapolis$in_buffer <- st_intersects(africapolis, IRSP_buff_50km, sparse = FALSE)
+
+
+
+
+
+##--------------- Affichage des couches -------------##
+
+plot(st_geometry(IRSP_buff_50km), col = NA)
+plot(africapolis["in_buffer"],border = NA, add = TRUE)
+plot(st_geometry(IRSP_geo), col="red", pch = 20, cex = 1.5, add = TRUE)
+plot(st_geometry(IRSP_buff_50km),  border = "red", lwd = 2, add = TRUE)
+
+
+
+
+
+
+##-- Nombre d'habitants dans les proches agglomérations ---##
+
+# Sélection des agglomérations qui intersectent la zone tampon
+africapolis_in_buff <- africapolis[africapolis$in_buffer == TRUE, ]
+
+# Calcul de la population totale de ces agglomérations
+sum(africapolis_in_buff$Pop2015)
 

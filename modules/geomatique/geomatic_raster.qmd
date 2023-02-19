@@ -10,9 +10,12 @@ code-fold: true
 code-tools: true
 ---
 
-:::{.callout-note}
-Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). 
-Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
+
+
+## <i class="bi bi-book"></i> Manuel {.title}
+
+::: callout-note
+Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
 :::
 
 \
@@ -26,69 +29,7 @@ Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une iss
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-[1. Créez un projet Rstudio]{.question}
 
-*File/New Project/New Directory...*
-
-[2. Téléchargez les données suivantes :]{.question}
-
-|             Intitulé              |                                                                     Téléchargement                                                                      |
-|:-----------------------------------------:|:---------------------------:|
-| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
-[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
-
-```{r, echo=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("../img/folder2.png")
-```
-
-
-
-[7. Exportez le graphique à l'aide d'une fonction (format png)]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-  
-dev.print(device = ..., file = "...")
-
-```
-
-------------------------------------------------------------------------
-
-\
-
-::: center
-<a href="/correction/graphique_rbase.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
-:::
-
-```{r warning = FALSE, message = FALSE , eval = FALSE, echo = FALSE, include = FALSE}
-#| code-summary: "Correction"
-  
-# Import des données
-data <- read.csv2(file = "../data/DEV_AFRICA_2018/afrika_don.csv")
-
-# Paramétrage de la couleur de fond de la fenêtre graphique
-par(bg = "cornsilk3")
-
-# Histogramme sur la variable 'POP'
-hist(data$POP, 
-     breaks  = quantile(data$POP),
-     col = "green4",
-     border = "white",
-     xlab = "Nombre d'habitants (millions)", 
-     ylab = "Proportion", 
-     main = "Répartition des pays africains selon leur population")
-
-# Ajout de marques pour chaque individus (axe des abscisses)
-rug(data$POP)
-
-# Ajout de la source des données
-mtext(side = 4, "source : UN, 2020", cex = 0.8)
-
-# Export en PNG
-dev.print(device = png, file = "mon_graphique.png", width = 600)
-
-```
 :::
 
 \

@@ -1,5 +1,5 @@
 ---
-title: "Les notebooks (exécutables)"
+title: "Créer un notebook *Rmarkdown*"
 subtitle: ""
 ordre: 04
 author: work in progress

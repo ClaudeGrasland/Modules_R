@@ -1,5 +1,19 @@
 [
   {
+    "listing": "/modules/geomatique.html",
+    "items": [
+      "/modules/geomatique/geomatic_vector.html",
+      "/modules/geomatique/geomatic_raster.html"
+    ]
+  },
+  {
+    "listing": "/modules/graphique.html",
+    "items": [
+      "/modules/graphique/Rbase_graph.html",
+      "/modules/graphique/ggplot2.html"
+    ]
+  },
+  {
     "listing": "/modules/import.html",
     "items": [
       "/modules/import/import.html",
@@ -10,17 +24,11 @@
     ]
   },
   {
-    "listing": "/modules/geomatique.html",
+    "listing": "/modules/manipulation.html",
     "items": [
-      "/modules/geomatique/geomatic_vector.html",
-      "/modules/geomatique/geomatic_raster.html"
-    ]
-  },
-  {
-    "listing": "/modules/cartographie.html",
-    "items": [
-      "/modules/cartographie/map_sf.html",
-      "/modules/cartographie/map_dyn.html"
+      "/modules/manipulation/manipulation.html",
+      "/modules/manipulation/datatable.html",
+      "/modules/manipulation/tidyverse.html"
     ]
   },
   {
@@ -35,24 +43,9 @@
   {
     "listing": "/modules/statistique.html",
     "items": [
-      "/modules/statistique/statistique_uni.html",
       "/modules/statistique/statistique_bi.html",
-      "/modules/statistique/statistique_multi.html"
-    ]
-  },
-  {
-    "listing": "/modules/manipulation.html",
-    "items": [
-      "/modules/manipulation/manipulation.html",
-      "/modules/manipulation/tidyverse.html",
-      "/modules/manipulation/datatable.html"
-    ]
-  },
-  {
-    "listing": "/modules/graphique.html",
-    "items": [
-      "/modules/graphique/Rbase_graph.html",
-      "/modules/graphique/ggplot2.html"
+      "/modules/statistique/statistique_multi.html",
+      "/modules/statistique/statistique_uni.html"
     ]
   },
   {
@@ -65,6 +58,13 @@
       "/modules/geomatique.html",
       "/modules/cartographie.html",
       "/modules/reproductibilite.html"
+    ]
+  },
+  {
+    "listing": "/modules/cartographie.html",
+    "items": [
+      "/modules/cartographie/map_sf.html",
+      "/modules/cartographie/map_dyn.html"
     ]
   }
 ]

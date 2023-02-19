@@ -76,7 +76,7 @@ Cette fonction est l'équivalent du *clic* sur l'objet `data.frame` dans l'ongle
 knitr::include_graphics("../img/view1.png")
 ```
 
-Il est également possible d'afficher, directement dans la console, les premières lignes ou dernières lignes d'un `data.frame`. 
+Il est également possible d'afficher, directement dans la console, les premières lignes ou dernières lignes d'un `data.frame`.
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
@@ -105,7 +105,6 @@ Cette fonction est l'équivalent du *clic* sur l'icône bleu situé à gauche d'
 ```{r, echo=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("../img/view2.png")
 ```
-
 
 Un ensemble de fonction permettent d'interroger les dimensions d'un `data.frame`. Ex :
 
@@ -144,11 +143,9 @@ summary(mon_tableau)
 
 ```
 
-
-
 ## Créer un colonne
 
-La syntaxe suivante `mon_tableau$nom` utilisant le symbole "$" permet de sélectionner une colonne (ici 'nom') d'un `data.frame`. Cette syntaxe peut également être utilisée pour créer une nouvelle colonne. Exemple :
+La syntaxe suivante `mon_tableau$nom` utilisant le symbole "\$" permet de sélectionner une colonne (ici 'nom') d'un `data.frame`. Cette syntaxe peut également être utilisée pour créer une nouvelle colonne. Exemple :
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
@@ -176,9 +173,9 @@ knitr::kable(mon_tableau, "simple")
 
 ## Séléctionner
 
-Le symbole "$" permet de sélectionner une colonne d'un tableau. Pour sélectionner plusieurs colonnes et également des lignes précises, deux solutions sont possibles. 
+Le symbole "\$" permet de sélectionner une colonne d'un tableau. Pour sélectionner plusieurs colonnes et également des lignes précises, deux solutions sont possibles.
 
-#### Les crochets [ , ]
+#### Les crochets \[ , \]
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-fold: FALSE
@@ -208,10 +205,9 @@ mon_tableau[2 , c("nom", "naissance")]
 
 ```
 
-
 #### La fonction `subset()`
 
-La fonction primitive `subset()` permet également de réaliser des sélections dans un `data.frame`. Avec cette fonction, il n'est pas possible de sélectionner des lignes avec leur index. La sélection de ligne doit forcément répondre à une condition. 
+La fonction primitive `subset()` permet également de réaliser des sélections dans un `data.frame`. Avec cette fonction, il n'est pas possible de sélectionner des lignes avec leur index. La sélection de ligne doit forcément répondre à une condition.
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
 #| code-fold: FALSE
@@ -290,9 +286,9 @@ mon_tableau[order(duree_pouvoir, decreasing = TRUE), 1:4]
 
 ## Chaîne de caractère
 
-La manipulation de chaîne de caractère dans un tableau est une opération classique. Si il existe des packages très puissant comme [`stringr`](https://stringr.tidyverse.org/) pour traiter les chaînes de caractère, les fonctions primitives du langage R offrent un certain nombre de fonctionnalités. 
+La manipulation de chaîne de caractère dans un tableau est une opération classique. Si il existe des packages très puissant comme [`stringr`](https://stringr.tidyverse.org/) pour traiter les chaînes de caractère, les fonctions primitives du langage R offrent un certain nombre de fonctionnalités.
 
-#### Concatener 
+#### Concatener
 
 Les fonction paste et paste0 permet de concatener des chaîne de caractère
 
@@ -303,8 +299,7 @@ paste(mon_tableau$nom, "a été président du Mali pendant", mon_tableau$duree_p
 
 ```
 
-
-#### Gérer la casse 
+#### Gérer la casse
 
 Plusieurs foncntions primitives permettent de gérer la casse d'une chaîne de caractère.
 
@@ -322,8 +317,6 @@ casefold(mon_tableau$nom, upper = TRUE)
 
 ```
 
-
-
 #### Modifier
 
 ```{r warning = FALSE, message = FALSE , eval = TRUE}
@@ -339,7 +332,7 @@ gsub(x = mon_tableau$naissance , pattern = "-" , replacement = "/")
 strsplit(x = mon_tableau$naissance, split = "-")
 
 ```
-  
+
 \
 
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
@@ -352,7 +345,7 @@ strsplit(x = mon_tableau$naissance, split = "-")
 [2. Téléchargez les données suivantes :]{.question}
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
-|:-----------------------------------------:|:---------------------------:|
+|:--------------:|:-----------------------------------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 
@@ -383,7 +376,6 @@ st_read()
 
 [5. Faîte une jointure entre le fond de carte des pays et le tableau de données]{.question}
 
-
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
   
@@ -391,23 +383,21 @@ merge(x = ... , y = ... , by = "...", all.x = ...)
 
 ```
 
-
 [6. Créez une nouvelle colonne stockant le nom de chaque pays en MAJUSCULE]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
-data_map_fr <- data_map[data_map$... == ... , ]
+...$... <- toupper(...$...)
 
 ```
-
 
 [7. Sélectionnez uniquement les pays francophone (LANGR = 1)]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
-data_map_fr <- data_map[data_map$... == ... , ]
+... <- ....[...$LANGR == ... , ]
 
 ```
 
@@ -416,7 +406,9 @@ data_map_fr <- data_map[data_map$... == ... , ]
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
-aggregate(... ~ ... , data = ... , FUN = ...)
+... <- aggregate(... ~ ..., 
+                 data = ..., 
+                 FUN = ...)
 
 ```
 
@@ -428,14 +420,12 @@ aggregate(... ~ ... , data = ... , FUN = ...)
 colnames(...) <- c("...", "...")
 
 ```
-------------------------------------------------------------------------
 
+------------------------------------------------------------------------
 
 \
 
 ::: center
 <a href="/correction/Manipulation_dataframe.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
-
-
 :::

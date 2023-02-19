@@ -18,8 +18,8 @@ basemap <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 ## Jointure ##
 ##----------##
 
-# R-base
-data_map <- merge(basemap, data, by="iso3")
+# Clef de jointure : iso3
+data_map <- merge(basemap, data, by="iso3", all.x = TRUE)
 
 
 
@@ -27,7 +27,7 @@ data_map <- merge(basemap, data, by="iso3")
 ## Création de colonne ##
 ##---------------------##
 
-# R-base
+# Chaîne de caractère en Majuscule
 data_map$NOM <- toupper(data_map$name.x)
 
 
