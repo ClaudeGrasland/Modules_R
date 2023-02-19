@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Crédits",
+    "section": "",
+    "text": "TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales. Ce site internet a depuis été ouvert aux contributions extérieurs.\n\nListe des contributeurs à ce jour, par ordre alphabétique :\nJulien Dansou, Timothée Giraud, Hugues Pecout…\n\n\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\n\n\n\n\n\nCitation\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
+  },
+  {
+    "objectID": "data.html#i.-un-cepii-data",
+    "href": "data.html#i.-un-cepii-data",
+    "title": "Données",
+    "section": "I. UN & CEPII data",
+    "text": "I. UN & CEPII data\nIndicateurs nationaux produits par les Nations-Unis (Human Development Report 2020) et le centre français d’étude et de recherche en économie internationale, couvrant la majorité des pays d’Afrique (2020).\n\n Télécharger les données\n\n\n\nCe tableau de données comporte 26 variables décrivant 49 pays.\n\nDictionnaire des variables :\n\n\n\n\n\n\n\n\n\n\n\nAffichage de données :"
+  },
+  {
+    "objectID": "data.html#ii.-gadm-data",
+    "href": "data.html#ii.-gadm-data",
+    "title": "Données",
+    "section": "II. GADM data",
+    "text": "II. GADM data\nCouche géographique des frontières nationales des pays d’Afrique issues de la base de données GAMD (2023). Cette couche géographique comporte peu d’attributs : code iso3, nom, sous-région d’appartenance.\n\n Télécharger les données\n\n\n\n\nAttributs de la couche géographique :\n\n\n\n\n\n\n\n\n\nAffichege de géométrie :"
+  },
+  {
+    "objectID": "data.html#iii.-africapolis",
+    "href": "data.html#iii.-africapolis",
+    "title": "Données",
+    "section": "III. Africapolis",
+    "text": "III. Africapolis\nExtraction (Ghana, Bénin et Togo) de la base de données géographique AFRICAPOLIS (2023), sur l’emprise des agglomérations urbaines en Afrique.\n\n Télécharger les données\n\n\n\n\nAttributs de la couche géographique :\n\n\n\n\n\n\n\n\n\n\n\nAffichage de la couche géographique :"
+  },
+  {
+    "objectID": "data.html#iii.-elevation-bénin",
+    "href": "data.html#iii.-elevation-bénin",
+    "title": "Données",
+    "section": "III. Elevation Bénin",
+    "text": "III. Elevation Bénin\nDonnées numériques d’élévation (raster en format TIF) pour le Bénin provenant de la base de données SRTM 90m Digital Elevation du CIAT. Database v4.1. Les données SRTM originales de l’USGS/NASA ont été fournies dans des cellules d’environ 90m x 90m.\n\n Télécharger les données\n\n\n\n\nAffichage du raster :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaractèristiques du Raster :\n\n\nclass       : SpatRaster \ndimensions  : 742, 369, 1  (nrow, ncol, nlyr)\nresolution  : 0.008339098, 0.008333169  (x, y)\nextent      : 0.774574, 3.851701, 6.23514, 12.41835  (xmin, xmax, ymin, ymax)\ncoord. ref. : lon/lat WGS 84 (EPSG:4326) \nsource      : elevation.tif \nname        : elevation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
+  },
+  {
+    "objectID": "modules/cartographie/map_sf.html",
+    "href": "modules/cartographie/map_sf.html",
+    "title": "Cartographie avec mapsf",
+    "section": "",
+    "text": "Note\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en postant une issue sur le dépôt GitHub de ce document."
+  },
+  {
+    "objectID": "modules/cartographie/map_sf.html#exercice",
+    "href": "modules/cartographie/map_sf.html#exercice",
+    "title": "Cartographie avec mapsf",
+    "section": " Exercice",
+    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\nFond de carte Afrique (GADM 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez les fichiers suivants en utilisant les fonctions adéquates :\n\ndata/DEV_AFRIA_2018/afrika_don.csv\n\ndata/GADM_AFRICA_2020/afrika_map.shp\n\n\n\n\nUn peu d’aide ?\n# Pour importer le fichier csv (afrika_don.csv)\nread.csv()\nread.csv2()\n\n# Pour importer le fichier ESRI Shapefile (afrika_map.shp)\nlibrary(sf)\nst_read()\n\n\n5. Faîte une jointure entre le fond de carte des pays et le tableau de données statistiques\n\n\nUn peu d’aide ?\n# Jointure en R-base\nmerge() \n\n# Ou \njointure avec le package dplyr\nleft_join()\n\n\n6. Construisez une carte thématique représentant la variable POP (nombre d’habitants)\n\n\nUn peu d’aide ?\n# Créer une carte en symboles proportionnels\nmf_map()\n# OU\nmf_prop()\n\n\n7. Construisez une thématique représentant la variable INTERN (part des utilisateurs d’internet dans la population totale)\n\n\nUn peu d’aide ?\n# Créer une carte choroplèthe\nmf_map()\n# OU\nmf_choro()\n\n\n8. Exportez ces deux cartes en format svg et png, à l’aide d’une fonction du package mapsf\n\n\nUn peu d’aide ?\nmf_export()\ndev.off()\n\n\n9. Construisez une carte thématique représentant la variable POP ET la variable INTERN\n\n\nUn peu d’aide ?\n# Créer une carte de stocks et de ratios\nmf_map()\n# OU\nmf_prop_choro()\n\n\n\n\n\n\n Corrigé"
+  },
+  {
+    "objectID": "modules/cartographie.html",
+    "href": "modules/cartographie.html",
+    "title": "Cartographie",
+    "section": "",
+    "text": "Cartographie avec mapsf\n\n\nPrésentation du package mapsf pour la cartographie thématique\n\n\n\n\n\n\n18 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nCartographie 3D et anamorphoses\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html",
+    "href": "modules/geomatique/geomatic_raster.html",
+    "title": "Géomatique avec R - raster",
+    "section": "",
+    "text": "Note\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document.\n\n\n\n\n\n Géomatique avec R - Les images matricielles"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
+    "href": "modules/geomatique/geomatic_raster.html#exercice",
+    "title": "Géomatique avec R - raster",
+    "section": " Exercice",
+    "text": "Exercice"
+  },
+  {
     "objectID": "modules/geomatique/geomatic_vector.html",
     "href": "modules/geomatique/geomatic_vector.html",
     "title": "Géomatique avec R - vecteur",
@@ -210,6 +287,27 @@
     "text": "Le package miniCRAN permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l’on souhaite (sur sa machine, sur clef USB, sur son propre serveur…).\nminiCRAN peut par exemple être utilisé pour créer son CRAN personnel sur une clef USB, qui vous permettra d’installer ces packages sur n’importe quelle machine sans avoir besoin d’être connecté à internet.\nCommencez par installer le package miniCRAN :\n\ninstall.packages(\"miniCRAN\")\n\nminiCRAN ne récupère pas uniquement le code source d’un package ciblé mais également toutes ses dépendances (autres packages) indispensables à son fonctionnement.\n\nLister les dépendances\nla fonction pkgDep()permet de connaitre la liste de toutes les dépendances d’un package. Exemple :\n\nlibrary(\"miniCRAN\")\n\nWarning: le package 'miniCRAN' a été compilé avec la version R 4.2.2\n\npkgDep(\"mapsf\", suggests = FALSE, enhances = FALSE)\n\n [1] \"mapsf\"      \"classInt\"   \"Rcpp\"       \"sf\"         \"e1071\"     \n [6] \"class\"      \"KernSmooth\" \"DBI\"        \"magrittr\"   \"s2\"        \n[11] \"units\"      \"MASS\"       \"proxy\"      \"wk\"        \n\n\nVous pouvez visualiser ces dépendances sous forme de graphe à l’aide de la fonction makeDepGraph() :\n\n# Construction d'un objet igraph (graphe) formalisant les dépendances d'un package\ngraph_dep <- makeDepGraph( \"mapsf\", suggests = FALSE, enhances = FALSE)\n\n# Affichage du graphe\nplot(graph_dep , legendPosition = c(-1, 1), vertex.size = 20)\n\n\n\n\n\n\nCréer son miniCRAN\nAvant d’importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker. Vous pouvez le faire manuellement ou en code R avec la fonction dir.create() :\n\npath_miniCRAN <- \"/home/hugues/Documents/5.Cours/Modules_R/miniCRAN\"\n\n# Création du répertoire nommé \"miniCRAN\"\ndir.create(path = path_miniCRAN)\n\nIl ne vous reste plus qu’à remplir votre répertoire avec les sources des packages ciblés. Pour cela, utilisez la fonction makeRepo() :\n\n# Création d'un vecteur avec le ou les package(s) ciblé(s)\nmes_pkgs <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Téléchargement des sources des packages (+ dépendances) dans le répertoire \"miniCRAN\"\nmakeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\n\n\nAjouter des packages\nIl est très simple de rajouter de nouveaux packages (et leur dépendances) dans votre miniCRAN en utilisant la fonction addPackage() :\n\naddPackage(\"tidyr\", path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\nPour lister l’ensemble des packages stockés sur votre miniCRAN, utilisez la fonction pkgAvail() :\n\n# Check for available packages\npkgAvail(repos = path_miniCRAN, )[, c(1:3, 5)]\n\n\n\nInstaller un package du miniCRAN\nPour installer un package stocké sur votre miniCRAN local, utilisez la fonction install.packages()de la manière suivante :\n\n# Chemin d'accès jusqu'au \"miniCRAN\" stocké sur votre machine.\nurl_miniCRAN <- paste0(\"file:///\", \"C:/Users/<username>/.../miniCRAN\")\n\n# Installation de ggplot2 \ninstall.packages(\"ggplot2\", \n                 repos = url_miniCRAN,\n                 type = \"source\")\n\n\n\nLe miniCRAN de TIG’R\nUn miniCRAN comportant l’ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. Vous pouvez le télécharger en vous connectant à cette page.\n\n\nPour aller plus loin\nPour connaitre l’ensemble des fonctionnalités offertes par le package miniCRAN, consultez le site web du package."
   },
   {
+    "objectID": "modules/reproductibilite/programmation_lettree.html",
+    "href": "modules/reproductibilite/programmation_lettree.html",
+    "title": "Programmation lettrée et notebook",
+    "section": "",
+    "text": "Présentation du paradigme de programmation lettrée et du format de publication notebook, qui offre de nombreuses fonctionnalités pour de nombreux usages.\n\n\n→ Consulter en plein écran\n→ Accéder au code source\n→ Télécharger en pdf"
+  },
+  {
+    "objectID": "modules/reproductibilite/programmation_lettree.html#le-rmarkdown",
+    "href": "modules/reproductibilite/programmation_lettree.html#le-rmarkdown",
+    "title": "Programmation lettrée et notebook",
+    "section": "Le Rmarkdown",
+    "text": "Le Rmarkdown\n\n\n→ Consulter en plein écran\n→ Accéder au code source\n→ Télécharger en pdf"
+  },
+  {
+    "objectID": "modules/reproductibilite/programmation_lettree.html#exercice",
+    "href": "modules/reproductibilite/programmation_lettree.html#exercice",
+    "title": "Programmation lettrée et notebook",
+    "section": "Exercice",
+    "text": "Exercice"
+  },
+  {
     "objectID": "modules/reproductibilite.html",
     "href": "modules/reproductibilite.html",
     "title": "Reproductibilité",
@@ -243,33 +341,5 @@
     "title": "Ressources",
     "section": "",
     "text": "De très nombreuses ressources diverses et gratuites (livres, articles, agrégateurs, cours, exercices, sites web, vidéos…) pour la pratique de R en sciences humaines et sociale sont référencées sur le site internet rzine.fr. Quelques exemples :\n analyse-R : Site web pour l’introduction à l’analyse d’enquêtes avec R et RStudio , crée et maintenue par Joseph Larmarange.\n Cartographie avec R : Manuel pour la création de cartes thématiques conformes aux règles de la sémiologie graphique et de la cartographie, T. giraud & H. Pecout.\n ElementR : Site web du groupe d’utilisateur·rice·s pour le traitement de l’information géographique avec R, coordonnée l’UMR Géographie-Cités, l’UMR PRODIG et l’UAR RIATE.\n Géomatique avec R : Manuel pour la gestion et le traitements de données spatiales, T. giraud & H. Pecout.\n guide-R : Guide pour l’analyse de données d’enquêtes avec R (version actualisée et restructurée de nombreux chapitres d’analyse-R).\n Parcours R : Supports de formations R MTES & MCTRCT.\n Une introduction à R et au tidyverse : Manuel d’introduction à R, accessible et régulièrement mis à jour, par Julien Barnier.\n UtilitR : Documentation collaborative et open source sur R, destinée en premier lieu aux agents de l’INSEE."
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html",
-    "href": "modules/geomatique/geomatic_raster.html",
-    "title": "Géomatique avec R - raster",
-    "section": "",
-    "text": "Note\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document.\n\n\n\n\n\n Géomatique avec R - Les images matricielles"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
-    "href": "modules/geomatique/geomatic_raster.html#exercice",
-    "title": "Géomatique avec R - raster",
-    "section": " Exercice",
-    "text": "Exercice"
-  },
-  {
-    "objectID": "modules/cartographie.html",
-    "href": "modules/cartographie.html",
-    "title": "Cartographie",
-    "section": "",
-    "text": "Cartographie avec mapsf\n\n\nPrésentation du package mapsf pour la cartographie thématique\n\n\n\n\n\n\n18 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nCartographie 3D et anamorphoses\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
-  },
-  {
-    "objectID": "modules/reproductibilite/programmation_lettree.html",
-    "href": "modules/reproductibilite/programmation_lettree.html",
-    "title": "Programmation lettrée et notebook",
-    "section": "",
-    "text": "Un diaporama de présentation"
   }
 ]

@@ -102,8 +102,8 @@ website:
             text: Le package `miniCRAN`
           # - href: modules/reproductibilite/renv.qmd
           #   text: Le package `renv`
-          # - href: modules/reproductibilite/programmation_lettree.qmd
-          #   text: Literate programming
+          - href: modules/reproductibilite/programmation_lettree.qmd
+            text: PL et Notebook
           # - href: modules/reproductibilite/notebook.qmd
           #   text: Les notebooks  
 

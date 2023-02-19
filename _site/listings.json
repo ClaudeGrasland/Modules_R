@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/modules/cartographie.html",
+    "items": [
+      "/modules/cartographie/map_sf.html",
+      "/modules/cartographie/map_dyn.html"
+    ]
+  },
+  {
     "listing": "/modules/geomatique.html",
     "items": [
       "/modules/geomatique/geomatic_vector.html",
@@ -58,13 +65,6 @@
       "/modules/geomatique.html",
       "/modules/cartographie.html",
       "/modules/reproductibilite.html"
-    ]
-  },
-  {
-    "listing": "/modules/cartographie.html",
-    "items": [
-      "/modules/cartographie/map_sf.html",
-      "/modules/cartographie/map_dyn.html"
     ]
   }
 ]
