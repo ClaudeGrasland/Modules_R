@@ -10,18 +10,25 @@ code-fold: true
 code-tools: true
 ---
 
-
-
 ## <i class="bi bi-book"></i> Manuel {.title}
 
+
+
+<iframe class="slide" src="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html">
+
+</iframe>
+
+
+\
+
 ::: callout-note
-Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
+Ce support de ce cours est un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
 :::
 
 \
 
 ::: center
-<a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-vectorielles.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Géomatique avec R - Les images matricielles</a>
+<a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a>
 :::
 
 \
@@ -29,7 +36,6 @@ Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialeme
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-
 :::
 
 \

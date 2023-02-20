@@ -45,6 +45,9 @@ mes_pkgs <- c("data.table",
               "esquisse",
               "survey",
               "quanteda",
+              "reticulate",
+              "htmltools",
+              "tinytex",
               "miniCRAN")
 
 

@@ -11,28 +11,22 @@ code-tools: true
 
 Présentation du paradigme de programmation lettrée et du format de publication *notebook*, qui offre de nombreuses fonctionnalités pour de nombreux usages.
 
-
-
 <iframe class="slide" src="https://ee-cist.github.io/OUT1_NotebookR/">
 
 </iframe>
 
-
-&rarr; Consulter en [plein écran](https://ee-cist.github.io/OUT1_NotebookR/)\
-&rarr; Accéder au [code source](https://github.com/EE-CIST/OUT1_NotebookR/)\
-&rarr; Télécharger en [pdf](https://github.com/EE-CIST/OUT1_NotebookR/raw/main/PL_et_notebook.pdf)\
-
+→ Consulter en [plein écran](https://ee-cist.github.io/OUT1_NotebookR/)\
+→ Accéder au [code source](https://github.com/EE-CIST/OUT1_NotebookR/)\
+→ Télécharger en [pdf](https://github.com/EE-CIST/OUT1_NotebookR/raw/main/PL_et_notebook.pdf)\
 
 ## Le Rmarkdown
 
-<iframe class="slide" src="https://ee-cist.github.io/OUT1_NotebookR/">
+<iframe class="slide" src="https://ee-cist.github.io/OUT1_Rmarkdown/">
 
 </iframe>
 
-
-&rarr; Consulter en [plein écran](https://ee-cist.github.io/OUT1_NotebookR/)\
-&rarr; Accéder au [code source](https://github.com/EE-CIST/OUT1_NotebookR/)\
-&rarr; Télécharger en [pdf](https://github.com/EE-CIST/OUT1_NotebookR/raw/main/PL_et_notebook.pdf)\
-
+→ Consulter en [plein écran](https://ee-cist.github.io/OUT1_NotebookR/)\
+→ Accéder au [code source](https://github.com/EE-CIST/OUT1_NotebookR/)\
+→ Télécharger en [pdf](https://github.com/EE-CIST/OUT1_NotebookR/raw/main/PL_et_notebook.pdf)\
 
 ## Exercice
