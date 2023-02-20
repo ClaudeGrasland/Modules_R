@@ -63,3 +63,11 @@ font-weight: bold;
     min-height: 650px;
     height: inherit !important; 
 }
+
+.slide2{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 750px;
+    height: inherit !important; 
+}

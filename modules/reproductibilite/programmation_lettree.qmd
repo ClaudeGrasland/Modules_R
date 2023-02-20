@@ -21,12 +21,12 @@ Présentation du paradigme de programmation lettrée et du format de publication
 
 ## Le Rmarkdown
 
-<iframe class="slide" src="https://ee-cist.github.io/OUT1_Rmarkdown/">
+<iframe class="slide2" src="https://ee-cist.github.io/OUT1_Rmarkdown/">
 
 </iframe>
 
-→ Consulter en [plein écran](https://ee-cist.github.io/OUT1_NotebookR/)\
-→ Accéder au [code source](https://github.com/EE-CIST/OUT1_NotebookR/)\
-→ Télécharger en [pdf](https://github.com/EE-CIST/OUT1_NotebookR/raw/main/PL_et_notebook.pdf)\
+→ Consulter en [plein écran](https://ee-cist.github.io/OUT1_Rmarkdown/)\
+→ Accéder au [code source](https://github.com/EE-CIST/OUT1_Rmarkdown/)\
+→ Télécharger en [pdf](f)\
 
 ## Exercice
