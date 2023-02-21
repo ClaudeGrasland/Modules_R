@@ -1,8 +1,0 @@
----
-title: "Créer un notebook *Rmarkdown*"
-subtitle: ""
-ordre: 04
-author: work in progress
-code-fold: true
-code-tools: true
----

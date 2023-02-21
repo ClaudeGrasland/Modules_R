@@ -56,6 +56,14 @@ font-weight: bold;
 }
 
 
+.slidintro{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 450px;
+    height: inherit !important; 
+}
+
 .slide{
     max-width: 100%;
     min-width: 100%;

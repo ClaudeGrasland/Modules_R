@@ -17,7 +17,7 @@ Les différentes leçon peuvent être utilisées indépendamment les unes des au
 Si vous êtes débutant.e, plusieurs supports libres et gratuits d'initiation à R sont indiqués dans les [ressources annexes](ressources.qmd). Si vous êtes enseignant, vous pouvez également utilisés ces deux diaporamas pour introduire au langage R :
 
 
-<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
+<iframe class="slidintro" width="100%" height="480px" style="margin-bottom:0px;" src="https://elementr.gitpages.huma-num.fr/session_1/Presentation_R/#/">
 </iframe>
 
 <center style="font-size:80%;">
@@ -26,7 +26,7 @@ Consulter en [**plein écran**](https://elementr.gitpages.huma-num.fr/session_1/
 
 \
 
-<iframe class="slide" width="100%" height="480px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
+<iframe class="slidintro" width="100%" height="480px" style="margin-bottom:0px;" src="https://huguespecout.github.io/Intro_R_Rstudio_FR/#/">
 </iframe>
 
 <center style="font-size:80%;">

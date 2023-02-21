@@ -27,9 +27,8 @@
     "listing": "/modules/reproductibilite.html",
     "items": [
       "/modules/reproductibilite/minicran.html",
-      "/modules/reproductibilite/renv.html",
       "/modules/reproductibilite/programmation_lettree.html",
-      "/modules/reproductibilite/notebook.html"
+      "/modules/reproductibilite/renv.html"
     ]
   },
   {

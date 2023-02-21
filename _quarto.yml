@@ -89,7 +89,7 @@ website:
           - href: modules/cartographie.qmd
             text: Toutes les leçons
           - href: modules/cartographie/map_sf.qmd
-            text: Cartographie statique
+            text: Cartographie `mapsf`
           # - href: modules/cartographie/map_dyn.qmd
           #   text: Cartographie dynamique              
             

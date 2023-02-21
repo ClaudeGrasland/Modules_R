@@ -10,14 +10,26 @@ code-fold: true
 code-tools: true
 ---
 
-::: callout-note
-Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
-:::
+
+## <i class="bi bi-book"></i> Manuel {.title}
+
+
+
+<iframe class="slide" src="https://rcarto.github.io/cartographie_avec_r/">
+
+</iframe>
+
 
 \
 
 ::: center
-<a href="https://rcarto.github.io/cartographie_avec_r/" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Cartographie avec R - Le package `mapsf`</a>
+<a href="https://rcarto.github.io/cartographie_avec_r/" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a>
+:::
+
+\
+
+::: callout-note
+Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
 :::
 
 \
