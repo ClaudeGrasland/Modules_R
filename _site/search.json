@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Crédits",
+    "section": "",
+    "text": "TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales. Ce site internet a depuis été ouvert aux contributions extérieurs.\n\nListe des contributeurs à ce jour, par ordre alphabétique :\nJulien Dansou, Timothée Giraud, Hugues Pecout…\n\n\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\n\n\n\n\n\nCitation\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
+  },
+  {
     "objectID": "data.html#i.-un-cepii-data",
     "href": "data.html#i.-un-cepii-data",
     "title": "Données",
@@ -28,25 +35,11 @@
     "text": "III. Elevation Bénin\nDonnées numériques d’élévation (raster en format TIF) pour le Bénin provenant de la base de données SRTM 90m Digital Elevation du CIAT. Database v4.1. Les données SRTM originales de l’USGS/NASA ont été fournies dans des cellules d’environ 90m x 90m.\n\n Télécharger les données\n\n\n\n\nAffichage du raster :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaractèristiques du Raster :\n\n\nclass       : SpatRaster \ndimensions  : 742, 369, 1  (nrow, ncol, nlyr)\nresolution  : 0.008339098, 0.008333169  (x, y)\nextent      : 0.774574, 3.851701, 6.23514, 12.41835  (xmin, xmax, ymin, ymax)\ncoord. ref. : lon/lat WGS 84 (EPSG:4326) \nsource      : elevation.tif \nname        : elevation"
   },
   {
-    "objectID": "modules/import.html",
-    "href": "modules/import.html",
-    "title": "Données",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
     "section": "",
-    "text": "Import et export de données\n\n\nLes différents types et formats de données pris en charge par R\n\n\n\n\n\n\n16 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nPackages de données et API\n\n\nQuelques packages forunisseurs de données\n\n\n\n\n\n\nWork in progress\n\n\n\n\n\n\n\n\nConnexion à une BD\n\n\nComment se connecter à une base de données avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nExploiter les données OSM\n\n\nRécupérer des données d’OpenStreetMap avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nWeb scraping\n\n\nCollecte automatique de données issues du web\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
-  },
-  {
-    "objectID": "modules/geomatique.html",
-    "href": "modules/geomatique.html",
-    "title": "Géomatique",
-    "section": "",
-    "text": "Géomatique avec R - vecteur\n\n\nLe package sf pour manipuler les données géographiques vectorielles\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nGéomatique avec R - raster\n\n\nLe package terra pour manipuler les données géographiques RASTER\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\n\n\nOpenStreetMap & R\n\n\nUtilisation du fond de carte, Géocodage, extraction de données et calcul d’itinéraire\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
-  },
-  {
-    "objectID": "modules/cartographie.html",
-    "href": "modules/cartographie.html",
-    "title": "Cartographie",
-    "section": "",
-    "text": "Cartographie avec mapsf\n\n\nPrésentation du package mapsf pour la cartographie thématique\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nCartographie 3D et anamorphoses\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
   },
   {
     "objectID": "modules/cartographie/map_sf.html",
@@ -60,7 +53,7 @@
     "href": "modules/cartographie/map_sf.html#manuel",
     "title": "Cartographie avec mapsf",
     "section": " Manuel",
-    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en postant une issue sur le dépôt GitHub de ce document."
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran"
   },
   {
     "objectID": "modules/cartographie/map_sf.html#exercice",
@@ -70,11 +63,81 @@
     "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\nFond de carte Afrique (GADM 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez les fichiers suivants en utilisant les fonctions adéquates :\n\ndata/DEV_AFRIA_2018/afrika_don.csv\n\ndata/GADM_AFRICA_2020/afrika_map.shp\n\n\n\n\nUn peu d’aide ?\n# Pour importer le fichier csv (afrika_don.csv)\nread.csv()\nread.csv2()\n\n# Pour importer le fichier ESRI Shapefile (afrika_map.shp)\nlibrary(sf)\nst_read()\n\n\n5. Faîte une jointure entre le fond de carte des pays et le tableau de données statistiques\n\n\nUn peu d’aide ?\n# Jointure en R-base\nmerge() \n\n# Ou \njointure avec le package dplyr\nleft_join()\n\n\n6. Construisez une carte thématique représentant la variable POP (nombre d’habitants)\n\n\nUn peu d’aide ?\n# Créer une carte en symboles proportionnels\nmf_map()\n# OU\nmf_prop()\n\n\n7. Construisez une thématique représentant la variable INTERN (part des utilisateurs d’internet dans la population totale)\n\n\nUn peu d’aide ?\n# Créer une carte choroplèthe\nmf_map()\n# OU\nmf_choro()\n\n\n8. Exportez ces deux cartes en format svg et png, à l’aide d’une fonction du package mapsf\n\n\nUn peu d’aide ?\nmf_export()\ndev.off()\n\n\n9. Construisez une carte thématique représentant la variable POP ET la variable INTERN\n\n\nUn peu d’aide ?\n# Créer une carte de stocks et de ratios\nmf_map()\n# OU\nmf_prop_choro()\n\n\n\n\n\n\n Corrigé"
   },
   {
-    "objectID": "modules/reproductibilite.html",
-    "href": "modules/reproductibilite.html",
-    "title": "Reproductibilité",
+    "objectID": "modules/cartographie.html",
+    "href": "modules/cartographie.html",
+    "title": "Cartographie",
     "section": "",
-    "text": "Le package miniCRAN\n\n\nCréer son CRAN personnel en local\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nProgrammation lettrée et notebook\n\n\nIntroduction et mise en pratique avec Rmarkdown\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nLe package renv\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Cartographie avec mapsf\n\n\nPrésentation du package mapsf pour la cartographie thématique\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nCartographie 3D et anamorphoses\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html",
+    "href": "modules/geomatique/geomatic_raster.html",
+    "title": "Géomatique avec R - raster",
+    "section": "",
+    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques matricielles (raster) avec le package terra. Les différentes manipulations de données matricielles abordées sont :\n\nImport et export de raster\nAffichage graphique de raster\nModification d’un raster (reprojection, découpage, aggrégation, fusion…)\nAlgèbre spatial (locale, focale, zonales et globale)\nTransformation et conversion de raster"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html#manuel",
+    "href": "modules/geomatique/geomatic_raster.html#manuel",
+    "title": "Géomatique avec R - raster",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
+    "href": "modules/geomatique/geomatic_raster.html#exercice",
+    "title": "Géomatique avec R - raster",
+    "section": " Exercice",
+    "text": "Exercice"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_vector.html",
+    "href": "modules/geomatique/geomatic_vector.html",
+    "title": "Géomatique avec R - vecteur",
+    "section": "",
+    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques vectorielles avec le package sf. Les différentes manipulations de données vectorielles abordées sont :\n\nImport et export de données\nGestion de la projection cartographique\nAffichage graphique des données\nSélection par attribut\nSélection spatiale\nOpération sur les géométries"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_vector.html#manuel",
+    "href": "modules/geomatique/geomatic_vector.html#manuel",
+    "title": "Géomatique avec R - vecteur",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_vector.html#exercice",
+    "href": "modules/geomatique/geomatic_vector.html#exercice",
+    "title": "Géomatique avec R - vecteur",
+    "section": " Exercice",
+    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier africapolis_extract.shp\n\n\nUn peu d’aide ?\n# Pour importer des données géographiques \nlibrary(sf)\n... <- st_read()\n\n\n5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection UTM zone 31N (EPSG : 32631 ).\n\n\nUn peu d’aide ?\n# Pour connaitre le système de référence et de projection d'une couche\nst_crs(...)\n\n# Transformer le crs d'un objet sf\n... <- st_transform(...)\n\n\n5. Affichez les géométries des agglomérations urbaines.\nAstuce : Vous pouvez utiliser la package mapview qui permet d’afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.\n\n\nUn peu d’aide ?\n# Affichez les géométries d'un objet sf\nplot(st_geometry(...))\n\n# Afficher sur un fond de carte dynamique\nlibrary(mapview)\nmapview(...)\n\n\n6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.\n\n\nUn peu d’aide ?\n# st_area() permet de calculer la surface des polygones d'un objet sf\n...$... <- st_area(...)\n\n\n7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.\n\n\nUn peu d’aide ?\nlibrary(dplyr)\n\n... <- ... %>% \n          group_by(...) %>% \n          summarise(... = sum(...),\n                    ... = n())\n\n\n8. Créez une quatrième couche géographique (point) à partir des coordonnées de l’Institut Régional de Santé Publique, à Ouidah (Bénin) :\n\nLatitude = 6.349223507626634\nLongitude = 2.0879482065861783\nCRS = WGS84 (4326)\n\n\n\nUn peu d’aide ?\n# Création d'un data.frame avec les colonnes \"name\", \"lat\" et \"long\"\nIRSP <- data.frame(name = \"...\", \n                   lat = ..., \n                   long = ...)\n\n\n# Création d'une couche géographique à partir de ces cordonnées\nIRSP_geo <- st_as_sf(IRSP, \n                     coords = c(\"...\", \"...\"), \n                     crs = ...)\n\n\n9. Créez une zone tampon de 50km autour de l’Institut Régional de Santé Publique\n\n\nUn peu d’aide ?\n# Créer un zone tampon\n... <- st_buffer(..., dist = ...)\n\n\n10. Détectez les agglomérations urbaines situées à moins de 50 km de l’IRSP\n\n\nUn peu d’aide ?\n# Quelles agglomérations intersectent la zone tampon ?\n...$... <- st_intersects(..., ..., sparse = ...)\n\n\n11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Utilisez l'argument \"add\" pour superposer les couches\n\nplot(st_geometry(...))\nplot(...[\"...\"], add = TRUE)\nplot(st_geometry(...), add = TRUE)\nplot(st_geometry(...), add = TRUE)\n\n\n12. Combien d’habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?\n\n\nCode\n# Sélectionnez les agglomérations qui intersectent la zone tampon\n... <- ...[...$... == TRUE, ]\n\n# Calcul de la population totale de ces agglomérations\nsum(...$...)\n\n\n\n\n\n\n Corrigé"
+  },
+  {
+    "objectID": "modules/geomatique/OpenStreetMap.html",
+    "href": "modules/geomatique/OpenStreetMap.html",
+    "title": "OpenStreetMap & R",
+    "section": "",
+    "text": "Cette leçon vise à introduire différents types d’exploitation de la base de données géographique libre OpenStreetMap avec R. Les traitements et analyses présentés sont :\n\nGéocodage d’adresses avec tidygeocoder\nCartographie interactive avec leaflet et mapview\nExtraction de données avec maptiles, osmdata et osmextract\nCalcul de matrice de distance avec sf, puis de temps avec osrm\nCalcul itinéraires avec osrm"
+  },
+  {
+    "objectID": "modules/geomatique/OpenStreetMap.html#manuel",
+    "href": "modules/geomatique/OpenStreetMap.html#manuel",
+    "title": "OpenStreetMap & R",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran"
+  },
+  {
+    "objectID": "modules/geomatique/OpenStreetMap.html#exercice",
+    "href": "modules/geomatique/OpenStreetMap.html#exercice",
+    "title": "OpenStreetMap & R",
+    "section": " Exercice",
+    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier africapolis_extract.shp\n\n\nUn peu d’aide ?\n# Pour importer des données géographiques \nlibrary(sf)\n... <- st_read()\n\n\n5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection UTM zone 31N (EPSG : 32631 ).\n\n\nUn peu d’aide ?\n# Pour connaitre le système de référence et de projection d'une couche\nst_crs(...)\n\n# Transformer le crs d'un objet sf\n... <- st_transform(...)\n\n\n5. Affichez les géométries des agglomérations urbaines.\nAstuce : Vous pouvez utiliser la package mapview qui permet d’afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.\n\n\nUn peu d’aide ?\n# Affichez les géométries d'un objet sf\nplot(st_geometry(...))\n\n# Afficher sur un fond de carte dynamique\nlibrary(mapview)\nmapview(...)\n\n\n6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.\n\n\nUn peu d’aide ?\n# st_area() permet de calculer la surface des polygones d'un objet sf\n...$... <- st_area(...)\n\n\n7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.\n\n\nUn peu d’aide ?\nlibrary(dplyr)\n\n... <- ... %>% \n          group_by(...) %>% \n          summarise(... = sum(...),\n                    ... = n())\n\n\n8. Créez une quatrième couche géographique (point) à partir des coordonnées de l’Institut Régional de Santé Publique, à Ouidah (Bénin) :\n\nLatitude = 6.349223507626634\nLongitude = 2.0879482065861783\nCRS = WGS84 (4326)\n\n\n\nUn peu d’aide ?\n# Création d'un data.frame avec les colonnes \"name\", \"lat\" et \"long\"\nIRSP <- data.frame(name = \"...\", \n                   lat = ..., \n                   long = ...)\n\n\n# Création d'une couche géographique à partir de ces cordonnées\nIRSP_geo <- st_as_sf(IRSP, \n                     coords = c(\"...\", \"...\"), \n                     crs = ...)\n\n\n9. Créez une zone tampon de 50km autour de l’Institut Régional de Santé Publique\n\n\nUn peu d’aide ?\n# Créer un zone tampon\n... <- st_buffer(..., dist = ...)\n\n\n10. Détectez les agglomérations urbaines situées à moins de 50 km de l’IRSP\n\n\nUn peu d’aide ?\n# Quelles agglomérations intersectent la zone tampon ?\n...$... <- st_intersects(..., ..., sparse = ...)\n\n\n11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Utilisez l'argument \"add\" pour superposer les couches\n\nplot(st_geometry(...))\nplot(...[\"...\"], add = TRUE)\nplot(st_geometry(...), add = TRUE)\nplot(st_geometry(...), add = TRUE)\n\n\n12. Combien d’habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?\n\n\nCode\n# Sélectionnez les agglomérations qui intersectent la zone tampon\n... <- ...[...$... == TRUE, ]\n\n# Calcul de la population totale de ces agglomérations\nsum(...$...)\n\n\n\n\n\n\n Corrigé"
+  },
+  {
+    "objectID": "modules/geomatique.html",
+    "href": "modules/geomatique.html",
+    "title": "Géomatique",
+    "section": "",
+    "text": "Géomatique avec R - vecteur\n\n\nLe package sf pour manipuler les données géographiques vectorielles\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nGéomatique avec R - raster\n\n\nLe package terra pour manipuler les données géographiques RASTER\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\n\n\nOpenStreetMap & R\n\n\nUtilisation du fond de carte, Géocodage, extraction de données et calcul d’itinéraire\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/graphique/Rbase_graph.html",
@@ -110,6 +173,76 @@
     "title": "Graphique R-base",
     "section": " Exercice",
     "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier “afrika_don.csv” dans un data.frame\n\n\nUn peu d’aide ?\n... <- read.csv2(file = \"...\")\n\n\n5. Construisez un histogramme par quartile pour la variable “POP” :\n\n\n\n\n\n\n\nUn peu d’aide ?\nhist(..., breaks  = quantile(...))\n\n\n6. Améliorez la mise en page, en ajoutant par exemple un peu de couleur, un titre, une source… :\n\n\n\n\n\n\n\nUn exemple ?\npar(bg = \"cornsilk3\")\n\nhist(My_data$POP, \n     breaks  = quantile(My_data$POP),\n     col = \"green4\",\n     border = \"white\",\n     xlab = \"Nombre d'habitants (millions)\", \n     ylab = \"Proportion\", \n     main = \"Répartition des pays africains selon leur population\")\n\nrug(My_data$POP)\nmtext(side = 4, \"source : UN, 2020\", cex = 0.8)\n\n\n7. Exportez le graphique à l’aide d’une fonction (format png)\n\n\nUn peu d’aide ?\ndev.print(device = ..., file = \"...\")\n\n\n\n\n\n\n Corrigé"
+  },
+  {
+    "objectID": "modules/graphique.html",
+    "href": "modules/graphique.html",
+    "title": "Graphique",
+    "section": "",
+    "text": "Graphique R-base\n\n\nRepresentations graphiques avec les fonctions primitives\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nGraphique avec ggplot2\n\n\nRepresentations graphiques avec ggplot2\n\n\n\n\n\n\n18 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+  },
+  {
+    "objectID": "modules/import/connectBD.html",
+    "href": "modules/import/connectBD.html",
+    "title": "Connexion à une BD",
+    "section": "",
+    "text": "Work in progress"
+  },
+  {
+    "objectID": "modules/import/import.html",
+    "href": "modules/import/import.html",
+    "title": "Import et export de données",
+    "section": "",
+    "text": "De nombreuses de fonctions (primitives ou non) permettent d’importer et d’exporter des données de différents formats."
+  },
+  {
+    "objectID": "modules/import/import.html#tableau-de-données",
+    "href": "modules/import/import.html#tableau-de-données",
+    "title": "Import et export de données",
+    "section": "Tableau de données",
+    "text": "Tableau de données\n\nFichier texte simple\nUn fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s’ouvrir avec n’importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.\nPlusieurs fonctions primitives permettent d’importer et d’exporter des fichiers texte simples, comme les fichiers csv, txt , tsv…\n\nImport\n\nread.delim() : fichiers délimités par un symbole quelconque et “.” en séparateur décimal\nread.delim2() : fichiers délimités par un symbole quelconque et “,” en séparateur décimal\nread.table() : pour des fichiers texte délimités par des espaces\n\nread.csv() : pour des fichiers texte délimités par des virgules (format csv)\nread.csv2() : pour des fichiers texte délimités par des points-virgules (format csv français)\n\nPour que l’import de données s’effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :\nheader = valeur logique qui indique si la première ligne contient les noms des variables. sep = indique le caractère utilisé comme séparateur de champ (ex : “;”) encoding = Chaîne de caractère qui précise l’encodage utilisé pour le fichier (ex : “UTF-8”).\n\n\n\n\n\n\nImportant\n\n\n\nN’oubliez pas d’assigner le résultat dans un objet pour garder en mémoire vos données importées.\n\n\n\n# Exemple d'utilisation de read.table()\nmon_tableau  <- read.table(file = \"../data/DEV_AFRICA_2018/afrika_don_meta.csv\", \n                           header = TRUE,\n                           sep= \";\",\n                           encoding = \"UTF-8\")\n\n\n# Le tableau importé est stocké dans un objet data.frame\nclass(mon_tableau)\n\n[1] \"data.frame\"\n\n\n\n\nExport\nDes fonctions primitives permettent également d’exporter votre tableau de données vers différents format texte.\n\nwrite.table() : pour tous les types de formats texte simple (séparateur à renseigner)\nwrite.csv() : pour exporter en csv (séparateur virgule)\nwrite.csv2() : pour exporter en csv (séparateur points-virgules)\n\n\n\nVoir l’exemple\n# Exemple write.table()\nwrite.table(x = mon_tableau, \n            file = \"../data/tableau.txt\", \n            sep = \"\\t\", col.names = TRUE, \n            fileEncoding = \"UTF-8\")\n              \n# Exemple write.csv()\nwrite.csv(x = mon_tableau, file = \"../data/tableau.csv\")\n\n\n\n\n\n\n\nFichier Excel\nIl est parfois nécessaire d’importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d’importer ce genre de format, et même d’exporter vos données dans ce type de format.\n\nImport\nVous pouvez par exemple importer un fichier Excel avec le package readxl.\n\ninstall.packages(\"readxl\")\n\n\n\n\n\n\n\nImportant\n\n\n\nLe packages readxl fait partie de l’écosystème tidyverse (cf. module x). Pour cette raison, le tableau importé est mis en mémoire dans un objet tibble et non dataframe. Il s’agit de deux objets très semblables mais pas identiques. Pour convertir un tibble en dataframe, vous pouvez utiliser la fonction as.data.frame().\n\n\n\nlibrary(readxl)\nmon_tableau <- read_excel(path = \"../data/DEV_AFRICA_2018/afrika_don.xls\", \n                          sheet = \"afrika_meta\", \n                          skip = 0,\n                          col_names = TRUE)\n\n# Le tableau importé est stocké dans un objet data.frame\nclass(mon_tableau)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\n\nExport\nPour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package openxlsx et sa fonction write.xlsx().\n\ninstall.packages(\"openxlsx\")\n\n\n\n\n\n\n\nImportant\n\n\n\nLe packages openxlsx permet uniquement de lire et écrire les fichiers Excel comportant l’extension .xlsx.\n\n\n\n\nVoir l’exemple\nlibrary(openxlsx)\nwrite.xlsx(x = mon_tableau, file = \"../data/DEV_AFRICA_2018/afrika_don.xlsx\")\n\n\n\n\n\n\n\nSAS, SPSS & Stata\nLe package haven permet de gérer des fichiers propriétaires de différents formats comme SAS, SPSS, Stata, dbf…\n\ninstall.packages(\"haven\")\n\n\n\n\n\n\n\nImportant\n\n\n\nTout comme readxl, ce package fait partie de l’écosystème tidyverse (cf. module x). Le tableau importé est mis en mémoire dans un objet tibble et non dataframe. Vous pouvez utiliser la fonction as.data.frame() pour le convertir.\n\n\n\nFichier SAS\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_sas(data_file = \"../data/data_sas.sas7bdat\")\n\n# Export\nwrite_sas(data = mon_tableau, path = \"../data/mon_tableau_sas.sas7bdat\")\n\n\n\n\nFichier SPSS\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_sav(file =  \"../data/data_spss.sav\")\n\n# Export\nwrite_sav(data = mon_tableau, path =  \"../data/mon_tableau_spss.sav\")\n\n\n\n\nFichier Stata\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_stata(file =  \"../data/data_stata.dta\")\n\n# Export\nwrite_dta(data = mon_tableau, path =  \"../data/mon_tableau_stata.dta\")"
+  },
+  {
+    "objectID": "modules/import/import.html#couche-géographique",
+    "href": "modules/import/import.html#couche-géographique",
+    "title": "Import et export de données",
+    "section": "Couche géographique",
+    "text": "Couche géographique\n\nVecteur\nLe package sf permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage…). Pour cela, ce package interface avec la librairie système GDAL. Les SIG fonctionnent de la même façon !\n\ninstall.packages(\"sf\")\n\n\n\n\n\n\n\nNote\n\n\n\nL’installation du package sf demande un prérequis. La librairie système GDAL doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d’exploitation comme GNU/Linux.\n\n\n\nImport\n\nlibrary(sf)\nmap_africa <- st_read(\"../data/GADM_AFRICA_2020/afrika_map.shp\",  quiet = TRUE)\n\nclass(map_africa)\n\n[1] \"sf\"         \"data.frame\"\n\n\n\n\n\n\n\n\nImportant\n\n\n\nUne couche géographique importée via la fonction st_read() du package sf est mise en mémoire dans un objet sf (simple feature). Il s’agit en quelque sorte d’un dataframe ou chaque individu est associé à une géométrie.\n\n\n\n\nExport\nLa fonction st_write() permet d’enregistrer un objet sf sur sa machine, dans le format que l’on souhaite.\n\n\nVoir les exemples\nlibrary(sf)\n\n# Enregistrement en format ESRI Shapefile\nst_write(obj = map_africa, \n         dsn = \"../data/map_africa.shp\", \n         layer_options = \"ENCODING=UTF-8\")\n\n\n# Enregistrement en format GeoPackage\nst_write(obj = map_africa, \n         dsn = \"../data/map_africa.gpkg\", \n         layer = \"pays\")\n\n\n\n\n\n\n\nRaster\nLe package terra permet aussi de lire et d’écrire des données géographiques vectorielles (comme sf) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.\n\ninstall.packages(\"terra\")\n\n\nImport\nPour importer des données Raster, vous pouvez utiliser la fonction rast().\n\n\n\n\n\n\nImportant\n\n\n\nUn Raster importé via la fonction rast() du package terra est mis en mémoire dans un objet SpatRaster.\n\n\n\nlibrary(terra)\nElevation_Benin <- rast(\"../data/elevation.tif\") \n\nElevation_Benin\n\nclass       : SpatRaster \ndimensions  : 742, 369, 1  (nrow, ncol, nlyr)\nresolution  : 0.008339098, 0.008333169  (x, y)\nextent      : 0.774574, 3.851701, 6.23514, 12.41835  (xmin, xmax, ymin, ymax)\ncoord. ref. : lon/lat WGS 84 (EPSG:4326) \nsource      : elevation.tif \nname        : elevation \n\n\n\n\nExport\nLa fonction writeRaster() permet d’enregistrer un objet SpatRaster sur sa machine, dans le format que l’on souhaite.\n\n\nVoir l’exemple\nlibrary(terra)\nwriteRaster(x = Elevation_Benin, filename = \"../data/Benin_Elevation.tif\")"
+  },
+  {
+    "objectID": "modules/import/import.html#image",
+    "href": "modules/import/import.html#image",
+    "title": "Import et export de données",
+    "section": "Image",
+    "text": "Image\n\nImport\nPour importer des images, le package pnget jpeg, pré-installés avec le language R vous permet d’importer des images.\n\nPNG\n\n\nVoir l’exemple\nlibrary(png)\nmon_image_png <- readPNG(\"../img/map.png\")\n\n\n\n\nJPEG\n\n\nVoir l’exemple\nlibrary(jpeg)\nmon_image_jpg <- readJPEG(\"../img/wip.jpg\")\n\n\n\n\n\nExport\nIl est également possible d’exporter les sorties graphiques en format image avec les fonctions primitives suivantes :\n\nbmp()\njpeg()\npng()\ntiff()\n\nCes fonctions doivent être utilisées avec la fonction dev.off(). Exemple :\n\n\nVoir l’exemple\n# Ouverture de la création de l'image\npng(filename = \"../img/mon_image.jpg\")\n\n# Création de la représentation graphique souhaitée\nplot(1:10)\n\n# Fermeture (enregistrement) de l'image png\ndev.off()\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLa fonction dev.off() permet de clôturer la représentation graphique et d’enregistrer l’image. Si aucun dev.off() n’est exécuté à la suite de ces fonctions d’export, votre fenêtre graphique restera figée, et inutilisable.\n\n\nIl est également possible d’exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator…). Les fonction pour réaliser cela sont :\n\npdf()\nsvg()\n\nL’utilisation de ces fonctions primitives est similaire à l’export d’images matricielles. Exemple :\n\n\nVoir l’exemple\n# Ouverture de la création de l'image\npdf(file = \"../img/mon_image.pdf\")\n\n# Création de la représentation graphique souhaitée\nplot(1:10)\n\n# Fermeture (enregistrement) du pdf\ndev.off()"
+  },
+  {
+    "objectID": "modules/import/import.html#exercice",
+    "href": "modules/import/import.html#exercice",
+    "title": "Import et export de données",
+    "section": " Exercice",
+    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\nFond de carte Afrique (GADM 2020)\n Download\n\n\nRaster délévation du Bénin (???)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Créez un script R à la racine de votre projet Rstudio\nFile/New File/R script\n5. Importer les fichiers suivants en utilisant les fonctions adéquates :\n\ndata/DEV_AFRIA_2018/afrika_don.csv\n\ndata/DEV_AFRICA_2018/afrika_don.xls (1er onglet)\n\ndata/GADM_AFRICA_2020/afrika_map.shp\n\ndata/elevation.tif\n\n\n\nUn peu d’aide ?\n# Pour importer un fichier csv (afrika_don.csv)\nread.csv()\nread.csv2()\n\n# Pour importer un fichier Excel (afrika_don.xls)\nlibrary(readxl)\nread_excel()\n\n# Pour importer un fichier ESRI Shapefile (afrika_map.shp)\nlibrary(sf)\nst_read()\n\n# Pour importer un fichier TIF (elevation.tif)\nlibrary(terra)\nrast()\n\n\n\n\n\n\n Corrigé"
+  },
+  {
+    "objectID": "modules/import/osm.html",
+    "href": "modules/import/osm.html",
+    "title": "Exploiter les données OSM",
+    "section": "",
+    "text": "Work in progress"
+  },
+  {
+    "objectID": "modules/import/scraping.html",
+    "href": "modules/import/scraping.html",
+    "title": "Web scraping",
+    "section": "",
+    "text": "Work in progress"
+  },
+  {
+    "objectID": "modules/import.html",
+    "href": "modules/import.html",
+    "title": "Données",
+    "section": "",
+    "text": "Import et export de données\n\n\nLes différents types et formats de données pris en charge par R\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nPackages de données et API\n\n\nQuelques packages forunisseurs de données\n\n\n\n\n\n\nWork in progress\n\n\n\n\n\n\n\n\nConnexion à une BD\n\n\nComment se connecter à une base de données avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nExploiter les données OSM\n\n\nRécupérer des données d’OpenStreetMap avec R\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\n\n\nWeb scraping\n\n\nCollecte automatique de données issues du web\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/manipulation/manipulation.html",
@@ -182,81 +315,18 @@
     "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\nFond de carte Afrique (GADM 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez les fichiers suivants en utilisant les fonctions adéquates :\n\ndata/DEV_AFRIA_2018/afrika_don.csv\n\ndata/GADM_AFRICA_2020/afrika_map.shp\n\n\n\n\nUn peu d’aide ?\n# Pour importer le fichier csv (afrika_don.csv)\nread.csv()\nread.csv2()\n\n# Pour importer le fichier ESRI Shapefile (afrika_map.shp)\nlibrary(sf)\nst_read()\n\n\n5. Faîte une jointure entre le fond de carte des pays et le tableau de données\n\n\nUn peu d’aide ?\nmerge(x = ... , y = ... , by = \"...\", all.x = ...) \n\n\n6. Créez une nouvelle colonne stockant le nom de chaque pays en MAJUSCULE\n\n\nUn peu d’aide ?\n...$... <- toupper(...$...)\n\n\n7. Sélectionnez uniquement les pays francophone (LANGR = 1)\n\n\nUn peu d’aide ?\n... <- ....[...$LANGR == ... , ]\n\n\n8. Calculer le nombre de pays francophone par sous-région\n\n\nUn peu d’aide ?\n... <- aggregate(... ~ ..., \n                 data = ..., \n                 FUN = ...)\n\n\n9. Modifiez les noms des colonnes du tableau de regroupement crée pour les rendre plus intelligibles\n\n\nUn peu d’aide ?\ncolnames(...) <- c(\"...\", \"...\")\n\n\n\n\n\n\n Corrigé"
   },
   {
-    "objectID": "modules/statistique.html",
-    "href": "modules/statistique.html",
-    "title": "Statistique",
-    "section": "",
-    "text": "Statistique descriptive univariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive bivariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
-  },
-  {
     "objectID": "modules/manipulation.html",
     "href": "modules/manipulation.html",
     "title": "Manipulation",
     "section": "",
-    "text": "Manipulation de tableau de données\n\n\nLes fonctions primitives pour manipuler un tableau de données\n\n\n\n\n\n\n20 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Manipulation de tableau de données\n\n\nLes fonctions primitives pour manipuler un tableau de données\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nUtilisation de data.table\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nUtilisation du tidyverse\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
-    "objectID": "modules/graphique.html",
-    "href": "modules/graphique.html",
-    "title": "Graphique",
+    "objectID": "modules/reproductibilite/minicran.html",
+    "href": "modules/reproductibilite/minicran.html",
+    "title": "Le package miniCRAN",
     "section": "",
-    "text": "Graphique R-base\n\n\nRepresentations graphiques avec les fonctions primitives\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout\n\n\n\n\n\n\n\n\nGraphique avec ggplot2\n\n\nRepresentations graphiques avec ggplot2\n\n\n\n\n\n\n27 janv. 2023\n\n\nHugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
-  },
-  {
-    "objectID": "modules/import/import.html",
-    "href": "modules/import/import.html",
-    "title": "Import et export de données",
-    "section": "",
-    "text": "De nombreuses de fonctions (primitives ou non) permettent d’importer et d’exporter des données de différents formats."
-  },
-  {
-    "objectID": "modules/import/import.html#tableau-de-données",
-    "href": "modules/import/import.html#tableau-de-données",
-    "title": "Import et export de données",
-    "section": "Tableau de données",
-    "text": "Tableau de données\n\nFichier texte simple\nUn fichier texte simple (ou fichier texte brut) est un fichier dont le contenu représente uniquement une suite de caractères. Il peut s’ouvrir avec n’importe quel éditeur de texte et utilise nécessairement une forme particulière de codage des caractères.\nPlusieurs fonctions primitives permettent d’importer et d’exporter des fichiers texte simples, comme les fichiers csv, txt , tsv…\n\nImport\n\nread.delim() : fichiers délimités par un symbole quelconque et “.” en séparateur décimal\nread.delim2() : fichiers délimités par un symbole quelconque et “,” en séparateur décimal\nread.table() : pour des fichiers texte délimités par des espaces\n\nread.csv() : pour des fichiers texte délimités par des virgules (format csv)\nread.csv2() : pour des fichiers texte délimités par des points-virgules (format csv français)\n\nPour que l’import de données s’effectue correctement, il est parfois nécessaire de renseigner plusieurs arguments, comme par exemple :\nheader = valeur logique qui indique si la première ligne contient les noms des variables. sep = indique le caractère utilisé comme séparateur de champ (ex : “;”) encoding = Chaîne de caractère qui précise l’encodage utilisé pour le fichier (ex : “UTF-8”).\n\n\n\n\n\n\nImportant\n\n\n\nN’oubliez pas d’assigner le résultat dans un objet pour garder en mémoire vos données importées.\n\n\n\n# Exemple d'utilisation de read.table()\nmon_tableau  <- read.table(file = \"../data/DEV_AFRICA_2018/afrika_don_meta.csv\", \n                           header = TRUE,\n                           sep= \";\",\n                           encoding = \"UTF-8\")\n\n\n# Le tableau importé est stocké dans un objet data.frame\nclass(mon_tableau)\n\n[1] \"data.frame\"\n\n\n\n\nExport\nDes fonctions primitives permettent également d’exporter votre tableau de données vers différents format texte.\n\nwrite.table() : pour tous les types de formats texte simple (séparateur à renseigner)\nwrite.csv() : pour exporter en csv (séparateur virgule)\nwrite.csv2() : pour exporter en csv (séparateur points-virgules)\n\n\n\nVoir l’exemple\n# Exemple write.table()\nwrite.table(x = mon_tableau, \n            file = \"../data/tableau.txt\", \n            sep = \"\\t\", col.names = TRUE, \n            fileEncoding = \"UTF-8\")\n              \n# Exemple write.csv()\nwrite.csv(x = mon_tableau, file = \"../data/tableau.csv\")\n\n\n\n\n\n\n\nFichier Excel\nIl est parfois nécessaire d’importer des tableaux de données stockées dans un format propriétaire, comme par exemple Excel (xls, xlsx) ou SAS. Plusieurs packages vous permettent d’importer ce genre de format, et même d’exporter vos données dans ce type de format.\n\nImport\nVous pouvez par exemple importer un fichier Excel avec le package readxl.\n\ninstall.packages(\"readxl\")\n\n\n\n\n\n\n\nImportant\n\n\n\nLe packages readxl fait partie de l’écosystème tidyverse (cf. module x). Pour cette raison, le tableau importé est mis en mémoire dans un objet tibble et non dataframe. Il s’agit de deux objets très semblables mais pas identiques. Pour convertir un tibble en dataframe, vous pouvez utiliser la fonction as.data.frame().\n\n\n\nlibrary(readxl)\nmon_tableau <- read_excel(path = \"../data/DEV_AFRICA_2018/afrika_don.xls\", \n                          sheet = \"afrika_meta\", \n                          skip = 0,\n                          col_names = TRUE)\n\n# Le tableau importé est stocké dans un objet data.frame\nclass(mon_tableau)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\n\nExport\nPour exporter un dataframe (ou tibble) dans un fichier au format Excel, vous pouvez utiliser le package openxlsx et sa fonction write.xlsx().\n\ninstall.packages(\"openxlsx\")\n\n\n\n\n\n\n\nImportant\n\n\n\nLe packages openxlsx permet uniquement de lire et écrire les fichiers Excel comportant l’extension .xlsx.\n\n\n\n\nVoir l’exemple\nlibrary(openxlsx)\nwrite.xlsx(x = mon_tableau, file = \"../data/DEV_AFRICA_2018/afrika_don.xlsx\")\n\n\n\n\n\n\n\nSAS, SPSS & Stata\nLe package haven permet de gérer des fichiers propriétaires de différents formats comme SAS, SPSS, Stata, dbf…\n\ninstall.packages(\"haven\")\n\n\n\n\n\n\n\nImportant\n\n\n\nTout comme readxl, ce package fait partie de l’écosystème tidyverse (cf. module x). Le tableau importé est mis en mémoire dans un objet tibble et non dataframe. Vous pouvez utiliser la fonction as.data.frame() pour le convertir.\n\n\n\nFichier SAS\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_sas(data_file = \"../data/data_sas.sas7bdat\")\n\n# Export\nwrite_sas(data = mon_tableau, path = \"../data/mon_tableau_sas.sas7bdat\")\n\n\n\n\nFichier SPSS\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_sav(file =  \"../data/data_spss.sav\")\n\n# Export\nwrite_sav(data = mon_tableau, path =  \"../data/mon_tableau_spss.sav\")\n\n\n\n\nFichier Stata\n\n\nVoir l’exemple\nlibrary(haven)\n\n# Import\nmon_tableau  <- read_stata(file =  \"../data/data_stata.dta\")\n\n# Export\nwrite_dta(data = mon_tableau, path =  \"../data/mon_tableau_stata.dta\")"
-  },
-  {
-    "objectID": "modules/import/import.html#couche-géographique",
-    "href": "modules/import/import.html#couche-géographique",
-    "title": "Import et export de données",
-    "section": "Couche géographique",
-    "text": "Couche géographique\n\nVecteur\nLe package sf permet de lire les différents formats de couche géographique vectorielle (ESRI Shapefile, GeoJSON, Keyhole Markup Language, GeoPackage…). Pour cela, ce package interface avec la librairie système GDAL. Les SIG fonctionnent de la même façon !\n\ninstall.packages(\"sf\")\n\n\n\n\n\n\n\nNote\n\n\n\nL’installation du package sf demande un prérequis. La librairie système GDAL doit être installée sur votre machine. Il est parfois nécessaire de la faire soi-même sur certains système d’exploitation comme GNU/Linux.\n\n\n\nImport\n\nlibrary(sf)\nmap_africa <- st_read(\"../data/GADM_AFRICA_2020/afrika_map.shp\",  quiet = TRUE)\n\nclass(map_africa)\n\n[1] \"sf\"         \"data.frame\"\n\n\n\n\n\n\n\n\nImportant\n\n\n\nUne couche géographique importée via la fonction st_read() du package sf est mise en mémoire dans un objet sf (simple feature). Il s’agit en quelque sorte d’un dataframe ou chaque individu est associé à une géométrie.\n\n\n\n\nExport\nLa fonction st_write() permet d’enregistrer un objet sf sur sa machine, dans le format que l’on souhaite.\n\n\nVoir les exemples\nlibrary(sf)\n\n# Enregistrement en format ESRI Shapefile\nst_write(obj = map_africa, \n         dsn = \"../data/map_africa.shp\", \n         layer_options = \"ENCODING=UTF-8\")\n\n\n# Enregistrement en format GeoPackage\nst_write(obj = map_africa, \n         dsn = \"../data/map_africa.gpkg\", \n         layer = \"pays\")\n\n\n\n\n\n\n\nRaster\nLe package terra permet aussi de lire et d’écrire des données géographiques vectorielles (comme sf) mais sa valeur ajoutée se situe au niveau de la manipulation de données raster.\n\ninstall.packages(\"terra\")\n\n\nImport\nPour importer des données Raster, vous pouvez utiliser la fonction rast().\n\n\n\n\n\n\nImportant\n\n\n\nUn Raster importé via la fonction rast() du package terra est mis en mémoire dans un objet SpatRaster.\n\n\n\nlibrary(terra)\nElevation_Benin <- rast(\"../data/elevation.tif\") \n\nElevation_Benin\n\nclass       : SpatRaster \ndimensions  : 742, 369, 1  (nrow, ncol, nlyr)\nresolution  : 0.008339098, 0.008333169  (x, y)\nextent      : 0.774574, 3.851701, 6.23514, 12.41835  (xmin, xmax, ymin, ymax)\ncoord. ref. : lon/lat WGS 84 (EPSG:4326) \nsource      : elevation.tif \nname        : elevation \n\n\n\n\nExport\nLa fonction writeRaster() permet d’enregistrer un objet SpatRaster sur sa machine, dans le format que l’on souhaite.\n\n\nVoir l’exemple\nlibrary(terra)\nwriteRaster(x = Elevation_Benin, filename = \"../data/Benin_Elevation.tif\")"
-  },
-  {
-    "objectID": "modules/import/import.html#image",
-    "href": "modules/import/import.html#image",
-    "title": "Import et export de données",
-    "section": "Image",
-    "text": "Image\n\nImport\nPour importer des images, le package pnget jpeg, pré-installés avec le language R vous permet d’importer des images.\n\nPNG\n\n\nVoir l’exemple\nlibrary(png)\nmon_image_png <- readPNG(\"../img/map.png\")\n\n\n\n\nJPEG\n\n\nVoir l’exemple\nlibrary(jpeg)\nmon_image_jpg <- readJPEG(\"../img/wip.jpg\")\n\n\n\n\n\nExport\nIl est également possible d’exporter les sorties graphiques en format image avec les fonctions primitives suivantes :\n\nbmp()\njpeg()\npng()\ntiff()\n\nCes fonctions doivent être utilisées avec la fonction dev.off(). Exemple :\n\n\nVoir l’exemple\n# Ouverture de la création de l'image\npng(filename = \"../img/mon_image.jpg\")\n\n# Création de la représentation graphique souhaitée\nplot(1:10)\n\n# Fermeture (enregistrement) de l'image png\ndev.off()\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLa fonction dev.off() permet de clôturer la représentation graphique et d’enregistrer l’image. Si aucun dev.off() n’est exécuté à la suite de ces fonctions d’export, votre fenêtre graphique restera figée, et inutilisable.\n\n\nIl est également possible d’exporter vos représentations graphiques dans un format vectoriel, qui permet leur retouche avec des logiciel de DAO (Inkscape, Adobe Illustrator…). Les fonction pour réaliser cela sont :\n\npdf()\nsvg()\n\nL’utilisation de ces fonctions primitives est similaire à l’export d’images matricielles. Exemple :\n\n\nVoir l’exemple\n# Ouverture de la création de l'image\npdf(file = \"../img/mon_image.pdf\")\n\n# Création de la représentation graphique souhaitée\nplot(1:10)\n\n# Fermeture (enregistrement) du pdf\ndev.off()"
-  },
-  {
-    "objectID": "modules/import/import.html#exercice",
-    "href": "modules/import/import.html#exercice",
-    "title": "Import et export de données",
-    "section": " Exercice",
-    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nDonnées pays africains (UN-CEPII)\n Download\n\n\nFond de carte Afrique (GADM 2020)\n Download\n\n\nRaster délévation du Bénin (???)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Créez un script R à la racine de votre projet Rstudio\nFile/New File/R script\n5. Importer les fichiers suivants en utilisant les fonctions adéquates :\n\ndata/DEV_AFRIA_2018/afrika_don.csv\n\ndata/DEV_AFRICA_2018/afrika_don.xls (1er onglet)\n\ndata/GADM_AFRICA_2020/afrika_map.shp\n\ndata/elevation.tif\n\n\n\nUn peu d’aide ?\n# Pour importer un fichier csv (afrika_don.csv)\nread.csv()\nread.csv2()\n\n# Pour importer un fichier Excel (afrika_don.xls)\nlibrary(readxl)\nread_excel()\n\n# Pour importer un fichier ESRI Shapefile (afrika_map.shp)\nlibrary(sf)\nst_read()\n\n# Pour importer un fichier TIF (elevation.tif)\nlibrary(terra)\nrast()\n\n\n\n\n\n\n Corrigé"
-  },
-  {
-    "objectID": "modules/import/osm.html",
-    "href": "modules/import/osm.html",
-    "title": "Exploiter les données OSM",
-    "section": "",
-    "text": "Work in progress"
-  },
-  {
-    "objectID": "modules/import/scraping.html",
-    "href": "modules/import/scraping.html",
-    "title": "Web scraping",
-    "section": "",
-    "text": "Work in progress"
-  },
-  {
-    "objectID": "modules/import/connectBD.html",
-    "href": "modules/import/connectBD.html",
-    "title": "Connexion à une BD",
-    "section": "",
-    "text": "Work in progress"
+    "text": "Le package miniCRAN permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l’on souhaite (sur sa machine, sur clef USB, sur son propre serveur…).\nminiCRAN peut par exemple être utilisé pour créer son CRAN personnel sur une clef USB, qui vous permettra d’installer ces packages sur n’importe quelle machine sans avoir besoin d’être connecté à internet.\nCommencez par installer le package miniCRAN :\n\ninstall.packages(\"miniCRAN\")\n\nminiCRAN ne récupère pas uniquement le code source d’un package ciblé mais également toutes ses dépendances (autres packages) indispensables à son fonctionnement.\n\nLister les dépendances\nla fonction pkgDep()permet de connaitre la liste de toutes les dépendances d’un package. Exemple :\n\nlibrary(\"miniCRAN\")\n\nWarning: le package 'miniCRAN' a été compilé avec la version R 4.2.2\n\npkgDep(\"mapsf\", suggests = FALSE, enhances = FALSE)\n\n [1] \"mapsf\"      \"classInt\"   \"Rcpp\"       \"sf\"         \"e1071\"     \n [6] \"class\"      \"KernSmooth\" \"DBI\"        \"magrittr\"   \"s2\"        \n[11] \"units\"      \"MASS\"       \"proxy\"      \"wk\"        \n\n\nVous pouvez visualiser ces dépendances sous forme de graphe à l’aide de la fonction makeDepGraph() :\n\n# Construction d'un objet igraph (graphe) formalisant les dépendances d'un package\ngraph_dep <- makeDepGraph( \"mapsf\", suggests = FALSE, enhances = FALSE)\n\n# Affichage du graphe\nplot(graph_dep , legendPosition = c(-1, 1), vertex.size = 20)\n\n\n\n\n\n\nCréer son miniCRAN\nAvant d’importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker. Vous pouvez le faire manuellement ou en code R avec la fonction dir.create() :\n\npath_miniCRAN <- \"/home/hugues/Documents/5.Cours/Modules_R/miniCRAN\"\n\n# Création du répertoire nommé \"miniCRAN\"\ndir.create(path = path_miniCRAN)\n\nIl ne vous reste plus qu’à remplir votre répertoire avec les sources des packages ciblés. Pour cela, utilisez la fonction makeRepo() :\n\n# Création d'un vecteur avec le ou les package(s) ciblé(s)\nmes_pkgs <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Téléchargement des sources des packages (+ dépendances) dans le répertoire \"miniCRAN\"\nmakeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\n\n\nAjouter des packages\nIl est très simple de rajouter de nouveaux packages (et leur dépendances) dans votre miniCRAN en utilisant la fonction addPackage() :\n\naddPackage(\"tidyr\", path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\nPour lister l’ensemble des packages stockés sur votre miniCRAN, utilisez la fonction pkgAvail() :\n\n# Check for available packages\npkgAvail(repos = path_miniCRAN, )[, c(1:3, 5)]\n\n\n\nInstaller un package du miniCRAN\nPour installer un package stocké sur votre miniCRAN local, utilisez la fonction install.packages()de la manière suivante :\n\n# Chemin d'accès jusqu'au \"miniCRAN\" stocké sur votre machine.\nurl_miniCRAN <- paste0(\"file:///\", \"C:/Users/<username>/.../miniCRAN\")\n\n# Installation de ggplot2 \ninstall.packages(\"ggplot2\", \n                 repos = url_miniCRAN,\n                 type = \"source\")\n\n\n\nLe miniCRAN de TIG’R\nUn miniCRAN comportant l’ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. Vous pouvez le télécharger en vous connectant à cette page.\n\n\nPour aller plus loin\nPour connaitre l’ensemble des fonctionnalités offertes par le package miniCRAN, consultez le site web du package."
   },
   {
     "objectID": "modules/reproductibilite/programmation_lettree.html",
@@ -280,81 +350,18 @@
     "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n\n\n\n\n Corrigé"
   },
   {
-    "objectID": "modules/reproductibilite/minicran.html",
-    "href": "modules/reproductibilite/minicran.html",
-    "title": "Le package miniCRAN",
+    "objectID": "modules/reproductibilite.html",
+    "href": "modules/reproductibilite.html",
+    "title": "Reproductibilité",
     "section": "",
-    "text": "Le package miniCRAN permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l’on souhaite (sur sa machine, sur clef USB, sur son propre serveur…).\nminiCRAN peut par exemple être utilisé pour créer son CRAN personnel sur une clef USB, qui vous permettra d’installer ces packages sur n’importe quelle machine sans avoir besoin d’être connecté à internet.\nCommencez par installer le package miniCRAN :\n\ninstall.packages(\"miniCRAN\")\n\nminiCRAN ne récupère pas uniquement le code source d’un package ciblé mais également toutes ses dépendances (autres packages) indispensables à son fonctionnement.\n\nLister les dépendances\nla fonction pkgDep()permet de connaitre la liste de toutes les dépendances d’un package. Exemple :\n\nlibrary(\"miniCRAN\")\n\npkgDep(\"mapsf\", suggests = FALSE, enhances = FALSE)\n\n [1] \"mapsf\"      \"classInt\"   \"Rcpp\"       \"sf\"         \"e1071\"     \n [6] \"class\"      \"KernSmooth\" \"DBI\"        \"magrittr\"   \"s2\"        \n[11] \"units\"      \"MASS\"       \"proxy\"      \"wk\"        \n\n\nVous pouvez visualiser ces dépendances sous forme de graphe à l’aide de la fonction makeDepGraph() :\n\n# Construction d'un objet igraph (graphe) formalisant les dépendances d'un package\ngraph_dep <- makeDepGraph( \"mapsf\", suggests = FALSE, enhances = FALSE)\n\n# Affichage du graphe\nplot(graph_dep , legendPosition = c(-1, 1), vertex.size = 20)\n\n\n\n\n\n\nCréer son miniCRAN\nAvant d’importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker. Vous pouvez le faire manuellement ou en code R avec la fonction dir.create() :\n\npath_miniCRAN <- \"/home/hugues/Documents/5.Cours/Modules_R/miniCRAN\"\n\n# Création du répertoire nommé \"miniCRAN\"\ndir.create(path = path_miniCRAN)\n\nIl ne vous reste plus qu’à remplir votre répertoire avec les sources des packages ciblés. Pour cela, utilisez la fonction makeRepo() :\n\n# Création d'un vecteur avec le ou les package(s) ciblé(s)\nmes_pkgs <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Téléchargement des sources des packages (+ dépendances) dans le répertoire \"miniCRAN\"\nmakeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\n\n\nAjouter des packages\nIl est très simple de rajouter de nouveaux packages (et leur dépendances) dans votre miniCRAN en utilisant la fonction addPackage() :\n\naddPackage(\"tidyr\", path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\nPour lister l’ensemble des packages stockés sur votre miniCRAN, utilisez la fonction pkgAvail() :\n\n# Check for available packages\npkgAvail(repos = path_miniCRAN, )[, c(1:3, 5)]\n\n\n\nInstaller un package du miniCRAN\nPour installer un package stocké sur votre miniCRAN local, utilisez la fonction install.packages()de la manière suivante :\n\n# Chemin d'accès jusqu'au \"miniCRAN\" stocké sur votre machine.\nurl_miniCRAN <- paste0(\"file:///\", \"C:/Users/<username>/.../miniCRAN\")\n\n# Installation de ggplot2 \ninstall.packages(\"ggplot2\", \n                 repos = url_miniCRAN,\n                 type = \"source\")\n\n\n\nLe miniCRAN de TIG’R\nUn miniCRAN comportant l’ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. Vous pouvez le télécharger en vous connectant à cette page.\n\n\nPour aller plus loin\nPour connaitre l’ensemble des fonctionnalités offertes par le package miniCRAN, consultez le site web du package."
+    "text": "Le package miniCRAN\n\n\nCréer son CRAN personnel en local\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nProgrammation lettrée et notebook\n\n\nIntroduction et mise en pratique avec Rmarkdown\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nLe package renv\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
-    "objectID": "modules/geomatique/OpenStreetMap.html",
-    "href": "modules/geomatique/OpenStreetMap.html",
-    "title": "OpenStreetMap & R",
+    "objectID": "modules/statistique.html",
+    "href": "modules/statistique.html",
+    "title": "Statistique",
     "section": "",
-    "text": "Cette leçon vise à introduire différents types d’exploitation de la base de données géographique libre OpenStreetMap avec R. Les traitements et analyses présentés sont :\n\nGéocodage d’adresses avec tidygeocoder\nCartographie interactive avec leaflet et mapview\nExtraction de données avec maptiles, osmdata et osmextract\nCalcul de matrice de distance avec sf, puis de temps avec osrm\nCalcul itinéraires avec osrm"
-  },
-  {
-    "objectID": "modules/geomatique/OpenStreetMap.html#manuel",
-    "href": "modules/geomatique/OpenStreetMap.html#manuel",
-    "title": "OpenStreetMap & R",
-    "section": " Manuel",
-    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
-  },
-  {
-    "objectID": "modules/geomatique/OpenStreetMap.html#exercice",
-    "href": "modules/geomatique/OpenStreetMap.html#exercice",
-    "title": "OpenStreetMap & R",
-    "section": " Exercice",
-    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier africapolis_extract.shp\n\n\nUn peu d’aide ?\n# Pour importer des données géographiques \nlibrary(sf)\n... <- st_read()\n\n\n5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection UTM zone 31N (EPSG : 32631 ).\n\n\nUn peu d’aide ?\n# Pour connaitre le système de référence et de projection d'une couche\nst_crs(...)\n\n# Transformer le crs d'un objet sf\n... <- st_transform(...)\n\n\n5. Affichez les géométries des agglomérations urbaines.\nAstuce : Vous pouvez utiliser la package mapview qui permet d’afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.\n\n\nUn peu d’aide ?\n# Affichez les géométries d'un objet sf\nplot(st_geometry(...))\n\n# Afficher sur un fond de carte dynamique\nlibrary(mapview)\nmapview(...)\n\n\n6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.\n\n\nUn peu d’aide ?\n# st_area() permet de calculer la surface des polygones d'un objet sf\n...$... <- st_area(...)\n\n\n7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.\n\n\nUn peu d’aide ?\nlibrary(dplyr)\n\n... <- ... %>% \n          group_by(...) %>% \n          summarise(... = sum(...),\n                    ... = n())\n\n\n8. Créez une quatrième couche géographique (point) à partir des coordonnées de l’Institut Régional de Santé Publique, à Ouidah (Bénin) :\n\nLatitude = 6.349223507626634\nLongitude = 2.0879482065861783\nCRS = WGS84 (4326)\n\n\n\nUn peu d’aide ?\n# Création d'un data.frame avec les colonnes \"name\", \"lat\" et \"long\"\nIRSP <- data.frame(name = \"...\", \n                   lat = ..., \n                   long = ...)\n\n\n# Création d'une couche géographique à partir de ces cordonnées\nIRSP_geo <- st_as_sf(IRSP, \n                     coords = c(\"...\", \"...\"), \n                     crs = ...)\n\n\n9. Créez une zone tampon de 50km autour de l’Institut Régional de Santé Publique\n\n\nUn peu d’aide ?\n# Créer un zone tampon\n... <- st_buffer(..., dist = ...)\n\n\n10. Détectez les agglomérations urbaines situées à moins de 50 km de l’IRSP\n\n\nUn peu d’aide ?\n# Quelles agglomérations intersectent la zone tampon ?\n...$... <- st_intersects(..., ..., sparse = ...)\n\n\n11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Utilisez l'argument \"add\" pour superposer les couches\n\nplot(st_geometry(...))\nplot(...[\"...\"], add = TRUE)\nplot(st_geometry(...), add = TRUE)\nplot(st_geometry(...), add = TRUE)\n\n\n12. Combien d’habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?\n\n\nCode\n# Sélectionnez les agglomérations qui intersectent la zone tampon\n... <- ...[...$... == TRUE, ]\n\n# Calcul de la population totale de ces agglomérations\nsum(...$...)\n\n\n\n\n\n\n Corrigé"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html",
-    "href": "modules/geomatique/geomatic_vector.html",
-    "title": "Géomatique avec R - vecteur",
-    "section": "",
-    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques vectorielles avec le package sf. Les différentes manipulations de données vectorielles abordées sont :\n\nImport et export de données\nGestion de la projection cartographique\nAffichage graphique des données\nSélection par attribut\nSélection spatiale\nOpération sur les géométries"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#manuel",
-    "href": "modules/geomatique/geomatic_vector.html#manuel",
-    "title": "Géomatique avec R - vecteur",
-    "section": " Manuel",
-    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_vector.html#exercice",
-    "href": "modules/geomatique/geomatic_vector.html#exercice",
-    "title": "Géomatique avec R - vecteur",
-    "section": " Exercice",
-    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier africapolis_extract.shp\n\n\nUn peu d’aide ?\n# Pour importer des données géographiques \nlibrary(sf)\n... <- st_read()\n\n\n5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection UTM zone 31N (EPSG : 32631 ).\n\n\nUn peu d’aide ?\n# Pour connaitre le système de référence et de projection d'une couche\nst_crs(...)\n\n# Transformer le crs d'un objet sf\n... <- st_transform(...)\n\n\n5. Affichez les géométries des agglomérations urbaines.\nAstuce : Vous pouvez utiliser la package mapview qui permet d’afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.\n\n\nUn peu d’aide ?\n# Affichez les géométries d'un objet sf\nplot(st_geometry(...))\n\n# Afficher sur un fond de carte dynamique\nlibrary(mapview)\nmapview(...)\n\n\n6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.\n\n\nUn peu d’aide ?\n# st_area() permet de calculer la surface des polygones d'un objet sf\n...$... <- st_area(...)\n\n\n7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.\n\n\nUn peu d’aide ?\nlibrary(dplyr)\n\n... <- ... %>% \n          group_by(...) %>% \n          summarise(... = sum(...),\n                    ... = n())\n\n\n8. Créez une quatrième couche géographique (point) à partir des coordonnées de l’Institut Régional de Santé Publique, à Ouidah (Bénin) :\n\nLatitude = 6.349223507626634\nLongitude = 2.0879482065861783\nCRS = WGS84 (4326)\n\n\n\nUn peu d’aide ?\n# Création d'un data.frame avec les colonnes \"name\", \"lat\" et \"long\"\nIRSP <- data.frame(name = \"...\", \n                   lat = ..., \n                   long = ...)\n\n\n# Création d'une couche géographique à partir de ces cordonnées\nIRSP_geo <- st_as_sf(IRSP, \n                     coords = c(\"...\", \"...\"), \n                     crs = ...)\n\n\n9. Créez une zone tampon de 50km autour de l’Institut Régional de Santé Publique\n\n\nUn peu d’aide ?\n# Créer un zone tampon\n... <- st_buffer(..., dist = ...)\n\n\n10. Détectez les agglomérations urbaines situées à moins de 50 km de l’IRSP\n\n\nUn peu d’aide ?\n# Quelles agglomérations intersectent la zone tampon ?\n...$... <- st_intersects(..., ..., sparse = ...)\n\n\n11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Utilisez l'argument \"add\" pour superposer les couches\n\nplot(st_geometry(...))\nplot(...[\"...\"], add = TRUE)\nplot(st_geometry(...), add = TRUE)\nplot(st_geometry(...), add = TRUE)\n\n\n12. Combien d’habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?\n\n\nCode\n# Sélectionnez les agglomérations qui intersectent la zone tampon\n... <- ...[...$... == TRUE, ]\n\n# Calcul de la population totale de ces agglomérations\nsum(...$...)\n\n\n\n\n\n\n Corrigé"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html",
-    "href": "modules/geomatique/geomatic_raster.html",
-    "title": "Géomatique avec R - raster",
-    "section": "",
-    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques matricielles (raster) avec le package terra. Les différentes manipulations de données matricielles abordées sont :\n\nImport et export de raster\nAffichage graphique de raster\nModification d’un raster (reprojection, découpage, aggrégation, fusion…)\nAlgèbre spatial (locale, focale, zonales et globale)\nTransformation et conversion de raster"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#manuel",
-    "href": "modules/geomatique/geomatic_raster.html#manuel",
-    "title": "Géomatique avec R - raster",
-    "section": " Manuel",
-    "text": "Manuel\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document.\n\n\n\n\n\n Consulter en plein écran"
-  },
-  {
-    "objectID": "modules/geomatique/geomatic_raster.html#exercice",
-    "href": "modules/geomatique/geomatic_raster.html#exercice",
-    "title": "Géomatique avec R - raster",
-    "section": " Exercice",
-    "text": "Exercice"
-  },
-  {
-    "objectID": "ressources.html",
-    "href": "ressources.html",
-    "title": "Ressources",
-    "section": "",
-    "text": "De très nombreuses ressources diverses et gratuites (livres, articles, agrégateurs, cours, exercices, sites web, vidéos…) pour la pratique de R en sciences humaines et sociale sont référencées sur le site internet rzine.fr. Quelques exemples :\n analyse-R : Site web pour l’introduction à l’analyse d’enquêtes avec R et RStudio , crée et maintenue par Joseph Larmarange.\n Cartographie avec R : Manuel pour la création de cartes thématiques conformes aux règles de la sémiologie graphique et de la cartographie, T. giraud & H. Pecout.\n ElementR : Site web du groupe d’utilisateur·rice·s pour le traitement de l’information géographique avec R, coordonnée l’UMR Géographie-Cités, l’UMR PRODIG et l’UAR RIATE.\n Geocomputation with R : Ouvrage (en anglais mais le plus complet) sur la géographie computationnelle avec R, R. Lovelace, J. Nowosad et J. Muenchow.\n Géomatique avec R : Manuel pour la gestion et le traitements de données spatiales, T. giraud & H. Pecout.\n guide-R : Guide pour l’analyse de données d’enquêtes avec R (version actualisée et restructurée de nombreux chapitres d’analyse-R).\n Parcours R : Supports de formations R MTES & MCTRCT.\n Spatial Data Science with R and terra : Documentation très complète (anglais) sur l’utilisation du package terra, produite par l’auteur principal du package.\n Une introduction à R et au tidyverse : Manuel d’introduction à R, accessible et régulièrement mis à jour, par Julien Barnier.\n UtilitR : Documentation collaborative et open source sur R, destinée en premier lieu aux agents de l’INSEE."
+    "text": "Statistique descriptive bivariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive multivariée\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nStatistique descriptive univariée\n\n\n\n\n\n\n\n \n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules.html",
@@ -364,13 +371,6 @@
     "text": "Données\n\n\nImport, collecte , connexion BD…\n\n\n\n\n\n\n\n\n\n\n\n\n\nManipulation\n\n\nGestion & traitement de données\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistique\n\n\nStat. descriptive uni, bi et multivariée\n\n\n\n\n\n\n\n\n\n\n\n\n\nGraphique\n\n\nReprésentation graphique\n\n\n\n\n\n\n\n\n\n\n\n\n\nGéomatique\n\n\nTraitement données vecteur et raster\n\n\n\n\n\n\n\n\n\n\n\n\n\nCartographie\n\n\nCartographie thématique\n\n\n\n\n\n\n\n\n\n\n\n\n\nReproductibilité\n\n\nBonnes pratiques pour la recherche reproductible\n\n\n\n\n\n\n\nAucun article correspondant"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Crédits",
-    "section": "",
-    "text": "TIG’R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales. Ce site internet a depuis été ouvert aux contributions extérieurs.\n\nListe des contributeurs à ce jour, par ordre alphabétique :\nJulien Dansou, Timothée Giraud, Hugues Pecout…\n\n\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\n\n\n\n\n\nCitation\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
-  },
-  {
     "objectID": "presentation.html",
     "href": "presentation.html",
     "title": "Introduction",
@@ -378,10 +378,10 @@
     "text": "TIG’R est un site collaboratif qui met à disposition des leçons entièrement reproductibles pour le traitement de l’information géographique avec R. Les différentes leçon peuvent être utilisées indépendamment les unes des autres. Il est néanmoins nécessaire de connaître les bases du langage R (objets, opérateurs, fonctions…) pour comprendre les différents cours et exercices proposés.\nSi vous êtes débutant.e, plusieurs supports libres et gratuits d’initiation à R sont indiqués dans les ressources annexes. Si vous êtes enseignant, vous pouvez également utilisés ces deux diaporamas pour introduire au langage R :\n\n\n\nConsulter en plein écran\n\n\n\n\n\n\nConsulter en plein écran\n\n\nLes modules thématiques\nLes leçons TIG’R sont classées en sept modules thématiques qui segmentent l’ensemble de la chaîne de traitement de données géographiques :\n\nDonnées (Import, collecte , connexion BD… et export de données)\nManipulation de données (gestion & traitement de données)\nStatistique descriptives (uni, bi et multivariée)\nReprésentation graphique (R-base & ggplot2)\nGéomatique (traitement des données vectorielles et raster)\nCartographie thématique (statique et interactive)\nReproductibilité (Bonnes pratiques pour la recherche reproductible)\n\n\n\nLes packages utilisés\nAfin de maximiser la reproductibilité des traitements présentés, les différents modules de formation tentent de minimiser les dépendances à des packages. De plus, les différents packages utilisés sont des références dans la communauté R et laisser présager une certaine stabilité du code présenté.\nLes packages utilisés dans les différents modules thématiques sont :\n\nreadxl\nopenxlsx\nhaven\ndplyr\nlubridate\nstringr\nFactoMineR\nggplot2\nsf\nterra\nmapsf\nrmarkdown\nknitr\n\n\nInstallation\n\n# Liste des packages à installer pour réaliser l'ensemble des leçons\npackages <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Détection de package à installer\nmissing_packages <- packages [!(packages  %in% installed.packages()[,\"Package\"])]\n\n# Installation des packages manquants\nif(length(missing_packages)) install.packages(missing_packages)\n\n\n\n\nLe miniCRAN\nAfin de pouvoir reproduire les différentes leçon sans être dépendant d’une connexion internet, un miniCRAN (répertoire contenant les sources de l’ensemble des packages) est mis à disposition :\n\n Télécharger le miniCRAN\n\nUne fois le répertoire décompressé, vous pouvez installer les différents packages en local de la manière suivante :\n\n# Chemin d'accès jusqu'au répertoire \"miniCRAN\" copié sur votre machine.\nURL_dossier <- paste0(\"file:///\", \"C:/Users/<username>/.../\", \"miniCRAN\")\n\n# Installation de ggplot2 depuis la source (répertoire miniCRAN)\ninstall.packages(\"ggplot2\", \n                 repos = URL_dossier,\n                 type = \"source\")\n\n\n\n\n\n\n\nNote\n\n\n\nModifier “C:/Users/username/…/” par le chemin d’accès correct.\n\n\n\n\nLes données utilisées\nLes différents jeux de données utilisés dans les modules sont présentés et mis à disposition sur cette page.\n\n\nConditions d’utilisation\nLe contenu de ce site web (support de cours et exercice inclus) est soumis à la Licence ouverte V2.0 d’Etalab. Le « Réutilisateur » est libre de réutiliser l’ « Information » :\n\nde la reproduire, la copier,\n\nde l’adapter, la modifier, l’extraire et la transformer, pour créer des « Informations dérivées », des produits ou des services,\n\nde la communiquer, la diffuser, la redistribuer, la publier et la transmettre,\n\nde l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans son propre produit ou application.\n\nSous réserve de :\n\nmentionner la paternité de l’ « Information » : sa source (cf. citation et la date de dernière mise à jour de l’ « Information » réutilisée.\n\n\n\nCitation TIG’R\n\n\nPecout H., et al. 2023. « TIG’R :  Traitement de l’information géographique avec R ». 2023. https://ee2023.netlify.app/."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Ressources",
     "section": "",
-    "text": "TIG’R est une ressource d’apprentissage pour le traitement de l’information géographique avec R. Ce site a été crée dans le cadre de l’école thématique Méthodes et outils de sciences territoriales organisée par le Collègue Internationnal des Sciences Territoirales et qui s’est déroulée au à Ouidah (Bénin) en Mars 2023.\nCe site contient l’ensemble des supports de cours et exercices reproductibles utilisés pour les modules de formation à R. Ces modules couvrent succinctement l’ensemble de la chaîne de traitement de données géographiques avec R.\nCette ressource est soumise à la Licence ouverte V2.0 d’Etalab. N’hésitez pas à la réutiliser !"
+    "text": "De très nombreuses ressources diverses et gratuites (livres, articles, agrégateurs, cours, exercices, sites web, vidéos…) pour la pratique de R en sciences humaines et sociale sont référencées sur le site internet rzine.fr. Quelques exemples :\n analyse-R : Site web pour l’introduction à l’analyse d’enquêtes avec R et RStudio , crée et maintenue par Joseph Larmarange.\n Cartographie avec R : Manuel pour la création de cartes thématiques conformes aux règles de la sémiologie graphique et de la cartographie, T. giraud & H. Pecout.\n ElementR : Site web du groupe d’utilisateur·rice·s pour le traitement de l’information géographique avec R, coordonnée l’UMR Géographie-Cités, l’UMR PRODIG et l’UAR RIATE.\n Geocomputation with R : Ouvrage (en anglais mais le plus complet) sur la géographie computationnelle avec R, R. Lovelace, J. Nowosad et J. Muenchow.\n Géomatique avec R : Manuel pour la gestion et le traitements de données spatiales, T. giraud & H. Pecout.\n guide-R : Guide pour l’analyse de données d’enquêtes avec R (version actualisée et restructurée de nombreux chapitres d’analyse-R).\n Parcours R : Supports de formations R MTES & MCTRCT.\n Spatial Data Science with R and terra : Documentation très complète (anglais) sur l’utilisation du package terra, produite par l’auteur principal du package.\n Une introduction à R et au tidyverse : Manuel d’introduction à R, accessible et régulièrement mis à jour, par Julien Barnier.\n UtilitR : Documentation collaborative et open source sur R, destinée en premier lieu aux agents de l’INSEE."
   }
 ]

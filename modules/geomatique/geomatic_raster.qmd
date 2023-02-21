@@ -10,18 +10,15 @@ code-fold: true
 code-tools: true
 ---
 
-
 ## Introduction
 
 Cette leçon vise à initier à la gestion, l'analyse et la représentation de données géographiques matricielles (raster) avec le package `terra`. Les différentes manipulations de données matricielles abordées sont :
 
-- Import et export de raster
-- Affichage graphique de raster
-- Modification d'un raster (reprojection, découpage, aggrégation, fusion...)
-- Algèbre spatial (locale, focale, zonales et globale)
-- Transformation et conversion de raster
-
-
+-   Import et export de raster
+-   Affichage graphique de raster
+-   Modification d'un raster (reprojection, découpage, aggrégation, fusion...)
+-   Algèbre spatial (locale, focale, zonales et globale)
+-   Transformation et conversion de raster
 
 ## <i class="bi bi-book"></i> Manuel {.title}
 
@@ -37,11 +34,6 @@ Ce support de ce cours est un manuel initialement conçu pour accompagner le cou
 
 \
 
-::: center
-<a href="https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-raster-le-package-terra.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a>
-:::
-
-\
 
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 

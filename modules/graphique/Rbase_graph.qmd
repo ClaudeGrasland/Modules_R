@@ -6,6 +6,12 @@ date: last-modified
 ordre: 01
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    css: styles.css
+    embed-resources: TRUE
 ---
 
 **Le langage R met à disposition un ensemble de fonctions pour la représentation graphique** via le package pré-installé `graphics` . Bien que l'on préférera des packages spécialisés et plus complets comme `ggplot2` pour créer de jolis graphiques personnalisés, les fonctions R-base de représentation **peuvent être très utiles en matière d'exploration de données**.
@@ -58,7 +64,7 @@ Les fonctions graphiques peuvent être classées en trois catégories :
 La fonction primitive de représentation graphique la plus couramment utilisée est la fonction `plot()`. **Il s'agit d'une fonction générique dont le comportement s'adapte automatiquement à la nature de ses arguments**.
 
 ::: callout-warning
-**En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.** (cf. [_Notes de cours STT-4230 / STT-6230_](https://stt4230.rbind.io/communication_resultats/graphiques_r/#fonction-g%C3%A9n%C3%A9rique-plot), de Sophie Baillargeon.)
+**En fonction du type de variable choisie, la fonction `plot()` peut produire un graphique de style `barplot`, `spineplot`, `stripchart`, `barplot` ou `curve`.** (cf. [*Notes de cours STT-4230 / STT-6230*](https://stt4230.rbind.io/communication_resultats/graphiques_r/#fonction-g%C3%A9n%C3%A9rique-plot), de Sophie Baillargeon.)
 :::
 
 Il est même possible d'exécuter cette fonction sur l'ensemble d'un dataframe. Des nuages de points par couple de variables seront alors automatiquement produits :

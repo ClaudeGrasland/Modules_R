@@ -8,28 +8,30 @@ date: last-modified
 ordre: 01
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    css: styles.css
 ---
-
 
 ## Introduction
 
 Cette leçon vise à initier à l'utilisation du package `mapsf` pour la construction et la mise en page de carte thématique et statistique de différents types :
 
-- Carte de **symboles proportionnels**
-- Carte **choroplèthe**
-- Carte de **typologie**
-- Carte de **stocks et de ratios**
-- Carte de **stocks et de catégories**
+-   Carte de **symboles proportionnels**
+-   Carte **choroplèthe**
+-   Carte de **typologie**
+-   Carte de **stocks et de ratios**
+-   Carte de **stocks et de catégories**
 
 La construction de cartogramme (ou anamorphose) à l'aide du package `cartogram` est également abordé en fin de leçon.
-
 
 ## <i class="bi bi-book"></i> Manuel {.title}
 
 <iframe class="slide" src="https://rcarto.github.io/cartographie_avec_r/">
 
 </iframe>
-
 
 \
 
@@ -39,11 +41,6 @@ La construction de cartogramme (ou anamorphose) à l'aide du package `cartogram`
 
 \
 
-::: callout-note
-Le support de ce cours est disponible en ligne. Il s'agit d'un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en [postant une issue](https://github.com/rCarto/cartographie_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/cartographie_avec_r) de ce document.
-:::
-
-\
 
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
@@ -152,5 +149,4 @@ mf_prop_choro()
 ::: center
 <a href="/correction/cartographie_mapsf.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
-
 :::
