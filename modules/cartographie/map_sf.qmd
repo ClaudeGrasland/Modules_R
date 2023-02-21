@@ -11,9 +11,20 @@ code-tools: true
 ---
 
 
+## Introduction
+
+Cette leçon vise à initier à l'utilisation du package `mapsf` pour la construction et la mise en page de carte thématique et statistique de différents types :
+
+- Carte de **symboles proportionnels**
+- Carte **choroplèthe**
+- Carte de **typologie**
+- Carte de **stocks et de ratios**
+- Carte de **stocks et de catégories**
+
+La construction de cartogramme (ou anamorphose) à l'aide du package `cartogram` est également abordé en fin de leçon.
+
+
 ## <i class="bi bi-book"></i> Manuel {.title}
-
-
 
 <iframe class="slide" src="https://rcarto.github.io/cartographie_avec_r/">
 

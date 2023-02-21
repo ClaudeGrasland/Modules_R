@@ -39,7 +39,7 @@
     "href": "modules/geomatique.html",
     "title": "Géomatique",
     "section": "",
-    "text": "Géomatique avec R - vecteur\n\n\nLe package sf pour manipuler les données géographiques vectorielles\n\n\n\n\n\n\n20 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nGéomatique avec R - raster\n\n\nLe package terra pour manipuler les données géographiques RASTER\n\n\n\n\n\n\n20 févr. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Géomatique avec R - vecteur\n\n\nLe package sf pour manipuler les données géographiques vectorielles\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\n\n\nGéomatique avec R - raster\n\n\nLe package terra pour manipuler les données géographiques RASTER\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues pecout, Timothée Giraud\n\n\n\n\n\n\n\n\nOpenStreetMap & R\n\n\nUtilisation du fond de carte, Géocodage, extraction de données et calcul d’itinéraire\n\n\n\n\n\n\n21 févr. 2023\n\n\nTimothée Giraud, Hugues pecout\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/cartographie.html",
@@ -53,7 +53,14 @@
     "href": "modules/cartographie/map_sf.html",
     "title": "Cartographie avec mapsf",
     "section": "",
-    "text": "Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en postant une issue sur le dépôt GitHub de ce document."
+    "text": "Cette leçon vise à initier à l’utilisation du package mapsf pour la construction et la mise en page de carte thématique et statistique de différents types :\n\nCarte de symboles proportionnels\nCarte choroplèthe\nCarte de typologie\nCarte de stocks et de ratios\nCarte de stocks et de catégories\n\nLa construction de cartogramme (ou anamorphose) à l’aide du package cartogram est également abordé en fin de leçon."
+  },
+  {
+    "objectID": "modules/cartographie/map_sf.html#manuel",
+    "href": "modules/cartographie/map_sf.html#manuel",
+    "title": "Cartographie avec mapsf",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nLe support de ce cours est disponible en ligne. Il s’agit d’un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez nous envoyer vos remarques et suggestions en postant une issue sur le dépôt GitHub de ce document."
   },
   {
     "objectID": "modules/cartographie/map_sf.html#exercice",
@@ -67,7 +74,7 @@
     "href": "modules/reproductibilite.html",
     "title": "Reproductibilité",
     "section": "",
-    "text": "Le package miniCRAN\n\n\nCréer son CRAN personnel en local\n\n\n\n\n\n\n10 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nProgrammation lettrée et notebook\n\n\nIntroduction et mise en pratique avec Rmarkdown\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nLe package renv\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
+    "text": "Le package miniCRAN\n\n\nCréer son CRAN personnel en local\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nProgrammation lettrée et notebook\n\n\nIntroduction et mise en pratique avec Rmarkdown\n\n\n\n\n\n\n21 févr. 2023\n\n\nHugues Pecout\n\n\n\n\n\n\n\n\nLe package renv\n\n\n\n\n\n\n\n\n\nwork in progress\n\n\n\n\n\n\nAucun article correspondant\n\n\n\n\nRevenir à la page d’acceuil des modules"
   },
   {
     "objectID": "modules/graphique/Rbase_graph.html",
@@ -280,11 +287,39 @@
     "text": "Le package miniCRAN permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l’on souhaite (sur sa machine, sur clef USB, sur son propre serveur…).\nminiCRAN peut par exemple être utilisé pour créer son CRAN personnel sur une clef USB, qui vous permettra d’installer ces packages sur n’importe quelle machine sans avoir besoin d’être connecté à internet.\nCommencez par installer le package miniCRAN :\n\ninstall.packages(\"miniCRAN\")\n\nminiCRAN ne récupère pas uniquement le code source d’un package ciblé mais également toutes ses dépendances (autres packages) indispensables à son fonctionnement.\n\nLister les dépendances\nla fonction pkgDep()permet de connaitre la liste de toutes les dépendances d’un package. Exemple :\n\nlibrary(\"miniCRAN\")\n\npkgDep(\"mapsf\", suggests = FALSE, enhances = FALSE)\n\n [1] \"mapsf\"      \"classInt\"   \"Rcpp\"       \"sf\"         \"e1071\"     \n [6] \"class\"      \"KernSmooth\" \"DBI\"        \"magrittr\"   \"s2\"        \n[11] \"units\"      \"MASS\"       \"proxy\"      \"wk\"        \n\n\nVous pouvez visualiser ces dépendances sous forme de graphe à l’aide de la fonction makeDepGraph() :\n\n# Construction d'un objet igraph (graphe) formalisant les dépendances d'un package\ngraph_dep <- makeDepGraph( \"mapsf\", suggests = FALSE, enhances = FALSE)\n\n# Affichage du graphe\nplot(graph_dep , legendPosition = c(-1, 1), vertex.size = 20)\n\n\n\n\n\n\nCréer son miniCRAN\nAvant d’importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker. Vous pouvez le faire manuellement ou en code R avec la fonction dir.create() :\n\npath_miniCRAN <- \"/home/hugues/Documents/5.Cours/Modules_R/miniCRAN\"\n\n# Création du répertoire nommé \"miniCRAN\"\ndir.create(path = path_miniCRAN)\n\nIl ne vous reste plus qu’à remplir votre répertoire avec les sources des packages ciblés. Pour cela, utilisez la fonction makeRepo() :\n\n# Création d'un vecteur avec le ou les package(s) ciblé(s)\nmes_pkgs <- c(\"readxl\", \"openxlsx\", \"haven\",\n              \"dplyr\", \"lubridate\", \"stringr\",\n              \"ggplot2\", \"FactoMineR\", \"sf\",\n              \"terra\", \"mapsf\", \"rmarkdown\", \"knitr\")\n\n\n# Téléchargement des sources des packages (+ dépendances) dans le répertoire \"miniCRAN\"\nmakeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\n\n\nAjouter des packages\nIl est très simple de rajouter de nouveaux packages (et leur dépendances) dans votre miniCRAN en utilisant la fonction addPackage() :\n\naddPackage(\"tidyr\", path = path_miniCRAN, type = c(\"source\", \"mac.binary\", \"win.binary\"))\n\nPour lister l’ensemble des packages stockés sur votre miniCRAN, utilisez la fonction pkgAvail() :\n\n# Check for available packages\npkgAvail(repos = path_miniCRAN, )[, c(1:3, 5)]\n\n\n\nInstaller un package du miniCRAN\nPour installer un package stocké sur votre miniCRAN local, utilisez la fonction install.packages()de la manière suivante :\n\n# Chemin d'accès jusqu'au \"miniCRAN\" stocké sur votre machine.\nurl_miniCRAN <- paste0(\"file:///\", \"C:/Users/<username>/.../miniCRAN\")\n\n# Installation de ggplot2 \ninstall.packages(\"ggplot2\", \n                 repos = url_miniCRAN,\n                 type = \"source\")\n\n\n\nLe miniCRAN de TIG’R\nUn miniCRAN comportant l’ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. Vous pouvez le télécharger en vous connectant à cette page.\n\n\nPour aller plus loin\nPour connaitre l’ensemble des fonctionnalités offertes par le package miniCRAN, consultez le site web du package."
   },
   {
+    "objectID": "modules/geomatique/OpenStreetMap.html",
+    "href": "modules/geomatique/OpenStreetMap.html",
+    "title": "OpenStreetMap & R",
+    "section": "",
+    "text": "Cette leçon vise à introduire différents types d’exploitation de la base de données géographique libre OpenStreetMap avec R. Les traitements et analyses présentés sont :\n\nGéocodage d’adresses avec tidygeocoder\nCartographie interactive avec leaflet et mapview\nExtraction de données avec maptiles, osmdata et osmextract\nCalcul de matrice de distance avec sf, puis de temps avec osrm\nCalcul itinéraires avec osrm"
+  },
+  {
+    "objectID": "modules/geomatique/OpenStreetMap.html#manuel",
+    "href": "modules/geomatique/OpenStreetMap.html#manuel",
+    "title": "OpenStreetMap & R",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
+  },
+  {
+    "objectID": "modules/geomatique/OpenStreetMap.html#exercice",
+    "href": "modules/geomatique/OpenStreetMap.html#exercice",
+    "title": "OpenStreetMap & R",
+    "section": " Exercice",
+    "text": "Exercice\n\n1. Créez un projet Rstudio\nFile/New Project/New Directory…\n2. Téléchargez les données suivantes :\n\n\n\n\n\n\n\nIntitulé\nTéléchargement\n\n\n\n\nEmprise des agglomérations urbaines (AFRICAPOLIS 2020)\n Download\n\n\n\n3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :\n\n\n\n\n\n\n\n\n\n4. Importez le fichier africapolis_extract.shp\n\n\nUn peu d’aide ?\n# Pour importer des données géographiques \nlibrary(sf)\n... <- st_read()\n\n\n5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection UTM zone 31N (EPSG : 32631 ).\n\n\nUn peu d’aide ?\n# Pour connaitre le système de référence et de projection d'une couche\nst_crs(...)\n\n# Transformer le crs d'un objet sf\n... <- st_transform(...)\n\n\n5. Affichez les géométries des agglomérations urbaines.\nAstuce : Vous pouvez utiliser la package mapview qui permet d’afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.\n\n\nUn peu d’aide ?\n# Affichez les géométries d'un objet sf\nplot(st_geometry(...))\n\n# Afficher sur un fond de carte dynamique\nlibrary(mapview)\nmapview(...)\n\n\n6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.\n\n\nUn peu d’aide ?\n# st_area() permet de calculer la surface des polygones d'un objet sf\n...$... <- st_area(...)\n\n\n7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.\n\n\nUn peu d’aide ?\nlibrary(dplyr)\n\n... <- ... %>% \n          group_by(...) %>% \n          summarise(... = sum(...),\n                    ... = n())\n\n\n8. Créez une quatrième couche géographique (point) à partir des coordonnées de l’Institut Régional de Santé Publique, à Ouidah (Bénin) :\n\nLatitude = 6.349223507626634\nLongitude = 2.0879482065861783\nCRS = WGS84 (4326)\n\n\n\nUn peu d’aide ?\n# Création d'un data.frame avec les colonnes \"name\", \"lat\" et \"long\"\nIRSP <- data.frame(name = \"...\", \n                   lat = ..., \n                   long = ...)\n\n\n# Création d'une couche géographique à partir de ces cordonnées\nIRSP_geo <- st_as_sf(IRSP, \n                     coords = c(\"...\", \"...\"), \n                     crs = ...)\n\n\n9. Créez une zone tampon de 50km autour de l’Institut Régional de Santé Publique\n\n\nUn peu d’aide ?\n# Créer un zone tampon\n... <- st_buffer(..., dist = ...)\n\n\n10. Détectez les agglomérations urbaines situées à moins de 50 km de l’IRSP\n\n\nUn peu d’aide ?\n# Quelles agglomérations intersectent la zone tampon ?\n...$... <- st_intersects(..., ..., sparse = ...)\n\n\n11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Utilisez l'argument \"add\" pour superposer les couches\n\nplot(st_geometry(...))\nplot(...[\"...\"], add = TRUE)\nplot(st_geometry(...), add = TRUE)\nplot(st_geometry(...), add = TRUE)\n\n\n12. Combien d’habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?\n\n\nCode\n# Sélectionnez les agglomérations qui intersectent la zone tampon\n... <- ...[...$... == TRUE, ]\n\n# Calcul de la population totale de ces agglomérations\nsum(...$...)\n\n\n\n\n\n\n Corrigé"
+  },
+  {
     "objectID": "modules/geomatique/geomatic_vector.html",
     "href": "modules/geomatique/geomatic_vector.html",
     "title": "Géomatique avec R - vecteur",
     "section": "",
-    "text": "Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
+    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques vectorielles avec le package sf. Les différentes manipulations de données vectorielles abordées sont :\n\nImport et export de données\nGestion de la projection cartographique\nAffichage graphique des données\nSélection par attribut\nSélection spatiale\nOpération sur les géométries"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_vector.html#manuel",
+    "href": "modules/geomatique/geomatic_vector.html#manuel",
+    "title": "Géomatique avec R - vecteur",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n Consulter en plein écran\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document."
   },
   {
     "objectID": "modules/geomatique/geomatic_vector.html#exercice",
@@ -298,7 +333,14 @@
     "href": "modules/geomatique/geomatic_raster.html",
     "title": "Géomatique avec R - raster",
     "section": "",
-    "text": "Note\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document.\n\n\n\n\n\n Consulter en plein écran"
+    "text": "Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques matricielles (raster) avec le package terra. Les différentes manipulations de données matricielles abordées sont :\n\nImport et export de raster\nAffichage graphique de raster\nModification d’un raster (reprojection, découpage, aggrégation, fusion…)\nAlgèbre spatial (locale, focale, zonales et globale)\nTransformation et conversion de raster"
+  },
+  {
+    "objectID": "modules/geomatique/geomatic_raster.html#manuel",
+    "href": "modules/geomatique/geomatic_raster.html#manuel",
+    "title": "Géomatique avec R - raster",
+    "section": " Manuel",
+    "text": "Manuel\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCe support de ce cours est un manuel initialement conçu pour accompagner le cours ‘Cartographie avec R’ du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l’Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en postant une issue sur le dépôt GitHub de ce document.\n\n\n\n\n\n Consulter en plein écran"
   },
   {
     "objectID": "modules/geomatique/geomatic_raster.html#exercice",

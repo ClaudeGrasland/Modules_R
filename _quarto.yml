@@ -83,6 +83,8 @@ website:
             text: Données vectorielles
           - href: modules/geomatique/geomatic_raster.qmd
             text: Données Raster
+          - href: modules/geomatique/OpenStreetMap.qmd
+            text: OpenStreetMap & R
             
       - section: "**Cartographie**"
         contents:

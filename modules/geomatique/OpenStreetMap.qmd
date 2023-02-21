@@ -1,0 +1,232 @@
+---
+title: "OpenStreetMap & R"
+subtitle: "Utilisation du fond de carte, Géocodage, extraction de données et calcul d'itinéraire"
+author: 
+- Timothée Giraud
+- Hugues pecout
+date: last-modified
+ordre: 03
+code-fold: true
+code-tools: true
+---
+
+## Introduction
+
+Cette leçon vise à introduire différents types d'exploitation de la **base de données géographique libre** [**OpenStreetMap**](https://www.openstreetmap.org/#map=5/45.290/-12.085) avec R. Les traitements et analyses présentés sont :
+
+-   Géocodage d'adresses avec `tidygeocoder`
+-   Cartographie interactive avec `leaflet` et `mapview`
+-   Extraction de données  avec `maptiles`, `osmdata` et `osmextract`
+-   Calcul de matrice de distance avec `sf`, puis de temps avec `osrm`
+-   Calcul itinéraires avec  `osrm`
+
+
+## <i class="bi bi-book"></i> Manuel {.title}
+
+
+
+<iframe class="slide" src="https://rcarto.github.io/geomatique_avec_r/osm.html">
+
+</iframe>
+
+
+\
+
+::: center
+<a href="https://rcarto.github.io/geomatique_avec_r/osm.html" class="btn btn-info" role="button" aria-disabled="true"><i class="bi bi-eye"></i> Consulter en plein écran</a>
+:::
+
+\
+
+::: callout-note
+Ce support de ce cours est un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en [postant une issue](https://github.com/rCarto/geomatique_avec_r/issues) sur le [dépôt GitHub](https://github.com/rCarto/geomatique_avec_r) de ce document.
+:::
+
+\
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|                              Intitulé                              |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("../img/folder5.png")
+```
+
+[4. Importez le fichier *africapolis_extract.shp*]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# Pour importer des données géographiques 
+library(sf)
+... <- st_read()
+
+
+```
+
+[5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection *UTM zone 31N* (EPSG : 32631 ).]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+# Pour connaitre le système de référence et de projection d'une couche
+st_crs(...)
+
+# Transformer le crs d'un objet sf
+... <- st_transform(...)
+
+```
+
+[5. Affichez les géométries des agglomérations urbaines.]{.question}
+
+Astuce : Vous pouvez utiliser la package `mapview` qui permet d'afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+# Affichez les géométries d'un objet sf
+plot(st_geometry(...))
+
+# Afficher sur un fond de carte dynamique
+library(mapview)
+mapview(...)
+
+
+```
+
+
+[6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+# st_area() permet de calculer la surface des polygones d'un objet sf
+...$... <- st_area(...)
+
+```
+
+[7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+library(dplyr)
+
+... <- ... %>% 
+          group_by(...) %>% 
+          summarise(... = sum(...),
+                    ... = n())
+
+```
+
+
+[8. Créez une quatrième couche géographique (point) à partir des coordonnées de l'Institut Régional de Santé Publique, à Ouidah (Bénin) :]{.question}
+
+-   Latitude = **6.349223507626634**
+-   Longitude = **2.0879482065861783**
+-   CRS = **WGS84** (4326)
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+
+# Création d'un data.frame avec les colonnes "name", "lat" et "long"
+IRSP <- data.frame(name = "...", 
+                   lat = ..., 
+                   long = ...)
+
+
+# Création d'une couche géographique à partir de ces cordonnées
+IRSP_geo <- st_as_sf(IRSP, 
+                     coords = c("...", "..."), 
+                     crs = ...)
+
+```
+
+
+[9. Créez une zone tampon de 50km autour de l'Institut Régional de Santé Publique]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+  
+
+# Créer un zone tampon
+... <- st_buffer(..., dist = ...)
+
+
+```
+
+[10. Détectez les agglomérations urbaines situées à moins de 50 km de l'IRSP]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+ 
+
+# Quelles agglomérations intersectent la zone tampon ?
+...$... <- st_intersects(..., ..., sparse = ...)
+
+```
+
+
+[11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :]{.question}
+
+\
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/Ex_plot_buff.png")
+```
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+
+# Utilisez l'argument "add" pour superposer les couches
+
+plot(st_geometry(...))
+plot(...["..."], add = TRUE)
+plot(st_geometry(...), add = TRUE)
+plot(st_geometry(...), add = TRUE)
+
+
+```
+
+
+[12. Combien d'habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ? ]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+
+
+# Sélectionnez les agglomérations qui intersectent la zone tampon
+... <- ...[...$... == TRUE, ]
+
+# Calcul de la population totale de ces agglomérations
+sum(...$...)
+
+
+```
+
+
+
+------------------------------------------------------------------------
+
+\
+
+::: center
+<a href="/correction/geomatic_vector.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
+
+:::
+
+\

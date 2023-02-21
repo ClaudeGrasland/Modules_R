@@ -18,9 +18,7 @@ format:
     output-ext:  "pdf"
 ---
 
-
-
-Le package `miniCRAN` permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l'on souhaite (sur sa machine, sur clef USB, sur son propre serveur...). 
+Le package `miniCRAN` permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l'on souhaite (sur sa machine, sur clef USB, sur son propre serveur...).
 
 `miniCRAN` peut par exemple être utilisé pour créer son CRAN personnel sur une clef USB, qui vous permettra d'installer ces packages sur n'importe quelle machine sans avoir besoin d'être connecté à internet.
 
@@ -32,13 +30,11 @@ Commencez par installer le package `miniCRAN` :
 install.packages("miniCRAN")
 ```
 
-
 `miniCRAN` ne récupère pas uniquement le code source d'un package ciblé mais également toutes ses dépendances (autres packages) indispensables à son fonctionnement.
 
 ### Lister les dépendances
 
 la fonction `pkgDep()`permet de connaitre la liste de toutes les dépendances d'un package. Exemple :
-
 
 ```{r eval = TRUE}
 #| code-fold: FALSE
@@ -62,12 +58,9 @@ plot(graph_dep , legendPosition = c(-1, 1), vertex.size = 20)
 
 ```
 
-
 ### Créer son *miniCRAN*
 
-Avant d'importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker.
-Vous pouvez le faire manuellement ou en code R avec la fonction `dir.create()` :
-
+Avant d'importer les sources des packages ciblés ainsi que leurs dépendances, créez un nouveau répertoire qui permettra de les stocker. Vous pouvez le faire manuellement ou en code R avec la fonction `dir.create()` :
 
 ```{r eval = FALSE}
 #| code-fold: FALSE
@@ -107,7 +100,6 @@ addPackage("tidyr", path = path_miniCRAN, type = c("source", "mac.binary", "win.
 
 ```
 
-
 Pour lister l'ensemble des packages stockés sur votre *miniCRAN*, utilisez la fonction `pkgAvail()` :
 
 ```{r eval = FALSE}
@@ -136,9 +128,7 @@ install.packages("ggplot2",
 
 ### Le miniCRAN de TIG'R
 
-Un *miniCRAN* comportant l'ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. 
-Vous pouvez le télécharger en vous connectant à cette [page](https://bit.ly/3X1L4lk).
-
+Un *miniCRAN* comportant l'ensemble des packages utilisés dans les leçons de ce site web est mis à disposition. Vous pouvez le télécharger en vous connectant à cette [page](https://bit.ly/3y0SKdT).
 
 ### Pour aller plus loin
 
@@ -148,7 +138,7 @@ Pour connaitre l'ensemble des fonctionnalités offertes par le package `miniCRAN
 \
 
 <!-- ::: center -->
+
 <!-- <a href="/miniCRAN.pdf" class="btn btn-success" role="button" aria-disabled="true"><i class="bi bi-file-pdf"></i> Télécharger ce document format PDF</a> -->
+
 <!-- ::: -->
-
-

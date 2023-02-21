@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -317,6 +317,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../../modules/geomatique/geomatic_raster.html" class="sidebar-item-text sidebar-link">Données Raster</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/geomatique/OpenStreetMap.html" class="sidebar-item-text sidebar-link">OpenStreetMap &amp; R</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -379,7 +384,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#manuel" id="toc-manuel" class="nav-link active" data-scroll-target="#manuel"><i class="bi bi-book"></i> Manuel</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#manuel" id="toc-manuel" class="nav-link" data-scroll-target="#manuel"><i class="bi bi-book"></i> Manuel</a></li>
   <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice"><i class="bi bi-person-workspace"></i> Exercice</a></li>
   </ul>
 </nav>
@@ -408,7 +414,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20 février 2023</p>
+      <p class="date">21 février 2023</p>
     </div>
   </div>
   
@@ -418,6 +424,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Cette leçon vise à initier à la gestion, l’analyse et la représentation de données géographiques vectorielles avec le package <code>sf</code>. Les différentes manipulations de données vectorielles abordées sont :</p>
+<ul>
+<li>Import et export de données</li>
+<li>Gestion de la projection cartographique</li>
+<li>Affichage graphique des données</li>
+<li>Sélection par attribut</li>
+<li>Sélection spatiale</li>
+<li>Opération sur les géométries</li>
+</ul>
+</section>
 <section id="manuel" class="level2 title">
 <h2 class="title anchored" data-anchor-id="manuel"><i class="bi bi-book"></i> Manuel</h2>
 <iframe class="slide" src="https://rcarto.github.io/geomatique_avec_r/les-données-vectorielles.html">
@@ -942,213 +960,213 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-book"&gt;&lt;/i&gt; Manuel {.title}</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>Cette leçon vise à initier à la gestion, l'analyse et la représentation de données géographiques vectorielles avec le package <span class="in">`sf`</span>. Les différentes manipulations de données vectorielles abordées sont :</span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;iframe</span> <span class="er">class</span><span class="ot">=</span><span class="st">"slide"</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://rcarto.github.io/geomatique_avec_r/les-données-vectorielles.html"</span><span class="kw">&gt;</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/iframe&gt;</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Import et export de données</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gestion de la projection cartographique</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Affichage graphique des données</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sélection par attribut</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sélection spatiale</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Opération sur les géométries</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>::: center</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-vectorielles.html"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-info"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-eye"</span><span class="kw">&gt;&lt;/i&gt;</span> Consulter en plein écran<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>Ce support de ce cours est un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en <span class="co">[</span><span class="ot">postant une issue</span><span class="co">](https://github.com/rCarto/geomatique_avec_r/issues)</span> sur le <span class="co">[</span><span class="ot">dépôt GitHub</span><span class="co">](https://github.com/rCarto/geomatique_avec_r)</span> de ce document.</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>|                              Intitulé                              |                                                                     Téléchargement                                                                      |</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3wnQKeG"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-book"&gt;&lt;/i&gt; Manuel {.title}</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;iframe</span> <span class="er">class</span><span class="ot">=</span><span class="st">"slide"</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://rcarto.github.io/geomatique_avec_r/les-données-vectorielles.html"</span><span class="kw">&gt;</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/iframe&gt;</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://rcarto.github.io/geomatique_avec_r/les-donn%C3%A9es-vectorielles.html"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-info"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-eye"</span><span class="kw">&gt;&lt;/i&gt;</span> Consulter en plein écran<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>Ce support de ce cours est un manuel initialement conçu pour accompagner le cours *'Cartographie avec R'* du Master 2 Géomatique, géodécisionnel, géomarketing et multimédia (G2M) de l'Université Paris 8 Vincennes - Saint-Denis (France). Vous pouvez envoyer vos remarques et suggestions aux auteurs en <span class="co">[</span><span class="ot">postant une issue</span><span class="co">](https://github.com/rCarto/geomatique_avec_r/issues)</span> sur le <span class="co">[</span><span class="ot">dépôt GitHub</span><span class="co">](https://github.com/rCarto/geomatique_avec_r)</span> de ce document.</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class="bi bi-person-workspace"&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
 <span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
 <span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="60%", fig.align='center'}</span></span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder5.png"</span>)</span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importez le fichier *africapolis_extract.shp*</span><span class="co">]</span>{.question}</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>|                        Intitulé                        |                                                                     Téléchargement                                                                      |</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3wnQKeG"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
 <span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer des données géographiques </span></span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_read</span>()</span>
-<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="60%", fig.align='center'}</span></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder5.png"</span>)</span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importez le fichier *africapolis_extract.shp*</span><span class="co">]</span>{.question}</span>
 <span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection *UTM zone 31N* (EPSG : 32631 ).</span><span class="co">]</span>{.question}</span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour connaitre le système de référence et de projection d'une couche</span></span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(...)</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour importer des données géographiques </span></span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_read</span>()</span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformer le crs d'un objet sf</span></span>
-<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(...)</span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Affichez les géométries des agglomérations urbaines.</span><span class="co">]</span>{.question}</span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>Astuce : Vous pouvez utiliser la package <span class="in">`mapview`</span> qui permet d'afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.</span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection *UTM zone 31N* (EPSG : 32631 ).</span><span class="co">]</span>{.question}</span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Pour connaitre le système de référence et de projection d'une couche</span></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(...)</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformer le crs d'un objet sf</span></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(...)</span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichez les géométries d'un objet sf</span></span>
-<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...))</span>
-<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher sur un fond de carte dynamique</span></span>
-<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
-<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(...)</span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Affichez les géométries des agglomérations urbaines.</span><span class="co">]</span>{.question}</span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>Astuce : Vous pouvez utiliser la package <span class="in">`mapview`</span> qui permet d'afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichez les géométries d'un objet sf</span></span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...))</span>
 <span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.</span><span class="co">]</span>{.question}</span>
-<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher sur un fond de carte dynamique</span></span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(...)</span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="co"># st_area() permet de calculer la surface des polygones d'un objet sf</span></span>
-<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">st_area</span>(...)</span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.</span><span class="co">]</span>{.question}</span>
 <span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.</span><span class="co">]</span>{.question}</span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="co"># st_area() permet de calculer la surface des polygones d'un objet sf</span></span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">st_area</span>(...)</span>
 <span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ... <span class="sc">%&gt;%</span> </span>
-<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(...) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarise</span>(<span class="at">... =</span> <span class="fu">sum</span>(...),</span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a>                    <span class="at">... =</span> <span class="fu">n</span>())</span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.</span><span class="co">]</span>{.question}</span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Créez une quatrième couche géographique (point) à partir des coordonnées de l'Institut Régional de Santé Publique, à Ouidah (Bénin) :</span><span class="co">]</span>{.question}</span>
-<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Latitude = **6.349223507626634**</span>
-<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Longitude = **2.0879482065861783**</span>
-<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>CRS = **WGS84** (4326)</span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ... <span class="sc">%&gt;%</span> </span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>          <span class="fu">group_by</span>(...) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>          <span class="fu">summarise</span>(<span class="at">... =</span> <span class="fu">sum</span>(...),</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>                    <span class="at">... =</span> <span class="fu">n</span>())</span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'un data.frame avec les colonnes "name", "lat" et "long"</span></span>
-<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>IRSP <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="st">"..."</span>, </span>
-<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a>                   <span class="at">lat =</span> ..., </span>
-<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>                   <span class="at">long =</span> ...)</span>
-<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Créez une quatrième couche géographique (point) à partir des coordonnées de l'Institut Régional de Santé Publique, à Ouidah (Bénin) :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Latitude = **6.349223507626634**</span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Longitude = **2.0879482065861783**</span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>CRS = **WGS84** (4326)</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une couche géographique à partir de ces cordonnées</span></span>
-<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a>IRSP_geo <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(IRSP, </span>
-<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a>                     <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"..."</span>, <span class="st">"..."</span>), </span>
-<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>                     <span class="at">crs =</span> ...)</span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'un data.frame avec les colonnes "name", "lat" et "long"</span></span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a>IRSP <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="st">"..."</span>, </span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a>                   <span class="at">lat =</span> ..., </span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>                   <span class="at">long =</span> ...)</span>
 <span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Créez une zone tampon de 50km autour de l'Institut Régional de Santé Publique</span><span class="co">]</span>{.question}</span>
-<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un zone tampon</span></span>
-<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(..., <span class="at">dist =</span> ...)</span>
-<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">10. Détectez les agglomérations urbaines situées à moins de 50 km de l'IRSP</span><span class="co">]</span>{.question}</span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une couche géographique à partir de ces cordonnées</span></span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>IRSP_geo <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(IRSP, </span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>                     <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"..."</span>, <span class="st">"..."</span>), </span>
+<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a>                     <span class="at">crs =</span> ...)</span>
+<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Créez une zone tampon de 50km autour de l'Institut Régional de Santé Publique</span><span class="co">]</span>{.question}</span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un zone tampon</span></span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(..., <span class="at">dist =</span> ...)</span>
 <span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Quelles agglomérations intersectent la zone tampon ?</span></span>
-<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">st_intersects</span>(..., ..., <span class="at">sparse =</span> ...)</span>
-<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">10. Détectez les agglomérations urbaines situées à moins de 50 km de l'IRSP</span><span class="co">]</span>{.question}</span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Quelles agglomérations intersectent la zone tampon ?</span></span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">st_intersects</span>(..., ..., <span class="at">sparse =</span> ...)</span>
 <span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
-<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/Ex_plot_buff.png"</span>)</span>
-<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :</span><span class="co">]</span>{.question}</span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a>\</span>
 <span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a><span class="co"># Utilisez l'argument "add" pour superposer les couches</span></span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/Ex_plot_buff.png"</span>)</span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...))</span>
-<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(...[<span class="st">"..."</span>], <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Utilisez l'argument "add" pour superposer les couches</span></span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...))</span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(...[<span class="st">"..."</span>], <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">12. Combien d'habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ? </span><span class="co">]</span>{.question}</span>
-<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">12. Combien d'habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?</span><span class="co">]</span>{.question}</span>
 <span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélectionnez les agglomérations qui intersectent la zone tampon</span></span>
-<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="cn">TRUE</span>, ]</span>
+<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul de la population totale de ces agglomérations</span></span>
-<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(...<span class="sc">$</span>...)</span>
+<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélectionnez les agglomérations qui intersectent la zone tampon</span></span>
+<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="cn">TRUE</span>, ]</span>
 <span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul de la population totale de ces agglomérations</span></span>
+<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(...<span class="sc">$</span>...)</span>
 <span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a>::: center</span>
-<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/correction/geomatic_vector.zip"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/correction/geomatic_vector.zip"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb11-220"><a href="#cb11-220" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb11-221"><a href="#cb11-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-222"><a href="#cb11-222" aria-hidden="true" tabindex="-1"></a>\</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>

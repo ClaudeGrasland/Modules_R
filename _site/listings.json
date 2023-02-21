@@ -13,7 +13,8 @@
     "listing": "/modules/geomatique.html",
     "items": [
       "/modules/geomatique/geomatic_vector.html",
-      "/modules/geomatique/geomatic_raster.html"
+      "/modules/geomatique/geomatic_raster.html",
+      "/modules/geomatique/OpenStreetMap.html"
     ]
   },
   {
