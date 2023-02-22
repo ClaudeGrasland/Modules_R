@@ -41,7 +41,6 @@ La construction de cartogramme (ou anamorphose) à l'aide du package `cartogram`
 
 \
 
-
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}

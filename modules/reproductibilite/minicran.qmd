@@ -10,12 +10,8 @@ format:
   html:
     theme: cosmo
     code-copy: true
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
-    output-file: "miniCRAN"
-    output-ext:  "pdf"
+    css: styles.css
+    embed-resources: TRUE
 ---
 
 Le package `miniCRAN` permet de créer un dépôt en interne composé de packages sélectionnés dans des dépôts de type CRAN. Cela permet de récupérer les sources binaires de packages ciblés, et de les rendre disponibles où l'on souhaite (sur sa machine, sur clef USB, sur son propre serveur...).

@@ -8,8 +8,9 @@
 # install.packages("tidygeocoder")
 # install.packages("sf")
 # install.packages("mapview")
-# install.packages("osmextract")
+# install.packages("maptiles")
 # install.packages("osrm")
+
 
 
 ##------------------- Géocodage adresse -----------------------##
@@ -57,29 +58,114 @@ mapview(africapolis_ben_pt)
 
 
 
-mat_dist_eucli <- st_distance(x = Univ_benin_sf, y = africapolis_ben_pt)
-class(mat_dist_eucli)
+mat_dist_eucli_km <- as.matrix(st_distance(x = Univ_benin_sf, y = africapolis_ben_pt))/1000
+class(mat_dist_eucli_km)
+
+rownames(mat_dist_eucli_km) <- Univ_benin_sf$name
+colnames(mat_dist_eucli_km) <- africapolis_ben_pt$agglosName
+
+View(mat_dist_eucli_km)
 
 
-africapolis_ben_pt$dist_IRSP <- mat_dist_eucli[1,]
-africapolis_ben_pt$dist_LARESPD <- mat_dist_eucli[2,]
+
+
+
+library(osrm)
+dist <- osrmTable(src = Univ_benin_sf, 
+                  dst = africapolis_ben_pt,
+                  measure = c("distance", "duration"))
+                  
+dist$destinations
+dist$sources
+dist$durations
+
+mat_dist_route_km <- as.matrix(dist$distances)/1000
+mat_dist_route_hrs <- as.matrix(dist$durations)/60
+
+## Indices accessibilité
+
+# Accessibilité moyenne
+
 mean(africapolis_ben_pt$dist_IRSP)
 mean(africapolis_ben_pt$dist_LARESPD)
 
+# Éloignement maximal
+
+max(africapolis_ben_pt$dist_IRSP)
+max(africapolis_ben_pt$dist_LARESPD)
+
+## Indices de performance
+
+
+# Indice de sinuosité
+ind1<-mat_dist_route_km/mat_dist_eucli_km
+
+moyenne<-apply(ind1,2,mean,na.rm=T)
+ind1<-rbind(ind1,moyenne)
+knitr::kable(ind1, digits=2, caption = "Indice de sinuosité ")
+
+# Indice de vitesse sur route
+mat_dist_route_hrs <- mat_dist_route_min / 60
+ind2 <- mat_dist_route_km / mat_dist_route_hrs
+
+moyenne<-apply(ind2,2,mean,na.rm=T)
+ind2<-rbind(ind2,moyenne)
+
+# Indice global de performance
+ind3<-ind2/ind1
+
+
+
+
+africapolis_ben_pt$dist_eucli_km_IRSP <- as.numeric(mat_dist_eucli_km[1,])
+africapolis_ben_pt$dist_eucli_km_LARESPD <- as.numeric(mat_dist_eucli_km[2,])
+africapolis_ben_pt$dist_route_km_IRSP <- as.numeric(mat_dist_route_km[1,])
+africapolis_ben_pt$dist_route_km_LARESPD <- as.numeric(mat_dist_route_km[2,])
+africapolis_ben_pt$dist_route_hrs_IRSP <- as.numeric(mat_dist_route_hrs[1,])
+africapolis_ben_pt$dist_route_hrs_LARESPD <- as.numeric(mat_dist_route_hrs[2,])
+
+
+africapolis_ben_pt$Ind_Sinuosite <- africapolis_ben_pt$dist_route_km_IRSP / africapolis_ben_pt$dist_eucli_km_IRSP
+# Plus c'est bas plus c'est direct
+
+africapolis_ben_pt$Ind_Vitesse <- africapolis_ben_pt$dist_route_km_IRSP / africapolis_ben_pt$dist_route_hrs_IRSP 
+# Plus c'est haut plus c'est rapide
+
+africapolis_ben_pt$Ind_performance <- africapolis_ben_pt$Ind_Vitesse / africapolis_ben_pt$Ind_Sinuosite 
+# Plus c'est haut plus c'est bien
+
 library(mapsf)
+plot_tiles(osm_tiles)
+
 
 mf_map(x = africapolis_ben_pt,
-       var = "dist_LARESPD",
-       symbol = "circle",
-       type = "prop",
-       inches = 0.40,
+       var = "Ind_performance",
+       type = "choro",
        col = "brown4",
-       border = "white",
-       lwd = 0.5,
        leg_pos = "bottomleft2",
-       leg_title = "Nombre d'habitants (en millions)", 
+       leg_title = "Nombre d'habitants (en millions)",
+       breaks = "jenks",
+       nbreaks = 5,
+       leg_val_rnd = 0,
+       border=NA,
+       cex = 2,
        add = TRUE)
+
+
+Itinéraire premier du classement 
+winner_city <- africapolis_ben_pt[africapolis_ben_pt$Ind_performance == max(africapolis_ben_pt$Ind_performance),]
+route <- osrmRoute(src = Univ_benin_sf[1,], 
+                   dst = winner_city )
+
+plot_tiles(osm_tiles)
+plot(st_geometry(route), col = "grey10", lwd = 6, add = T)
+plot(st_geometry(route), col = "grey90", lwd = 1, add = T)
+
+
 # mat_dist_eucli <- units::drop_units(mat_dist_eucli)
+
+plot(st_geometry(Univ_benin_sf[1,]), border = "red", col="red" , lwd = 10, pch = 20, add = TRUE)
+mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
 
 row.names(mat_dist_eucli) <- Univ_benin_sf$name
 colnames(mat_dist_eucli, do.NULL =FALSE)<- africapolis$agglosName

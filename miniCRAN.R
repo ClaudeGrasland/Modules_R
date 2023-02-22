@@ -1,9 +1,8 @@
 path_miniCRAN <- "/home/hugues/Documents/5.Cours/Modules_R/miniCRAN"
-path_miniCRAN <- "C:/Users/HP/Documents/Modules_R"
+path_miniCRAN <- "/home/hugues/Bureau/Modules_R/miniCRAN"
 
 # Création du répertoire nommé "miniCRAN"
 dir.create(path = path_miniCRAN)
-
 
 
 # Création d'un vecteur avec le ou les package(s) ciblé(s)
@@ -29,7 +28,6 @@ mes_pkgs <- c("data.table",
               "leaflet", 
               "mapview",
               "rayshader",
-              "rayvista",
               "cartogram",
               "ggmap",
               "ggspatial",
@@ -58,9 +56,64 @@ mes_pkgs <- c("data.table",
               "reticulate",
               "htmltools",
               "tinytex",
-              "miniCRAN")
+              "miniCRAN",
+              "car",
+              "RColorBrewer",
+              "reshape2",
+              "htmlwidgets",
+              "ipumsr",
+              "kableExtra",
+              "GGally",
+              "stargazer",
+              "gt",
+              "readstata13",
+              "rio", 
+              "summarytools", 
+              "DescTools",
+              "Factoshiny",
+              "explor", 
+              "foreign",
+              "lme4", 
+              "Rcmdr", 
+              "nloptr", 
+              "readr",
+              "xfun", 
+              "DBI", 
+              "readxl",
+              "geosphere",
+              "rgeos", 
+              "factoextra", 
+              "RSQLite",
+              "flexdashboard",
+              "caret",
+              "randomForest",
+              "forcats",  
+              "proj4",
+              "tidytext",
+              "viridis", 
+              "sfnetworks",
+              "rmapshaper", 
+              "cartography", 
+              "remotes",
+              "xlsx",
+              "tinytex")
+
+
+# ttt
+# tinytext latex
+# rayvista
+
+
 
 
 library(miniCRAN)
 # Téléchargement des sources des packages (+ dépendances) dans le répertoire "miniCRAN"
 makeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c("source", "mac.binary", "win.binary"), writePACKAGES = TRUE)
+
+
+mes_pkgs <- c()
+
+makeRepo(pkgDep(mes_pkgs), path = path_miniCRAN, type = c("source", "mac.binary", "win.binary"), writePACKAGES = TRUE)
+
+
+

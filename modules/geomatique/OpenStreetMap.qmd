@@ -39,7 +39,6 @@ Cette leçon vise à introduire différents types d'exploitation de la **base de
 
 \
 
-
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
