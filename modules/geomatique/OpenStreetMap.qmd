@@ -42,9 +42,263 @@ Cette leçon vise à introduire différents types d'exploitation de la **base de
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-[1. Créez un projet Rstudio]{.question}
+[1. Créez un projet Rstudio, puis un script R]{.question}
 
 *File/New Project/New Directory...*
+
+
+[2. Géocodez une de ces deux adresses :]{.question}
+
+A. Adresse de l'IRSP : *"Institut Régional de Santé Publique de Ouidah, Bénin"*   
+B. Adresse du LaReSPD : *"Université de Parakou, Bénin"*   
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# Construction d'un data.frame avec nom et adresse
+... <- data.frame(name = "...",
+                  addresse = ".........")
+
+# Géocodage 
+library(tidygeocoder)
+... <- geocode(..., ...)
+
+
+````
+
+
+[3. Créez un point (objet sf) à partir de la latitude et de la longitude récupérées :]{.question}
+
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+library(sf)
+
+# Création objet sf
+... <- st_as_sf(..., coords = c("...", "..."), crs = 4326)
+
+
+````
+
+[4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (CRS **3857**), puis visualisez-le avec `mapview`]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# Transformation de la projection 
+... <- st_transform(..., crs = 3857)
+
+library(mapview)
+mapview(...)
+
+````
+
+
+[5. Téléchargez les données suivantes :]{.question}
+
+|                        Intitulé                        |                                                                     Téléchargement                                                                      |
+|:-----------------------------------------:|:---------------------------:|
+| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+
+[6. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("../img/folder5.png")
+```
+
+
+[7. Importez la couche *Africapolis* dans R et transformez sa projection en en WGS84 / Pseudo-Mercator (CRS **3857**).]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+... <- st_read("data/.../....shp",  quiet = TRUE)
+
+# Transformation de la projection en Pseudo-Mercator (3857)
+... <- st_transform(..., crs = 3857)
+
+````
+
+
+[8. Sélectionnez uniquement les agglomérations béninoises]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+... <- ...[...$... == "BEN", ]
+
+```
+
+
+[9. Extrayez les centroïdes des polygones d'agglomération du Bénin]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+... <- st_centroid(...)
+
+```
+
+
+
+[9. Extrayez la tuile (fond de carte) OSM située au niveau des centroïdes extraits ]{.question}
+
+Vous pouvez utiliser la fonction `st_buffer()` pour extraire une zone légèrement plus étendue que l'emprise des centroïdes.
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+library(maptiles)
+... <- get_tiles(x = st_buffer(x = ..., dist =  ...), zoom = 8, crop = TRUE)
+
+
+```
+
+
+[10. Affichez la tuile OSM, les centroïdes d'agglomérations et l'IRSP (ou LaReSPD) sur une carte]{.question}
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+plot_tiles(...)
+plot(st_geometry(...),  col="..." , add = TRUE)
+plot(st_geometry(...),  col="..." , add = TRUE)
+
+# Source des données ?
+mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
+
+```
+
+
+[11. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroîdes des agglomérations béninoises.]{.question}
+
+A. Une matrice de distance euclidienne   
+B. Une matrice de distance par la route   
+C. Un matrice de distance temps par la route   
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+# Distance Euclidienne 
+... <- st_distance(x = ..., y = ...) 
+
+
+
+# Distance et temps par la route
+library(osrm)
+... <- osrmTable(src = ..., 
+                 dst = ...,
+                 measure = c("...", "..."))
+                  
+```
+
+
+
+[12. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroîdes des agglomérations béninoises.]{.question}
+
+A. Une matrice de distance euclidienne   
+B. Une matrice de distance par la route   
+C. Un matrice de distance temps par la route   
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+#------ Ajout des valeurs (+ conversion) comme attributs des agglomérations ---------#
+
+# mètres -> kilomètres
+africapolis_ben_pt$IRSP_eucli_dist <- as.numeric(mat_eucli_km) / 1000
+
+# mètres -> kilomètres
+africapolis_ben_pt$IRSP_route_km <- as.numeric(dist$distances) / 1000
+
+# Minutes -> heures
+africapolis_ben_pt$IRSP_route_hr <- as.numeric(dist$durations) / 60
+
+
+
+
+#####---------------------- Calcul d'indice ----------------------#####
+
+
+#------------------ Calcul indice d'accessibilité  -------------------#
+
+mean(africapolis_ben_pt$IRSP_eucli_dist)
+max(africapolis_ben_pt$IRSP_eucli_dist)
+
+mean(africapolis_ben_pt$IRSP_route_km)
+max(africapolis_ben_pt$IRSP_route_km)
+
+mean(africapolis_ben_pt$IRSP_route_hr)
+max(africapolis_ben_pt$IRSP_route_hr)
+
+
+
+#------------------ Calcul indice de performance ---------------------#
+
+# Indice de sinuosité 
+africapolis_ben_pt$ind_sinuo <- round(africapolis_ben_pt$IRSP_route_km / africapolis_ben_pt$IRSP_eucli_dist, 2)
+
+# Indice de vitesse sur route
+africapolis_ben_pt$ind_speed <- round(africapolis_ben_pt$IRSP_route_km / africapolis_ben_pt$IRSP_route_hr, 1)
+
+# Indice global de performance
+africapolis_ben_pt$ind_perf <- round(africapolis_ben_pt$ind_speed / africapolis_ben_pt$ind_sinuo, 1)
+
+
+
+#---------- Cartographie de l'indice global de performance----------#
+
+library(mapsf)
+
+plot_tiles(osm_tiles)
+mf_map(x = africapolis_ben_pt,
+       var = "ind_perf",
+       type = "choro",
+       pal = "Dark Mint",
+       leg_pos = "bottomleft2",
+       leg_title = "Indice de perfomaance globale",
+       breaks = "jenks",
+       nbreaks = 8,
+       leg_val_rnd = 0,
+       border=NA,
+       cex = 2,
+       add = TRUE)
+
+plot(st_geometry(IRSP_sf), border = "red", col="red" , lwd = 10, pch = 20, add = TRUE)
+mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
+
+
+
+
+#--- Agglomération avec le plus haut indice global de performance ----#
+
+
+# Sélection de l'agglomération présentant l'indice global le plus élevé
+city_max_perf <- africapolis_ben_pt[africapolis_ben_pt$ind_perf == max(africapolis_ben_pt$ind_perf),]
+
+
+
+
+#---------- Calcul d'itinéraire entre IRSP et city_max_perf ----------#
+
+route <- osrmRoute(src = IRSP_sf, dst = city_max_perf)
+
+# Affichage de l'itinéraire
+plot_tiles(osm_tiles)
+plot(st_geometry(route), col = "grey10", lwd = 6, add = TRUE)
+plot(st_geometry(route), col = "grey90", lwd = 1, add = TRUE)
+plot(st_geometry(IRSP_sf), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
+plot(st_geometry(city_max_perf), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
+mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
+
+
 
 [2. Téléchargez les données suivantes :]{.question}
 
