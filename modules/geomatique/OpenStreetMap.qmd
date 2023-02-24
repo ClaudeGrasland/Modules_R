@@ -75,8 +75,6 @@ library(sf)
 
 ```
 
-
-
 [4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (EPSG **3857**), puis visualisez-le avec `mapview`.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
@@ -89,13 +87,11 @@ library(mapview)
 mapview(...)
 ```
 
-
 [5. Téléchargez les données suivantes :]{.question}
 
 |                        Intitulé                        |                                                                     Téléchargement                                                                      |
-|:-----------------------------------------:|:---------------------------:|
+|:------------------:|:--------------------------------------------------:|
 | Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
 
 [6. Placez les données décompressées dans le répertoire de votre projet, de la façon suivante :]{.question}
 
@@ -113,7 +109,6 @@ knitr::include_graphics("../img/folder5.png")
 ... <- st_transform(..., crs = 3857)
 
 ```
-
 
 [8. Sélectionnez uniquement les agglomérations béninoises.]{.question}
 
@@ -197,9 +192,7 @@ Convertissez les distances calculées (mètres) en kilomètres et les temps (min
 
 ```
 
-
 [14. Calculez les indices moyens d'accessibilité à l'IRSP (ou LaReSPD).]{.question}
-
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -210,7 +203,6 @@ mean(...$...)
 mean(...$...)
 
 ```
-
 
 [15. Calculez les indices de performances suivants à partir des distances récupérées.]{.question}
 
@@ -233,7 +225,6 @@ Enregistrez ces indices dans de nouvelles colonnes. Vous pouvez arrondir leurs v
 ...$... <- round(...$ind_vit / ...$ind_sin, 1)
 
 ```
-
 
 [16. Cartographiez l'indice global de performance sur les centroïdes (points) des agglomérations. Utilisez la tuile OSM téléchargée comme fond de carte.]{.question}
 
@@ -260,12 +251,10 @@ mf_map(x = ...,
        cex = ...,
        add = TRUE)
 
-# Ajout d'un point pour situer l'IRSP (ou LaReSPD)
-plot(st_geometry(IRSP_sf), border = NA, col="red",
-     pch = 20, cex = 2, add = TRUE)
+# Affichage de l'IRSP (ou LaReSPD)
+plot(st_geometry(...), border = NA, col="red", pch = 20, cex = 2, add = TRUE)
 
 ```
-
 
 [17. Quelle agglomération présente la plus forte valeur de l'indice global de performance d'accessibilité pour l'IRSP (ou LaReSPD).]{.question}
 

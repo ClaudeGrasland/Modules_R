@@ -76,7 +76,7 @@ Les packages utilisés dans les différents modules thématiques sont :
 
 #### Installation
 
-```{r}
+```{r, eval = FALSE}
 
 # Liste des packages à installer
 packages <- c("readxl", "openxlsx", "haven",

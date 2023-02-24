@@ -392,10 +392,10 @@ dev.off()
 [2. Téléchargez les données suivantes :]{.question}
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
-|:--------------:|:-----------------------------------------------------:|
+|:----------------:|:----------------------------------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-| Raster délévation du Bénin (???)  | <a href="https://bit.ly/3XqLAKR" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+| Raster délévation du Bénin        | <a href="https://bit.ly/3XqLAKR" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 

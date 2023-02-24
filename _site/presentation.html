@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.247">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -169,26 +169,31 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./presentation.html" aria-current="page">Introduction</a>
+    <a class="nav-link active" href="./presentation.html" aria-current="page">
+ <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html">Données</a>
+    <a class="nav-link" href="./data.html">
+ <span class="menu-text">Données</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./modules.html">Modules</a>
+    <a class="nav-link" href="./modules.html">
+ <span class="menu-text">Modules</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ressources.html">Ressources</a>
+    <a class="nav-link" href="./ressources.html">
+ <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">Crédits</a>
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -416,6 +421,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -492,17 +498,6 @@ div.csl-indent {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation des packages manquants</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">length</span>(missing_packages)) <span class="fu">install.packages</span>(missing_packages)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installation du package dans '/home/hugues/R/x86_64-pc-linux-gnu-library/4.2'
-(car 'lib' n'est pas spécifié)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: le package '...' n'est pas disponible for this version of R
-
-Une version de ce package pour votre version de R est peut-être disponible ailleurs,
-Voyez des idées à
-https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
-</div>
 </div>
 </section>
 </section>
@@ -514,13 +509,13 @@ https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-package
 </div>
 <p>Une fois le répertoire décompressé, vous pouvez installer les différents packages en local de la manière suivante :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chemin d'accès jusqu'au répertoire "miniCRAN" copié sur votre machine.</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>URL_dossier <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"file:///"</span>, <span class="st">"C:/Users/&lt;username&gt;/.../"</span>, <span class="st">"miniCRAN"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de ggplot2 depuis la source (répertoire miniCRAN)</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>, </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> URL_dossier,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"source"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chemin d'accès jusqu'au répertoire "miniCRAN" copié sur votre machine.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>URL_dossier <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"file:///"</span>, <span class="st">"C:/Users/&lt;username&gt;/.../"</span>, <span class="st">"miniCRAN"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de ggplot2 depuis la source (répertoire miniCRAN)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> URL_dossier,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"source"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -558,17 +553,17 @@ Note
 </ul>
 </section>
 <section id="citation-tigr" class="level3">
-
-
+<h3 class="anchored" data-anchor-id="citation-tigr">Citation TIG’R</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-WinNT" class="csl-entry" role="doc-biblioentry">
+Pecout H., Dansou J., et al. 2023. <span>«&nbsp;<span>TIG’R : </span> Traitement de l’information géographique avec R&nbsp;»</span>. 2023. <a href="https://ee2023.netlify.app/">https://ee2023.netlify.app/</a>.
+</div>
+</div>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Citation TIG’R</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-WinNT" class="csl-entry" role="doc-biblioentry">
-Pecout H., Dansou J., et al. 2023. <span>«&nbsp;<span>TIG’R : </span> Traitement de l’information géographique avec R&nbsp;»</span>. 2023. <a href="https://ee2023.netlify.app/">https://ee2023.netlify.app/</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -701,7 +696,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -723,7 +720,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -759,31 +773,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">Ecole d’été CIST·2023 - <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" class="img-fluid" alt="licensebuttons by-sa"></a> - UMR8504 Géographie-Cités</div>
+      <div class="nav-footer-center">Ecole d’été CIST·2023 - <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" class="img-fluid" alt="licensebuttons by-sa"></a> - Ouidah, Bénin</div>
   </div>
 </footer>
 

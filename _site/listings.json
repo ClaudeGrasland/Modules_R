@@ -7,13 +7,6 @@
     ]
   },
   {
-    "listing": "/modules/graphique.html",
-    "items": [
-      "/modules/graphique/Rbase_graph.html",
-      "/modules/graphique/ggplot2.html"
-    ]
-  },
-  {
     "listing": "/modules/geomatique.html",
     "items": [
       "/modules/geomatique/geomatic_vector.html",
@@ -22,11 +15,10 @@
     ]
   },
   {
-    "listing": "/modules/statistique.html",
+    "listing": "/modules/graphique.html",
     "items": [
-      "/modules/statistique/statistique_uni.html",
-      "/modules/statistique/statistique_bi.html",
-      "/modules/statistique/statistique_multi.html"
+      "/modules/graphique/Rbase_graph.html",
+      "/modules/graphique/ggplot2.html"
     ]
   },
   {
@@ -40,6 +32,14 @@
     ]
   },
   {
+    "listing": "/modules/manipulation.html",
+    "items": [
+      "/modules/manipulation/manipulation.html",
+      "/modules/manipulation/datatable.html",
+      "/modules/manipulation/tidyverse.html"
+    ]
+  },
+  {
     "listing": "/modules/reproductibilite.html",
     "items": [
       "/modules/reproductibilite/minicran.html",
@@ -48,11 +48,11 @@
     ]
   },
   {
-    "listing": "/modules/manipulation.html",
+    "listing": "/modules/statistique.html",
     "items": [
-      "/modules/manipulation/manipulation.html",
-      "/modules/manipulation/tidyverse.html",
-      "/modules/manipulation/datatable.html"
+      "/modules/statistique/statistique_bi.html",
+      "/modules/statistique/statistique_multi.html",
+      "/modules/statistique/statistique_uni.html"
     ]
   },
   {

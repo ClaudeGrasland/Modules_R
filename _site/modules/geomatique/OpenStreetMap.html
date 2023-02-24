@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.247">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="TIG’R - OpenStreetMap &amp; R">
-<meta name="twitter:description" content="Utilisation du fond de carte, Géocodage, extraction de données et calcul d’itinéraire">
+<meta name="twitter:description" content="Utilisation du fond de carte, Géocodage, extraction de données et calcul d'itinéraire">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -154,26 +154,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../presentation.html" aria-current="page">Introduction</a>
+    <a class="nav-link active" href="../../presentation.html" aria-current="page">
+ <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../data.html">Données</a>
+    <a class="nav-link" href="../../data.html">
+ <span class="menu-text">Données</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../modules.html">Modules</a>
+    <a class="nav-link" href="../../modules.html">
+ <span class="menu-text">Modules</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ressources.html">Ressources</a>
+    <a class="nav-link" href="../../ressources.html">
+ <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">Crédits</a>
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -412,6 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <p class="date">24 février 2023</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -484,8 +490,8 @@ B. <strong>LaReSPD</strong> : <em>“Université de Parakou, Bénin”</em></p>
 <p><span class="question">5. Téléchargez les données suivantes :</span></p>
 <table class="table">
 <colgroup>
-<col style="width: 59%">
-<col style="width: 40%">
+<col style="width: 27%">
+<col style="width: 72%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -643,9 +649,8 @@ C. Un matrice de distance temps par la route</p>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> ...,</span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un point pour situer l'IRSP (ou LaReSPD)</span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(IRSP_sf), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>,</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'IRSP (ou LaReSPD)</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><span class="question">17. Quelle agglomération présente la plus forte valeur de l’indice global de performance d’accessibilité pour l’IRSP (ou LaReSPD).</span></p>
@@ -823,7 +828,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -845,7 +852,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -932,24 +956,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -1042,245 +1084,234 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (EPSG **3857**), puis visualisez-le avec `mapview`.</span><span class="co">]</span>{.question}</span>
 <span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (EPSG **3857**), puis visualisez-le avec `mapview`.</span><span class="co">]</span>{.question}</span>
-<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(..., <span class="at">crs =</span> <span class="dv">3857</span>)</span>
 <span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(..., <span class="at">crs =</span> <span class="dv">3857</span>)</span>
-<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
-<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(...)</span>
-<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(...)</span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
 <span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
-<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>|                        Intitulé                        |                                                                     Téléchargement                                                                      |</span>
-<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a>|:-----------------------------------------:|:---------------------------:|</span>
-<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3wnQKeG"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Placez les données décompressées dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>|                        Intitulé                        |                                                                     Téléchargement                                                                      |</span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>|:------------------:|:--------------------------------------------------:|</span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://bit.ly/3wnQKeG"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Placez les données décompressées dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder5.png"</span>)</span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="70%", fig.align='center'}</span></span>
-<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/folder5.png"</span>)</span>
-<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Importez la couche géographique *africapolis_extract.shp* et transformez sa projection en en WGS84 / Pseudo-Mercator (EPSG **3857**).</span><span class="co">]</span>{.question}</span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Importez la couche géographique *africapolis_extract.shp* et transformez sa projection en en WGS84 / Pseudo-Mercator (EPSG **3857**).</span><span class="co">]</span>{.question}</span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/.../....shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"data/.../....shp"</span>,  <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-111"><a href="#cb16-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-112"><a href="#cb16-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformation de la projection en Pseudo-Mercator (3857)</span></span>
-<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(..., <span class="at">crs =</span> <span class="dv">3857</span>)</span>
+<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformation de la projection en Pseudo-Mercator (3857)</span></span>
+<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(..., <span class="at">crs =</span> <span class="dv">3857</span>)</span>
+<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-111"><a href="#cb16-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-112"><a href="#cb16-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Sélectionnez uniquement les agglomérations béninoises.</span><span class="co">]</span>{.question}</span>
 <span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Sélectionnez uniquement les agglomérations béninoises.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="st">"BEN"</span>, ]</span>
 <span id="cb16-119"><a href="#cb16-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-122"><a href="#cb16-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-123"><a href="#cb16-123" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="st">"BEN"</span>, ]</span>
-<span id="cb16-124"><a href="#cb16-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-122"><a href="#cb16-122" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Extrayez les centroïdes des polygones d'agglomération du Bénin.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-123"><a href="#cb16-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-124"><a href="#cb16-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb16-126"><a href="#cb16-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-127"><a href="#cb16-127" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Extrayez les centroïdes des polygones d'agglomération du Bénin.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-127"><a href="#cb16-127" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(...)</span>
 <span id="cb16-128"><a href="#cb16-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(...)</span>
-<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-134"><a href="#cb16-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-135"><a href="#cb16-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">10. Extrayez la tuile (fond de carte) OSM située au niveau des centroïdes extraits.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">10. Extrayez la tuile (fond de carte) OSM située au niveau des centroïdes extraits.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser la fonction <span class="in">`st_buffer()`</span> pour extraire une zone légèrement plus étendue que l'emprise des centroïdes.</span>
+<span id="cb16-134"><a href="#cb16-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-135"><a href="#cb16-135" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb16-137"><a href="#cb16-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a>Vous pouvez utiliser la fonction <span class="in">`st_buffer()`</span> pour extraire une zone légèrement plus étendue que l'emprise des centroïdes.</span>
-<span id="cb16-139"><a href="#cb16-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maptiles)</span>
+<span id="cb16-139"><a href="#cb16-139" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">get_tiles</span>(<span class="at">x =</span> <span class="fu">st_buffer</span>(<span class="at">x =</span> ..., <span class="at">dist =</span>  ...), <span class="at">zoom =</span> <span class="dv">8</span>, <span class="at">crop =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maptiles)</span>
-<span id="cb16-144"><a href="#cb16-144" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">get_tiles</span>(<span class="at">x =</span> <span class="fu">st_buffer</span>(<span class="at">x =</span> ..., <span class="at">dist =</span>  ...), <span class="at">zoom =</span> <span class="dv">8</span>, <span class="at">crop =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-145"><a href="#cb16-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">11. Affichez la tuile OSM, les centroïdes d'agglomérations et l'IRSP (ou LaReSPD) sur une carte.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-144"><a href="#cb16-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-145"><a href="#cb16-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">11. Affichez la tuile OSM, les centroïdes d'agglomérations et l'IRSP (ou LaReSPD) sur une carte.</span><span class="co">]</span>{.question}</span>
-<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
-<span id="cb16-154"><a href="#cb16-154" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...),  <span class="at">col=</span><span class="st">"..."</span> , <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...),  <span class="at">col=</span><span class="st">"..."</span> , <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
+<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...),  <span class="at">col=</span><span class="st">"..."</span> , <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...),  <span class="at">col=</span><span class="st">"..."</span> , <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Source des données ?</span></span>
+<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">text =</span> <span class="fu">get_credit</span>(<span class="st">"OpenStreetMap"</span>), <span class="at">col=</span><span class="st">"tomato"</span>)</span>
+<span id="cb16-154"><a href="#cb16-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a><span class="co"># Source des données ?</span></span>
-<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">text =</span> <span class="fu">get_credit</span>(<span class="st">"OpenStreetMap"</span>), <span class="at">col=</span><span class="st">"tomato"</span>)</span>
-<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-162"><a href="#cb16-162" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">12. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroïdes des agglomérations béninoises.</span><span class="co">]</span>{.question}</span>
-<span id="cb16-163"><a href="#cb16-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a>A. Une matrice de distance euclidienne\</span>
-<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a>B. Une matrice de distance par la route\</span>
-<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a>C. Un matrice de distance temps par la route</span>
-<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Distance Euclidienne </span></span>
-<span id="cb16-172"><a href="#cb16-172" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_distance</span>(<span class="at">x =</span> ..., <span class="at">y =</span> ...) </span>
-<span id="cb16-173"><a href="#cb16-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Distance et temps par la route</span></span>
-<span id="cb16-175"><a href="#cb16-175" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osrm)</span>
-<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">osrmTable</span>(<span class="at">src =</span> ..., </span>
-<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a>                 <span class="at">dst =</span> ...,</span>
-<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a>                 <span class="at">measure =</span> <span class="fu">c</span>(<span class="st">"..."</span>, <span class="st">"..."</span>))</span>
-<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-181"><a href="#cb16-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-182"><a href="#cb16-182" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">13. Créez de nouveaux attributs (nouvelles colonnes) dans la couche géographique des centroïdes d'agglomérations, pour y stocker les distances euclidiennes à l'IRSP (ou LaReSPD), et les distances (km et temps) par la route.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">12. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroïdes des agglomérations béninoises.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a>A. Une matrice de distance euclidienne\</span>
+<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a>B. Une matrice de distance par la route\</span>
+<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a>C. Un matrice de distance temps par la route</span>
+<span id="cb16-162"><a href="#cb16-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-163"><a href="#cb16-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a><span class="co"># Distance Euclidienne </span></span>
+<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">st_distance</span>(<span class="at">x =</span> ..., <span class="at">y =</span> ...) </span>
+<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Distance et temps par la route</span></span>
+<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osrm)</span>
+<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">osrmTable</span>(<span class="at">src =</span> ..., </span>
+<span id="cb16-172"><a href="#cb16-172" aria-hidden="true" tabindex="-1"></a>                 <span class="at">dst =</span> ...,</span>
+<span id="cb16-173"><a href="#cb16-173" aria-hidden="true" tabindex="-1"></a>                 <span class="at">measure =</span> <span class="fu">c</span>(<span class="st">"..."</span>, <span class="st">"..."</span>))</span>
+<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-175"><a href="#cb16-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">13. Créez de nouveaux attributs (nouvelles colonnes) dans la couche géographique des centroïdes d'agglomérations, pour y stocker les distances euclidiennes à l'IRSP (ou LaReSPD), et les distances (km et temps) par la route.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a>Convertissez les distances calculées (mètres) en kilomètres et les temps (minutes) en heures.</span>
+<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-181"><a href="#cb16-181" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-182"><a href="#cb16-182" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
 <span id="cb16-183"><a href="#cb16-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-184"><a href="#cb16-184" aria-hidden="true" tabindex="-1"></a>Convertissez les distances calculées (mètres) en kilomètres et les temps (minutes) en heures.</span>
-<span id="cb16-185"><a href="#cb16-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances euclidiennes</span></span>
-<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...) <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-192"><a href="#cb16-192" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances km/route</span></span>
-<span id="cb16-193"><a href="#cb16-193" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...<span class="sc">$</span>...) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb16-184"><a href="#cb16-184" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances euclidiennes</span></span>
+<span id="cb16-185"><a href="#cb16-185" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances km/route</span></span>
+<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...<span class="sc">$</span>...) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances hrs/route</span></span>
+<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...<span class="sc">$</span>...) <span class="sc">/</span> <span class="dv">60</span></span>
+<span id="cb16-192"><a href="#cb16-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-193"><a href="#cb16-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-194"><a href="#cb16-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-195"><a href="#cb16-195" aria-hidden="true" tabindex="-1"></a><span class="co"># Distances hrs/route</span></span>
-<span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(...<span class="sc">$</span>...) <span class="sc">/</span> <span class="dv">60</span></span>
-<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">14. Calculez les indices moyens d'accessibilité à l'IRSP (ou LaReSPD).</span><span class="co">]</span>{.question}</span>
-<span id="cb16-202"><a href="#cb16-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-203"><a href="#cb16-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-206"><a href="#cb16-206" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb16-207"><a href="#cb16-207" aria-hidden="true" tabindex="-1"></a><span class="co"># Moyenne des indices accessibilité </span></span>
-<span id="cb16-208"><a href="#cb16-208" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
-<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
-<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
-<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-195"><a href="#cb16-195" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">14. Calculez les indices moyens d'accessibilité à l'IRSP (ou LaReSPD).</span><span class="co">]</span>{.question}</span>
+<span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a><span class="co"># Moyenne des indices accessibilité </span></span>
+<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
+<span id="cb16-202"><a href="#cb16-202" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
+<span id="cb16-203"><a href="#cb16-203" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(...<span class="sc">$</span>...)</span>
+<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-206"><a href="#cb16-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-207"><a href="#cb16-207" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">15. Calculez les indices de performances suivants à partir des distances récupérées.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-208"><a href="#cb16-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a>A.  **Indice de sinuosité** = distance km par la route / distance euclidienne\</span>
+<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a>B.  **Indice de vitesse sur route** = distance km par la route / distance temps par la route\</span>
+<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a>C.  **Indice global de performance** = **Indice de vitesse sur route** / **Indice de sinuosité**.</span>
+<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a>Enregistrez ces indices dans de nouvelles colonnes. Vous pouvez arrondir leurs valeurs à l'aide de la fonction <span class="in">`round()`</span>.</span>
 <span id="cb16-214"><a href="#cb16-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">15. Calculez les indices de performances suivants à partir des distances récupérées.</span><span class="co">]</span>{.question}</span>
-<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a>A.  **Indice de sinuosité** = distance km par la route / distance euclidienne\</span>
-<span id="cb16-218"><a href="#cb16-218" aria-hidden="true" tabindex="-1"></a>B.  **Indice de vitesse sur route** = distance km par la route / distance temps par la route\</span>
-<span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>C.  **Indice global de performance** = **Indice de vitesse sur route** / **Indice de sinuosité**.</span>
+<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-218"><a href="#cb16-218" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice de sinuosité </span></span>
+<span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>ind_sin <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>... <span class="sc">/</span> ...<span class="sc">$</span>..., <span class="dv">2</span>)</span>
 <span id="cb16-220"><a href="#cb16-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a>Enregistrez ces indices dans de nouvelles colonnes. Vous pouvez arrondir leurs valeurs à l'aide de la fonction <span class="in">`round()`</span>.</span>
-<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-226"><a href="#cb16-226" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice de sinuosité </span></span>
-<span id="cb16-227"><a href="#cb16-227" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>ind_sin <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>... <span class="sc">/</span> ...<span class="sc">$</span>..., <span class="dv">2</span>)</span>
+<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice de vitesse sur route</span></span>
+<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>ind_vit <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>... <span class="sc">/</span> ...<span class="sc">$</span>..., <span class="dv">1</span>)</span>
+<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice global de performance</span></span>
+<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>ind_vit <span class="sc">/</span> ...<span class="sc">$</span>ind_sin, <span class="dv">1</span>)</span>
+<span id="cb16-226"><a href="#cb16-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-227"><a href="#cb16-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-228"><a href="#cb16-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-229"><a href="#cb16-229" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice de vitesse sur route</span></span>
-<span id="cb16-230"><a href="#cb16-230" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>ind_vit <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>... <span class="sc">/</span> ...<span class="sc">$</span>..., <span class="dv">1</span>)</span>
-<span id="cb16-231"><a href="#cb16-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-232"><a href="#cb16-232" aria-hidden="true" tabindex="-1"></a><span class="co"># Indice global de performance</span></span>
-<span id="cb16-233"><a href="#cb16-233" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">round</span>(...<span class="sc">$</span>ind_vit <span class="sc">/</span> ...<span class="sc">$</span>ind_sin, <span class="dv">1</span>)</span>
-<span id="cb16-234"><a href="#cb16-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-235"><a href="#cb16-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-229"><a href="#cb16-229" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">16. Cartographiez l'indice global de performance sur les centroïdes (points) des agglomérations. Utilisez la tuile OSM téléchargée comme fond de carte.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-230"><a href="#cb16-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-231"><a href="#cb16-231" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-232"><a href="#cb16-232" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-233"><a href="#cb16-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-234"><a href="#cb16-234" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapsf)</span>
+<span id="cb16-235"><a href="#cb16-235" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maptiles)</span>
 <span id="cb16-236"><a href="#cb16-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-237"><a href="#cb16-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-238"><a href="#cb16-238" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">16. Cartographiez l'indice global de performance sur les centroïdes (points) des agglomérations. Utilisez la tuile OSM téléchargée comme fond de carte.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-237"><a href="#cb16-237" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de la tuile</span></span>
+<span id="cb16-238"><a href="#cb16-238" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
 <span id="cb16-239"><a href="#cb16-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-240"><a href="#cb16-240" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-241"><a href="#cb16-241" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-242"><a href="#cb16-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-243"><a href="#cb16-243" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapsf)</span>
-<span id="cb16-244"><a href="#cb16-244" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maptiles)</span>
-<span id="cb16-245"><a href="#cb16-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-246"><a href="#cb16-246" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de la tuile</span></span>
-<span id="cb16-247"><a href="#cb16-247" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
-<span id="cb16-248"><a href="#cb16-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-249"><a href="#cb16-249" aria-hidden="true" tabindex="-1"></a><span class="co"># Cartographie de l'indice global de performance</span></span>
-<span id="cb16-250"><a href="#cb16-250" aria-hidden="true" tabindex="-1"></a><span class="fu">mf_map</span>(<span class="at">x =</span> ...,</span>
-<span id="cb16-251"><a href="#cb16-251" aria-hidden="true" tabindex="-1"></a>       <span class="at">var =</span> <span class="st">"..."</span>,</span>
-<span id="cb16-252"><a href="#cb16-252" aria-hidden="true" tabindex="-1"></a>       <span class="at">type =</span> <span class="st">"..."</span>,</span>
-<span id="cb16-253"><a href="#cb16-253" aria-hidden="true" tabindex="-1"></a>       <span class="at">pal =</span> <span class="st">"..."</span>,</span>
-<span id="cb16-254"><a href="#cb16-254" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_pos =</span> <span class="st">"..."</span>,</span>
-<span id="cb16-255"><a href="#cb16-255" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_title =</span> <span class="st">"..."</span>,</span>
-<span id="cb16-256"><a href="#cb16-256" aria-hidden="true" tabindex="-1"></a>       <span class="at">breaks =</span> <span class="st">"...s"</span>,</span>
-<span id="cb16-257"><a href="#cb16-257" aria-hidden="true" tabindex="-1"></a>       <span class="at">nbreaks =</span> ...,</span>
-<span id="cb16-258"><a href="#cb16-258" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_val_rnd =</span> ...,</span>
-<span id="cb16-259"><a href="#cb16-259" aria-hidden="true" tabindex="-1"></a>       <span class="at">border=</span> ...,</span>
-<span id="cb16-260"><a href="#cb16-260" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> ...,</span>
-<span id="cb16-261"><a href="#cb16-261" aria-hidden="true" tabindex="-1"></a>       <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-262"><a href="#cb16-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-263"><a href="#cb16-263" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajout d'un point pour situer l'IRSP (ou LaReSPD)</span></span>
-<span id="cb16-264"><a href="#cb16-264" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(IRSP_sf), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>,</span>
-<span id="cb16-265"><a href="#cb16-265" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-240"><a href="#cb16-240" aria-hidden="true" tabindex="-1"></a><span class="co"># Cartographie de l'indice global de performance</span></span>
+<span id="cb16-241"><a href="#cb16-241" aria-hidden="true" tabindex="-1"></a><span class="fu">mf_map</span>(<span class="at">x =</span> ...,</span>
+<span id="cb16-242"><a href="#cb16-242" aria-hidden="true" tabindex="-1"></a>       <span class="at">var =</span> <span class="st">"..."</span>,</span>
+<span id="cb16-243"><a href="#cb16-243" aria-hidden="true" tabindex="-1"></a>       <span class="at">type =</span> <span class="st">"..."</span>,</span>
+<span id="cb16-244"><a href="#cb16-244" aria-hidden="true" tabindex="-1"></a>       <span class="at">pal =</span> <span class="st">"..."</span>,</span>
+<span id="cb16-245"><a href="#cb16-245" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_pos =</span> <span class="st">"..."</span>,</span>
+<span id="cb16-246"><a href="#cb16-246" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_title =</span> <span class="st">"..."</span>,</span>
+<span id="cb16-247"><a href="#cb16-247" aria-hidden="true" tabindex="-1"></a>       <span class="at">breaks =</span> <span class="st">"...s"</span>,</span>
+<span id="cb16-248"><a href="#cb16-248" aria-hidden="true" tabindex="-1"></a>       <span class="at">nbreaks =</span> ...,</span>
+<span id="cb16-249"><a href="#cb16-249" aria-hidden="true" tabindex="-1"></a>       <span class="at">leg_val_rnd =</span> ...,</span>
+<span id="cb16-250"><a href="#cb16-250" aria-hidden="true" tabindex="-1"></a>       <span class="at">border=</span> ...,</span>
+<span id="cb16-251"><a href="#cb16-251" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> ...,</span>
+<span id="cb16-252"><a href="#cb16-252" aria-hidden="true" tabindex="-1"></a>       <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-253"><a href="#cb16-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-254"><a href="#cb16-254" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'IRSP (ou LaReSPD)</span></span>
+<span id="cb16-255"><a href="#cb16-255" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-256"><a href="#cb16-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-257"><a href="#cb16-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-258"><a href="#cb16-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-259"><a href="#cb16-259" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">17. Quelle agglomération présente la plus forte valeur de l'indice global de performance d'accessibilité pour l'IRSP (ou LaReSPD).</span><span class="co">]</span>{.question}</span>
+<span id="cb16-260"><a href="#cb16-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-261"><a href="#cb16-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-262"><a href="#cb16-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-263"><a href="#cb16-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-264"><a href="#cb16-264" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélection </span></span>
+<span id="cb16-265"><a href="#cb16-265" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="fu">max</span>(...<span class="sc">$</span>...), ]</span>
 <span id="cb16-266"><a href="#cb16-266" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-267"><a href="#cb16-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-268"><a href="#cb16-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-269"><a href="#cb16-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-270"><a href="#cb16-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">17. Quelle agglomération présente la plus forte valeur de l'indice global de performance d'accessibilité pour l'IRSP (ou LaReSPD).</span><span class="co">]</span>{.question}</span>
-<span id="cb16-271"><a href="#cb16-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-272"><a href="#cb16-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-273"><a href="#cb16-273" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-269"><a href="#cb16-269" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">18. Calculez l'itinéraire (plus court chemin) entre l'IRSP (ou LaReSPD) et cette agglomération. Cartographiez cet intinéraire sur la tuile OSM téléchargée.</span><span class="co">]</span>{.question}</span>
+<span id="cb16-270"><a href="#cb16-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-271"><a href="#cb16-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb16-272"><a href="#cb16-272" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
+<span id="cb16-273"><a href="#cb16-273" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-274"><a href="#cb16-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-275"><a href="#cb16-275" aria-hidden="true" tabindex="-1"></a><span class="co"># Sélection </span></span>
-<span id="cb16-276"><a href="#cb16-276" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> ...[...<span class="sc">$</span>... <span class="sc">==</span> <span class="fu">max</span>(...<span class="sc">$</span>...), ]</span>
+<span id="cb16-275"><a href="#cb16-275" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osrm)</span>
+<span id="cb16-276"><a href="#cb16-276" aria-hidden="true" tabindex="-1"></a>route <span class="ot">&lt;-</span> <span class="fu">osrmRoute</span>(<span class="at">src =</span> ..., <span class="at">dst =</span> ...)</span>
 <span id="cb16-277"><a href="#cb16-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-278"><a href="#cb16-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-279"><a href="#cb16-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-280"><a href="#cb16-280" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">18. Calculez l'itinéraire (plus court chemin) entre l'IRSP (ou LaReSPD) et cette agglomération. Cartographiez cet intinéraire sur la tuile OSM téléchargée.</span><span class="co">]</span>{.question}</span>
-<span id="cb16-281"><a href="#cb16-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-282"><a href="#cb16-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb16-283"><a href="#cb16-283" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Un peu d'aide ?"</span></span>
-<span id="cb16-284"><a href="#cb16-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-285"><a href="#cb16-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-286"><a href="#cb16-286" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osrm)</span>
-<span id="cb16-287"><a href="#cb16-287" aria-hidden="true" tabindex="-1"></a>route <span class="ot">&lt;-</span> <span class="fu">osrmRoute</span>(<span class="at">src =</span> ..., <span class="at">dst =</span> ...)</span>
+<span id="cb16-278"><a href="#cb16-278" aria-hidden="true" tabindex="-1"></a><span class="co"># Cartographie</span></span>
+<span id="cb16-279"><a href="#cb16-279" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
+<span id="cb16-280"><a href="#cb16-280" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(route), <span class="at">col =</span> <span class="st">"grey10"</span>, <span class="at">lwd =</span> <span class="dv">6</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-281"><a href="#cb16-281" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(route), <span class="at">col =</span> <span class="st">"grey90"</span>, <span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-282"><a href="#cb16-282" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du point d'origine</span></span>
+<span id="cb16-283"><a href="#cb16-283" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">3</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-284"><a href="#cb16-284" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du point de destination</span></span>
+<span id="cb16-285"><a href="#cb16-285" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">3</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-286"><a href="#cb16-286" aria-hidden="true" tabindex="-1"></a><span class="co"># Crédit pour la tuile OSM</span></span>
+<span id="cb16-287"><a href="#cb16-287" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">text =</span> <span class="fu">get_credit</span>(<span class="st">"OpenStreetMap"</span>), <span class="at">col=</span><span class="st">"tomato"</span>)</span>
 <span id="cb16-288"><a href="#cb16-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-289"><a href="#cb16-289" aria-hidden="true" tabindex="-1"></a><span class="co"># Cartographie</span></span>
-<span id="cb16-290"><a href="#cb16-290" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_tiles</span>(...)</span>
-<span id="cb16-291"><a href="#cb16-291" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(route), <span class="at">col =</span> <span class="st">"grey10"</span>, <span class="at">lwd =</span> <span class="dv">6</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-292"><a href="#cb16-292" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(route), <span class="at">col =</span> <span class="st">"grey90"</span>, <span class="at">lwd =</span> <span class="dv">1</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-293"><a href="#cb16-293" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du point d'origine</span></span>
-<span id="cb16-294"><a href="#cb16-294" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">3</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-295"><a href="#cb16-295" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du point de destination</span></span>
-<span id="cb16-296"><a href="#cb16-296" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(...), <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">3</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-297"><a href="#cb16-297" aria-hidden="true" tabindex="-1"></a><span class="co"># Crédit pour la tuile OSM</span></span>
-<span id="cb16-298"><a href="#cb16-298" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">text =</span> <span class="fu">get_credit</span>(<span class="st">"OpenStreetMap"</span>), <span class="at">col=</span><span class="st">"tomato"</span>)</span>
+<span id="cb16-289"><a href="#cb16-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-290"><a href="#cb16-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-291"><a href="#cb16-291" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb16-292"><a href="#cb16-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-293"><a href="#cb16-293" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb16-294"><a href="#cb16-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-295"><a href="#cb16-295" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb16-296"><a href="#cb16-296" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/correction/OpenStreetMap.zip"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb16-297"><a href="#cb16-297" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb16-298"><a href="#cb16-298" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb16-299"><a href="#cb16-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-300"><a href="#cb16-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-301"><a href="#cb16-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-302"><a href="#cb16-302" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb16-303"><a href="#cb16-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-304"><a href="#cb16-304" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb16-305"><a href="#cb16-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-306"><a href="#cb16-306" aria-hidden="true" tabindex="-1"></a>::: center</span>
-<span id="cb16-307"><a href="#cb16-307" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/correction/OpenStreetMap.zip"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-outline-warning"</span> <span class="er">role</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">"true"</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bi bi-cloud-arrow-down"</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb16-308"><a href="#cb16-308" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb16-309"><a href="#cb16-309" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb16-310"><a href="#cb16-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-311"><a href="#cb16-311" aria-hidden="true" tabindex="-1"></a>\</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-300"><a href="#cb16-300" aria-hidden="true" tabindex="-1"></a>\</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">Ecole d’été CIST·2023 - <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" class="img-fluid" alt="licensebuttons by-sa"></a> - UMR8504 Géographie-Cités</div>
+      <div class="nav-footer-center">Ecole d’été CIST·2023 - <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" class="img-fluid" alt="licensebuttons by-sa"></a> - Ouidah, Bénin</div>
   </div>
 </footer>
 

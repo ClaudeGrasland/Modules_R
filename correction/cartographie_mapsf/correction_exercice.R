@@ -1,9 +1,11 @@
-#### EXERCICE CARTOGRAPHIE avec mapsf ####
+########################################################################
+####-------------------- Cartographie avec R R ---------------------####
+########################################################################
 
 
-##--------------------##  
-## Import des données ##
-##--------------------##
+
+##----------------------- Import des données--------------------------##
+
 
 # Tableau csv
 data <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don.csv")
@@ -13,22 +15,22 @@ library(sf)
 basemap <- st_read("data/GADM_AFRICA_2020/afrika_map.shp",  quiet = TRUE)
 
 
-##----------##
-## Jointure ##
-##----------##
+
+
+##--------------------------- Jointure-------------------------------##
 
 # R-base
 data_map <- merge(basemap, data, by="iso3", all.x = TRUE)
 
-# OU avec le package dplyr
+# OU avec dplyr
 library(dplyr)
 data_map <-left_join(basemap, data, by = "iso3")
 
 
 
-##----------------------------------##  
-## Carte en symboles proportionnels ##
-##----------------------------------##
+
+
+##---------------- Carte en symboles proportionnel-------------------##
 
 library(mapsf)
 
@@ -65,9 +67,9 @@ dev.off()
 
 
 
-##-------------------------------##  
-## Carte choroplèthe avec Export ##
-##-------------------------------##
+
+##---------------- Carte choroplèthe avec Export --------------------##
+
 
 # Visualisation de la forme de la distribution de la variable "INTERN" 
 hist(data_map$INTERN)
@@ -78,7 +80,7 @@ mf_export(data_map, "Internet_users_in_Afica_2020.png", width = 700)
 # Utilisation du thème jsk
 mf_theme("jsk")
 
-# Initialisation d'une carte centré sur la couche géographique "data_map" (pays d'Afrique)
+# Initialisation d'une carte centrée sur la couche géographique "data_map" (pays d'Afrique)
 mf_init(x = data_map)
 
 # Ajour d'un effet d'ombrage pour la couche "data_map"

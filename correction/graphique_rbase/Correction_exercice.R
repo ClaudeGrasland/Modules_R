@@ -1,13 +1,23 @@
-#### EXERCICE GRAPHIQUE R-BASE ####
+######################################################
+####--------- EXERCICE GRAPHIQUE R-BASE --------- ####
+######################################################
 
 
-# Import des données csv
+##------------- Import des données------------------##
+
 data <- read.csv2(file = "data/DEV_AFRICA_2018/afrika_don.csv")
 
-# Paramétrage de la couleur de fond de la fenêtre graphique
+
+
+
+##----------- Paramétrage fenêtre graphique ---------##
+
 par(bg = "cornsilk3")
 
-# Histogramme sur la variable 'POP'
+
+
+##------------  Histogramme variable 'POP'-----------##
+
 hist(data$POP, 
      breaks  = quantile(data$POP),
      col = "green4",
@@ -22,6 +32,9 @@ rug(data$POP)
 # Ajout de la source des données
 mtext(side = 4, "source : UN, 2020", cex = 0.8)
 
-# Export en PNG
+
+
+##------------------- Export en PNG ------------------##
+
 dev.print(device = png, file = "mon_graphique.png", width = 600)
 
