@@ -65,6 +65,12 @@ Les packages utilisés dans les différents modules thématiques sont :
 -   [sf](https://r-spatial.github.io/sf/)
 -   [terra](https://rspatial.org/index.html)
 -   [mapsf](https://riatelab.github.io/mapsf/index.html)
+-   [leaflet](https://rstudio.github.io/leaflet/)
+-   [mapview](https://r-spatial.github.io/mapview/)
+-   [maptiles](https://rgeomatic.hypotheses.org/2032)
+-   [osmdata](https://cran.r-project.org/web/packages/osmdata/vignettes/osmdata.html)
+-   [osmextract](https://docs.ropensci.org/osmextract/)
+-   [osrm](https://rgeomatic.hypotheses.org/category/osrm)
 -   [rmarkdown](https://rmarkdown.rstudio.com/)
 -   [knitr](https://yihui.org/knitr/)
 
@@ -72,11 +78,11 @@ Les packages utilisés dans les différents modules thématiques sont :
 
 ```{r}
 
-# Liste des packages à installer pour réaliser l'ensemble des leçons
+# Liste des packages à installer
 packages <- c("readxl", "openxlsx", "haven",
               "dplyr", "lubridate", "stringr",
               "ggplot2", "FactoMineR", "sf",
-              "terra", "mapsf", "rmarkdown", "knitr")
+              "terra", "mapsf", "rmarkdown", "knitr", "...")
 
 
 # Détection de package à installer
@@ -90,7 +96,7 @@ if(length(missing_packages)) install.packages(missing_packages)
 
 ### Le miniCRAN
 
-Afin de pouvoir reproduire les différentes leçon sans être dépendant d'une connexion internet, un [miniCRAN](modules/reproductibilite/minicran.qmd) (répertoire contenant les sources de l'ensemble des packages) est mis à disposition :
+Afin de pouvoir reproduire les différentes leçons sans être dépendant d'une connexion internet, un [miniCRAN](modules/reproductibilite/minicran.qmd) (répertoire contenant les sources de l'ensemble des packages) est mis à disposition :
 
 ::: center
 <a href="https://bit.ly/3y0SKdT" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger le miniCRAN</a>

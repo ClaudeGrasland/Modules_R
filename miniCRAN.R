@@ -96,7 +96,8 @@ mes_pkgs <- c("data.table",
               "cartography", 
               "remotes",
               "xlsx",
-              "tinytex")
+              "tinytex", 
+              "curl")
 
 
 # ttt

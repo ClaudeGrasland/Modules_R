@@ -1,7 +1,9 @@
 ---
 title: "Graphique R-base"
 subtitle: "Representations graphiques avec les fonctions primitives"
-author: Hugues pecout
+author: 
+- Hugues pecout
+- Justin Dansou
 date: last-modified
 ordre: 01
 code-fold: true
@@ -10,7 +12,6 @@ format:
   html:
     theme: cosmo
     code-copy: true
-    css: styles.css
     embed-resources: TRUE
 ---
 

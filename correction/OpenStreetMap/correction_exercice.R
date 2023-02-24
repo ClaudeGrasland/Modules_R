@@ -23,7 +23,7 @@ IRSP <- data.frame(name = "IRSP",
 
 # Géocodage de l'adresse à partir de la base de données OpenStreetMap
 library(tidygeocoder)
-IRSP_loc <- geocode(IRSP, addresse)
+IRSP_loc <- geocode(.tbl = IRSP, address =  addresse)
 
 
 
@@ -164,7 +164,7 @@ mf_map(x = africapolis_ben_pt,
        type = "choro",
        pal = "Dark Mint",
        leg_pos = "bottomleft2",
-       leg_title = "Indice de perfomaance globale",
+       leg_title = "Indice de performance globale",
        breaks = "jenks",
        nbreaks = 8,
        leg_val_rnd = 0,

@@ -12,7 +12,6 @@ format:
   html:
     theme: cosmo
     code-copy: true
-    css: styles.css
 ---
 
 ## Introduction
@@ -22,7 +21,7 @@ Cette leçon vise à introduire différents types d'exploitation de la **base de
 -   Géocodage d'adresses avec `tidygeocoder`
 -   Cartographie interactive avec `leaflet` et `mapview`
 -   Extraction de données avec `maptiles`, `osmdata` et `osmextract`
--   Calcul de matrice de distance avec `sf`, puis de temps avec `osrm`
+-   Calcul de matrice de distance euclidienne avec `sf`, puis par la route avec `osrm`
 -   Calcul itinéraires avec `osrm`
 
 ## <i class="bi bi-book"></i> Manuel {.title}
@@ -42,34 +41,29 @@ Cette leçon vise à introduire différents types d'exploitation de la **base de
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
-[1. Créez un projet Rstudio, puis un script R]{.question}
+[1. Créez un projet Rstudio puis un script R à la racine du projet.]{.question}
 
 *File/New Project/New Directory...*
 
-
 [2. Géocodez une de ces deux adresses :]{.question}
 
-A. Adresse de l'IRSP : *"Institut Régional de Santé Publique de Ouidah, Bénin"*   
-B. Adresse du LaReSPD : *"Université de Parakou, Bénin"*   
+A. **IRSP** : *"Institut Régional de Santé Publique de Ouidah, Bénin"*\
+B. **LaReSPD** : *"Université de Parakou, Bénin"*
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
 # Construction d'un data.frame avec nom et adresse
-... <- data.frame(name = "...",
+... <- data.frame(name = "IRSP",
                   addresse = ".........")
 
 # Géocodage 
 library(tidygeocoder)
-... <- geocode(..., ...)
+... <- geocode(.tbl = ...,  address = ...)
 
+```
 
-````
-
-
-[3. Créez un point (objet sf) à partir de la latitude et de la longitude récupérées :]{.question}
-
-
+[3. Créez un point (objet sf) à partir de la latitude et de la longitude récupérées.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -79,22 +73,21 @@ library(sf)
 # Création objet sf
 ... <- st_as_sf(..., coords = c("...", "..."), crs = 4326)
 
+```
 
-````
 
-[4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (CRS **3857**), puis visualisez-le avec `mapview`]{.question}
 
+[4. **Transformez la projection de ce point en WGS84 / Pseudo-Mercator** (EPSG **3857**), puis visualisez-le avec `mapview`.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
-# Transformation de la projection 
+
 ... <- st_transform(..., crs = 3857)
 
 library(mapview)
 mapview(...)
-
-````
+```
 
 
 [5. Téléchargez les données suivantes :]{.question}
@@ -104,29 +97,25 @@ mapview(...)
 | Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 
 
-[6. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+[6. Placez les données décompressées dans le répertoire de votre projet, de la façon suivante :]{.question}
 
-```{r, echo=FALSE, out.width="60%", fig.align='center'}
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("../img/folder5.png")
 ```
 
-
-[7. Importez la couche *Africapolis* dans R et transformez sa projection en en WGS84 / Pseudo-Mercator (CRS **3857**).]{.question}
-
+[7. Importez la couche géographique *africapolis_extract.shp* et transformez sa projection en en WGS84 / Pseudo-Mercator (EPSG **3857**).]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
-
-
 ... <- st_read("data/.../....shp",  quiet = TRUE)
 
 # Transformation de la projection en Pseudo-Mercator (3857)
 ... <- st_transform(..., crs = 3857)
 
-````
+```
 
 
-[8. Sélectionnez uniquement les agglomérations béninoises]{.question}
+[8. Sélectionnez uniquement les agglomérations béninoises.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -135,8 +124,7 @@ knitr::include_graphics("../img/folder5.png")
 
 ```
 
-
-[9. Extrayez les centroïdes des polygones d'agglomération du Bénin]{.question}
+[9. Extrayez les centroïdes des polygones d'agglomération du Bénin.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -145,9 +133,7 @@ knitr::include_graphics("../img/folder5.png")
 
 ```
 
-
-
-[9. Extrayez la tuile (fond de carte) OSM située au niveau des centroïdes extraits ]{.question}
+[10. Extrayez la tuile (fond de carte) OSM située au niveau des centroïdes extraits.]{.question}
 
 Vous pouvez utiliser la fonction `st_buffer()` pour extraire une zone légèrement plus étendue que l'emprise des centroïdes.
 
@@ -157,12 +143,9 @@ Vous pouvez utiliser la fonction `st_buffer()` pour extraire une zone légèreme
 library(maptiles)
 ... <- get_tiles(x = st_buffer(x = ..., dist =  ...), zoom = 8, crop = TRUE)
 
-
 ```
 
-
-[10. Affichez la tuile OSM, les centroïdes d'agglomérations et l'IRSP (ou LaReSPD) sur une carte]{.question}
-
+[11. Affichez la tuile OSM, les centroïdes d'agglomérations et l'IRSP (ou LaReSPD) sur une carte.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -176,287 +159,143 @@ mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
 
 ```
 
+[12. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroïdes des agglomérations béninoises.]{.question}
 
-[11. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroîdes des agglomérations béninoises.]{.question}
-
-A. Une matrice de distance euclidienne   
-B. Une matrice de distance par la route   
-C. Un matrice de distance temps par la route   
+A. Une matrice de distance euclidienne\
+B. Une matrice de distance par la route\
+C. Un matrice de distance temps par la route
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
 
-
 # Distance Euclidienne 
 ... <- st_distance(x = ..., y = ...) 
-
-
 
 # Distance et temps par la route
 library(osrm)
 ... <- osrmTable(src = ..., 
                  dst = ...,
                  measure = c("...", "..."))
-                  
+                
 ```
 
+[13. Créez de nouveaux attributs (nouvelles colonnes) dans la couche géographique des centroïdes d'agglomérations, pour y stocker les distances euclidiennes à l'IRSP (ou LaReSPD), et les distances (km et temps) par la route.]{.question}
 
-
-[12. Calculez trois matrices de distance différentes entre l'IRSP (ou LaReSPD) et les centroîdes des agglomérations béninoises.]{.question}
-
-A. Une matrice de distance euclidienne   
-B. Une matrice de distance par la route   
-C. Un matrice de distance temps par la route   
+Convertissez les distances calculées (mètres) en kilomètres et les temps (minutes) en heures.
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
-#------ Ajout des valeurs (+ conversion) comme attributs des agglomérations ---------#
 
-# mètres -> kilomètres
-africapolis_ben_pt$IRSP_eucli_dist <- as.numeric(mat_eucli_km) / 1000
+# Distances euclidiennes
+...$... <- as.numeric(...) / 1000
 
-# mètres -> kilomètres
-africapolis_ben_pt$IRSP_route_km <- as.numeric(dist$distances) / 1000
+# Distances km/route
+...$... <- as.numeric(...$...) / 1000
 
-# Minutes -> heures
-africapolis_ben_pt$IRSP_route_hr <- as.numeric(dist$durations) / 60
+# Distances hrs/route
+...$... <- as.numeric(...$...) / 60
 
-
-
-
-#####---------------------- Calcul d'indice ----------------------#####
+```
 
 
-#------------------ Calcul indice d'accessibilité  -------------------#
-
-mean(africapolis_ben_pt$IRSP_eucli_dist)
-max(africapolis_ben_pt$IRSP_eucli_dist)
-
-mean(africapolis_ben_pt$IRSP_route_km)
-max(africapolis_ben_pt$IRSP_route_km)
-
-mean(africapolis_ben_pt$IRSP_route_hr)
-max(africapolis_ben_pt$IRSP_route_hr)
+[14. Calculez les indices moyens d'accessibilité à l'IRSP (ou LaReSPD).]{.question}
 
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+#| 
+# Moyenne des indices accessibilité 
+mean(...$...)
+mean(...$...)
+mean(...$...)
 
-#------------------ Calcul indice de performance ---------------------#
+```
+
+
+[15. Calculez les indices de performances suivants à partir des distances récupérées.]{.question}
+
+A.  **Indice de sinuosité** = distance km par la route / distance euclidienne\
+B.  **Indice de vitesse sur route** = distance km par la route / distance temps par la route\
+C.  **Indice global de performance** = **Indice de vitesse sur route** / **Indice de sinuosité**.
+
+Enregistrez ces indices dans de nouvelles colonnes. Vous pouvez arrondir leurs valeurs à l'aide de la fonction `round()`.
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
 
 # Indice de sinuosité 
-africapolis_ben_pt$ind_sinuo <- round(africapolis_ben_pt$IRSP_route_km / africapolis_ben_pt$IRSP_eucli_dist, 2)
+...$ind_sin <- round(...$... / ...$..., 2)
 
 # Indice de vitesse sur route
-africapolis_ben_pt$ind_speed <- round(africapolis_ben_pt$IRSP_route_km / africapolis_ben_pt$IRSP_route_hr, 1)
+...$ind_vit <- round(...$... / ...$..., 1)
 
 # Indice global de performance
-africapolis_ben_pt$ind_perf <- round(africapolis_ben_pt$ind_speed / africapolis_ben_pt$ind_sinuo, 1)
+...$... <- round(...$ind_vit / ...$ind_sin, 1)
+
+```
 
 
+[16. Cartographiez l'indice global de performance sur les centroïdes (points) des agglomérations. Utilisez la tuile OSM téléchargée comme fond de carte.]{.question}
 
-#---------- Cartographie de l'indice global de performance----------#
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
 
 library(mapsf)
+library(maptiles)
 
-plot_tiles(osm_tiles)
-mf_map(x = africapolis_ben_pt,
-       var = "ind_perf",
-       type = "choro",
-       pal = "Dark Mint",
-       leg_pos = "bottomleft2",
-       leg_title = "Indice de perfomaance globale",
-       breaks = "jenks",
-       nbreaks = 8,
-       leg_val_rnd = 0,
-       border=NA,
-       cex = 2,
+# Affichage de la tuile
+plot_tiles(...)
+
+# Cartographie de l'indice global de performance
+mf_map(x = ...,
+       var = "...",
+       type = "...",
+       pal = "...",
+       leg_pos = "...",
+       leg_title = "...",
+       breaks = "...s",
+       nbreaks = ...,
+       leg_val_rnd = ...,
+       border= ...,
+       cex = ...,
        add = TRUE)
 
-plot(st_geometry(IRSP_sf), border = "red", col="red" , lwd = 10, pch = 20, add = TRUE)
-mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
+# Ajout d'un point pour situer l'IRSP (ou LaReSPD)
+plot(st_geometry(IRSP_sf), border = NA, col="red",
+     pch = 20, cex = 2, add = TRUE)
+
+```
 
 
+[17. Quelle agglomération présente la plus forte valeur de l'indice global de performance d'accessibilité pour l'IRSP (ou LaReSPD).]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+# Sélection 
+... <- ...[...$... == max(...$...), ]
+
+```
+
+[18. Calculez l'itinéraire (plus court chemin) entre l'IRSP (ou LaReSPD) et cette agglomération. Cartographiez cet intinéraire sur la tuile OSM téléchargée.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
 
 
-#--- Agglomération avec le plus haut indice global de performance ----#
+library(osrm)
+route <- osrmRoute(src = ..., dst = ...)
 
-
-# Sélection de l'agglomération présentant l'indice global le plus élevé
-city_max_perf <- africapolis_ben_pt[africapolis_ben_pt$ind_perf == max(africapolis_ben_pt$ind_perf),]
-
-
-
-
-#---------- Calcul d'itinéraire entre IRSP et city_max_perf ----------#
-
-route <- osrmRoute(src = IRSP_sf, dst = city_max_perf)
-
-# Affichage de l'itinéraire
-plot_tiles(osm_tiles)
+# Cartographie
+plot_tiles(...)
 plot(st_geometry(route), col = "grey10", lwd = 6, add = TRUE)
 plot(st_geometry(route), col = "grey90", lwd = 1, add = TRUE)
-plot(st_geometry(IRSP_sf), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
-plot(st_geometry(city_max_perf), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
+# Affichage du point d'origine
+plot(st_geometry(...), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
+# Affichage du point de destination
+plot(st_geometry(...), border = NA, col="red", pch = 20, cex = 3, add = TRUE)
+# Crédit pour la tuile OSM
 mtext(side = 1, line = -1, text = get_credit("OpenStreetMap"), col="tomato")
-
-
-
-[2. Téléchargez les données suivantes :]{.question}
-
-|                        Intitulé                        |                                                                     Téléchargement                                                                      |
-|:-----------------------------------------:|:---------------------------:|
-| Emprise des agglomérations urbaines (AFRICAPOLIS 2020) | <a href="https://bit.ly/3wnQKeG" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
-[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
-
-```{r, echo=FALSE, out.width="60%", fig.align='center'}
-knitr::include_graphics("../img/folder5.png")
-```
-
-[4. Importez le fichier *africapolis_extract.shp*]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-
-# Pour importer des données géographiques 
-library(sf)
-... <- st_read()
-
-
-```
-
-[5. Vérifiez quelle est la projection cartographique utilisée. Re-projetez la couche dans la projection *UTM zone 31N* (EPSG : 32631 ).]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-  
-# Pour connaitre le système de référence et de projection d'une couche
-st_crs(...)
-
-# Transformer le crs d'un objet sf
-... <- st_transform(...)
-
-```
-
-[5. Affichez les géométries des agglomérations urbaines.]{.question}
-
-Astuce : Vous pouvez utiliser la package `mapview` qui permet d'afficher la couche sur différents fonds de carte dynamiques. Cela permet de contrôler le niveau de précision de vos données.
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-
-
-# Affichez les géométries d'un objet sf
-plot(st_geometry(...))
-
-# Afficher sur un fond de carte dynamique
-library(mapview)
-mapview(...)
-
-
-```
-
-[6. Calculez les surfaces de chaque agglomération urbaine. Enregistrez ces valeurs dans une nouvelle colonne.]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-
-
-# st_area() permet de calculer la surface des polygones d'un objet sf
-...$... <- st_area(...)
-
-```
-
-[7. Calculez le nombre et la superficie totale des agglomérations urbaines, par pays.]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-
-library(dplyr)
-
-... <- ... %>% 
-          group_by(...) %>% 
-          summarise(... = sum(...),
-                    ... = n())
-
-```
-
-[8. Créez une quatrième couche géographique (point) à partir des coordonnées de l'Institut Régional de Santé Publique, à Ouidah (Bénin) :]{.question}
-
--   Latitude = **6.349223507626634**
--   Longitude = **2.0879482065861783**
--   CRS = **WGS84** (4326)
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-  
-
-# Création d'un data.frame avec les colonnes "name", "lat" et "long"
-IRSP <- data.frame(name = "...", 
-                   lat = ..., 
-                   long = ...)
-
-
-# Création d'une couche géographique à partir de ces cordonnées
-IRSP_geo <- st_as_sf(IRSP, 
-                     coords = c("...", "..."), 
-                     crs = ...)
-
-```
-
-[9. Créez une zone tampon de 50km autour de l'Institut Régional de Santé Publique]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
-  
-
-# Créer un zone tampon
-... <- st_buffer(..., dist = ...)
-
-
-```
-
-[10. Détectez les agglomérations urbaines situées à moins de 50 km de l'IRSP]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-#| code-summary: "Un peu d'aide ?"
- 
-
-# Quelles agglomérations intersectent la zone tampon ?
-...$... <- st_intersects(..., ..., sparse = ...)
-
-```
-
-[11. Affichez correctement les différentes couches. Utilisez la couleur pour indiquer les agglomérations urbaines qui intersectent la zone tampon. Exemple :]{.question}
-
-\
-
-```{r, echo=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("../img/Ex_plot_buff.png")
-```
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-
-# Utilisez l'argument "add" pour superposer les couches
-
-plot(st_geometry(...))
-plot(...["..."], add = TRUE)
-plot(st_geometry(...), add = TRUE)
-plot(st_geometry(...), add = TRUE)
-
-
-```
-
-[12. Combien d'habitants résident dans les agglomérations urbaines qui intersectent la zone tampon ?]{.question}
-
-```{r warning = FALSE, message = FALSE , eval = FALSE}
-
-
-# Sélectionnez les agglomérations qui intersectent la zone tampon
-... <- ...[...$... == TRUE, ]
-
-# Calcul de la population totale de ces agglomérations
-sum(...$...)
-
 
 ```
 
@@ -465,7 +304,7 @@ sum(...$...)
 \
 
 ::: center
-<a href="/correction/geomatic_vector.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+<a href="/correction/OpenStreetMap.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
 :::
 

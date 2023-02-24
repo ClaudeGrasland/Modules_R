@@ -468,17 +468,23 @@ div.csl-indent {
 <li><a href="https://r-spatial.github.io/sf/">sf</a></li>
 <li><a href="https://rspatial.org/index.html">terra</a></li>
 <li><a href="https://riatelab.github.io/mapsf/index.html">mapsf</a></li>
+<li><a href="https://rstudio.github.io/leaflet/">leaflet</a></li>
+<li><a href="https://r-spatial.github.io/mapview/">mapview</a></li>
+<li><a href="https://rgeomatic.hypotheses.org/2032">maptiles</a></li>
+<li><a href="https://cran.r-project.org/web/packages/osmdata/vignettes/osmdata.html">osmdata</a></li>
+<li><a href="https://docs.ropensci.org/osmextract/">osmextract</a></li>
+<li><a href="https://rgeomatic.hypotheses.org/category/osrm">osrm</a></li>
 <li><a href="https://rmarkdown.rstudio.com/">rmarkdown</a></li>
 <li><a href="https://yihui.org/knitr/">knitr</a></li>
 </ul>
 <section id="installation" class="level4">
 <h4 class="anchored" data-anchor-id="installation">Installation</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste des packages à installer pour réaliser l'ensemble des leçons</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste des packages à installer</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"readxl"</span>, <span class="st">"openxlsx"</span>, <span class="st">"haven"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">"dplyr"</span>, <span class="st">"lubridate"</span>, <span class="st">"stringr"</span>,</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ggplot2"</span>, <span class="st">"FactoMineR"</span>, <span class="st">"sf"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">"terra"</span>, <span class="st">"mapsf"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"knitr"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">"terra"</span>, <span class="st">"mapsf"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"knitr"</span>, <span class="st">"..."</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Détection de package à installer</span></span>
@@ -486,24 +492,35 @@ div.csl-indent {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation des packages manquants</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">length</span>(missing_packages)) <span class="fu">install.packages</span>(missing_packages)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installation du package dans '/home/hugues/R/x86_64-pc-linux-gnu-library/4.2'
+(car 'lib' n'est pas spécifié)</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: le package '...' n'est pas disponible for this version of R
+
+Une version de ce package pour votre version de R est peut-être disponible ailleurs,
+Voyez des idées à
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
+</div>
 </div>
 </section>
 </section>
 <section id="le-minicran" class="level3">
 <h3 class="anchored" data-anchor-id="le-minicran">Le miniCRAN</h3>
-<p>Afin de pouvoir reproduire les différentes leçon sans être dépendant d’une connexion internet, un <a href="./modules/reproductibilite/minicran.html">miniCRAN</a> (répertoire contenant les sources de l’ensemble des packages) est mis à disposition :</p>
+<p>Afin de pouvoir reproduire les différentes leçons sans être dépendant d’une connexion internet, un <a href="./modules/reproductibilite/minicran.html">miniCRAN</a> (répertoire contenant les sources de l’ensemble des packages) est mis à disposition :</p>
 <div class="center">
 <p><a href="https://bit.ly/3y0SKdT" class="btn btn-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Télécharger le miniCRAN</a></p>
 </div>
 <p>Une fois le répertoire décompressé, vous pouvez installer les différents packages en local de la manière suivante :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chemin d'accès jusqu'au répertoire "miniCRAN" copié sur votre machine.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>URL_dossier <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"file:///"</span>, <span class="st">"C:/Users/&lt;username&gt;/.../"</span>, <span class="st">"miniCRAN"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de ggplot2 depuis la source (répertoire miniCRAN)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>, </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> URL_dossier,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"source"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chemin d'accès jusqu'au répertoire "miniCRAN" copié sur votre machine.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>URL_dossier <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"file:///"</span>, <span class="st">"C:/Users/&lt;username&gt;/.../"</span>, <span class="st">"miniCRAN"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation de ggplot2 depuis la source (répertoire miniCRAN)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>, </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> URL_dossier,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"source"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -549,7 +566,7 @@ Note
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Citation TIG’R</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-WinNT" class="csl-entry" role="doc-biblioentry">
-Pecout H., et al. 2023. <span>«&nbsp;<span>TIG’R : </span> Traitement de l’information géographique avec R&nbsp;»</span>. 2023. <a href="https://ee2023.netlify.app/">https://ee2023.netlify.app/</a>.
+Pecout H., Dansou J., et al. 2023. <span>«&nbsp;<span>TIG’R : </span> Traitement de l’information géographique avec R&nbsp;»</span>. 2023. <a href="https://ee2023.netlify.app/">https://ee2023.netlify.app/</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -11,7 +11,7 @@ subtitle: |
 
 **TIG'R est une ressource d'apprentissage pour le traitement de l'information géographique avec R**. Ce site a été crée dans le cadre de l'école thématique [Méthodes et outils de sciences territoriales](https://ee2023.netlify.app/) organisée par le [Collègue Internationnal des Sciences Territoirales](https://cist.cnrs.fr/) et qui s'est déroulée au à Ouidah (Bénin) en Mars 2023.
 
-Ce site contient l'ensemble des **supports de cours et exercices reproductibles** utilisés pour les modules de formation à R. Ces modules couvrent succinctement l'ensemble de la chaîne de traitement de données géographiques avec R.
+Ce site contient l'ensemble des **supports de cours et exercices reproductibles** utilisés pour les modules de formation à R. Ces modules couvrent l'ensemble de la chaîne de traitement de données géographiques avec R.
 
 Cette ressource est soumise à la [Licence ouverte V2.0 d'Etalab](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). **N'hésitez pas à la réutiliser !**
 

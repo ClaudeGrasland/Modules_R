@@ -1,7 +1,9 @@
 ---
 title: "Manipulation de tableau de données"
 subtitle: "Les fonctions primitives pour manipuler un tableau de données"
-author: Hugues pecout
+author: 
+- Hugues pecout
+- Justin Dansou
 date: last-modified
 ordre: 01
 code-fold: true
@@ -10,7 +12,6 @@ format:
   html:
     theme: cosmo
     code-copy: true
-    css: styles.css
     embed-resources: TRUE
   # pdf:
   #   toc: true
@@ -346,7 +347,7 @@ strsplit(x = mon_tableau$naissance, split = "-")
 [2. Téléchargez les données suivantes :]{.question}
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
-|:----------------:|:----------------------------------------------------:|
+|:------------------:|:--------------------------------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 | Fond de carte Afrique (GADM 2020) | <a href="https://bit.ly/3DaAUb2" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 

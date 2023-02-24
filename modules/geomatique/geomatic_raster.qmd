@@ -8,6 +8,10 @@ date: last-modified
 ordre: 02
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
 ---
 
 ## Introduction
@@ -33,7 +37,6 @@ Ce support de ce cours est un manuel initialement conçu pour accompagner le cou
 :::
 
 \
-
 
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 

@@ -111,14 +111,14 @@ Pour installer un package stocké sur votre *miniCRAN* local, utilisez la foncti
 
 ```{r eval = FALSE, echo = TRUE}
 #| code-fold: FALSE
-
 # Chemin d'accès jusqu'au "miniCRAN" stocké sur votre machine.
 url_miniCRAN <- paste0("file:///", "C:/Users/<username>/.../miniCRAN")
 
-# Installation de ggplot2 
+# Installation (type = "source", "mac.binary" ou "win.binary")
 install.packages("ggplot2", 
                  repos = url_miniCRAN,
-                 type = "source")
+                 type = "win.binary", 
+                 dependencies = TRUE)
 
 ```
 

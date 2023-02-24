@@ -6,10 +6,10 @@ nocite: '@*'
 # csl: geo.csl
 ---
 
-TIG'R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l'école thématique [Méthodes et outils de sciences territoriales](https://ee2023.netlify.app/) organisée par le [Collègue Internationnal des Sciences Territoirales](https://cist.cnrs.fr/). Ce site internet a depuis été ouvert aux contributions extérieurs. 
+TIG'R a été initié en 2023 par Hugues pecout et Julien Dansou dans le cadre de l'école thématique [Méthodes et outils de sciences territoriales](https://ee2023.netlify.app/) organisée par le [Collègue Internationnal des Sciences Territoirales](https://cist.cnrs.fr/). Ce site internet est ouvert aux contributions extérieurs.
 
-:::{.center}
-**Liste des contributeurs** à ce jour, par ordre alphabétique : 
+::: center
+**Liste des contributeurs** à ce jour, par ordre alphabétique :
 
 **Julien Dansou, Timothée Giraud, Hugues Pecout...**
 :::
@@ -29,19 +29,13 @@ Le contenu de ce site web (support de cours et exercice inclus) est soumis à la
 
 -   mentionner la paternité de l' « Information » : sa source (cf. [citation](#citation) et la date de dernière mise à jour de l' « Information » réutilisée.
 
-
-:::{.center}
+::: center
 ![](img/etalab.gif){width="7%"}
 :::
 
 \
 
-### Citation
+### Citation {#citation}
 
 ::: {#refs}
 :::
-
-
-
-
-

@@ -6,6 +6,10 @@ author: Hugues Pecout
 date: last-modified
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
   # pdf:
   #   toc: true
   #   number-sections: true
@@ -56,7 +60,7 @@ Présentation du paradigme de programmation lettrée et du format de publication
 \
 
 ::: center
-<a href="/correction/programmation_lettre.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+<a href="/correction/programmation_lettree.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
 :::
 :::
 
