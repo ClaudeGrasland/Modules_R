@@ -36,6 +36,11 @@ Consulter en [**plein écran**](https://huguespecout.github.io/Intro_R_Rstudio_F
 
 </center>
 
+
+**Téléchargement de R et de RStudio : [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)**
+
+
+
 ### Les modules thématiques
 
 Les leçons TIG'R sont classées en sept modules thématiques qui segmentent l'ensemble de la chaîne de traitement de données géographiques :

@@ -1,3 +1,329 @@
 ---
-title: "Utilisation du tidyverse"
+title: "L'ecosystème `tidyverse`"
+subtitle: "Manipulation de données avec les packages du `tidyverse`"
+author: 
+- Justin Dansou
+date: last-modified
+ordre: 02
+code-fold: true
+code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    embed-resources: TRUE
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   output-file: "import"
+  #   output-ext:  "pdf"
 ---
+
+# Objectifs pédagogiques
+
+L'objectif général de ce module est d'initier les participants à la famille de packages **`tidyverse`**.
+
+Plus spécifiquement, à la fin de ce module, les participants devraient être capables de:
+
+-   installer et de charger la librairie `tidyverse`,
+
+-   décrire les principales librairies de la famille `tidyverse`,
+
+-   décrire les principales fonctions de la librairie de **`tidyverse`** dédiée à la manipulation de données (**dplyr**),
+
+-   manipuler les principales fonctions de dplyr dédiées à la manipulation de données.
+
+# Introduction
+
+Le terme **tidyvrse** vient de *tidy* (bien ranger ou bien ordonner) et de *universe*. Il s'agit d'une collection de librairies / extensions aynt une même philolophie de base permettant entre autres, l'importation et l'exportation des données, la manipulation des tableaux de données, la manipulation des collonnes de data frame (variable), le web scrapping, la programmation, etc. Dans ce module nous aborderont les extensions du package `tidyverse` permettant la manipulation des données et un peu plus bas celui permettant la visualiation (représentation graphique) des données. soit Le package dplyr propose des fonctions permettant la manipulation des tableaux de données ou data-frames ou plutôt sur une variante appelée **tibble.** Les tibbles se diffèrent des data.frames à quelques exceptions près. En effet, les lignes d'un tibble n'ont pas de nom (identifiant) et à l'afficharge seules quelques lignes sont retounées.
+
+## Installation et chargement du package `tidyverse`
+
+Les lignes de codes suivantes permettent de faire l'installation et le chargement de `tidyverse`.
+
+
+
+```{r, warning=FALSE, message=FALSE, eval=FALSE}
+#| code-fold: FALSE
+
+# Installation du package 
+install.packages("tidyverse")
+
+# Chargement du package. 
+library(tidyverse)
+
+```
+
+Les principales librairies (écosystème `tidyverse`) automatiquement installées avec **`tidyverse`** sont les suivantes :
+
+-   **readr** : import de données,
+
+-   **tibble** : exploitation des tableaux de données,
+
+-   **stringr** : manipulation des chaînes de caractères,
+
+-   **dplyr** : manipulation des données,
+
+-   **tidyr** : remise en forme des données,
+
+-   **ggplot2** : visualisation / représentation graphique des données,
+
+-   **forcats** : variables qualitatives,
+
+-   **purrr** : programmation.
+
+
+La liste complèle des extensions de `tidyverse` se trouve sur [le site officiel du `tidyverse`](https://www.tidyverse.org/packages/ "Page web officielle de tidyverse").
+
+Note: *Ceci étant, au lieu d'installer la collection de packages (`tidyverse`), il est aussi possible d'installer directement l'extension souhaité.* Par exemple, si l'on souhaite utiliser des fonctions du package `dplyr`, vous pouvez uniquement installer ce package de la manière suivante :
+
+```{r, warning=FALSE, message=FALSE, eval=FALSE}
+#| code-fold: FALSE
+
+# Installation du package dplyr 
+install.packages("dplyr")
+
+
+```
+
+Puis charger la librairie pour pouvoir utiliser ses fonctions :
+
+```{r, warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# Chargement de la librairie
+library(dplyr)
+
+
+```
+
+
+# Enchaînement des opérations avec le [*pipe*]{.underline}
+
+La manipulation des tables de données nous amène parfois à envisager l’enchaînement de plusieurs opérations. Par exemple on peut être appeler à faire une sélection, faire des transformations sur la sélection et en fin faire un tri sur le résultat. Pour ce faire, on peut directement imbriquer les fonctions concernées, ceci dans l'ordre inverse de réalisation dans une approche. Ceci rend le code un peu plus difficile à lire et à comprendre (par exemple il est difficile de voir les paramètres de chaque fonction de façon séparée, etc.). La deuxième approche consistera à faire les opérations de façon séparée en stockant les résultats dans des objets en les passant d'une fonction à une autre. En fin, avec le [***pipe***]{.underline}, il possible de réaliser la série d'opérations de manière efficace, claire et compréhensible. Le symbole du pipe est [**`%\>%` ou \|\> (appelé pipe natif depuis la version 4.1 de R)**.]{.underline} Le pipe natif est la fois un peu plus rapide et un peu moins flexible/souple comparé au pipe originel (`%\>%`). Par exemple avec `%\>%` il est possible d'appeler une fonction sans parenthèse, ce qui est impossible avec le pipe natif (\|\>). La suite d'instructions faisant intervenir plusieurs pipes s'appelle **pipeline.**
+
+```{r warning=FALSE, eval=FALSE, message=FALSE}
+#| code-fold: FALSE
+
+
+# Sans le pipe la commande suivante permet de sélectionner dans la base DevAfrica2018 trois colonnes (nom, sousregion et population) dont l'effectif de la population est < 10 millions d'habitants 
+filter(select(DevAfrica2018, nom, SUBREG, POP), POP<=10)
+
+# enchaînement d'opérations sur les fonctions "select" et "filter" a voir ultérieurement
+
+DevAfrica2018 %>% 
+    select(nom, SUBREG, POP) %>%
+    filter(POP<=10)
+
+# Ce qui équivaut encore à :   
+
+DevAfrica2018 |> 
+    select(nom, SUBREG, POP) |>
+    filter(POP<=10)
+
+
+```
+
+# Quelques fonctions usuelles de manipulation des tableaux de données avec dplyr
+
+Avant de commencer, importons la base de données d'application
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Import des métadonnées
+metaDataDEVAFRICA  <- read.table(file = "data/DEV_AFRICA_2018/afrika_don_meta.csv",
+                           header = TRUE,
+                           sep= ";",
+                           encoding = "UTF-8")
+
+
+# Import de la base de données DEV_AFRICA_2018
+library(readxl)
+DevAfrica2018 <- read_excel("data/DEV_AFRICA_2018/afrika_don.xls")
+
+```
+
+
+Les fonctions suivantes sont d'usage courant sur les **tibbles** dans le processus de manipulation des tableaux de données avec le package **dplyr**:
+
+1.  **`select()`** : permet de sélectionner les colonnes d'un tableau de données par leur nom ou pour leur position (numéro de colonne). Elle comprend une série de fonctions facilitant la sélection de colonnes multiples. Les fonctions stars_with(), ends_width(), contains() ou matches() permettent de spécifier des conditions sur les noms de variables. La liste exhaustive des possibilités offertes par **select()** est disponible dans la documentation de l'extension tidyselect [Ici](https://tidyselect.r-lib.org/reference/language.html "Site officiel de tidyselect"),
+
+```{r  warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Selection de colonnes par nom : sélectionner la liste des pays et leur région d'appartenance 
+select(DevAfrica2018, name, SUBREG) 
+
+# Selection de colonnes par position: sélectionner les trois premières colonnes / variable de la base DevAfrica2018
+select(DevAfrica2018, 1:3) 
+
+# Selection de colonnes par nom : sélectionner les variables dont le nom commencent par "n" 
+select(DevAfrica2018, starts_with("n")) 
+
+```
+
+
+2. **`rename()`** : permet de renommer des colonnes.
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# Renommer la variable "name" par "NAME" ET
+# Renommer la variable "nom"  par "Nom du pays"
+
+DevAfrica2018 %>%
+      rename(NAME = name) %>%
+      rename('Nom du pays' = nom)
+
+```
+
+3.  **`mutate()`** : permet de modifier ou de créer de nouvelles colonnes en fonction d'autre.s colonne.s.,
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# créer une nouvelle variable "Population" contenant la population réelle (a partir de la variable POP)
+DevAfrica2018 %>%
+     mutate(Population=POP*1000000)
+
+```
+
+4.  **`filter()`** : permet de filtrer ou de sélectionner les lignes d'une table de données en fonction des conditions sur les colonnes,
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# Sélectionner les pays dont l'effectif de la population est inférieur à 10 millions d'habitants
+DevAfrica2018 %>%
+      filter(POP<=10)
+
+```
+
+5.  **`slice()`** : permet de sélectionner des lignes d'un tableau de données selon leur position. Elle propose plusieurs variantes dont **`slice_head()`** et **`slice_tail()`** permettant respectivement de sélectionner les premières ou les dernières observations d'un tableaux de données en précisant le nombre via l'option **`n`.** **`slice_min`** et **`slice_max`** permettent de sélectionner les lignes présentant les plus faibles ou plus fortes valeurs. Lorsque plusieurs lignes répondent au critère, on spécifier le nombre retourné avec l'option **`n`**.
+
+```{r}
+#| code-fold: FALSE
+
+
+# Sélectionner la deuxième observation
+DevAfrica2018 %>%
+         slice(2)
+
+# Sélectionner les dix premières observations
+DevAfrica2018 %>%
+         slice(1:10)
+
+```
+
+En plus de ces fonctions, on a deux autres qui sont généralement applicables aux tableaux de données elles-mêmes. Il s'agit de:
+
+1.  **`summarize()`**: permet de résumer un tableau de données,
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+DevAfrica2018 %>%
+      summarise(popMoyen = mean(POP))
+
+```
+
+2.  **`arrange()`**: réordonne un tableau de données en fonction d'une colonne (variable).
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+
+# Trier les pays par ordre alphabétique croissant
+DevAfrica2018 %>%
+    arrange(desc(nom))
+
+
+```
+
+# Opérations groupées
+
+## La fonction `group_by()`
+
+La clause `group_by()` est aussi l'une des fonctions d'usage courant et utile de `dply`r. Elle permet de définir des groupes de lignes à partir des valeurs d'une ou plusieurs colonnes. Par exemple, on peut regroupe la population d'un pays par un certain niveau de découpage administratif. L'usage courant est d'effectuer des opérations sur les groupes constitués par la fonction group_by() en faisant appel à d'autres fonctions, par exemple `slice()`, `mutate()` ou `summarise()`. L'argument `n()` de `summarise()` appliqué à un `group_by()` permet d'obtenir les effectifs par groupe.
+
+Il est aussi possible de grouper selon plusieurs colonnes / variables en les indiquant dans la clause du `group_by()`.
+
+[***Note***]{.underline}*: la clause **`group_by()`** marche avec la plus part des fonctions à l'exception de **`arrange()`** qui s'applique par défaut à l'ensemble du tableau de données. Pour avoir un tri par groupe, un argument suplémentaire `.by_group = TRUE` doit être utilisé.*
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# Population moyenne par sous région
+DevAfrica2018 %>%
+     group_by(SUBREG) %>%
+     summarise(popMoyen = mean(POP))
+
+```
+
+# Pour aller plus loin \~ autres fonctions utiles
+
+1.  **`slice_sample()`** : sélection aléatoire d'observation dans une table de données,
+
+2.  **`relocate()`** : permet de réordonner les colonnes d'un data frame,
+
+3.  **`full_join()`** : toutes les lignes des tableaux de données en fusion sont conversées et les NA sont générées si nécessaire,
+
+4.  **`inner_join()`** : conserve les lignes communes aux data frame,
+
+5.  **`semi_join()`** et **`anti_join()`** sont des jointures *filtrantes*, c'est-à-dire qu'elles sélectionnent les lignes de **x** sans ajouter les colonnes de **y**,
+
+6.  **`left_join()`**, **`right_join()`,**
+
+7.  **`bind_rows()` et `bind_cols()`**
+
+
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:-------------------:|:-------------------------------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder2.png")
+```
+
+
+[4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
+
+
+[5. Sélectionner la liste des pays et leur région d’appartenance.]{.question}
+
+
+
+[6. Quelles sont les variables de la base de données dont le nom commence par la lettre “P”.]{.question}
+
+[7.	Quelles sont les variables de la base de données dont le nom contient la lettre “P”.]{.question}
+
+[8.	Renommer la variable “PIB” en “ProduitInterieurBrut”.]{.question}
+
+[9.	Calculer le taux de dépendance jeune par sous-région.]{.question}
+
+[10. Trier les pays par sous-région.]{.question}
+
+
+------------------------------------------------------------------------
+
+\
+
+<!-- ::: center -->
+<!-- <a href="/correction/Manipulation_dataframe.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a> -->
+<!-- ::: -->
+:::

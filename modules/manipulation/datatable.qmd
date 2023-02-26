@@ -1,3 +1,0 @@
----
-title: "Utilisation de data.table"
----
