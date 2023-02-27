@@ -1,0 +1,85 @@
+---
+title: "Application Tidyverse & ggplot2"
+author: 
+- Justin Dansou
+- Hugues Pecout
+code-fold: FALSE
+code-tools: TRUE
+---
+
+# Exercice 1 \~ Application Tidyverse
+
+#### 1. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+
+
+library(tidyverse)
+
+# Import des métadonnées
+metaDataDEVAFRICA  <- read.table(file = "data/DEV_AFRICA_2018/afrika_don_meta.csv", 
+                           header = TRUE,
+                           sep= ";",
+                           encoding = "UTF-8")
+
+library(readxl)
+DevAfrica2018 <- read_excel("data/DEV_AFRICA_2018/afrika_don.xls")
+
+```
+
+#### 2. Sélectionner la liste des pays et leur region d'appartenance
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+
+
+# Sélection de la liste des pays et leur region d'appartenance
+DevAfrica2018 %>%
+  select(nom, SUBREG)
+
+```
+
+#### 3. Quelles sont les variables de la base de données dont le nom commence par la lettre "P"
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+
+# Select ion de colonnes par nom : sélectionner les variables dont le nom commencent par "P" 
+DevAfrica2018 %>%
+  select(starts_with("P"))
+
+```
+
+#### 4. Quelles sont les variables de la base de données dont le nom contient la lettre "P"
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+
+# sélectionner les variables dont le nom contient la lettre "P" 
+DevAfrica2018 %>%
+  select(contains("P"))
+```
+
+#### 5. Renommer la variable "PIB" en "ProduitInterieurBrut"
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+# Renommer la variable "PIB"  par "ProduitInterieurBrut"
+DevAfrica2018 %>%
+  rename(ProduitInterieurBrut = PIB)
+```
+
+#### 6. Calculer le taux de dépendance jeune par sous-région
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+# Proportion (Pourcentage) de jeunes par sous région
+DevAfrica2018 %>%
+  group_by(SUBREG) %>%
+  summarise(depJeune = mean(DJEUNE))
+
+```
+
+#### 7. Ordonner les pays par sous région
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+# Trier les pays par niveau de PIB croissant
+DevAfrica2018 %>%
+  arrange(desc(SUBREG))
+
+```

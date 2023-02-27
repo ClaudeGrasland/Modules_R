@@ -50,6 +50,8 @@ website:
             text: Toutes les leçons
           - href: modules/manipulation/manipulation.qmd
             text: Manipulation de tableau
+          - href: modules/manipulation/tidyverse.qmd
+            text: L'écosystème `tidyverse`
           # - href: modules/manipulation/datatable.qmd
           #   text: Le package `data.table`
           # - href: modules/manipulation/tidyverse.qmd 
@@ -61,8 +63,8 @@ website:
             text: Toutes les leçons
           - href: modules/graphique/Rbase_graph.qmd
             text: Graphique R-base
-          # - href: modules/graphique/ggplot2.qmd
-          #   text: Graphique avec `ggplot2`
+          - href: modules/graphique/ggplot2.qmd
+            text: Graphique avec `ggplot2`
             
       - section: "**Statistique**"
         contents:

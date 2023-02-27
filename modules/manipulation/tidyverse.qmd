@@ -3,6 +3,7 @@ title: "L'ecosystème `tidyverse`"
 subtitle: "Manipulation de données avec les packages du `tidyverse`"
 author: 
 - Justin Dansou
+- Hugues Pecout
 date: last-modified
 ordre: 02
 code-fold: true
@@ -304,26 +305,93 @@ knitr::include_graphics("../img/folder2.png")
 [4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
 
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+# Import des métadonnées
+...  <- read.table(file = "...", 
+                   header = ...,
+                   sep= "...",
+                   encoding = "...")
+
+
+library(...)
+DevAfrica2018 <- read_excel("...")
+
+```
+
 [5. Sélectionner la liste des pays et leur région d’appartenance.]{.question}
 
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+    select(..., ...)
+
+```
 
 [6. Quelles sont les variables de la base de données dont le nom commence par la lettre “P”.]{.question}
 
+
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+    select(...("..."))
+
+```
+
 [7.	Quelles sont les variables de la base de données dont le nom contient la lettre “P”.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+   select(...("..."))
+
+```
+
 
 [8.	Renommer la variable “PIB” en “ProduitInterieurBrut”.]{.question}
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+   rename(... = ...)
+
+```
+
 [9.	Calculer le taux de dépendance jeune par sous-région.]{.question}
 
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+    group_by(...) %>%
+    summarise(... = mean(...))
+
+```
+
 [10. Trier les pays par sous-région.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+DevAfrica2018 %>%
+   arrange(...(...))
+
+```
 
 
 ------------------------------------------------------------------------
 
 \
 
-<!-- ::: center -->
-<!-- <a href="/correction/Manipulation_dataframe.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a> -->
-<!-- ::: -->
+::: center
+<a href="/correction/tidyverse.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
 :::

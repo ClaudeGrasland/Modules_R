@@ -1,9 +1,321 @@
 ---
-title: "Graphique avec `ggplot2`"
-subtitle: "Representations graphiques avec `ggplot2`"
-author: Hugues pecout
+title: "Le package `ggplot2`"
+subtitle: "Représentations graphiques avec `ggplot2`"
+author: 
+- Justin Dansou
+- Hugues Pecout
 date: last-modified
 ordre: 02
 code-fold: true
 code-tools: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    embed-resources: TRUE
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   output-file: "import"
+  #   output-ext:  "pdf"
 ---
+
+# Objectifs pédagogiques
+
+L'objectif général de ce module est d'initier les participants à l'extension de visualisation de données avec **`ggplot2`**, package de la famille de **`tidyverse`**.
+
+Plus spécifiquement, à la fin de ce module, les participants devraient être capables de:
+
+-   d'installer et de charger la librairie `ggplot2`,
+
+-   décrire les principales fonctions de la librairie de `tidyverse` dédiée à la visualisation de données (**`ggplot2`**),
+
+-   manipuler les principales fonctions graphiques de **`ggplot2`** dédiées à la visualisation de données.
+
+# Introduction
+
+**`ggplot2`** fait partie de la suite d'extension de **`tidyverse`** ayant une même philosophie de base permettant entre autres, l'importation et l'exportation des données, la manipulation des tableaux de données, la manipulation des colonnes de data.frame (variable), le web scrapping, la programmation. Dans ce module est consacré aux principales fonctions graphiques de `ggplot2` permettant la visualisation des données. Le principe de base de `ggplot2` est que les données de base de la visualisation sont stockées sous forme de tableau de données ou `data.frame`, `tibble` etc.
+
+## Installation et chargement du package `ggplot2`
+
+Les lignes de codes suivantes permettent de faire l'installation et le chargement de tidyverse.
+
+```{r, warning=FALSE, message=FALSE, eval=FALSE}
+#| code-fold: FALSE
+
+# Installation du package 
+install.packages("tidyverse")
+
+# Chargement de la librairie 
+library(ggplot2)
+
+```
+
+La liste complète des extensions de tidyverse se trouve sur le site officiel du tidyverse [ici](https://www.tidyverse.org/packages/ "Page web officielle de tidyverse").
+
+Note: *Ceci étant, au lieu d'installer la collection de packages (`tidyverse`), il est aussi possible d'installer directement `ggplot2`. Exemple :*
+
+```{r, warning=FALSE, message=FALSE, eval=FALSE}
+#| code-fold: FALSE
+
+# Installation du package ggplot2
+install.packages("ggplot2")
+
+
+```
+
+Puis charger la librairie pour pouvoir utiliser ses fonctions :
+
+```{r, warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+# Chargement de la librairie
+library(ggplot2)
+
+
+```
+
+## Fonctions graphiques usuelles de viusalisation des données avec `ggplot2`
+
+### Principe de base des synthaxes graphiques de `ggplot2`
+
+La syntaxe de `ggplot2` est spécifique et diffère totalement de celle des graphiques de base de R. Elle est de type "**Grammar of Graphics"** et est généralement structurée comme un ensemble indépendant de commandes. Ce module n'est qu'une introduction à quelques fonctions usuelles d'application de `ggplot2`. Pour plus d'information, le lecteur est invité à consulter les nombreuses ressources disponibles (en général gratuitement) en ligne sur l'extension.
+
+Le principe de base de la représentation graphique de `ggplot2` consiste à segmenter les instructions. En général, il nécessite de spécifier :
+
+-   le jeux de données contenant l'information à visualiser,
+
+-   l'information (variable ou ensemble de variables) que l'on souhaite visualiser. Elle est généralement indiquée au niveau de la fonction **`aes()`**,
+
+-   le type de visualisation (représentation graphique) souhaité: camembert, histogramme, etc. Il est aussi spécifié par une fonction.
+
+### Grammaire du ggplot
+
+La grammaire de la syntaxe de `ggplot2` se présente ainsi qui suit:
+
+-   **Data** (ggplot): pour spécifier le jeu de données contenant l'information à visualiser. Le jeu de données est généralement un data frame, un tibble ou tableau de données renseigné dans la fonction **`ggplot()`**,
+
+-   **Aesthetics** (aes): pour spécifier l'information / variable.s à représenter/visualiser. La ou les variables à visualiser est/sont indiquées dans la fonction **`aes()`**. Elle prend en argument d'autres paramètre de contrôler avancé du rendu de la représentation graphique. Il s'agit de ***color, size, fill*** en général utilisé lorsqu'une couleur ou une taille est définie par une variable,
+
+-   **Geometrics** (geom\_...) pour spécifier le type de représentation graphique souhaité (*cf. plus bas pour la description des fonctions usuelles des types de représentation graphiques*),
+
+-   **Statistics** (stat\_...): pour spécifier les éventuelles transformations des données pour la représentation en vue,
+
+-   **Scales** (scale\_...): permet de contrôler le lien entre les données et les aesthetics (modification de couleurs, gestion des axes, etc.)
+
+### Geometrics et aesthetics
+
+Le tableau ci-dessous décrit quelques types de représentation géométrique et les types d'informations requises.
+
+| \#  | Geom               | Description               | Aesthetics                             |
+|--------------|--------------|-----------------|---------------------------|
+| 1   | `geom_point()`     | Nuage de points           | x, y, shape, fill                      |
+| 2   | `geom_line()`      | Ligne (ordonnées selon x) | x, y, linetype                         |
+| 3   | `geom_abline()`    | Droite                    | slope, intercept                       |
+| 4   | `geom_path()`      | Ligne (ordre original)    | x, y, lignetype                        |
+| 5   | `geom_text()`      | Texte                     | x, y, label, hjust, vjust              |
+| 6   | `geom_rect()`      | Rectangle                 | xmin, xmax, ymin, ymax, fill, linetype |
+| 7   | `geom_polygon()`   | Polygone                  | x, y, fill, linetype                   |
+| 8   | `geom_segment()`   | Segment                   | x, y, fill, linetype                   |
+| 9   | `geom_bar()`       | Diagramme en barres       | x, fill, linetype, weight              |
+| 10  | `geom_histogram()` | Histogramme               | x, fill, linetype, weight              |
+| 11  | `geom_boxplot()`   | Boîte à moustaches        | x, y, fill, weight                     |
+| 12  | `geom_density()`   | Densité                   | x, y, fill, linetype                   |
+| 13  | `geom_contour()`   | Line de contour           | x, y, fill, linetype                   |
+| 14  | `geom_smooth()`    | Lissage                   | x, y, fill, linetype                   |
+
+: Exemples de geom et aesthetics associés
+
+### Statistics
+
+Les données brutes provenant des tableaux de données ou data frames nécessitent souvent de transformations préalables avant la visualisation. Ainsi, les statistiques permettent de gérer les transformations ou calculs intermédiaires dans le processus de visualisation. Les fonctions assurant ces transformations intermédiaires sont en géneral renseignés dans l'argument ***stat*** des fonctions **geom\_...** Par exemple pour représenter un histogramme (**geom_histgram**), la valeur par défaut permettant le calculer des principaux indicateurs est stat="bin":
+
+-   [count]{.underline} : nombre de points dans chaque classe,
+
+-   [density]{.underline} : densité pour chaque class,
+
+-   [ncount]{.underline} :similaire à **count** mais ici la valeur maximale est équivalent 1.
+
+-   vndensity\]{.underline} : similaire à density mais la valeur maximale ici est de 1.
+
+Le tableau ci-dessous présente quelques statistics prise en charge dans ggplot.
+
+| \#  | Stat              | Description           | Paramètres       |
+|-----|-------------------|-----------------------|------------------|
+| 1   | `stat_identity()` | Aucune transformation |                  |
+| 2   | `stat_bin()`      | Comptage              | bineidth, origin |
+| 3   | `stat_density()`  | Densité               | adjust, kernel   |
+| 4   | `stat_smooth()`   | Lissage               | method, se       |
+| 5   | `stat_boxplot()`  | Boxplot               | coef             |
+
+: Exemples de statistics
+
+### Faceting
+
+Le *faceting* permet de faire une représentation graphique selon les modalités d'une ou de plusieurs variable.s qualitative.s. Ainsi, on distingue les variantes ***`facet_wrap()`*** et ***`facet_grid()`***. *facet_wrap()* prend en argument un paramètre de la forme [*vars(variable)*]{.underline} ou [variable]{.underline} est le nom de la variable de catégorisation des différents graphiques.
+
+### Scales
+
+Les *scales* permettent de modifier la manière dont un attribut graphique va être relié aux valeurs d'une variable.
+
+### Thèmes
+
+Les thèmes permettent de contrôler l'aperçu de touts les éléments du graphique qui ne sont pas reliés aux données: titre, grilles, fonds, etc.
+
+Certains thèmes prédéfinis existent. C'est le cas de [**`theme_bw()`, `theme_minimal()`**]{.underline}
+
+### Quelques exemples
+
+```{r warning = FALSE, message = FALSE , eval = TRUE}
+#| code-fold: FALSE
+
+# Import de la base de données DEV_AFRICA_2018
+library(readxl)
+DevAfrica2018 <- read_excel("data/DEV_AFRICA_2018/afrika_don.xls")
+
+# Chargement de la librairie ggplot2
+library(ggplot2)
+```
+
+Représentation graphique (diagramme en barre) du nombre de pays (effectif de pays) par sous-région.
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+
+ggplot(DevAfrica2018) + 
+  geom_bar(aes(x=SUBREG))
+
+```
+
+Représentation graphique (boite à moustache) de l'espérance à la naissance par sous-région.
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+
+ggplot(DevAfrica2018) + geom_boxplot(aes(x=SUBREG, y = ESPVIE))
+
+```
+
+On peut personnaliser le graphique avec différents arguments supplémentaires comme `fill` et `color`.
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+
+ggplot(DevAfrica2018) + 
+  geom_boxplot(aes(x=SUBREG, y = ESPVIE),
+               fill= "wheat", color = "tomato4")
+
+```
+
+Un autre argument utile, `varwidth`, permet de faire varier la largeur des boîtes en fonction des effectifs de la classe (donc, ici, en fonction du nombre de pays par sous-région) :
+
+```{r warning=FALSE, message=FALSE, eval=TRUE}
+#| code-fold: FALSE
+ggplot(DevAfrica2018) + 
+  geom_boxplot(aes(x=SUBREG, y = ESPVIE),
+               fill= "wheat", color = "tomato4", varwidth = TRUE)
+
+
+```
+
+Si on préfère avoir un graphique en barres horizontales, il suffit de passer la variable comme attribut `y` plutôt que `x`.
+
+Pour modifier manuellement les différents éléments, les fonctions `ggtitle`, `xlab` et `ylab` permettent d'ajouter ou de modifier le titre du graphique, ainsi que les étiquettes des axes `x` et `y`.
+
+```{r}
+#| code-fold: FALSE
+
+ggplot(DevAfrica2018) + geom_bar(aes(y=SUBREG)) + 
+  xlab("Nombre de pays") +
+  ylab("Sous-région") +
+  ggtitle("Joli graphique")
+
+```
+
+## Ressources:
+
+[La documentation officielle de `ggplot2`](http://ggplot2.tidyverse.org/)\
+[The R Graph Gallery](https://r-graph-gallery.com/ggplot2-package.html)
+
+## L'interface graphique du package `Esquisse`
+
+```{r, warning=FALSE, message=FALSE, eval=FALSE}
+#| code-fold: FALSE
+
+# Installation du package 
+install.packages("esquisse")
+
+```
+
+```{r, echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("../img/esquisse.jpg")
+```
+
+Construisez votre graphique ggplot en clic-bouton et glisser-déposer, puis récupérer le code source !
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("../img/ex_esquisse.png")
+```
+
+## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
+
+::: {#exo}
+[1. Créez un projet Rstudio]{.question}
+
+*File/New Project/New Directory...*
+
+[2. Téléchargez les données suivantes :]{.question}
+
+|             Intitulé              |                                                                     Téléchargement                                                                      |
+|:--------------------:|:------------------------------------------------:|
+| Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
+
+[3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
+
+```{r, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("../img/folder2.png")
+```
+
+[4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+
+# Import des métadonnées
+...  <- read.table(file = "...", 
+                   header = ...,
+                   sep= "...",
+                   encoding = "...")
+
+
+library(...)
+DevAfrica2018 <- read_excel("...")
+
+```
+
+[5. Re-coder la variable « POP » en « Population » en trois catégories :]{.question}
+
+1)  Moins de 10 millions
+2)  10 -- 25 millions
+3)  \> 25 millions
+
+[6. Faire une représentation graphique de l'effectif des pays par sous-région.]{.question}
+
+[7. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+
+[8. Faite la boite à moustache de l'espérance de vie à la naissance par sous-région.]{.question}
+
+[9. Faite la boite à moustache de l'espérance de vie à la naissance par sous-région.]{.question}
+
+Note : faites les largeurs des boites à moustaches proportionnelles à l'effectif de pays par sous-région
+
+[10. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+
+------------------------------------------------------------------------
+
+\
+:::
