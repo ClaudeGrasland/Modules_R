@@ -109,7 +109,7 @@ La grammaire de la syntaxe de `ggplot2` se présente ainsi qui suit:
 Le tableau ci-dessous décrit quelques types de représentation géométrique et les types d'informations requises.
 
 | \#  | Geom               | Description               | Aesthetics                             |
-|--------------|--------------|-----------------|---------------------------|
+|-----------------|-----------------|-----------------|----------------------|
 | 1   | `geom_point()`     | Nuage de points           | x, y, shape, fill                      |
 | 2   | `geom_line()`      | Ligne (ordonnées selon x) | x, y, linetype                         |
 | 3   | `geom_abline()`    | Droite                    | slope, intercept                       |
@@ -137,7 +137,7 @@ Les données brutes provenant des tableaux de données ou data frames nécessite
 
 -   [ncount]{.underline} :similaire à **count** mais ici la valeur maximale est équivalent 1.
 
--   vndensity\]{.underline} : similaire à density mais la valeur maximale ici est de 1.
+-   [ndensity]{.underline} : similaire à density mais la valeur maximale ici est de 1.
 
 Le tableau ci-dessous présente quelques statistics prise en charge dans ggplot.
 
@@ -270,7 +270,7 @@ knitr::include_graphics("../img/ex_esquisse.png")
 [2. Téléchargez les données suivantes :]{.question}
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
-|:--------------------:|:------------------------------------------------:|
+|:---------------------:|:-----------------------------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
@@ -279,7 +279,7 @@ knitr::include_graphics("../img/ex_esquisse.png")
 knitr::include_graphics("../img/folder2.png")
 ```
 
-[4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
+[4. Importez la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -297,25 +297,97 @@ DevAfrica2018 <- read_excel("...")
 
 ```
 
-[5. Re-coder la variable « POP » en « Population » en trois catégories :]{.question}
+[5. Re-codez la variable « POP » en « Population » en trois catégories :]{.question}
 
 1)  Moins de 10 millions
 2)  10 -- 25 millions
 3)  \> 25 millions
 
-[6. Faire une représentation graphique de l'effectif des pays par sous-région.]{.question}
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
 
-[7. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+...$... <- cut(...$...,  
+              breaks = c(..., ..., ..., ...), 
+              labels = c("...s", 
+              "...", 
+              "..."), 
+              right = ...)
+
+```
+
+[6. Faite une représentation graphique de l'effectif des pays par sous-région.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+library(...)
+
+ggplot(...) + 
+   geom_histogram(aes(x = ...), stat = '...')
+
+
+```
+
+[7. Ajoutez les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+ggplot(...) + 
+  geom_histogram(aes(x=...), stat = '...')+
+  ggtitle("...")+
+  xlab("...") + 
+  ylab("...")
+
+```
 
 [8. Faite la boite à moustache de l'espérance de vie à la naissance par sous-région.]{.question}
 
-[9. Faite la boite à moustache de l'espérance de vie à la naissance par sous-région.]{.question}
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
 
-Note : faites les largeurs des boites à moustaches proportionnelles à l'effectif de pays par sous-région
 
-[10. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+ggplot(...) + 
+  geom_boxplot(aes(x=..., y=...))
+
+
+```
+
+[9. Ajout des étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.]{.question}
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+ggplot(...) + 
+  geom_boxplot(aes(x=..., y=...), varwidth = ...)
+
+
+```
+
+Note : *faites les largeurs des boites à moustaches proportionnelles à l'effectif de pays par sous-région*
+
+```{r warning = FALSE, message = FALSE , eval = FALSE}
+#| code-summary: "Un peu d'aide ?"
+
+Graphique1 <- ggplot(...) + 
+  geom_boxplot(aes(x=..., y=...), varwidth = ...) + 
+  xlab("...") + 
+  ylab("...") + 
+  ggtitle("...")
+
+
+# Sauvegarde du graphique
+ggsave("...", dpi = 3000)
+
+
+```
+
 
 ------------------------------------------------------------------------
 
 \
+
+::: center
+<a href="/correction/ggplot2.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a>
+:::
 :::

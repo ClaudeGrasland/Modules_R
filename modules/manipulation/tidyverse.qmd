@@ -43,8 +43,6 @@ Le terme **tidyvrse** vient de *tidy* (bien ranger ou bien ordonner) et de *univ
 
 Les lignes de codes suivantes permettent de faire l'installation et le chargement de `tidyverse`.
 
-
-
 ```{r, warning=FALSE, message=FALSE, eval=FALSE}
 #| code-fold: FALSE
 
@@ -74,7 +72,6 @@ Les principales librairies (écosystème `tidyverse`) automatiquement installée
 
 -   **purrr** : programmation.
 
-
 La liste complèle des extensions de `tidyverse` se trouve sur [le site officiel du `tidyverse`](https://www.tidyverse.org/packages/ "Page web officielle de tidyverse").
 
 Note: *Ceci étant, au lieu d'installer la collection de packages (`tidyverse`), il est aussi possible d'installer directement l'extension souhaité.* Par exemple, si l'on souhaite utiliser des fonctions du package `dplyr`, vous pouvez uniquement installer ce package de la manière suivante :
@@ -99,10 +96,9 @@ library(dplyr)
 
 ```
 
-
 # Enchaînement des opérations avec le [*pipe*]{.underline}
 
-La manipulation des tables de données nous amène parfois à envisager l’enchaînement de plusieurs opérations. Par exemple on peut être appeler à faire une sélection, faire des transformations sur la sélection et en fin faire un tri sur le résultat. Pour ce faire, on peut directement imbriquer les fonctions concernées, ceci dans l'ordre inverse de réalisation dans une approche. Ceci rend le code un peu plus difficile à lire et à comprendre (par exemple il est difficile de voir les paramètres de chaque fonction de façon séparée, etc.). La deuxième approche consistera à faire les opérations de façon séparée en stockant les résultats dans des objets en les passant d'une fonction à une autre. En fin, avec le [***pipe***]{.underline}, il possible de réaliser la série d'opérations de manière efficace, claire et compréhensible. Le symbole du pipe est [**`%\>%` ou \|\> (appelé pipe natif depuis la version 4.1 de R)**.]{.underline} Le pipe natif est la fois un peu plus rapide et un peu moins flexible/souple comparé au pipe originel (`%\>%`). Par exemple avec `%\>%` il est possible d'appeler une fonction sans parenthèse, ce qui est impossible avec le pipe natif (\|\>). La suite d'instructions faisant intervenir plusieurs pipes s'appelle **pipeline.**
+La manipulation des tables de données nous amène parfois à envisager l'enchaînement de plusieurs opérations. Par exemple on peut être appeler à faire une sélection, faire des transformations sur la sélection et en fin faire un tri sur le résultat. Pour ce faire, on peut directement imbriquer les fonctions concernées, ceci dans l'ordre inverse de réalisation dans une approche. Ceci rend le code un peu plus difficile à lire et à comprendre (par exemple il est difficile de voir les paramètres de chaque fonction de façon séparée, etc.). La deuxième approche consistera à faire les opérations de façon séparée en stockant les résultats dans des objets en les passant d'une fonction à une autre. En fin, avec le [***pipe***]{.underline}, il possible de réaliser la série d'opérations de manière efficace, claire et compréhensible. Le symbole du pipe est [**`%\>%` ou \|\> (appelé pipe natif depuis la version 4.1 de R)**.]{.underline} Le pipe natif est la fois un peu plus rapide et un peu moins flexible/souple comparé au pipe originel (`%\>%`). Par exemple avec `%\>%` il est possible d'appeler une fonction sans parenthèse, ce qui est impossible avec le pipe natif (\|\>). La suite d'instructions faisant intervenir plusieurs pipes s'appelle **pipeline.**
 
 ```{r warning=FALSE, eval=FALSE, message=FALSE}
 #| code-fold: FALSE
@@ -146,7 +142,6 @@ DevAfrica2018 <- read_excel("data/DEV_AFRICA_2018/afrika_don.xls")
 
 ```
 
-
 Les fonctions suivantes sont d'usage courant sur les **tibbles** dans le processus de manipulation des tableaux de données avec le package **dplyr**:
 
 1.  **`select()`** : permet de sélectionner les colonnes d'un tableau de données par leur nom ou pour leur position (numéro de colonne). Elle comprend une série de fonctions facilitant la sélection de colonnes multiples. Les fonctions stars_with(), ends_width(), contains() ou matches() permettent de spécifier des conditions sur les noms de variables. La liste exhaustive des possibilités offertes par **select()** est disponible dans la documentation de l'extension tidyselect [Ici](https://tidyselect.r-lib.org/reference/language.html "Site officiel de tidyselect"),
@@ -165,8 +160,7 @@ select(DevAfrica2018, starts_with("n"))
 
 ```
 
-
-2. **`rename()`** : permet de renommer des colonnes.
+2.  **`rename()`** : permet de renommer des colonnes.
 
 ```{r warning=FALSE, message=FALSE, eval=TRUE}
 #| code-fold: FALSE
@@ -279,8 +273,6 @@ DevAfrica2018 %>%
 
 7.  **`bind_rows()` et `bind_cols()`**
 
-
-
 ## <i class="bi bi-person-workspace"></i> Exercice {.title .exo-title}
 
 ::: {#exo}
@@ -291,9 +283,8 @@ DevAfrica2018 %>%
 [2. Téléchargez les données suivantes :]{.question}
 
 |             Intitulé              |                                                                     Téléchargement                                                                      |
-|:-------------------:|:-------------------------------------------------:|
+|:--------------------:|:------------------------------------------------:|
 | Données pays africains (UN-CEPII) | <a href="https://bit.ly/3DaCAkX" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Download</a> |
-
 
 [3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :]{.question}
 
@@ -301,9 +292,7 @@ DevAfrica2018 %>%
 knitr::include_graphics("../img/folder2.png")
 ```
 
-
 [4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.]{.question}
-
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -321,8 +310,7 @@ DevAfrica2018 <- read_excel("...")
 
 ```
 
-[5. Sélectionner la liste des pays et leur région d’appartenance.]{.question}
-
+[5. Sélectionner la liste des pays et leur région d'appartenance.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -332,9 +320,7 @@ DevAfrica2018 %>%
 
 ```
 
-[6. Quelles sont les variables de la base de données dont le nom commence par la lettre “P”.]{.question}
-
-
+[6. Quelles sont les variables de la base de données dont le nom commence par la lettre "P".]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -344,7 +330,7 @@ DevAfrica2018 %>%
 
 ```
 
-[7.	Quelles sont les variables de la base de données dont le nom contient la lettre “P”.]{.question}
+[7. Quelles sont les variables de la base de données dont le nom contient la lettre "P".]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -354,8 +340,7 @@ DevAfrica2018 %>%
 
 ```
 
-
-[8.	Renommer la variable “PIB” en “ProduitInterieurBrut”.]{.question}
+[8. Renommer la variable "PIB" en "ProduitInterieurBrut".]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -365,7 +350,7 @@ DevAfrica2018 %>%
 
 ```
 
-[9.	Calculer le taux de dépendance jeune par sous-région.]{.question}
+[9. Calculer le taux de dépendance jeune par sous-région.]{.question}
 
 ```{r warning = FALSE, message = FALSE , eval = FALSE}
 #| code-summary: "Un peu d'aide ?"
@@ -385,7 +370,6 @@ DevAfrica2018 %>%
    arrange(...(...))
 
 ```
-
 
 ------------------------------------------------------------------------
 

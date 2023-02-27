@@ -2,150 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tigr.netlify.app/about.html</loc>
-    <lastmod>2023-02-27T11:08:58.748Z</lastmod>
+    <lastmod>2023-02-27T13:04:54.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tigr.netlify.app/correction/ggplot2/Correction_ggplot.html</loc>
+    <lastmod>2023-02-27T13:05:05.355Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/correction/tidyverse/correction_tidyverse.html</loc>
-    <lastmod>2023-02-27T11:09:02.656Z</lastmod>
+    <lastmod>2023-02-27T13:05:08.091Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/data.html</loc>
-    <lastmod>2023-02-27T11:09:38.197Z</lastmod>
+    <lastmod>2023-02-27T13:05:26.485Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/index.html</loc>
-    <lastmod>2023-02-27T11:09:38.982Z</lastmod>
+    <lastmod>2023-02-27T13:05:26.872Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/cartographie/map_dyn.html</loc>
-    <lastmod>2023-02-27T11:09:39.796Z</lastmod>
+    <lastmod>2023-02-27T13:05:27.262Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/cartographie/map_sf.html</loc>
-    <lastmod>2023-02-27T11:09:43.497Z</lastmod>
+    <lastmod>2023-02-27T13:05:29.631Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/cartographie.html</loc>
-    <lastmod>2023-02-27T11:09:45.040Z</lastmod>
+    <lastmod>2023-02-27T13:05:30.578Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/geomatique/geomatic_raster.html</loc>
-    <lastmod>2023-02-27T11:09:46.744Z</lastmod>
+    <lastmod>2023-02-27T13:05:31.537Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/geomatique/geomatic_vector.html</loc>
-    <lastmod>2023-02-27T11:09:49.738Z</lastmod>
+    <lastmod>2023-02-27T13:05:33.506Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/geomatique/OpenStreetMap.html</loc>
-    <lastmod>2023-02-27T11:09:52.925Z</lastmod>
+    <lastmod>2023-02-27T13:05:35.590Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/geomatique.html</loc>
-    <lastmod>2023-02-27T11:09:54.517Z</lastmod>
+    <lastmod>2023-02-27T13:05:36.547Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/graphique/ggplot2.html</loc>
-    <lastmod>2023-02-27T11:10:13.966Z</lastmod>
+    <lastmod>2023-02-27T13:08:02.011Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/graphique/Rbase_graph.html</loc>
-    <lastmod>2023-02-27T11:10:34.362Z</lastmod>
+    <lastmod>2023-02-27T13:06:10.572Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/graphique.html</loc>
-    <lastmod>2023-02-27T11:10:36.034Z</lastmod>
+    <lastmod>2023-02-27T13:06:11.664Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import/api.html</loc>
-    <lastmod>2023-02-27T11:10:36.610Z</lastmod>
+    <lastmod>2023-02-27T13:06:12.096Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import/connectBD.html</loc>
-    <lastmod>2023-02-27T11:10:37.190Z</lastmod>
+    <lastmod>2023-02-27T13:06:12.559Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import/import.html</loc>
-    <lastmod>2023-02-27T11:10:57.820Z</lastmod>
+    <lastmod>2023-02-27T13:06:31.425Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import/osm.html</loc>
-    <lastmod>2023-02-27T11:10:59.294Z</lastmod>
+    <lastmod>2023-02-27T13:06:32.379Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import/scraping.html</loc>
-    <lastmod>2023-02-27T11:10:59.902Z</lastmod>
+    <lastmod>2023-02-27T13:06:32.774Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/import.html</loc>
-    <lastmod>2023-02-27T11:11:00.645Z</lastmod>
+    <lastmod>2023-02-27T13:06:33.200Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/manipulation/datatable.html</loc>
-    <lastmod>2023-02-27T11:11:01.385Z</lastmod>
+    <lastmod>2023-02-27T13:06:33.566Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/manipulation/manipulation.html</loc>
-    <lastmod>2023-02-27T11:11:19.323Z</lastmod>
+    <lastmod>2023-02-27T13:06:47.673Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/manipulation/tidyverse.html</loc>
-    <lastmod>2023-02-27T11:11:37.495Z</lastmod>
+    <lastmod>2023-02-27T13:07:02.606Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/manipulation.html</loc>
-    <lastmod>2023-02-27T11:11:39.057Z</lastmod>
+    <lastmod>2023-02-27T13:07:03.576Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/reproductibilite/minicran.html</loc>
-    <lastmod>2023-02-27T11:12:04.208Z</lastmod>
+    <lastmod>2023-02-27T13:07:25.182Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/reproductibilite/programmation_lettree.html</loc>
-    <lastmod>2023-02-27T11:12:04.851Z</lastmod>
+    <lastmod>2023-02-27T13:07:25.585Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/reproductibilite/renv.html</loc>
-    <lastmod>2023-02-27T11:12:06.584Z</lastmod>
+    <lastmod>2023-02-27T13:07:26.543Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/reproductibilite.html</loc>
-    <lastmod>2023-02-27T11:12:07.320Z</lastmod>
+    <lastmod>2023-02-27T13:07:26.964Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/statistique/statistique_bi.html</loc>
-    <lastmod>2023-02-27T11:12:08.079Z</lastmod>
+    <lastmod>2023-02-27T13:07:27.377Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/statistique/statistique_multi.html</loc>
-    <lastmod>2023-02-27T11:12:08.692Z</lastmod>
+    <lastmod>2023-02-27T13:07:27.717Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/statistique/statistique_uni.html</loc>
-    <lastmod>2023-02-27T11:12:09.351Z</lastmod>
+    <lastmod>2023-02-27T13:07:28.096Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules/statistique.html</loc>
-    <lastmod>2023-02-27T11:12:10.085Z</lastmod>
+    <lastmod>2023-02-27T13:08:04.452Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/modules.html</loc>
-    <lastmod>2023-02-27T11:12:10.982Z</lastmod>
+    <lastmod>2023-02-27T13:07:29.068Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/packages.html</loc>
-    <lastmod>2023-02-27T11:12:11.623Z</lastmod>
+    <lastmod>2023-02-27T13:07:29.461Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/presentation.html</loc>
-    <lastmod>2023-02-27T11:12:14.157Z</lastmod>
+    <lastmod>2023-02-27T13:07:31.112Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/quarto.html</loc>
-    <lastmod>2023-02-27T11:12:14.795Z</lastmod>
+    <lastmod>2023-02-27T13:07:31.477Z</lastmod>
   </url>
   <url>
     <loc>https://tigr.netlify.app/ressources.html</loc>
-    <lastmod>2023-02-27T11:12:15.463Z</lastmod>
+    <lastmod>2023-02-27T13:07:31.845Z</lastmod>
   </url>
 </urlset>

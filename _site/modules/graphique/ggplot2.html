@@ -4038,7 +4038,7 @@ vertical-align: -.125em;
  <span class="menu-text">Crédits</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HuguesPecout/Modules_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -4376,10 +4376,10 @@ vertical-align: -.125em;
 <table class="table">
 <caption>Exemples de geom et aesthetics associés</caption>
 <colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
 <col style="width: 23%">
-<col style="width: 37%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -4484,7 +4484,7 @@ vertical-align: -.125em;
 <li><p><u>count</u> : nombre de points dans chaque classe,</p></li>
 <li><p><u>density</u> : densité pour chaque class,</p></li>
 <li><p><u>ncount</u> :similaire à <strong>count</strong> mais ici la valeur maximale est équivalent 1.</p></li>
-<li><p>vndensity]{.underline} : similaire à density mais la valeur maximale ici est de 1.</p></li>
+<li><p><u>ndensity</u> : similaire à density mais la valeur maximale ici est de 1.</p></li>
 </ul>
 <p>Le tableau ci-dessous présente quelques statistics prise en charge dans ggplot.</p>
 <table class="table">
@@ -4639,8 +4639,8 @@ vertical-align: -.125em;
 <p><span class="question">2. Téléchargez les données suivantes :</span></p>
 <table class="table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 69%">
+<col style="width: 31%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -4665,7 +4665,7 @@ vertical-align: -.125em;
 </div>
 </div>
 </div>
-<p><span class="question">4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.</span></p>
+<p><span class="question">4. Importez la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.</span></p>
 <div class="cell">
 <details>
 <summary>Un peu d’aide ?</summary>
@@ -4680,21 +4680,81 @@ vertical-align: -.125em;
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>DevAfrica2018 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;...&quot;</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><span class="question">5. Re-coder la variable « POP » en « Population » en trois catégories :</span></p>
+<p><span class="question">5. Re-codez la variable « POP » en « Population » en trois catégories :</span></p>
 <ol type="1">
 <li>Moins de 10 millions</li>
 <li>10 – 25 millions</li>
 <li>&gt; 25 millions</li>
 </ol>
-<p><span class="question">6. Faire une représentation graphique de l’effectif des pays par sous-région.</span></p>
-<p><span class="question">7. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">cut</span>(...<span class="sc">$</span>...,  </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">breaks =</span> <span class="fu">c</span>(..., ..., ..., ...), </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;...s&quot;</span>, </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;...&quot;</span>, </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;...&quot;</span>), </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">right =</span> ...)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><span class="question">6. Faite une représentation graphique de l’effectif des pays par sous-région.</span></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(...)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> ...), <span class="at">stat =</span> <span class="st">&#39;...&#39;</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><span class="question">7. Ajoutez les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span>...), <span class="at">stat =</span> <span class="st">&#39;...&#39;</span>)<span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;...&quot;</span>)<span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;...&quot;</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p><span class="question">8. Faite la boite à moustache de l’espérance de vie à la naissance par sous-région.</span></p>
-<p><span class="question">9. Faite la boite à moustache de l’espérance de vie à la naissance par sous-région.</span></p>
-<p>Note : faites les largeurs des boites à moustaches proportionnelles à l’effectif de pays par sous-région</p>
-<p><span class="question">10. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><span class="question">9. Ajout des étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...), <span class="at">varwidth =</span> ...)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Note : <em>faites les largeurs des boites à moustaches proportionnelles à l’effectif de pays par sous-région</em></p>
+<div class="cell">
+<details>
+<summary>Un peu d’aide ?</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Graphique1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...), <span class="at">varwidth =</span> ...) <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;...&quot;</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarde du graphique</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;...&quot;</span>, <span class="at">dpi =</span> <span class="dv">3000</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <hr>
 <p><br>
 </p>
+<div class="center">
+<p><a href="../../correction/ggplot2.zip" class="btn btn-outline-warning" role="button" aria-disabled="true"><i class="bi bi-cloud-arrow-down"></i> Corrigé</a></p>
+</div>
 </div>
 
 
@@ -5015,327 +5075,399 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Le package `ggplot2`&quot;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;Représentations graphiques avec `ggplot2`&quot;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">- Justin Dansou</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">- Hugues Pecout</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 02</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: TRUE</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">  # pdf:</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">  #   toc: true</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">  #   number-sections: true</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">  #   colorlinks: true</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">  #   output-file: &quot;import&quot;</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">  #   output-ext:  &quot;pdf&quot;</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Objectifs pédagogiques</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>L&#39;objectif général de ce module est d&#39;initier les participants à l&#39;extension de visualisation de données avec **`ggplot2`**, package de la famille de **`tidyverse`**.</span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>Plus spécifiquement, à la fin de ce module, les participants devraient être capables de:</span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>d&#39;installer et de charger la librairie <span class="in">`ggplot2`</span>,</span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>décrire les principales fonctions de la librairie de <span class="in">`tidyverse`</span> dédiée à la visualisation de données (**`ggplot2`**),</span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>manipuler les principales fonctions graphiques de **`ggplot2`** dédiées à la visualisation de données.</span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>**`ggplot2`** fait partie de la suite d&#39;extension de **`tidyverse`** ayant une même philosophie de base permettant entre autres, l&#39;importation et l&#39;exportation des données, la manipulation des tableaux de données, la manipulation des colonnes de data.frame (variable), le web scrapping, la programmation. Dans ce module est consacré aux principales fonctions graphiques de <span class="in">`ggplot2`</span> permettant la visualisation des données. Le principe de base de <span class="in">`ggplot2`</span> est que les données de base de la visualisation sont stockées sous forme de tableau de données ou <span class="in">`data.frame`</span>, <span class="in">`tibble`</span> etc.</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Installation et chargement du package `ggplot2`</span></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>Les lignes de codes suivantes permettent de faire l&#39;installation et le chargement de tidyverse.</span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package </span></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie </span></span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>La liste complète des extensions de tidyverse se trouve sur le site officiel du tidyverse <span class="co">[</span><span class="ot">ici</span><span class="co">](https://www.tidyverse.org/packages/ &quot;Page web officielle de tidyverse&quot;)</span>.</span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>Note: *Ceci étant, au lieu d&#39;installer la collection de packages (`tidyverse`), il est aussi possible d&#39;installer directement `ggplot2`. Exemple :*</span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package ggplot2</span></span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>Puis charger la librairie pour pouvoir utiliser ses fonctions :</span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=TRUE}</span></span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie</span></span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fonctions graphiques usuelles de viusalisation des données avec `ggplot2`</span></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principe de base des synthaxes graphiques de `ggplot2`</span></span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>La syntaxe de <span class="in">`ggplot2`</span> est spécifique et diffère totalement de celle des graphiques de base de R. Elle est de type &quot;**Grammar of Graphics&quot;** et est généralement structurée comme un ensemble indépendant de commandes. Ce module n&#39;est qu&#39;une introduction à quelques fonctions usuelles d&#39;application de <span class="in">`ggplot2`</span>. Pour plus d&#39;information, le lecteur est invité à consulter les nombreuses ressources disponibles (en général gratuitement) en ligne sur l&#39;extension.</span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>Le principe de base de la représentation graphique de <span class="in">`ggplot2`</span> consiste à segmenter les instructions. En général, il nécessite de spécifier :</span>
-<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>le jeux de données contenant l&#39;information à visualiser,</span>
-<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>l&#39;information (variable ou ensemble de variables) que l&#39;on souhaite visualiser. Elle est généralement indiquée au niveau de la fonction **`aes()`**,</span>
-<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>le type de visualisation (représentation graphique) souhaité: camembert, histogramme, etc. Il est aussi spécifié par une fonction.</span>
-<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="fu">### Grammaire du ggplot</span></span>
-<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a>La grammaire de la syntaxe de <span class="in">`ggplot2`</span> se présente ainsi qui suit:</span>
-<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Data** (ggplot): pour spécifier le jeu de données contenant l&#39;information à visualiser. Le jeu de données est généralement un data frame, un tibble ou tableau de données renseigné dans la fonction **`ggplot()`**,</span>
-<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Aesthetics** (aes): pour spécifier l&#39;information / variable.s à représenter/visualiser. La ou les variables à visualiser est/sont indiquées dans la fonction **`aes()`**. Elle prend en argument d&#39;autres paramètre de contrôler avancé du rendu de la représentation graphique. Il s&#39;agit de ***color, size, fill*** en général utilisé lorsqu&#39;une couleur ou une taille est définie par une variable,</span>
-<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Geometrics** (geom<span class="sc">\_</span>...) pour spécifier le type de représentation graphique souhaité (*cf. plus bas pour la description des fonctions usuelles des types de représentation graphiques*),</span>
-<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Statistics** (stat<span class="sc">\_</span>...): pour spécifier les éventuelles transformations des données pour la représentation en vue,</span>
-<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Scales** (scale<span class="sc">\_</span>...): permet de contrôler le lien entre les données et les aesthetics (modification de couleurs, gestion des axes, etc.)</span>
-<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Geometrics et aesthetics</span></span>
-<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>Le tableau ci-dessous décrit quelques types de représentation géométrique et les types d&#39;informations requises.</span>
-<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>| <span class="sc">\#</span>  | Geom               | Description               | Aesthetics                             |</span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a>|--------------|--------------|-----------------|---------------------------|</span>
-<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>| 1   | <span class="in">`geom_point()`</span>     | Nuage de points           | x, y, shape, fill                      |</span>
-<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>| 2   | <span class="in">`geom_line()`</span>      | Ligne (ordonnées selon x) | x, y, linetype                         |</span>
-<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>| 3   | <span class="in">`geom_abline()`</span>    | Droite                    | slope, intercept                       |</span>
-<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a>| 4   | <span class="in">`geom_path()`</span>      | Ligne (ordre original)    | x, y, lignetype                        |</span>
-<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>| 5   | <span class="in">`geom_text()`</span>      | Texte                     | x, y, label, hjust, vjust              |</span>
-<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>| 6   | <span class="in">`geom_rect()`</span>      | Rectangle                 | xmin, xmax, ymin, ymax, fill, linetype |</span>
-<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>| 7   | <span class="in">`geom_polygon()`</span>   | Polygone                  | x, y, fill, linetype                   |</span>
-<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>| 8   | <span class="in">`geom_segment()`</span>   | Segment                   | x, y, fill, linetype                   |</span>
-<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>| 9   | <span class="in">`geom_bar()`</span>       | Diagramme en barres       | x, fill, linetype, weight              |</span>
-<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>| 10  | <span class="in">`geom_histogram()`</span> | Histogramme               | x, fill, linetype, weight              |</span>
-<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>| 11  | <span class="in">`geom_boxplot()`</span>   | Boîte à moustaches        | x, y, fill, weight                     |</span>
-<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>| 12  | <span class="in">`geom_density()`</span>   | Densité                   | x, y, fill, linetype                   |</span>
-<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>| 13  | <span class="in">`geom_contour()`</span>   | Line de contour           | x, y, fill, linetype                   |</span>
-<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>| 14  | <span class="in">`geom_smooth()`</span>    | Lissage                   | x, y, fill, linetype                   |</span>
-<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a>: Exemples de geom et aesthetics associés</span>
-<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistics</span></span>
-<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a>Les données brutes provenant des tableaux de données ou data frames nécessitent souvent de transformations préalables avant la visualisation. Ainsi, les statistiques permettent de gérer les transformations ou calculs intermédiaires dans le processus de visualisation. Les fonctions assurant ces transformations intermédiaires sont en géneral renseignés dans l&#39;argument ***stat*** des fonctions **geom\_...** Par exemple pour représenter un histogramme (**geom_histgram**), la valeur par défaut permettant le calculer des principaux indicateurs est stat=&quot;bin&quot;:</span>
-<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">count</span><span class="co">]</span>{.underline} : nombre de points dans chaque classe,</span>
-<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">density</span><span class="co">]</span>{.underline} : densité pour chaque class,</span>
-<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">ncount</span><span class="co">]</span>{.underline} :similaire à **count** mais ici la valeur maximale est équivalent 1.</span>
-<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>vndensity<span class="sc">\]</span>{.underline} : similaire à density mais la valeur maximale ici est de 1.</span>
-<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a>Le tableau ci-dessous présente quelques statistics prise en charge dans ggplot.</span>
-<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a>| <span class="sc">\#</span>  | Stat              | Description           | Paramètres       |</span>
-<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a>|-----|-------------------|-----------------------|------------------|</span>
-<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a>| 1   | <span class="in">`stat_identity()`</span> | Aucune transformation |                  |</span>
-<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>| 2   | <span class="in">`stat_bin()`</span>      | Comptage              | bineidth, origin |</span>
-<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a>| 3   | <span class="in">`stat_density()`</span>  | Densité               | adjust, kernel   |</span>
-<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a>| 4   | <span class="in">`stat_smooth()`</span>   | Lissage               | method, se       |</span>
-<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a>| 5   | <span class="in">`stat_boxplot()`</span>  | Boxplot               | coef             |</span>
-<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a>: Exemples de statistics</span>
-<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a><span class="fu">### Faceting</span></span>
-<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>Le *faceting* permet de faire une représentation graphique selon les modalités d&#39;une ou de plusieurs variable.s qualitative.s. Ainsi, on distingue les variantes ***`facet_wrap()`*** et ***`facet_grid()`***. *facet_wrap()* prend en argument un paramètre de la forme [*vars(variable)*]{.underline} ou <span class="co">[</span><span class="ot">variable</span><span class="co">]</span>{.underline} est le nom de la variable de catégorisation des différents graphiques.</span>
-<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scales</span></span>
-<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a>Les *scales* permettent de modifier la manière dont un attribut graphique va être relié aux valeurs d&#39;une variable.</span>
-<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a><span class="fu">### Thèmes</span></span>
-<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a>Les thèmes permettent de contrôler l&#39;aperçu de touts les éléments du graphique qui ne sont pas reliés aux données: titre, grilles, fonds, etc.</span>
-<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a>Certains thèmes prédéfinis existent. C&#39;est le cas de <span class="co">[</span><span class="ot">**`theme_bw()`, `theme_minimal()`**</span><span class="co">]</span>{.underline}</span>
-<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quelques exemples</span></span>
-<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
-<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a><span class="co"># Import de la base de données DEV_AFRICA_2018</span></span>
-<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>DevAfrica2018 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/DEV_AFRICA_2018/afrika_don.xls&quot;</span>)</span>
-<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie ggplot2</span></span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>Représentation graphique (diagramme en barre) du nombre de pays (effectif de pays) par sous-région.</span>
-<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
-<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG))</span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>Représentation graphique (boite à moustache) de l&#39;espérance à la naissance par sous-région.</span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
-<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE))</span>
-<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>On peut personnaliser le graphique avec différents arguments supplémentaires comme <span class="in">`fill`</span> et <span class="in">`color`</span>.</span>
-<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
-<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
-<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE),</span>
-<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill=</span> <span class="st">&quot;wheat&quot;</span>, <span class="at">color =</span> <span class="st">&quot;tomato4&quot;</span>)</span>
-<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a>Un autre argument utile, <span class="in">`varwidth`</span>, permet de faire varier la largeur des boîtes en fonction des effectifs de la classe (donc, ici, en fonction du nombre de pays par sous-région) :</span>
-<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE),</span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill=</span> <span class="st">&quot;wheat&quot;</span>, <span class="at">color =</span> <span class="st">&quot;tomato4&quot;</span>, <span class="at">varwidth =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>Si on préfère avoir un graphique en barres horizontales, il suffit de passer la variable comme attribut <span class="in">`y`</span> plutôt que <span class="in">`x`</span>.</span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>Pour modifier manuellement les différents éléments, les fonctions <span class="in">`ggtitle`</span>, <span class="in">`xlab`</span> et <span class="in">`ylab`</span> permettent d&#39;ajouter ou de modifier le titre du graphique, ainsi que les étiquettes des axes <span class="in">`x`</span> et <span class="in">`y`</span>.</span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y=</span>SUBREG)) <span class="sc">+</span> </span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Nombre de pays&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Sous-région&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Joli graphique&quot;</span>)</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ressources:</span></span>
-<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">La documentation officielle de `ggplot2`</span><span class="co">](http://ggplot2.tidyverse.org/)</span>\</span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The R Graph Gallery</span><span class="co">](https://r-graph-gallery.com/ggplot2-package.html)</span></span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## L&#39;interface graphique du package `Esquisse`</span></span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package </span></span>
-<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;esquisse&quot;</span>)</span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;35%&quot;, fig.align=&#39;center&#39;}</span></span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/esquisse.jpg&quot;</span>)</span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a>Construisez votre graphique ggplot en clic-bouton et glisser-déposer, puis récupérer le code source !</span>
-<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;90%&quot;, fig.align=&#39;center&#39;}</span></span>
-<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/ex_esquisse.png&quot;</span>)</span>
-<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class=&quot;bi bi-person-workspace&quot;&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
-<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
-<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
-<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
-<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
-<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
-<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>|:--------------------:|:------------------------------------------------:|</span>
-<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://bit.ly/3DaCAkX&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;btn btn-outline-warning&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;button&quot;</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;bi bi-cloud-arrow-down&quot;</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
-<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
-<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;70%&quot;, fig.align=&#39;center&#39;}</span></span>
-<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/folder2.png&quot;</span>)</span>
-<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importer la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
-<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
-<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des métadonnées</span></span>
-<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a>...  <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">&quot;...&quot;</span>, </span>
-<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a>                   <span class="at">header =</span> ...,</span>
-<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a>                   <span class="at">sep=</span> <span class="st">&quot;...&quot;</span>,</span>
-<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>                   <span class="at">encoding =</span> <span class="st">&quot;...&quot;</span>)</span>
-<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(...)</span>
-<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a>DevAfrica2018 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;...&quot;</span>)</span>
-<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Re-coder la variable « POP » en « Population » en trois catégories :</span><span class="co">]</span>{.question}</span>
-<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a>1)  Moins de 10 millions</span>
-<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a>2)  10 -- 25 millions</span>
-<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a>3)  <span class="sc">\&gt;</span> 25 millions</span>
-<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Faire une représentation graphique de l&#39;effectif des pays par sous-région.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Faite la boite à moustache de l&#39;espérance de vie à la naissance par sous-région.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Faite la boite à moustache de l&#39;espérance de vie à la naissance par sous-région.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a>Note : faites les largeurs des boites à moustaches proportionnelles à l&#39;effectif de pays par sous-région</span>
-<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">10. Ajouter les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span><span class="co">]</span>{.question}</span>
-<span id="cb12-319"><a href="#cb12-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-320"><a href="#cb12-320" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb12-321"><a href="#cb12-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-322"><a href="#cb12-322" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb12-323"><a href="#cb12-323" aria-hidden="true" tabindex="-1"></a>:::</span>
+<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Le package `ggplot2`&quot;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;Représentations graphiques avec `ggplot2`&quot;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">- Justin Dansou</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">- Hugues Pecout</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="an">ordre:</span><span class="co"> 02</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-copy: true</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: TRUE</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co">  # pdf:</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="co">  #   toc: true</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co">  #   number-sections: true</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co">  #   colorlinks: true</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co">  #   output-file: &quot;import&quot;</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="co">  #   output-ext:  &quot;pdf&quot;</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Objectifs pédagogiques</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>L&#39;objectif général de ce module est d&#39;initier les participants à l&#39;extension de visualisation de données avec **`ggplot2`**, package de la famille de **`tidyverse`**.</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>Plus spécifiquement, à la fin de ce module, les participants devraient être capables de:</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>d&#39;installer et de charger la librairie <span class="in">`ggplot2`</span>,</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>décrire les principales fonctions de la librairie de <span class="in">`tidyverse`</span> dédiée à la visualisation de données (**`ggplot2`**),</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>manipuler les principales fonctions graphiques de **`ggplot2`** dédiées à la visualisation de données.</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>**`ggplot2`** fait partie de la suite d&#39;extension de **`tidyverse`** ayant une même philosophie de base permettant entre autres, l&#39;importation et l&#39;exportation des données, la manipulation des tableaux de données, la manipulation des colonnes de data.frame (variable), le web scrapping, la programmation. Dans ce module est consacré aux principales fonctions graphiques de <span class="in">`ggplot2`</span> permettant la visualisation des données. Le principe de base de <span class="in">`ggplot2`</span> est que les données de base de la visualisation sont stockées sous forme de tableau de données ou <span class="in">`data.frame`</span>, <span class="in">`tibble`</span> etc.</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Installation et chargement du package `ggplot2`</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>Les lignes de codes suivantes permettent de faire l&#39;installation et le chargement de tidyverse.</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package </span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie </span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a>La liste complète des extensions de tidyverse se trouve sur le site officiel du tidyverse <span class="co">[</span><span class="ot">ici</span><span class="co">](https://www.tidyverse.org/packages/ &quot;Page web officielle de tidyverse&quot;)</span>.</span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a>Note: *Ceci étant, au lieu d&#39;installer la collection de packages (`tidyverse`), il est aussi possible d&#39;installer directement `ggplot2`. Exemple :*</span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package ggplot2</span></span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a>Puis charger la librairie pour pouvoir utiliser ses fonctions :</span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=TRUE}</span></span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie</span></span>
+<span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fonctions graphiques usuelles de viusalisation des données avec `ggplot2`</span></span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principe de base des synthaxes graphiques de `ggplot2`</span></span>
+<span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a>La syntaxe de <span class="in">`ggplot2`</span> est spécifique et diffère totalement de celle des graphiques de base de R. Elle est de type &quot;**Grammar of Graphics&quot;** et est généralement structurée comme un ensemble indépendant de commandes. Ce module n&#39;est qu&#39;une introduction à quelques fonctions usuelles d&#39;application de <span class="in">`ggplot2`</span>. Pour plus d&#39;information, le lecteur est invité à consulter les nombreuses ressources disponibles (en général gratuitement) en ligne sur l&#39;extension.</span>
+<span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a>Le principe de base de la représentation graphique de <span class="in">`ggplot2`</span> consiste à segmenter les instructions. En général, il nécessite de spécifier :</span>
+<span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>le jeux de données contenant l&#39;information à visualiser,</span>
+<span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-89"><a href="#cb18-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>l&#39;information (variable ou ensemble de variables) que l&#39;on souhaite visualiser. Elle est généralement indiquée au niveau de la fonction **`aes()`**,</span>
+<span id="cb18-90"><a href="#cb18-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-91"><a href="#cb18-91" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>le type de visualisation (représentation graphique) souhaité: camembert, histogramme, etc. Il est aussi spécifié par une fonction.</span>
+<span id="cb18-92"><a href="#cb18-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-93"><a href="#cb18-93" aria-hidden="true" tabindex="-1"></a><span class="fu">### Grammaire du ggplot</span></span>
+<span id="cb18-94"><a href="#cb18-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-95"><a href="#cb18-95" aria-hidden="true" tabindex="-1"></a>La grammaire de la syntaxe de <span class="in">`ggplot2`</span> se présente ainsi qui suit:</span>
+<span id="cb18-96"><a href="#cb18-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-97"><a href="#cb18-97" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Data** (ggplot): pour spécifier le jeu de données contenant l&#39;information à visualiser. Le jeu de données est généralement un data frame, un tibble ou tableau de données renseigné dans la fonction **`ggplot()`**,</span>
+<span id="cb18-98"><a href="#cb18-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-99"><a href="#cb18-99" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Aesthetics** (aes): pour spécifier l&#39;information / variable.s à représenter/visualiser. La ou les variables à visualiser est/sont indiquées dans la fonction **`aes()`**. Elle prend en argument d&#39;autres paramètre de contrôler avancé du rendu de la représentation graphique. Il s&#39;agit de ***color, size, fill*** en général utilisé lorsqu&#39;une couleur ou une taille est définie par une variable,</span>
+<span id="cb18-100"><a href="#cb18-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-101"><a href="#cb18-101" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Geometrics** (geom<span class="sc">\_</span>...) pour spécifier le type de représentation graphique souhaité (*cf. plus bas pour la description des fonctions usuelles des types de représentation graphiques*),</span>
+<span id="cb18-102"><a href="#cb18-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-103"><a href="#cb18-103" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Statistics** (stat<span class="sc">\_</span>...): pour spécifier les éventuelles transformations des données pour la représentation en vue,</span>
+<span id="cb18-104"><a href="#cb18-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-105"><a href="#cb18-105" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Scales** (scale<span class="sc">\_</span>...): permet de contrôler le lien entre les données et les aesthetics (modification de couleurs, gestion des axes, etc.)</span>
+<span id="cb18-106"><a href="#cb18-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-107"><a href="#cb18-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Geometrics et aesthetics</span></span>
+<span id="cb18-108"><a href="#cb18-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-109"><a href="#cb18-109" aria-hidden="true" tabindex="-1"></a>Le tableau ci-dessous décrit quelques types de représentation géométrique et les types d&#39;informations requises.</span>
+<span id="cb18-110"><a href="#cb18-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-111"><a href="#cb18-111" aria-hidden="true" tabindex="-1"></a>| <span class="sc">\#</span>  | Geom               | Description               | Aesthetics                             |</span>
+<span id="cb18-112"><a href="#cb18-112" aria-hidden="true" tabindex="-1"></a>|-----------------|-----------------|-----------------|----------------------|</span>
+<span id="cb18-113"><a href="#cb18-113" aria-hidden="true" tabindex="-1"></a>| 1   | <span class="in">`geom_point()`</span>     | Nuage de points           | x, y, shape, fill                      |</span>
+<span id="cb18-114"><a href="#cb18-114" aria-hidden="true" tabindex="-1"></a>| 2   | <span class="in">`geom_line()`</span>      | Ligne (ordonnées selon x) | x, y, linetype                         |</span>
+<span id="cb18-115"><a href="#cb18-115" aria-hidden="true" tabindex="-1"></a>| 3   | <span class="in">`geom_abline()`</span>    | Droite                    | slope, intercept                       |</span>
+<span id="cb18-116"><a href="#cb18-116" aria-hidden="true" tabindex="-1"></a>| 4   | <span class="in">`geom_path()`</span>      | Ligne (ordre original)    | x, y, lignetype                        |</span>
+<span id="cb18-117"><a href="#cb18-117" aria-hidden="true" tabindex="-1"></a>| 5   | <span class="in">`geom_text()`</span>      | Texte                     | x, y, label, hjust, vjust              |</span>
+<span id="cb18-118"><a href="#cb18-118" aria-hidden="true" tabindex="-1"></a>| 6   | <span class="in">`geom_rect()`</span>      | Rectangle                 | xmin, xmax, ymin, ymax, fill, linetype |</span>
+<span id="cb18-119"><a href="#cb18-119" aria-hidden="true" tabindex="-1"></a>| 7   | <span class="in">`geom_polygon()`</span>   | Polygone                  | x, y, fill, linetype                   |</span>
+<span id="cb18-120"><a href="#cb18-120" aria-hidden="true" tabindex="-1"></a>| 8   | <span class="in">`geom_segment()`</span>   | Segment                   | x, y, fill, linetype                   |</span>
+<span id="cb18-121"><a href="#cb18-121" aria-hidden="true" tabindex="-1"></a>| 9   | <span class="in">`geom_bar()`</span>       | Diagramme en barres       | x, fill, linetype, weight              |</span>
+<span id="cb18-122"><a href="#cb18-122" aria-hidden="true" tabindex="-1"></a>| 10  | <span class="in">`geom_histogram()`</span> | Histogramme               | x, fill, linetype, weight              |</span>
+<span id="cb18-123"><a href="#cb18-123" aria-hidden="true" tabindex="-1"></a>| 11  | <span class="in">`geom_boxplot()`</span>   | Boîte à moustaches        | x, y, fill, weight                     |</span>
+<span id="cb18-124"><a href="#cb18-124" aria-hidden="true" tabindex="-1"></a>| 12  | <span class="in">`geom_density()`</span>   | Densité                   | x, y, fill, linetype                   |</span>
+<span id="cb18-125"><a href="#cb18-125" aria-hidden="true" tabindex="-1"></a>| 13  | <span class="in">`geom_contour()`</span>   | Line de contour           | x, y, fill, linetype                   |</span>
+<span id="cb18-126"><a href="#cb18-126" aria-hidden="true" tabindex="-1"></a>| 14  | <span class="in">`geom_smooth()`</span>    | Lissage                   | x, y, fill, linetype                   |</span>
+<span id="cb18-127"><a href="#cb18-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-128"><a href="#cb18-128" aria-hidden="true" tabindex="-1"></a>: Exemples de geom et aesthetics associés</span>
+<span id="cb18-129"><a href="#cb18-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-130"><a href="#cb18-130" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistics</span></span>
+<span id="cb18-131"><a href="#cb18-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-132"><a href="#cb18-132" aria-hidden="true" tabindex="-1"></a>Les données brutes provenant des tableaux de données ou data frames nécessitent souvent de transformations préalables avant la visualisation. Ainsi, les statistiques permettent de gérer les transformations ou calculs intermédiaires dans le processus de visualisation. Les fonctions assurant ces transformations intermédiaires sont en géneral renseignés dans l&#39;argument ***stat*** des fonctions **geom\_...** Par exemple pour représenter un histogramme (**geom_histgram**), la valeur par défaut permettant le calculer des principaux indicateurs est stat=&quot;bin&quot;:</span>
+<span id="cb18-133"><a href="#cb18-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-134"><a href="#cb18-134" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">count</span><span class="co">]</span>{.underline} : nombre de points dans chaque classe,</span>
+<span id="cb18-135"><a href="#cb18-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-136"><a href="#cb18-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">density</span><span class="co">]</span>{.underline} : densité pour chaque class,</span>
+<span id="cb18-137"><a href="#cb18-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-138"><a href="#cb18-138" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">ncount</span><span class="co">]</span>{.underline} :similaire à **count** mais ici la valeur maximale est équivalent 1.</span>
+<span id="cb18-139"><a href="#cb18-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-140"><a href="#cb18-140" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">ndensity</span><span class="co">]</span>{.underline} : similaire à density mais la valeur maximale ici est de 1.</span>
+<span id="cb18-141"><a href="#cb18-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-142"><a href="#cb18-142" aria-hidden="true" tabindex="-1"></a>Le tableau ci-dessous présente quelques statistics prise en charge dans ggplot.</span>
+<span id="cb18-143"><a href="#cb18-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-144"><a href="#cb18-144" aria-hidden="true" tabindex="-1"></a>| <span class="sc">\#</span>  | Stat              | Description           | Paramètres       |</span>
+<span id="cb18-145"><a href="#cb18-145" aria-hidden="true" tabindex="-1"></a>|-----|-------------------|-----------------------|------------------|</span>
+<span id="cb18-146"><a href="#cb18-146" aria-hidden="true" tabindex="-1"></a>| 1   | <span class="in">`stat_identity()`</span> | Aucune transformation |                  |</span>
+<span id="cb18-147"><a href="#cb18-147" aria-hidden="true" tabindex="-1"></a>| 2   | <span class="in">`stat_bin()`</span>      | Comptage              | bineidth, origin |</span>
+<span id="cb18-148"><a href="#cb18-148" aria-hidden="true" tabindex="-1"></a>| 3   | <span class="in">`stat_density()`</span>  | Densité               | adjust, kernel   |</span>
+<span id="cb18-149"><a href="#cb18-149" aria-hidden="true" tabindex="-1"></a>| 4   | <span class="in">`stat_smooth()`</span>   | Lissage               | method, se       |</span>
+<span id="cb18-150"><a href="#cb18-150" aria-hidden="true" tabindex="-1"></a>| 5   | <span class="in">`stat_boxplot()`</span>  | Boxplot               | coef             |</span>
+<span id="cb18-151"><a href="#cb18-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-152"><a href="#cb18-152" aria-hidden="true" tabindex="-1"></a>: Exemples de statistics</span>
+<span id="cb18-153"><a href="#cb18-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-154"><a href="#cb18-154" aria-hidden="true" tabindex="-1"></a><span class="fu">### Faceting</span></span>
+<span id="cb18-155"><a href="#cb18-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-156"><a href="#cb18-156" aria-hidden="true" tabindex="-1"></a>Le *faceting* permet de faire une représentation graphique selon les modalités d&#39;une ou de plusieurs variable.s qualitative.s. Ainsi, on distingue les variantes ***`facet_wrap()`*** et ***`facet_grid()`***. *facet_wrap()* prend en argument un paramètre de la forme [*vars(variable)*]{.underline} ou <span class="co">[</span><span class="ot">variable</span><span class="co">]</span>{.underline} est le nom de la variable de catégorisation des différents graphiques.</span>
+<span id="cb18-157"><a href="#cb18-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-158"><a href="#cb18-158" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scales</span></span>
+<span id="cb18-159"><a href="#cb18-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-160"><a href="#cb18-160" aria-hidden="true" tabindex="-1"></a>Les *scales* permettent de modifier la manière dont un attribut graphique va être relié aux valeurs d&#39;une variable.</span>
+<span id="cb18-161"><a href="#cb18-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-162"><a href="#cb18-162" aria-hidden="true" tabindex="-1"></a><span class="fu">### Thèmes</span></span>
+<span id="cb18-163"><a href="#cb18-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-164"><a href="#cb18-164" aria-hidden="true" tabindex="-1"></a>Les thèmes permettent de contrôler l&#39;aperçu de touts les éléments du graphique qui ne sont pas reliés aux données: titre, grilles, fonds, etc.</span>
+<span id="cb18-165"><a href="#cb18-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-166"><a href="#cb18-166" aria-hidden="true" tabindex="-1"></a>Certains thèmes prédéfinis existent. C&#39;est le cas de <span class="co">[</span><span class="ot">**`theme_bw()`, `theme_minimal()`**</span><span class="co">]</span>{.underline}</span>
+<span id="cb18-167"><a href="#cb18-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-168"><a href="#cb18-168" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quelques exemples</span></span>
+<span id="cb18-169"><a href="#cb18-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-170"><a href="#cb18-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = TRUE}</span></span>
+<span id="cb18-171"><a href="#cb18-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-172"><a href="#cb18-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-173"><a href="#cb18-173" aria-hidden="true" tabindex="-1"></a><span class="co"># Import de la base de données DEV_AFRICA_2018</span></span>
+<span id="cb18-174"><a href="#cb18-174" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb18-175"><a href="#cb18-175" aria-hidden="true" tabindex="-1"></a>DevAfrica2018 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/DEV_AFRICA_2018/afrika_don.xls&quot;</span>)</span>
+<span id="cb18-176"><a href="#cb18-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-177"><a href="#cb18-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement de la librairie ggplot2</span></span>
+<span id="cb18-178"><a href="#cb18-178" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-179"><a href="#cb18-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-180"><a href="#cb18-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-181"><a href="#cb18-181" aria-hidden="true" tabindex="-1"></a>Représentation graphique (diagramme en barre) du nombre de pays (effectif de pays) par sous-région.</span>
+<span id="cb18-182"><a href="#cb18-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-183"><a href="#cb18-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
+<span id="cb18-184"><a href="#cb18-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-185"><a href="#cb18-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-186"><a href="#cb18-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-187"><a href="#cb18-187" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
+<span id="cb18-188"><a href="#cb18-188" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG))</span>
+<span id="cb18-189"><a href="#cb18-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-190"><a href="#cb18-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-191"><a href="#cb18-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-192"><a href="#cb18-192" aria-hidden="true" tabindex="-1"></a>Représentation graphique (boite à moustache) de l&#39;espérance à la naissance par sous-région.</span>
+<span id="cb18-193"><a href="#cb18-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-194"><a href="#cb18-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
+<span id="cb18-195"><a href="#cb18-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-196"><a href="#cb18-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-197"><a href="#cb18-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-198"><a href="#cb18-198" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE))</span>
+<span id="cb18-199"><a href="#cb18-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-200"><a href="#cb18-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-201"><a href="#cb18-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-202"><a href="#cb18-202" aria-hidden="true" tabindex="-1"></a>On peut personnaliser le graphique avec différents arguments supplémentaires comme <span class="in">`fill`</span> et <span class="in">`color`</span>.</span>
+<span id="cb18-203"><a href="#cb18-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-204"><a href="#cb18-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
+<span id="cb18-205"><a href="#cb18-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-206"><a href="#cb18-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-207"><a href="#cb18-207" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
+<span id="cb18-208"><a href="#cb18-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE),</span>
+<span id="cb18-209"><a href="#cb18-209" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill=</span> <span class="st">&quot;wheat&quot;</span>, <span class="at">color =</span> <span class="st">&quot;tomato4&quot;</span>)</span>
+<span id="cb18-210"><a href="#cb18-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-211"><a href="#cb18-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-212"><a href="#cb18-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-213"><a href="#cb18-213" aria-hidden="true" tabindex="-1"></a>Un autre argument utile, <span class="in">`varwidth`</span>, permet de faire varier la largeur des boîtes en fonction des effectifs de la classe (donc, ici, en fonction du nombre de pays par sous-région) :</span>
+<span id="cb18-214"><a href="#cb18-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-215"><a href="#cb18-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, message=FALSE, eval=TRUE}</span></span>
+<span id="cb18-216"><a href="#cb18-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-217"><a href="#cb18-217" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> </span>
+<span id="cb18-218"><a href="#cb18-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>SUBREG, <span class="at">y =</span> ESPVIE),</span>
+<span id="cb18-219"><a href="#cb18-219" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill=</span> <span class="st">&quot;wheat&quot;</span>, <span class="at">color =</span> <span class="st">&quot;tomato4&quot;</span>, <span class="at">varwidth =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-220"><a href="#cb18-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-221"><a href="#cb18-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-222"><a href="#cb18-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-223"><a href="#cb18-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-224"><a href="#cb18-224" aria-hidden="true" tabindex="-1"></a>Si on préfère avoir un graphique en barres horizontales, il suffit de passer la variable comme attribut <span class="in">`y`</span> plutôt que <span class="in">`x`</span>.</span>
+<span id="cb18-225"><a href="#cb18-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-226"><a href="#cb18-226" aria-hidden="true" tabindex="-1"></a>Pour modifier manuellement les différents éléments, les fonctions <span class="in">`ggtitle`</span>, <span class="in">`xlab`</span> et <span class="in">`ylab`</span> permettent d&#39;ajouter ou de modifier le titre du graphique, ainsi que les étiquettes des axes <span class="in">`x`</span> et <span class="in">`y`</span>.</span>
+<span id="cb18-227"><a href="#cb18-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-230"><a href="#cb18-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-231"><a href="#cb18-231" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-232"><a href="#cb18-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-233"><a href="#cb18-233" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DevAfrica2018) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y=</span>SUBREG)) <span class="sc">+</span> </span>
+<span id="cb18-234"><a href="#cb18-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Nombre de pays&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-235"><a href="#cb18-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Sous-région&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-236"><a href="#cb18-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Joli graphique&quot;</span>)</span>
+<span id="cb18-237"><a href="#cb18-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-238"><a href="#cb18-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-239"><a href="#cb18-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-240"><a href="#cb18-240" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ressources:</span></span>
+<span id="cb18-241"><a href="#cb18-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-242"><a href="#cb18-242" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">La documentation officielle de `ggplot2`</span><span class="co">](http://ggplot2.tidyverse.org/)</span>\</span>
+<span id="cb18-243"><a href="#cb18-243" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">The R Graph Gallery</span><span class="co">](https://r-graph-gallery.com/ggplot2-package.html)</span></span>
+<span id="cb18-244"><a href="#cb18-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-245"><a href="#cb18-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## L&#39;interface graphique du package `Esquisse`</span></span>
+<span id="cb18-246"><a href="#cb18-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-247"><a href="#cb18-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, message=FALSE, eval=FALSE}</span></span>
+<span id="cb18-248"><a href="#cb18-248" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: FALSE</span></span>
+<span id="cb18-249"><a href="#cb18-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-250"><a href="#cb18-250" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation du package </span></span>
+<span id="cb18-251"><a href="#cb18-251" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;esquisse&quot;</span>)</span>
+<span id="cb18-252"><a href="#cb18-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-253"><a href="#cb18-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-254"><a href="#cb18-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-255"><a href="#cb18-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;35%&quot;, fig.align=&#39;center&#39;}</span></span>
+<span id="cb18-256"><a href="#cb18-256" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/esquisse.jpg&quot;</span>)</span>
+<span id="cb18-257"><a href="#cb18-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-258"><a href="#cb18-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-259"><a href="#cb18-259" aria-hidden="true" tabindex="-1"></a>Construisez votre graphique ggplot en clic-bouton et glisser-déposer, puis récupérer le code source !</span>
+<span id="cb18-260"><a href="#cb18-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-261"><a href="#cb18-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;90%&quot;, fig.align=&#39;center&#39;}</span></span>
+<span id="cb18-262"><a href="#cb18-262" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/ex_esquisse.png&quot;</span>)</span>
+<span id="cb18-263"><a href="#cb18-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-264"><a href="#cb18-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-265"><a href="#cb18-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## &lt;i class=&quot;bi bi-person-workspace&quot;&gt;&lt;/i&gt; Exercice {.title .exo-title}</span></span>
+<span id="cb18-266"><a href="#cb18-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-267"><a href="#cb18-267" aria-hidden="true" tabindex="-1"></a>::: {#exo}</span>
+<span id="cb18-268"><a href="#cb18-268" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">1. Créez un projet Rstudio</span><span class="co">]</span>{.question}</span>
+<span id="cb18-269"><a href="#cb18-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-270"><a href="#cb18-270" aria-hidden="true" tabindex="-1"></a>*File/New Project/New Directory...*</span>
+<span id="cb18-271"><a href="#cb18-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-272"><a href="#cb18-272" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2. Téléchargez les données suivantes :</span><span class="co">]</span>{.question}</span>
+<span id="cb18-273"><a href="#cb18-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-274"><a href="#cb18-274" aria-hidden="true" tabindex="-1"></a>|             Intitulé              |                                                                     Téléchargement                                                                      |</span>
+<span id="cb18-275"><a href="#cb18-275" aria-hidden="true" tabindex="-1"></a>|:---------------------:|:-----------------------------------------------:|</span>
+<span id="cb18-276"><a href="#cb18-276" aria-hidden="true" tabindex="-1"></a>| Données pays africains (UN-CEPII) | <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://bit.ly/3DaCAkX&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;btn btn-outline-warning&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;button&quot;</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;bi bi-cloud-arrow-down&quot;</span><span class="kw">&gt;&lt;/i&gt;</span> Download<span class="kw">&lt;/a&gt;</span> |</span>
+<span id="cb18-277"><a href="#cb18-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-278"><a href="#cb18-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">3. Placez les données (décompressées) dans le répertoire de votre projet, de la façon suivante :</span><span class="co">]</span>{.question}</span>
+<span id="cb18-279"><a href="#cb18-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-280"><a href="#cb18-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width=&quot;70%&quot;, fig.align=&#39;center&#39;}</span></span>
+<span id="cb18-281"><a href="#cb18-281" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;../img/folder2.png&quot;</span>)</span>
+<span id="cb18-282"><a href="#cb18-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-283"><a href="#cb18-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-284"><a href="#cb18-284" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">4. Importez la base de données DEV_AFRICA_2018 sous le nom DevAfrica2018.</span><span class="co">]</span>{.question}</span>
+<span id="cb18-285"><a href="#cb18-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-286"><a href="#cb18-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-287"><a href="#cb18-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-288"><a href="#cb18-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-289"><a href="#cb18-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-290"><a href="#cb18-290" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des métadonnées</span></span>
+<span id="cb18-291"><a href="#cb18-291" aria-hidden="true" tabindex="-1"></a>...  <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">&quot;...&quot;</span>, </span>
+<span id="cb18-292"><a href="#cb18-292" aria-hidden="true" tabindex="-1"></a>                   <span class="at">header =</span> ...,</span>
+<span id="cb18-293"><a href="#cb18-293" aria-hidden="true" tabindex="-1"></a>                   <span class="at">sep=</span> <span class="st">&quot;...&quot;</span>,</span>
+<span id="cb18-294"><a href="#cb18-294" aria-hidden="true" tabindex="-1"></a>                   <span class="at">encoding =</span> <span class="st">&quot;...&quot;</span>)</span>
+<span id="cb18-295"><a href="#cb18-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-296"><a href="#cb18-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-297"><a href="#cb18-297" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(...)</span>
+<span id="cb18-298"><a href="#cb18-298" aria-hidden="true" tabindex="-1"></a>DevAfrica2018 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;...&quot;</span>)</span>
+<span id="cb18-299"><a href="#cb18-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-300"><a href="#cb18-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-301"><a href="#cb18-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-302"><a href="#cb18-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">5. Re-codez la variable « POP » en « Population » en trois catégories :</span><span class="co">]</span>{.question}</span>
+<span id="cb18-303"><a href="#cb18-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-304"><a href="#cb18-304" aria-hidden="true" tabindex="-1"></a>1)  Moins de 10 millions</span>
+<span id="cb18-305"><a href="#cb18-305" aria-hidden="true" tabindex="-1"></a>2)  10 -- 25 millions</span>
+<span id="cb18-306"><a href="#cb18-306" aria-hidden="true" tabindex="-1"></a>3)  <span class="sc">\&gt;</span> 25 millions</span>
+<span id="cb18-307"><a href="#cb18-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-308"><a href="#cb18-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-309"><a href="#cb18-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-310"><a href="#cb18-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-311"><a href="#cb18-311" aria-hidden="true" tabindex="-1"></a>...<span class="sc">$</span>... <span class="ot">&lt;-</span> <span class="fu">cut</span>(...<span class="sc">$</span>...,  </span>
+<span id="cb18-312"><a href="#cb18-312" aria-hidden="true" tabindex="-1"></a>              <span class="at">breaks =</span> <span class="fu">c</span>(..., ..., ..., ...), </span>
+<span id="cb18-313"><a href="#cb18-313" aria-hidden="true" tabindex="-1"></a>              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;...s&quot;</span>, </span>
+<span id="cb18-314"><a href="#cb18-314" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;...&quot;</span>, </span>
+<span id="cb18-315"><a href="#cb18-315" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;...&quot;</span>), </span>
+<span id="cb18-316"><a href="#cb18-316" aria-hidden="true" tabindex="-1"></a>              <span class="at">right =</span> ...)</span>
+<span id="cb18-317"><a href="#cb18-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-318"><a href="#cb18-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-319"><a href="#cb18-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-320"><a href="#cb18-320" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">6. Faite une représentation graphique de l&#39;effectif des pays par sous-région.</span><span class="co">]</span>{.question}</span>
+<span id="cb18-321"><a href="#cb18-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-322"><a href="#cb18-322" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-323"><a href="#cb18-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-324"><a href="#cb18-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-325"><a href="#cb18-325" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(...)</span>
+<span id="cb18-326"><a href="#cb18-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-327"><a href="#cb18-327" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb18-328"><a href="#cb18-328" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> ...), <span class="at">stat =</span> <span class="st">&#39;...&#39;</span>)</span>
+<span id="cb18-329"><a href="#cb18-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-330"><a href="#cb18-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-331"><a href="#cb18-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-332"><a href="#cb18-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-333"><a href="#cb18-333" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">7. Ajoutez les étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span><span class="co">]</span>{.question}</span>
+<span id="cb18-334"><a href="#cb18-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-335"><a href="#cb18-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-336"><a href="#cb18-336" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-337"><a href="#cb18-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-338"><a href="#cb18-338" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb18-339"><a href="#cb18-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span>...), <span class="at">stat =</span> <span class="st">&#39;...&#39;</span>)<span class="sc">+</span></span>
+<span id="cb18-340"><a href="#cb18-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;...&quot;</span>)<span class="sc">+</span></span>
+<span id="cb18-341"><a href="#cb18-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb18-342"><a href="#cb18-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;...&quot;</span>)</span>
+<span id="cb18-343"><a href="#cb18-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-344"><a href="#cb18-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-345"><a href="#cb18-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-346"><a href="#cb18-346" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">8. Faite la boite à moustache de l&#39;espérance de vie à la naissance par sous-région.</span><span class="co">]</span>{.question}</span>
+<span id="cb18-347"><a href="#cb18-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-348"><a href="#cb18-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-349"><a href="#cb18-349" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-350"><a href="#cb18-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-351"><a href="#cb18-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-352"><a href="#cb18-352" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb18-353"><a href="#cb18-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...))</span>
+<span id="cb18-354"><a href="#cb18-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-355"><a href="#cb18-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-356"><a href="#cb18-356" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-357"><a href="#cb18-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-358"><a href="#cb18-358" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">9. Ajout des étiquettes (titre du graphique, étiquette axe abscisse, axe des ordonnées) au graphique.</span><span class="co">]</span>{.question}</span>
+<span id="cb18-359"><a href="#cb18-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-360"><a href="#cb18-360" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-361"><a href="#cb18-361" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-362"><a href="#cb18-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-363"><a href="#cb18-363" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb18-364"><a href="#cb18-364" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...), <span class="at">varwidth =</span> ...)</span>
+<span id="cb18-365"><a href="#cb18-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-366"><a href="#cb18-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-367"><a href="#cb18-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-368"><a href="#cb18-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-369"><a href="#cb18-369" aria-hidden="true" tabindex="-1"></a>Note : *faites les largeurs des boites à moustaches proportionnelles à l&#39;effectif de pays par sous-région*</span>
+<span id="cb18-370"><a href="#cb18-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-371"><a href="#cb18-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning = FALSE, message = FALSE , eval = FALSE}</span></span>
+<span id="cb18-372"><a href="#cb18-372" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: &quot;Un peu d&#39;aide ?&quot;</span></span>
+<span id="cb18-373"><a href="#cb18-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-374"><a href="#cb18-374" aria-hidden="true" tabindex="-1"></a>Graphique1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(...) <span class="sc">+</span> </span>
+<span id="cb18-375"><a href="#cb18-375" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>..., <span class="at">y=</span>...), <span class="at">varwidth =</span> ...) <span class="sc">+</span> </span>
+<span id="cb18-376"><a href="#cb18-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb18-377"><a href="#cb18-377" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;...&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb18-378"><a href="#cb18-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;...&quot;</span>)</span>
+<span id="cb18-379"><a href="#cb18-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-380"><a href="#cb18-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-381"><a href="#cb18-381" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarde du graphique</span></span>
+<span id="cb18-382"><a href="#cb18-382" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;...&quot;</span>, <span class="at">dpi =</span> <span class="dv">3000</span>)</span>
+<span id="cb18-383"><a href="#cb18-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-384"><a href="#cb18-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-385"><a href="#cb18-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb18-386"><a href="#cb18-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-387"><a href="#cb18-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-388"><a href="#cb18-388" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb18-389"><a href="#cb18-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-390"><a href="#cb18-390" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb18-391"><a href="#cb18-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-392"><a href="#cb18-392" aria-hidden="true" tabindex="-1"></a>::: center</span>
+<span id="cb18-393"><a href="#cb18-393" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/correction/ggplot2.zip&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;btn btn-outline-warning&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;button&quot;</span> <span class="er">aria-disabled</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;&lt;i</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;bi bi-cloud-arrow-down&quot;</span><span class="kw">&gt;&lt;/i&gt;</span> Corrigé<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb18-394"><a href="#cb18-394" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb18-395"><a href="#cb18-395" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
